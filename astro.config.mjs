@@ -6,9 +6,5 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://programmagang.web.id',
   output: 'static',
-  trailingSlash: 'never',
-  build: {
-    format: 'file'
-  },
   integrations: [sitemap()]
 });

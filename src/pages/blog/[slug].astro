@@ -23,9 +23,56 @@ const relatedPosts = blogPosts
 
 const pageTitle = `${post.title} | Blog MagangPro Malang`;
 const pageDescription = post.excerpt;
+
+// Schema JSON-LD (SEO, AEO, GEO) for Article & FAQPage
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      '@id': `https://programmagang.web.id/blog/${post.slug}#article`,
+      headline: post.title,
+      description: post.excerpt,
+      image: [
+        `https://programmagang.web.id${post.image}`,
+        `https://programmagang.web.id${post.secondImage.src}`
+      ],
+      datePublished: '2026-10-30T08:00:00+07:00',
+      dateModified: '2026-10-30T08:00:00+07:00',
+      author: {
+        '@type': 'Person',
+        name: post.author.name,
+        jobTitle: post.author.role
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'MagangPro',
+        url: 'https://programmagang.web.id/'
+      },
+      mainEntityOfPage: `https://programmagang.web.id/blog/${post.slug}`
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `https://programmagang.web.id/blog/${post.slug}#faq`,
+      mainEntity: post.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    }
+  ]
+};
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  ogImage={`https://programmagang.web.id${post.image}`}
+  pageSchema={articleSchema}
+>
   <!-- Article Main Content (Clean Light Layout without dark PageBanner) -->
   <article class="article-detail-page mp-section">
     <div class="mp-container article-container">

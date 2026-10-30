@@ -10,6 +10,7 @@ interface Props {
   canonical?: string;
   noindex?: boolean;
   ogImage?: string;
+  pageSchema?: object | object[];
 }
 
 const siteUrl = 'https://programmagang.web.id';
@@ -21,6 +22,7 @@ const {
   canonical,
   noindex = false,
   ogImage = `${siteUrl}/images/og-magangpro.png`,
+  pageSchema,
 } = Astro.props;
 
 // Ensure clean canonical URL without trailing slash
@@ -104,6 +106,14 @@ const globalSchema = {
 
     <!-- Schema.org JSON-LD Global -->
     <script type="application/ld+json" set:html={JSON.stringify(globalSchema)} />
+
+    <!-- Optional Page-Specific Schema (Article, FAQPage, Course, dll) -->
+    {pageSchema && (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify(pageSchema)}
+      />
+    )}
   </head>
   <body>
     <!-- Skip to Content for Accessibility -->
