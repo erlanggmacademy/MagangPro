@@ -1,0 +1,587 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageBanner from '../components/PageBanner.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { servicesData } from '../data/services';
+
+const pageTitle = "Pelatihan Digital Marketing di Malang untuk UMKM & Instansi | MagangPro";
+const pageDescription = "Program pelatihan dan workshop digital marketing praktis di Kota Malang. Belajar SEO, Google Bisnis Profil, iklan digital, dan strategi konten bersama praktisi industri.";
+
+const breadcrumbs = [
+  { label: 'Beranda', href: '/' },
+  { label: 'Pelatihan Digital Marketing' },
+];
+
+const modules = [
+  {
+    num: '01',
+    title: 'Fondasi SEO & Pencarian Google',
+    desc: 'Mempelajari cara kerja algoritma Google, riset kata kunci intent komersial, optimasi on-page (title tag, meta description, heading structure), serta audit teknis situs.',
+    skills: ['Keyword Research', 'On-Page SEO', 'Google Search Console', 'Search Intent'],
+  },
+  {
+    num: '02',
+    title: 'Dominasi Lokal & Google Maps',
+    desc: 'Teknik mendaftarkan dan memverifikasi profil Google Bisnis (GBP), penataan kategori usaha, strategi mengumpulkan ulasan bintang 5, serta optimasi titik lokasi lokal.',
+    skills: ['Google Bisnis Profil', 'Local Citation', 'Reputation Management', 'Geo-Targeting'],
+  },
+  {
+    num: '03',
+    title: 'Konten Kreatif & Copywriting',
+    desc: 'Formula penulisan naskah persuasif (AIDA), pembuatan video vertikal promosi memakai smartphone & CapCut, serta perencanaan kalender konten mingguan.',
+    skills: ['Persuasive Copywriting', 'Short-form Video', 'Canva Design', 'Content Calendar'],
+  },
+  {
+    num: '04',
+    title: 'WhatsApp Marketing & Closing',
+    desc: 'Pengaturan WhatsApp Business CRM, pembuatan quick replies dan katalog produk, alur follow-up prospek ramah, serta teknik meningkatkan angka konversi penjualan.',
+    skills: ['WhatsApp Business CRM', 'Closing Techniques', 'Lead Nurturing', 'Broadcast Etika'],
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- 1. Unified Page Banner -->
+  <PageBanner
+    pill="Workshop & Pendampingan Bisnis"
+    title="Pelatihan Digital Marketing"
+    description="Program bimbingan praktis berbasis studi kasus nyata untuk meningkatkan kehadiran online, visibilitas pencarian Google, dan omzet penjualan bisnis Anda di Kota Malang."
+    breadcrumbs={breadcrumbs}
+  />
+
+  <!-- 2. Section Dua Program Pelatihan Utama (Visual Cards dengan Gambar) -->
+  <section class="mp-section" id="program-pelatihan">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Pilihan Program Pelatihan</span>
+        <h2 class="heading-lg">Pelatihan yang Disesuaikan dengan Skala Organisasi</h2>
+        <p>Materi pembelajaran dirancang khusus agar aplikatif: baik untuk wirausahawan mandiri maupun staf korporat dan aparatur instansi.</p>
+      </div>
+
+      <div class="training-cards-grid">
+        <!-- Card 1: UMKM -->
+        <div class="training-card">
+          <div class="card-img-wrap">
+            <img
+              src="/images/services/pelatihan-umkm.webp"
+              alt="Pelatihan Digital Marketing untuk UMKM di Malang"
+              width="600"
+              height="360"
+              loading="lazy"
+              decoding="async"
+              class="card-img"
+            />
+            <span class="card-floating-badge">Khusus Pelaku Usaha</span>
+          </div>
+
+          <div class="card-content">
+            <span class="card-tagline">Pelatihan untuk UMKM</span>
+            <h3 class="card-title">Tingkatkan Penjualan Lokal & Dominasi Google Maps</h3>
+            <p class="card-desc">
+              Bimbingan intensif bagi pemilik usaha mikro, kecil, dan menengah untuk memanfaatkan kanal digital gratisan secara optimal tanpa harus bakar modal iklan besar.
+            </p>
+
+            <div class="key-points-box">
+              <span class="points-label">Materi Utama yang Dipelajari:</span>
+              <ul class="points-list">
+                <li><span class="chk">✓</span><span>Setup & Optimasi Google Profil Bisnis (Local SEO)</span></li>
+                <li><span class="chk">✓</span><span>Membuat konten video promosi hanya lewat smartphone</span></li>
+                <li><span class="chk">✓</span><span>Alur closing cepat dan customer care via WhatsApp</span></li>
+                <li><span class="chk">✓</span><span>Strategi menjaga loyalitas pelanggan lama agar beli lagi</span></li>
+              </ul>
+            </div>
+
+            <div class="card-action-bar">
+              <a href="/pelatihan-digital-marketing/umkm" class="detail-link-btn">
+                <span>Pelajari Detail Program UMKM</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Instansi & Perusahaan -->
+        <div class="training-card">
+          <div class="card-img-wrap">
+            <img
+              src="/images/services/pelatihan-instansi.webp"
+              alt="Pelatihan Digital Marketing Instansi & Perusahaan Malang"
+              width="600"
+              height="360"
+              loading="lazy"
+              decoding="async"
+              class="card-img"
+            />
+            <span class="card-floating-badge">Khusus Tim & Korporat</span>
+          </div>
+
+          <div class="card-content">
+            <span class="card-tagline">In-House Training & Workshop</span>
+            <h3 class="card-title">Peningkatan Kapasitas & Komunikasi Digital Tim</h3>
+            <p class="card-desc">
+              Program peningkatan kapabilitas digital aparatur instansi pemerintah dan staf profesional korporat dengan silabus yang disesuaikan dengan tujuan kerja institusi.
+            </p>
+
+            <div class="key-points-box">
+              <span class="points-label">Materi Utama yang Dipelajari:</span>
+              <ul class="points-list">
+                <li><span class="chk">✓</span><span>Strategi publikasi & komunikasi publik instansi modern</span></li>
+                <li><span class="chk">✓</span><span>Manajemen kampanye iklan berbayar (Google & Meta Ads)</span></li>
+                <li><span class="chk">✓</span><span>Pengukuran metrik analitik & pelaporan KPI digital</span></li>
+                <li><span class="chk">✓</span><span>Simulasi studi kasus terarah (Hands-on Workshop)</span></li>
+              </ul>
+            </div>
+
+            <div class="card-action-bar">
+              <a href="/pelatihan-digital-marketing/instansi-perusahaan" class="detail-link-btn">
+                <span>Pelajari Detail Program Instansi</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Section 4 Modul Kurikulum Pelatihan -->
+  <section class="mp-section mp-section--surface" id="kurikulum-modul">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Kurikulum Terapan</span>
+        <h2 class="heading-lg">4 Modul Inti Pelatihan Digital Marketing</h2>
+        <p>Disusun bertahap mulai dari riset pasar hingga teknik eksekusi dan pelaporan performa digital.</p>
+      </div>
+
+      <div class="modules-grid">
+        {modules.map((mod) => (
+          <div class="module-card">
+            <span class="mod-num">{mod.num}</span>
+            <h3 class="mod-title">{mod.title}</h3>
+            <p class="mod-desc">{mod.desc}</p>
+            <div class="mod-skills">
+              {mod.skills.map((s) => (
+                <span class="skill-tag">{s}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Section Layanan Jasa Digital Terpadu (Preview Jasa) -->
+  <section class="mp-section" id="layanan-jasa">
+    <div class="mp-container">
+      <div class="services-banner-box">
+        <div class="services-text">
+          <span class="eyebrow">Solusi Siap Pakai</span>
+          <h2 class="heading-lg">Butuh Bantuan Teknis Langsung untuk Bisnis Anda?</h2>
+          <p class="lead-text">
+            Selain program pelatihan, MagangPro juga menyediakan layanan jasa digital profesional: mulai dari optimasi SEO website untuk tampil di halaman 1 Google, hingga pembuatan website modern berbasis Astro berkecepatan tinggi.
+          </p>
+          <div class="services-cta-group">
+            <a href="/jasa" class="service-primary-btn">
+              <span>Lihat Semua Layanan Jasa Digital</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="services-mini-cards">
+          <div class="service-preview-card">
+            <img
+              src="/images/services/layanan-seo.webp"
+              alt="Layanan SEO Website Malang"
+              width="400"
+              height="220"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="preview-info">
+              <h4>Jasa Optimasi SEO Website</h4>
+              <p>Menaikkan peringkat website Anda pada pencarian kata kunci Google secara organik dan berkelanjutan.</p>
+            </div>
+          </div>
+
+          <div class="service-preview-card">
+            <img
+              src="/images/services/pembuatan-website.webp"
+              alt="Jasa Pembuatan Website Modern Malang"
+              width="400"
+              height="220"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="preview-info">
+              <h4>Pembuatan Website Modern & Cepat</h4>
+              <p>Website tanpa database rentan dengan skor Google PageSpeed 90+ dan tampilan responsif elegan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Unified Closing CTA Banner -->
+  <CtaBanner
+    eyebrow="Tingkatkan Kapasitas Digital"
+    title="Konsultasikan Kebutuhan Pelatihan Tim atau Bisnis Anda"
+    desc="Silabus materi, lokasi (in-house / studio Malang), dan jadwal pelatihan dapat disesuaikan dengan kebutuhan Anda."
+    waLabel="Konsultasi Pelatihan via WhatsApp"
+    waMessage="Halo MagangPro, saya ingin berkonsultasi mengenai program pelatihan digital marketing."
+  />
+</BaseLayout>
+
+<style>
+  /* Training Cards Grid */
+  .training-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(28px, 4vw, 40px);
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 860px) {
+    .training-cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .training-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  }
+
+  .training-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+    border-color: rgba(198, 40, 40, 0.35);
+  }
+
+  .card-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background: #f1f5f9;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+
+  .training-card:hover .card-img {
+    transform: scale(1.04);
+  }
+
+  .card-floating-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(15, 23, 42, 0.85);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    backdrop-filter: blur(6px);
+  }
+
+  .card-content {
+    padding: clamp(24px, 3.5vw, 32px);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .card-tagline {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--mp-red);
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .card-title {
+    font-family: var(--mp-font-heading);
+    font-size: clamp(1.3rem, 2vw, 1.55rem);
+    color: #0f172a;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .card-desc {
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+
+  .key-points-box {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 22px;
+  }
+
+  .points-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+  }
+
+  .points-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .points-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: #334155;
+    line-height: 1.45;
+  }
+
+  .chk {
+    color: #16a34a;
+    font-weight: 800;
+    font-size: 0.85rem;
+  }
+
+  .card-action-bar {
+    margin-top: auto;
+  }
+
+  .detail-link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 46px;
+    background: #f8fafc;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .detail-link-btn:hover {
+    background: var(--mp-red);
+    color: #ffffff;
+    border-color: var(--mp-red);
+    box-shadow: 0 4px 14px rgba(198, 40, 40, 0.25);
+  }
+
+  /* Modules Grid */
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .modules-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .modules-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .module-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 22px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+  }
+
+  .module-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  }
+
+  .mod-num {
+    font-family: var(--mp-font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--mp-red);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .mod-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.15rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+
+  .mod-desc {
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+
+  .mod-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .skill-tag {
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 6px;
+  }
+
+  /* Services Banner Box */
+  .services-banner-box {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(32px, 5vw, 60px);
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 26px;
+    padding: clamp(28px, 4vw, 44px);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  }
+
+  @media (max-width: 900px) {
+    .services-banner-box {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .lead-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #334155;
+    margin-bottom: 24px;
+  }
+
+  .services-cta-group {
+    display: flex;
+    gap: 12px;
+  }
+
+  .service-primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--mp-red);
+    color: #ffffff;
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(198, 40, 40, 0.25);
+  }
+
+  .service-primary-btn:hover {
+    background: var(--mp-red-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(198, 40, 40, 0.35);
+  }
+
+  .services-mini-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .service-preview-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .service-preview-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(198, 40, 40, 0.3);
+  }
+
+  .service-preview-card img {
+    width: 110px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  .preview-info h4 {
+    font-family: var(--mp-font-heading);
+    font-size: 0.95rem;
+    color: #0f172a;
+    margin-bottom: 4px;
+  }
+
+  .preview-info p {
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.45;
+    margin: 0;
+  }
+</style>

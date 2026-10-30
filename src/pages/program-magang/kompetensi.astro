@@ -1,0 +1,424 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+const pageTitle = "Kompetensi yang Dipelajari Selama Magang di Malang | MagangPro";
+const pageDescription = "Silabus lengkap kompetensi teknis (hard skills) dan etika kerja profesional (soft skills) yang dipelajari selama mengikuti program magang di MagangPro Kota Malang.";
+
+const breadcrumbs = [
+  { label: 'Beranda', href: '/' },
+  { label: 'Program Magang', href: '/program-magang' },
+  { label: 'Kompetensi yang Dipelajari' },
+];
+
+const technicalClusters = [
+  {
+    cluster: 'Web Engineering & Frontend',
+    badge: 'Teknologi Modern',
+    desc: 'Penguasaan arsitektur web modern dengan penekanan pada kecepatan akses, clean code, dan keramahan mesin pencari.',
+    items: [
+      'Struktur semantic HTML5 yang aksesibel dan SEO-friendly',
+      'Penguasaan CSS3, Flexbox, Grid, dan prinsip responsive multi-device',
+      'Logika pemrograman JavaScript / TypeScript untuk interaktivitas web',
+      'Arsitektur komponen modern menggunakan framework Astro',
+      'Manajemen versi kode, branching, dan commit standar industri via Git',
+      'Optimasi performa Core Web Vitals (LCP, FID, CLS)',
+    ],
+  },
+  {
+    cluster: 'Digital Marketing & SEO Terapan',
+    badge: 'Pertumbuhan & Trafik',
+    desc: 'Metodologi sistematis untuk mendatangkan audiens bertarget ke platform digital bisnis melalui jalur organik.',
+    items: [
+      'Riset kata kunci (keyword research) intent transaksional dan informasional',
+      'Optimasi SEO on-page: title tag, meta description, heading hierarchy, alt text',
+      'Setup & optimasi Google Bisnis Profil untuk dominasi kata kunci lokal Malang',
+      'Penyusunan content cluster dan artikel pilar yang relevan',
+      'Analisis trafik, impresi, dan performa query via Google Search Console',
+      'Pemanfaatan WhatsApp Business CRM untuk alur konversi prospek',
+    ],
+  },
+  {
+    cluster: 'UI/UX Design & Creative Multimedia',
+    badge: 'Visual & User Experience',
+    desc: 'Perancangan aset visual dan antarmuka digital yang tidak hanya estetis, tetapi juga mudah dan nyaman digunakan audiens.',
+    items: [
+      'Pemahaman hierarki visual, tipografi digital, dan teori warna harmonis',
+      'Perancangan design system, komponen reusable, dan varian di Figma',
+      'Penyusunan user journey, wireframing, dan interactive prototyping',
+      'Produksi materi visual promosi media sosial (feeds, carousel, flyer)',
+      'Pengambilan & editing video vertikal format pendek (Reels / TikTok)',
+      'Penyusunan portofolio studi kasus desain siap presentasi',
+    ],
+  },
+  {
+    cluster: 'IT Infrastructure & Operations',
+    badge: 'Stabilitas & Dukungan',
+    desc: 'Keterampilan fondasi dalam menjaga keandalan perangkat keras, jaringan internet, dan ekosistem server penunjang.',
+    items: [
+      'Konfigurasi jaringan kabel LAN dan manajemen access point WiFi',
+      'Troubleshooting perangkat komputer lab, instalasi OS, dan driver',
+      'Dasar pengelolaan web hosting cPanel dan konfigurasi DNS domain',
+      'Pencadangan database (backup) dan manajemen keamanan data kerja',
+    ],
+  },
+];
+
+const softSkillPoints = [
+  {
+    num: '01',
+    title: 'Professional Communication',
+    desc: 'Terbiasa melakukan komunikasi kerja secara terbuka, mengikuti daily brief, dan menyampaikan kendala teknis secara terstruktur kepada mentor.',
+  },
+  {
+    num: '02',
+    title: 'Problem-Solving Mindset',
+    desc: 'Membiasakan diri membaca dokumentasi teknis dan mencari alternatif solusi mandiri sebelum meminta asistensi pembimbing.',
+  },
+  {
+    num: '03',
+    title: 'Time & Deadline Discipline',
+    desc: 'Membagi beban kerja proyek ke dalam checklist harian agar seluruh target selesai tepat waktu sebelum batas tenggat evaluasi.',
+  },
+  {
+    num: '04',
+    title: 'Cross-Discipline Collaboration',
+    desc: 'Menghargai peran rekan lintas divisi, misalnya programmer yang memahami kebutuhan desainer dan marketer yang menghargai struktur teknis.',
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- 1. Unified Page Banner -->
+  <PageBanner
+    pill="Silabus & Keterampilan Nyata"
+    title="Kompetensi yang Dipelajari"
+    description="Rincian kompetensi teknis (hard skills) dan etika kerja industri (soft skills) yang dibangun selama mengikuti program magang di MagangPro Kota Malang."
+    breadcrumbs={breadcrumbs}
+  />
+
+  <!-- 2. Section Pendekatan Belajar PBL -->
+  <section class="mp-section" id="pendekatan-kurikulum">
+    <div class="mp-container">
+      <div class="pbl-intro-box">
+        <div class="pbl-text">
+          <span class="eyebrow">Project-Based Learning</span>
+          <h2 class="heading-lg">Belajar dengan Mengerjakan Proyek Nyata, Bukan Sekadar Menonton Tutorial</h2>
+          <p class="lead-text">
+            Metode pembelajaran di MagangPro berakar pada keterlibatan langsung peserta pada proyek digital aktif. Kami yakin keterampilan teknologi paling efektif dikuasai saat Anda dihadapkan pada tantangan nyata di lapangan.
+          </p>
+          <p>
+            Setiap peserta diberikan target capaian spesifik mingguan yang terukur, dipandu oleh instruktur dan praktisi berpengalaman yang memberikan umpan balik langsung (code/design review).
+          </p>
+        </div>
+
+        <div class="pbl-stats-col">
+          <div class="pbl-ratio-card">
+            <span class="ratio-pct">70%</span>
+            <strong>Praktik Proyek Nyata</strong>
+            <p>Pengerjaan website aktif, optimasi SEO lokal, dan konten kreatif bisnis.</p>
+          </div>
+          <div class="pbl-ratio-card">
+            <span class="ratio-pct">20%</span>
+            <strong>1-on-1 Mentoring</strong>
+            <p>Review kode, asistensi desain, dan diskusi kendala teknis harian.</p>
+          </div>
+          <div class="pbl-ratio-card">
+            <span class="ratio-pct">10%</span>
+            <strong>Fondasi Konseptual</strong>
+            <p>Standar industri, tren teknologi modern, dan etika profesionalitas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Section Hard Skills (Kluster Kompetensi) -->
+  <section class="mp-section mp-section--surface" id="hard-skills">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Hard Skills</span>
+        <h2 class="heading-lg">Peta Kompetensi Teknis Industri</h2>
+        <p>Keterampilan teknis yang kami ajarkan merupakan standar yang saat ini aktif digunakan oleh praktisi industri teknologi dan pemasaran digital modern.</p>
+      </div>
+
+      <div class="clusters-grid">
+        {technicalClusters.map((cluster) => (
+          <div class="cluster-card">
+            <div class="cluster-head">
+              <span class="cluster-badge">{cluster.badge}</span>
+              <h3 class="cluster-title">{cluster.cluster}</h3>
+              <p class="cluster-desc">{cluster.desc}</p>
+            </div>
+
+            <div class="cluster-body">
+              <span class="list-label">Capaian Keterampilan Khusus:</span>
+              <ul class="skills-checklist">
+                {cluster.items.map((item) => (
+                  <li>
+                    <span class="check-bullet">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Section Soft Skills -->
+  <section class="mp-section" id="soft-skills">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Etika Kerja Profesional</span>
+        <h2 class="heading-lg">Soft Skills yang Menjadikan Anda Talenta Unggul</h2>
+        <p>Keahlian teknis membuka pintu wawancara, tetapi etika kerja dan karakter profesional yang menjamin keberlanjutan karier Anda.</p>
+      </div>
+
+      <div class="soft-skills-grid">
+        {softSkillPoints.map((point) => (
+          <div class="soft-card">
+            <span class="soft-num">{point.num}</span>
+            <h3 class="soft-title">{point.title}</h3>
+            <p class="soft-desc">{point.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Unified Closing CTA Banner -->
+  <CtaBanner
+    eyebrow="Tingkatkan Kemampuan Anda"
+    title="Kuasai Keterampilan Digital Nyata Bersama MagangPro"
+    desc="Pelajari silabus lengkap dan konsultasikan persiapan magang Anda bersama praktisi kami di Mojolangu Malang."
+    waLabel="Tanya Detail Silabus"
+    waMessage="Halo MagangPro, saya ingin mengetahui lebih detail mengenai kompetensi yang dipelajari selama magang."
+  />
+</BaseLayout>
+
+<style>
+  /* PBL Intro */
+  .pbl-intro-box {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .pbl-intro-box {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .lead-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #1e293b;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .pbl-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 20px;
+  }
+
+  .pbl-stats-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .pbl-ratio-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  }
+
+  .ratio-pct {
+    font-family: var(--mp-font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--mp-red);
+    line-height: 1;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .pbl-ratio-card strong {
+    font-size: 0.95rem;
+    color: #0f172a;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .pbl-ratio-card p {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Clusters Grid */
+  .clusters-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 860px) {
+    .clusters-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .cluster-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: clamp(26px, 3.5vw, 36px);
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cluster-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+  }
+
+  .cluster-head {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .cluster-badge {
+    display: inline-block;
+    background: rgba(198, 40, 40, 0.1);
+    color: var(--mp-red);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    margin-bottom: 10px;
+  }
+
+  .cluster-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.35rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .cluster-desc {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .list-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0f172a;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+
+  .skills-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skills-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.5;
+  }
+
+  .check-bullet {
+    color: #16a34a;
+    font-weight: 800;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* Soft Skills Grid */
+  .soft-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .soft-skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .soft-skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .soft-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 22px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  }
+
+  .soft-num {
+    font-family: var(--mp-font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--mp-red);
+    line-height: 1;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .soft-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.05rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+
+  .soft-desc {
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+</style>

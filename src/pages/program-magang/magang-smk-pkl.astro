@@ -1,0 +1,656 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+const pageTitle = "Program Magang SMK & Tempat PKL di Malang | MagangPro";
+const pageDescription = "Informasi lengkap tempat magang SMK (PKL) di Kota Malang untuk jurusan RPL, TKJ, Multimedia, DKV, Bisnis Digital, dan Pemasaran dengan proyek industri nyata dan bimbingan laporan resmi.";
+
+const breadcrumbs = [
+  { label: 'Beranda', href: '/' },
+  { label: 'Program Magang', href: '/program-magang' },
+  { label: 'Magang SMK & PKL' },
+];
+
+const smkMajors = [
+  {
+    code: 'RPL',
+    name: 'Rekayasa Perangkat Lunak',
+    badge: 'Software & Web',
+    desc: 'Fokus pada pengembangan website modern, pemahaman struktur HTML/CSS/JavaScript, pengenalan framework Astro, serta manajemen kode tim via Git & GitHub.',
+    tasks: ['Membangun website landing page interaktif', 'Optimasi performa & responsive layout', 'Deployment website ke cloud hosting'],
+    tools: ['VS Code', 'Git & GitHub', 'HTML5 & CSS3', 'JavaScript'],
+  },
+  {
+    code: 'TKJ',
+    name: 'Teknik Komputer & Jaringan',
+    badge: 'Infrastruktur & Jaringan',
+    desc: 'Mempelajari administrasi sistem komputer, konfigurasi jaringan lokal (LAN/WiFi), pengelolaan hosting & domain, serta troubleshooting perangkat lab kerja.',
+    tasks: ['Setup & konfigurasi DNS domain website', 'Maintenance sistem & keamanan jaringan', 'Troubleshooting hardware komputer lab'],
+    tools: ['Mikrotik Basics', 'Cloud CPanel', 'Command Line', 'Hardware Tools'],
+  },
+  {
+    code: 'MM',
+    name: 'Multimedia / Animasi',
+    badge: 'Konten Visual & Video',
+    desc: 'Produksi video pendek kreatif untuk media sosial, teknik visual storytelling, pengambilan video vertikal (Reels/TikTok), serta motion grafis ringan.',
+    tasks: ['Shooting & editing video promosi klien UMKM', 'Membuat animasi bumper & transisi video', 'Penyusunan storyboard konten mingguan'],
+    tools: ['CapCut Pro', 'Adobe Premiere', 'Canva Pro', 'Smartphone Gimbal'],
+  },
+  {
+    code: 'DKV',
+    name: 'Desain Komunikasi Visual',
+    badge: 'Branding & Identitas',
+    desc: 'Perancangan identitas visual usaha (logo & color palette), layout feeds sosial media interaktif, desain banner web, serta pemahaman UI/UX antarmuka digital.',
+    tasks: ['Desain feed & flyer digital promosi', 'Penyusunan brand guidelines sederhana', 'Wireframing tampilan antarmuka web'],
+    tools: ['Figma', 'Adobe Illustrator', 'Photoshop', 'Canva'],
+  },
+  {
+    code: 'BD & PM',
+    name: 'Bisnis Digital & Pemasaran',
+    badge: 'Pemasaran & SEO',
+    desc: 'Praktik riset kata kunci Google, optimasi profil Google Bisnis Lokal UMKM, copywriting konten promosi, dan analisis perkembangan audiens.',
+    tasks: ['Optimasi Google Maps & kata kunci lokal', 'Menulis artikel SEO informatif', 'Pemasaran produk via WhatsApp CRM'],
+    tools: ['Google Search Console', 'Google Bisnis Profil', 'Meta Suite', 'WhatsApp Business'],
+  },
+  {
+    code: 'OTKP',
+    name: 'Manajemen Perkantoran / OTKP',
+    badge: 'Administrasi Digital',
+    desc: 'Pengelolaan data inventaris berbasis spreadsheet cloud, administrasi dokumen kerja sama, komunikasi layanan pelanggan, dan pengarsipan digital rapi.',
+    tasks: ['Pencatatan database pelanggan & absensi', 'Penyusunan draft surat & MoU mitra', 'Customer care handling via WhatsApp'],
+    tools: ['Google Sheets', 'Google Docs', 'Notion', 'Drive Cloud'],
+  },
+];
+
+const pklBenefits = [
+  {
+    icon: 'briefcase',
+    title: '100% Tugas Proyek Industri Riil',
+    desc: 'Peserta tidak akan disuruh tugas non-edukatif (seperti membeli makan atau fotokopi). Setiap hari Anda mengerjakan proyek portofolio nyata.',
+  },
+  {
+    icon: 'file-text',
+    title: 'Bimbingan Laporan PKL Sampai Selesai',
+    desc: 'Mentor membantu penyusunan materi bab laporan magang sekolah, verifikasi lembar logbook harian, dan tanda tangan resmi pembimbing industri.',
+  },
+  {
+    icon: 'users',
+    title: '1-on-1 Mentoring Ramah Pemula',
+    desc: 'Pendampingan langsung dari praktisi yang sabar mengarahkan dari tingkat dasar hingga siswa mandiri dan percaya diri menyelesaikan tugas.',
+  },
+  {
+    icon: 'award',
+    title: 'Sertifikat Resmi Berpredikat Nilai',
+    desc: 'Sertifikat fisik & digital dilengkapi rincian nilai kompetensi kejuruan dan lampiran portofolio proyek untuk modal melamar kerja setelah lulus SMK.',
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- 1. Unified Page Banner -->
+  <PageBanner
+    pill="Jalur Siswa SMK & Vokasi"
+    title="Magang SMK & PKL"
+    description="Program Praktik Kerja Lapangan (PKL) terstruktur di Kota Malang untuk mengasah keterampilan industri nyata, etika kerja profesional, dan portofolio kejuruan siswa SMK."
+    breadcrumbs={breadcrumbs}
+  />
+
+  <!-- 2. Section Pengantar Vokasi -->
+  <section class="mp-section" id="standar-vokasi">
+    <div class="mp-container">
+      <div class="vokasi-intro-grid">
+        <div class="vokasi-text">
+          <span class="eyebrow">Sinkronisasi DUDI & Sekolah</span>
+          <h2 class="heading-lg">PKL Bukan Sekadar Syarat Absensi, Tapi Awal Karier Anda</h2>
+          <p class="lead-text">
+            MagangPro merancang silabus magang SMK yang selaras dengan kebutuhan Dunia Usaha dan Dunia Industri (DUDI). Kami memastikan siswa vokasi mendapatkan pengalaman teknis yang relevan dengan tuntutan kerja masa depan.
+          </p>
+          <p>
+            Berlokasi di kawasan pendidikan Mojolangu Kota Malang, siswa SMK dibimbing dalam lingkungan kerja yang kondusif, didukung fasilitas komputer dan jaringan internet memadai, serta mentor industri yang siap membimbing langkah demi langkah.
+          </p>
+          <div class="vokasi-checklist">
+            <div class="chk-item">
+              <span class="chk-icon">✓</span>
+              <span>Terbuka untuk PKL 3 Bulan, 6 Bulan, hingga 1 Tahun</span>
+            </div>
+            <div class="chk-item">
+              <span class="chk-icon">✓</span>
+              <span>Menerima Pendaftaran Rombongan Tim Sekolah Maupun Mandiri</span>
+            </div>
+            <div class="chk-item">
+              <span class="chk-icon">✓</span>
+              <span>Surat Balasan / Bukti Penerimaan Diterbitkan Cepat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="vokasi-highlight-card">
+          <span class="card-eyebrow">Ringkasan Program PKL</span>
+          <h3 class="card-title">Informasi Penting Pelaksanaan</h3>
+          <ul class="quick-info-list">
+            <li>
+              <strong>Lokasi:</strong>
+              <span>Mojolangu, Kec. Lowokwaru, Kota Malang</span>
+            </li>
+            <li>
+              <strong>Hari & Jam:</strong>
+              <span>Senin – Jumat, 08.30 – 16.30 WIB</span>
+            </li>
+            <li>
+              <strong>Kapasitas:</strong>
+              <span>8 – 12 Siswa per Gelombang (Terbatas)</span>
+            </li>
+            <li>
+              <strong>Fasilitas:</strong>
+              <span>Meja Kerja, WiFi Cepat, Lab Onsite, Asistensi Laporan</span>
+            </li>
+            <li>
+              <strong>Biaya:</strong>
+              <span>Tidak Ada Pungutan Pendaftaran Tersembunyi</span>
+            </li>
+          </ul>
+
+          <div class="quick-action">
+            <WhatsAppButton
+              label="Tanya Kuota PKL Periode Ini"
+              message="Halo MagangPro, saya ingin bertanya ketersediaan kuota PKL SMK untuk periode yang akan datang."
+              variant="primary"
+              size="md"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Section 6 Jurusan SMK yang Diterima -->
+  <section class="mp-section mp-section--surface" id="jurusan-smk">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Kompetensi Kejuruan</span>
+        <h2 class="heading-lg">Pilihan Divisi Sesuai Jurusan SMK</h2>
+        <p>Setiap jurusan mendapatkan porsi tugas terarah sesuai kompetensi keahlian yang dipelajari di sekolah.</p>
+      </div>
+
+      <div class="majors-cards-grid">
+        {smkMajors.map((major) => (
+          <div class="major-card">
+            <div class="major-top">
+              <span class="major-code">{major.code}</span>
+              <span class="major-badge">{major.badge}</span>
+            </div>
+
+            <h3 class="major-name">{major.name}</h3>
+            <p class="major-desc">{major.desc}</p>
+
+            <div class="major-tasks-box">
+              <span class="box-label">Contoh Penugasan Proyek:</span>
+              <ul class="tasks-list">
+                {major.tasks.map((task) => (
+                  <li>
+                    <span class="task-bullet">▪</span>
+                    <span>{task}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="major-tools">
+              <span class="tools-label">Tools yang Digunakan:</span>
+              <div class="tools-pills">
+                {major.tools.map((t) => (
+                  <span class="t-pill">{t}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Section Keunggulan PKL di MagangPro -->
+  <section class="mp-section" id="keunggulan-pkl">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Nilai Lebih</span>
+        <h2 class="heading-lg">Mengapa Memilih PKL di MagangPro?</h2>
+        <p>Investasi waktu magang Anda dijamin berbuah keterampilan konkret dan bukti portofolio yang dapat dibanggakan.</p>
+      </div>
+
+      <div class="benefits-four-grid">
+        {pklBenefits.map((b) => (
+          <div class="benefit-col-card">
+            <div class="benefit-col-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="benefit-col-title">{b.title}</h3>
+            <p class="benefit-col-desc">{b.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Section Alur Pengajuan Siswa SMK -->
+  <section class="mp-section mp-section--surface" id="alur-smk">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Tahapan Simpel</span>
+        <h2 class="heading-lg">Cara Mendaftar Magang SMK</h2>
+        <p>Prosedur pendaftaran tanpa birokrasi rumit bagi siswa maupun guru pembimbing magang.</p>
+      </div>
+
+      <div class="smk-steps-grid">
+        <div class="smk-step-box">
+          <div class="smk-step-num">01</div>
+          <h4>Cek Kuota via WhatsApp</h4>
+          <p>Tanyakan slot periode magang sekolah Anda dan sebutkan jurusan siswa ke Admin MagangPro.</p>
+        </div>
+
+        <div class="smk-step-box">
+          <div class="smk-step-num">02</div>
+          <h4>Kirim Surat Pengantar</h4>
+          <p>Kirimkan foto/scan surat permohonan magang resmi dari pihak SMK untuk penerbitan surat balasan.</p>
+        </div>
+
+        <div class="smk-step-box">
+          <div class="smk-step-num">03</div>
+          <h4>Orientasi Onsite Lab</h4>
+          <p>Peserta datang ke lab di Mojolangu Malang untuk perkenalan mentor, instalasi tools, dan pembagian project.</p>
+        </div>
+
+        <div class="smk-step-box">
+          <div class="smk-step-num">04</div>
+          <h4>Penyusunan Laporan & Sertifikat</h4>
+          <p>Bimbingan laporan PKL sekolah, penilaian pembimbing industri, dan penerbitan sertifikat kelulusan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Unified Closing CTA Banner -->
+  <CtaBanner
+    eyebrow="Siap Menjalani PKL Bermakna?"
+    title="Amankan Kuota PKL SMK Anda di MagangPro Sekarang"
+    desc="Diskusikan jadwal periode sekolah Anda dan kuota jurusan bersama tim MagangPro di Kota Malang."
+    waLabel="Konsultasi Kuota PKL SMK"
+    waMessage="Halo MagangPro, saya ingin konsultasi pendaftaran magang SMK / PKL di Kota Malang."
+  />
+</BaseLayout>
+
+<style>
+  /* Vokasi Intro */
+  .vokasi-intro-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .vokasi-intro-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .lead-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #1e293b;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .vokasi-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 24px;
+  }
+
+  .vokasi-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .chk-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  .chk-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(22, 163, 74, 0.12);
+    color: #16a34a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .vokasi-highlight-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: clamp(28px, 4vw, 36px);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  }
+
+  .card-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--mp-red);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .card-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.35rem;
+    color: #0f172a;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+
+  .quick-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .quick-info-list li {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #f1f5f9;
+  }
+
+  .quick-info-list li strong {
+    color: #0f172a;
+    margin-bottom: 2px;
+  }
+
+  .quick-info-list li span {
+    color: #64748b;
+  }
+
+  .quick-action {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .quick-action :global(.mp-button) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Majors Cards Grid */
+  .majors-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .majors-cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .majors-cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .major-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 22px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .major-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  }
+
+  .major-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .major-code {
+    font-family: var(--mp-font-heading);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--mp-red);
+  }
+
+  .major-badge {
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 9999px;
+  }
+
+  .major-name {
+    font-family: var(--mp-font-heading);
+    font-size: 1.15rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .major-desc {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+
+  .major-tasks-box {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 16px;
+  }
+
+  .box-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0f172a;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+  }
+
+  .tasks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .tasks-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.78rem;
+    color: #334155;
+    line-height: 1.45;
+  }
+
+  .task-bullet {
+    color: var(--mp-red);
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  .major-tools {
+    border-top: 1px dashed #e2e8f0;
+    padding-top: 12px;
+  }
+
+  .tools-label {
+    display: block;
+    font-size: 0.72rem;
+    color: #94a3b8;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .tools-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .t-pill {
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 6px;
+  }
+
+  /* 4 Benefits Grid */
+  .benefits-four-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .benefits-four-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .benefits-four-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .benefit-col-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 22px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  }
+
+  .benefit-col-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(198, 40, 40, 0.1);
+    color: var(--mp-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .benefit-col-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.05rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+
+  .benefit-col-desc {
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* SMK Steps */
+  .smk-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .smk-steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .smk-steps-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .smk-step-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 22px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  }
+
+  .smk-step-num {
+    font-family: var(--mp-font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--mp-red);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .smk-step-box h4 {
+    font-family: var(--mp-font-heading);
+    font-size: 1.05rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+  }
+
+  .smk-step-box p {
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+</style>

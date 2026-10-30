@@ -1,0 +1,441 @@
+---
+import { servicesData } from '../data/services';
+---
+
+<div class="expanding-cards-track" id="expanding-cards-track">
+  {servicesData.map((service, index) => (
+    <article
+      class={`expanding-card ${index === 0 ? 'is-active' : ''}`}
+      data-card-id={service.id}
+      tabindex="0"
+    >
+      <!-- Background Image with Overlay -->
+      <div class="card-bg-wrap">
+        <img
+          src={service.image}
+          alt={service.title}
+          class="card-bg-img"
+          loading="lazy"
+        />
+        <div class="card-gradient-overlay"></div>
+      </div>
+
+      <!-- Top Bar: Badge and Arrow Button -->
+      <div class="card-top-bar">
+        <span class="card-pill-badge">{service.shortBadge || service.badge}</span>
+        <a
+          href={`https://wa.me/62895639068080?text=${encodeURIComponent(service.waMessage)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-arrow-btn"
+          aria-label={`Konsultasi ${service.title}`}
+        >
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Collapsed indicator (centered vertical text for narrow cards) -->
+      <div class="card-collapsed-indicator" aria-hidden="true">
+        <span class="collapsed-vertical-title">{service.shortBadge}</span>
+      </div>
+
+      <!-- Bottom Content Area -->
+      <div class="card-bottom-content">
+        <div class="card-fixed-content">
+          <span class="card-tagline">{service.tagline}</span>
+          <h3 class="card-title">{service.title}</h3>
+        </div>
+
+        <!-- Buttery Smooth Grid Reveal for Expandable Content -->
+        <div class="card-expandable-details">
+          <div class="card-expandable-inner">
+            <p class="card-description">{service.description}</p>
+            <ul class="card-points-list">
+              {service.points.slice(0, 2).map((point) => (
+                <li>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+            <div class="card-cta-row">
+              <a
+                href={`https://wa.me/62895639068080?text=${encodeURIComponent(service.waMessage)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="card-cta-btn"
+              >
+                <span>Konsultasi via WhatsApp</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  ))}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('expanding-cards-track');
+    if (!track) return;
+    const cards = track.querySelectorAll<HTMLElement>('.expanding-card');
+
+    // Smooth hover switch with no flickering
+    cards.forEach((card) => {
+      // Desktop mouseenter: activates instantly and smoothly holds state without flickering
+      card.addEventListener('mouseenter', () => {
+        cards.forEach((c) => c.classList.remove('is-active'));
+        card.classList.add('is-active');
+      });
+
+      // Mobile / tablet tap
+      card.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        if (target.closest('.card-arrow-btn') || target.closest('.card-cta-btn')) {
+          return;
+        }
+        cards.forEach((c) => c.classList.remove('is-active'));
+        card.classList.add('is-active');
+      });
+
+      // Accessible keyboard navigation
+      card.addEventListener('focus', () => {
+        cards.forEach((c) => c.classList.remove('is-active'));
+        card.classList.add('is-active');
+      });
+    });
+  });
+</script>
+
+<style>
+  .expanding-cards-track {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    height: clamp(500px, 56vh, 600px);
+    align-items: stretch;
+    margin-top: clamp(28px, 4vw, 44px);
+    position: relative;
+  }
+
+  .expanding-card {
+    position: relative;
+    flex: 1 1 0px;
+    min-width: 0;
+    border-radius: 28px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #0c0d10;
+    box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Apple-grade fluid bezier curve for silky expand/compress */
+    transition: flex-grow 0.62s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.4s ease,
+                box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: flex-grow;
+    transform: translateZ(0);
+    user-select: none;
+    outline: none;
+  }
+
+  /* Active / Expanded State */
+  .expanding-card.is-active {
+    flex-grow: 3.4;
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 26px 56px -12px rgba(0, 0, 0, 0.48);
+  }
+
+  .expanding-card:not(.is-active) {
+    flex-grow: 1;
+  }
+
+  /* Background image wrap & zoom effect */
+  .card-bg-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .card-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  .card-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.08) 35%,
+      rgba(0, 0, 0, 0.82) 75%,
+      rgba(0, 0, 0, 0.96) 100%
+    );
+    pointer-events: none;
+  }
+
+  .expanding-card.is-active .card-bg-img {
+    transform: scale(1.06);
+  }
+
+  /* Top Bar (Badge + Circular Arrow CTA) */
+  .card-top-bar {
+    position: relative;
+    z-index: 3;
+    padding: clamp(16px, 2vw, 24px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .card-pill-badge {
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    font-family: var(--mp-font-body);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+  }
+
+  .card-arrow-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    text-decoration: none;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                background 0.25s ease,
+                color 0.25s ease;
+  }
+
+  .card-arrow-btn:hover {
+    background: #ffffff;
+    color: #0f172a;
+    transform: scale(1.1) rotate(45deg);
+  }
+
+  /* Collapsed indicator (centered vertical text for narrow cards) */
+  .card-collapsed-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .collapsed-vertical-title {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: var(--mp-font-heading);
+    font-size: 0.8125rem;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.65);
+    text-transform: uppercase;
+  }
+
+  .expanding-card.is-active .card-collapsed-indicator {
+    opacity: 0;
+  }
+
+  /* Bottom Content Area */
+  .card-bottom-content {
+    position: relative;
+    z-index: 3;
+    padding: clamp(18px, 2.4vw, 28px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-fixed-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-tagline {
+    font-family: var(--mp-font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ff5252;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+    display: block;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card-title {
+    font-family: var(--mp-font-heading);
+    font-size: clamp(1.15rem, 1.6vw, 1.55rem);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.25;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: white-space 0.4s ease;
+  }
+
+  .expanding-card.is-active .card-tagline {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .expanding-card.is-active .card-title {
+    white-space: normal;
+  }
+
+  /* Expandable Grid Accordion (Zero jank layout transitions) */
+  .card-expandable-details {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    will-change: grid-template-rows, opacity;
+  }
+
+  .expanding-card.is-active .card-expandable-details {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  .card-expandable-inner {
+    overflow: hidden;
+    min-width: 280px; /* Pre-renders width so text doesn't frantically wrap during animation */
+  }
+
+  .card-description {
+    font-family: var(--mp-font-body);
+    font-size: 0.84rem;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.5;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    max-width: 520px;
+  }
+
+  .card-points-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .card-points-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  .card-points-list li svg {
+    color: #4ade80;
+    flex-shrink: 0;
+  }
+
+  .card-cta-row {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .card-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    color: #0f172a;
+    font-family: var(--mp-font-body);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                background 0.2s ease,
+                color 0.2s ease;
+  }
+
+  .card-cta-btn:hover {
+    background: var(--mp-red);
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  /* Responsive for Mobile and Tablet (< 860px) */
+  @media (max-width: 860px) {
+    .expanding-cards-track {
+      flex-direction: column;
+      height: auto;
+      gap: 14px;
+    }
+
+    .expanding-card {
+      flex: none !important;
+      height: 110px;
+      transition: height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .expanding-card.is-active,
+    .expanding-card:focus-within {
+      height: 380px;
+    }
+
+    .card-collapsed-indicator {
+      display: none;
+    }
+
+    .card-expandable-inner {
+      min-width: unset;
+    }
+  }
+</style>

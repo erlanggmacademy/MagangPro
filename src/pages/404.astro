@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+const pageTitle = "Halaman Tidak Ditemukan (404) | MagangPro";
+const pageDescription = "Maaf, halaman yang Anda cari tidak dapat ditemukan di situs resmi MagangPro.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} noindex={true}>
+  <section class="mp-section not-found-section">
+    <div class="mp-container not-found-content">
+      <span class="error-code">404</span>
+      <h1 class="heading-lg">Halaman Tidak Ditemukan</h1>
+      <p class="error-text">
+        Maaf, tautan yang Anda tuju mungkin telah dipindahkan, diubah namanya, atau sedang tidak tersedia.
+      </p>
+
+      <div class="actions">
+        <a href="/" class="mp-button mp-button--primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Kembali ke Beranda</span>
+        </a>
+        <WhatsAppButton
+          label="Bantuan via WhatsApp"
+          message="Halo MagangPro, saya mengalami kendala tautan di website."
+          variant="secondary"
+        />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found-section {
+    min-height: calc(80vh - 76px);
+    padding-top: 40px;
+    padding-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .not-found-content {
+    max-width: 600px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .error-code {
+    font-family: var(--mp-font-heading);
+    font-size: clamp(5rem, 10vw, 8rem);
+    font-weight: 800;
+    color: var(--mp-red-soft);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .error-text {
+    font-size: 1.0625rem;
+    color: var(--mp-muted);
+    margin-top: 12px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+</style>

@@ -1,0 +1,595 @@
+---
+import { navigationItems } from '../data/navigation';
+import WhatsAppButton from './WhatsAppButton.astro';
+
+const currentPath = Astro.url.pathname;
+const isHome = currentPath === '/' || currentPath === '';
+---
+
+<header class={`mp-header ${!isHome ? 'mp-header--solid scrolled' : ''}`} id="main-header" data-is-home={isHome ? 'true' : 'false'}>
+  <div class="header-inner">
+    <!-- Brand Logo -->
+    <a href="/" class="brand-logo" aria-label="MagangPro - Beranda">
+      <img
+        src="/images/logo-magangpro-light.webp"
+        alt="MagangPro"
+        width="186"
+        height="48"
+        class="header-logo-img"
+        loading="eager"
+        decoding="async"
+      />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav" aria-label="Navigasi Utama">
+      <ul class="nav-list">
+        {navigationItems.map((item) => {
+          const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
+          const hasChildren = item.children && item.children.length > 0;
+
+          return (
+            <li class={`nav-item ${hasChildren ? 'has-dropdown' : ''}`}>
+              <a
+                href={item.href}
+                class={`nav-link ${isActive ? 'active' : ''}`}
+                aria-haspopup={hasChildren ? 'true' : undefined}
+                aria-expanded={hasChildren ? 'false' : undefined}
+              >
+                <span>{item.title}</span>
+                {hasChildren && (
+                  <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                )}
+              </a>
+
+              {hasChildren && (
+                <div class="dropdown-menu">
+                  <div class="dropdown-inner">
+                    {item.children!.map((child) => (
+                      <a href={child.href} class="dropdown-item">
+                        <span class="dropdown-title">{child.title}</span>
+                        {child.desc && <span class="dropdown-desc">{child.desc}</span>}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+
+    <!-- Header Actions (CTA) -->
+    <div class="header-actions">
+      <WhatsAppButton
+        label="Hubungi Kami"
+        message="Halo MagangPro, saya ingin berkonsultasi mengenai program magang dan pelatihan."
+        variant="primary"
+        size="sm"
+        showIcon={false}
+        class="header-cta"
+      />
+
+      <!-- Mobile Toggle Button -->
+      <button
+        id="mobile-menu-btn"
+        class="mobile-toggle"
+        aria-label="Buka navigasi menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav-drawer"
+      >
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Navigation -->
+  <div id="mobile-nav-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-header">
+        <a href="/" class="drawer-logo" aria-label="MagangPro - Beranda">
+          <img
+            src="/images/logo-magangpro.webp"
+            alt="MagangPro"
+            width="135"
+            height="45"
+            class="drawer-logo-img"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+        <button id="mobile-close-btn" class="close-btn" aria-label="Tutup navigasi menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" aria-label="Navigasi Mobile">
+        <ul class="mobile-nav-list">
+          {navigationItems.map((item) => {
+            const hasChildren = item.children && item.children.length > 0;
+            return (
+              <li class="mobile-nav-item">
+                {hasChildren ? (
+                  <details class="mobile-accordion">
+                    <summary class="mobile-nav-link">
+                      <span>{item.title}</span>
+                      <svg class="accordion-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </summary>
+                    <ul class="mobile-sub-list">
+                      {item.children!.map((child) => (
+                        <li>
+                          <a href={child.href} class="mobile-sub-link">{child.title}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                ) : (
+                  <a href={item.href} class="mobile-nav-link">{item.title}</a>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+
+      <div class="mobile-drawer-footer">
+        <WhatsAppButton
+          label="Konsultasi WhatsApp"
+          message="Halo MagangPro, saya ingin berkonsultasi mengenai program magang dan pelatihan."
+          variant="whatsapp"
+          class="w-full"
+        />
+        <p class="mobile-location">Mojolangu, Kota Malang, Jawa Timur</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .mp-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    transition: background-color 220ms ease, backdrop-filter 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+  }
+
+  /* Scrolled dark glassmorphism state & solid state on non-home pages */
+  .mp-header.scrolled,
+  .mp-header.mp-header--solid {
+    background-color: rgba(10, 10, 10, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+    gap: 20px;
+    width: 100%;
+    max-width: 1560px;
+    margin-inline: auto;
+    padding-inline: clamp(24px, 4.5vw, 64px);
+  }
+
+  /* Brand Logo */
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  .header-logo-img {
+    height: 48px;
+    width: auto;
+    max-width: 210px;
+    object-fit: contain;
+    display: block;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  .brand-logo:hover .header-logo-img {
+    opacity: 0.94;
+    transform: scale(1.02);
+  }
+
+  .drawer-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .drawer-logo-img {
+    height: 38px;
+    width: auto;
+    max-width: 145px;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Desktop Nav */
+  .desktop-nav {
+    display: none;
+  }
+
+  @media (min-width: 992px) {
+    .desktop-nav {
+      display: block;
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.88);
+    border-radius: 9999px;
+    transition: all 180ms ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .chevron-icon {
+    color: rgba(255, 255, 255, 0.7);
+    transition: transform 180ms ease;
+  }
+
+  .nav-item:hover .chevron-icon {
+    transform: rotate(180deg);
+  }
+
+  /* Dropdown Menu */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 280px;
+    padding-top: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: all 200ms ease;
+    pointer-events: none;
+  }
+
+  .nav-item:hover .dropdown-menu,
+  .nav-item:focus-within .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .dropdown-inner {
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--mp-radius-md);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    padding: 10px;
+  }
+
+  .dropdown-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: background 160ms ease;
+  }
+
+  .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .dropdown-title {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #ffffff;
+  }
+
+  .dropdown-item:hover .dropdown-title {
+    color: var(--mp-red-light, #ef4444);
+  }
+
+  .dropdown-desc {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 2px;
+  }
+
+  /* Header Actions & White CTA Button */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  :global(.header-cta) {
+    display: none;
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 9999px !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    padding: 9px 22px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+    transition: all 180ms ease !important;
+    text-decoration: none !important;
+  }
+
+  @media (min-width: 768px) {
+    :global(.header-cta) {
+      display: inline-flex !important;
+    }
+  }
+
+  :global(.header-cta:hover) {
+    background-color: #f3f4f6 !important;
+    color: var(--mp-red) !important;
+    border-color: #f3f4f6 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  /* Mobile Toggle */
+  .mobile-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  @media (min-width: 992px) {
+    .mobile-toggle {
+      display: none;
+    }
+  }
+
+  .hamburger-bar {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: transform 200ms ease;
+  }
+
+  /* Mobile Drawer */
+  .mobile-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 2000;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 250ms ease;
+  }
+
+  .mobile-drawer.is-open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .mobile-drawer-inner {
+    width: min(320px, 85vw);
+    height: 100%;
+    background: var(--mp-white);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 250ms ease;
+  }
+
+  .mobile-drawer.is-open .mobile-drawer-inner {
+    transform: translateX(0);
+  }
+
+  .mobile-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--mp-border);
+  }
+
+  .close-btn {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--mp-surface);
+    color: var(--mp-ink);
+  }
+
+  .mobile-nav {
+    flex: 1;
+    margin-top: 16px;
+  }
+
+  .mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .mobile-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--mp-ink);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .mobile-nav-link:hover {
+    background: var(--mp-surface);
+    color: var(--mp-red);
+  }
+
+  .mobile-accordion summary {
+    list-style: none;
+  }
+
+  .mobile-accordion summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-accordion[open] .accordion-chevron {
+    transform: rotate(180deg);
+  }
+
+  .mobile-sub-list {
+    padding-left: 16px;
+    margin-block: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .mobile-sub-link {
+    display: block;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    color: var(--mp-text);
+    border-radius: 6px;
+  }
+
+  .mobile-sub-link:hover {
+    color: var(--mp-red);
+    background: var(--mp-surface);
+  }
+
+  .mobile-drawer-footer {
+    padding-top: 20px;
+    border-top: 1px solid var(--mp-border);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .mobile-location {
+    font-size: 0.75rem;
+    color: var(--mp-muted);
+    text-align: center;
+  }
+</style>
+
+<script>
+  function setupHeader() {
+    const header = document.getElementById('main-header');
+    const btn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('mobile-close-btn');
+    const drawer = document.getElementById('mobile-nav-drawer');
+
+    const isSolid = header?.getAttribute('data-is-home') === 'false';
+
+    // Scroll state for header glassmorphism
+    function onScroll() {
+      if (isSolid) {
+        header?.classList.add('scrolled');
+        return;
+      }
+      if (window.scrollY > 30) {
+        header?.classList.add('scrolled');
+      } else {
+        header?.classList.remove('scrolled');
+      }
+    }
+
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Mobile drawer
+    if (!btn || !drawer) return;
+
+    function openMenu() {
+      drawer?.classList.add('is-open');
+      drawer?.setAttribute('aria-hidden', 'false');
+      btn?.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      drawer?.classList.remove('is-open');
+      drawer?.setAttribute('aria-hidden', 'true');
+      btn?.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    btn.addEventListener('click', openMenu);
+    closeBtn?.addEventListener('click', closeMenu);
+    
+    // Close on backdrop click
+    drawer.addEventListener('click', (e) => {
+      if (e.target === drawer) closeMenu();
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+        closeMenu();
+      }
+    });
+  }
+
+  setupHeader();
+  document.addEventListener('astro:after-swap', setupHeader);
+</script>

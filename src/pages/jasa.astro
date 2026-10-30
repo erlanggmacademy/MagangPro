@@ -1,0 +1,523 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageBanner from '../components/PageBanner.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+const pageTitle = "Layanan Jasa Digital & SEO Website di Malang | MagangPro";
+const pageDescription = "Jasa optimasi SEO website dan pembuatan website modern berbasis Astro SSG di Kota Malang. Cepat, aman tanpa database rentan, dan terindeks Google.";
+
+const breadcrumbs = [
+  { label: 'Beranda', href: '/' },
+  { label: 'Layanan Jasa Digital' },
+];
+
+const portfolioWorks = [
+  {
+    title: 'Website Kedai Kopi & Roastery Malang',
+    category: 'Web Development & Branding',
+    image: '/images/portfolio/portfolio-web-kopi.webp',
+    desc: 'Website katalog menu interaktif dengan skor performa PageSpeed 98 dan integrasi pemesanan WhatsApp otomatis.',
+  },
+  {
+    title: 'Optimasi SEO Toko Oleh-Oleh Khas Malang',
+    category: 'SEO & Local Google Maps',
+    image: '/images/portfolio/portfolio-seo-umkm.webp',
+    desc: 'Menaikkan ranking kata kunci lokal "oleh oleh khas malang" ke halaman 1 Google dan verifikasi titik Google Maps.',
+  },
+  {
+    title: 'Rebranding Visual Produk UMKM Makanan',
+    category: 'Graphic Design & Packaging',
+    image: '/images/portfolio/portfolio-dkv-branding.webp',
+    desc: 'Perancangan identitas visual, kemasan standing pouch modern, dan materi promosi feeds Instagram profesional.',
+  },
+  {
+    title: 'Dashboard Layanan Data Interaktif',
+    category: 'Web Application & UI/UX',
+    image: '/images/portfolio/portfolio-web-dashboard.webp',
+    desc: 'Antarmuka visualisasi data pengguna berbasis komponen modern yang responsif diakses dari smartphone maupun desktop.',
+  },
+];
+
+const workSteps = [
+  {
+    step: '01',
+    title: 'Konsultasi & Brief Kebutuhan',
+    desc: 'Diskusikan target bisnis, referensi desain, dan sasaran kata kunci yang ingin Anda bidik bersama konsultan kami via WhatsApp.',
+  },
+  {
+    step: '02',
+    title: 'Riset & Perancangan Prototipe',
+    desc: 'Tim kami menyusun wireframe desain atau roadmap audit teknis SEO sebelum pengerjaan kode implementasi dimulai.',
+  },
+  {
+    step: '03',
+    title: 'Pengerjaan & Review Berkala',
+    desc: 'Pengembangan website modern berbasis clean code atau optimasi on-page dengan pembaruan progres yang transparan.',
+  },
+  {
+    step: '04',
+    title: 'Peluncuran & Handover Aset',
+    desc: 'Website diluncurkan, akun Google Search Console diserahkan penuh, disertai garansi stabilitas dan panduan penggunaan.',
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- 1. Unified Page Banner -->
+  <PageBanner
+    pill="Solusi Teknologi & Pemasaran"
+    title="Layanan Digital & SEO"
+    description="Solusi profesional pengembangan website berkecepatan tinggi dan strategi optimasi SEO organik untuk mengangkat visibilitas bisnis Anda di halaman 1 Google."
+    breadcrumbs={breadcrumbs}
+  />
+
+  <!-- 2. Section 2 Layanan Jasa Utama dengan Gambar Visual Asli -->
+  <section class="mp-section" id="layanan-utama">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Solusi Terbaik</span>
+        <h2 class="heading-lg">Dua Layanan Inti untuk Pertumbuhan Bisnis Anda</h2>
+        <p>Kombinasi teknologi website modern yang cepat dan visibilitas pencarian Google yang mendatangkan prospek secara konsisten.</p>
+      </div>
+
+      <div class="services-dual-grid">
+        <!-- Service 1: SEO Website -->
+        <div class="service-large-card">
+          <div class="service-large-img">
+            <img
+              src="/images/services/layanan-seo.webp"
+              alt="Layanan Optimasi SEO Website Malang"
+              width="600"
+              height="360"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="service-tag-badge">Layanan SEO Profesional</span>
+          </div>
+
+          <div class="service-large-content">
+            <span class="srv-cat">Optimasi Mesin Pencari</span>
+            <h3 class="srv-title">Jasa Optimasi SEO Website Organik</h3>
+            <p class="srv-desc">
+              Kami membantu website bisnis Anda tampil di posisi teratas Google saat calon pelanggan mencari solusi yang Anda tawarkan. Strategi kami mengutamakan metode *white-hat* yang aman dan berkelanjutan jangka panjang.
+            </p>
+
+            <div class="srv-points-box">
+              <span class="srv-points-title">Cakupan Pengerjaan SEO:</span>
+              <ul class="srv-points-list">
+                <li><span class="chk">✓</span><span>Audit teknis Core Web Vitals, indeksasi, dan sitemap</span></li>
+                <li><span class="chk">✓</span><span>Riset kata kunci komersial bertarget dengan persaingan terukur</span></li>
+                <li><span class="chk">✓</span><span>Optimasi heading (H1-H3), meta tag, dan struktur data Schema.org</span></li>
+                <li><span class="chk">✓</span><span>Laporan evaluasi performa bulanan via Google Search Console</span></li>
+              </ul>
+            </div>
+
+            <div class="srv-action">
+              <WhatsAppButton
+                label="Konsultasi Layanan SEO"
+                message="Halo MagangPro, saya ingin berkonsultasi mengenai jasa optimasi SEO untuk website saya."
+                variant="primary"
+                size="md"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Web Dev Modern -->
+        <div class="service-large-card">
+          <div class="service-large-img">
+            <img
+              src="/images/services/pembuatan-website.webp"
+              alt="Jasa Pembuatan Website Modern Cepat Malang"
+              width="600"
+              height="360"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="service-tag-badge">Arsitektur Web Modern</span>
+          </div>
+
+          <div class="service-large-content">
+            <span class="srv-cat">Web Development</span>
+            <h3 class="srv-title">Pembuatan Website Modern & Cepat</h3>
+            <p class="srv-desc">
+              Kami membangun website menggunakan arsitektur modern (Static Site Generation / SSG dengan Astro) yang menghasilkan kecepatan *load time* instan di bawah 1 detik, aman dari serangan injeksi database, dan ramah smartphone.
+            </p>
+
+            <div class="srv-points-box">
+              <span class="srv-points-title">Cakupan Pengerjaan Website:</span>
+              <ul class="srv-points-list">
+                <li><span class="chk">✓</span><span>Desain antarmuka custom, modern, dan sangat responsif</span></li>
+                <li><span class="chk">✓</span><span>Skor Google PageSpeed 90+ tanpa beban database berat</span></li>
+                <li><span class="chk">✓</span><span>Struktur tombol call-to-action (CTA) terhubung ke WhatsApp</span></li>
+                <li><span class="chk">✓</span><span>Kepemilikan aset kode (source code) dan domain 100% milik Anda</span></li>
+              </ul>
+            </div>
+
+            <div class="srv-action">
+              <WhatsAppButton
+                label="Konsultasi Pembuatan Website"
+                message="Halo MagangPro, saya ingin berkonsultasi mengenai jasa pembuatan website modern untuk bisnis saya."
+                variant="primary"
+                size="md"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Section Portofolio Karya Nyata (Gambar Visual Nyata) -->
+  <section class="mp-section mp-section--surface" id="portofolio-karya">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Bukti Nyata</span>
+        <h2 class="heading-lg">Portofolio Proyek yang Telah Diselesaikan</h2>
+        <p>Setiap proyek kami kerjakan dengan ketelitian teknis tinggi demi kepuasan klien dan performa bisnis yang terbukti.</p>
+      </div>
+
+      <div class="works-grid">
+        {portfolioWorks.map((work) => (
+          <div class="work-card">
+            <div class="work-img-wrap">
+              <img
+                src={work.image}
+                alt={work.title}
+                width="500"
+                height="320"
+                loading="lazy"
+                decoding="async"
+                class="work-img"
+              />
+              <span class="work-cat-pill">{work.category}</span>
+            </div>
+
+            <div class="work-content">
+              <h3 class="work-title">{work.title}</h3>
+              <p class="work-desc">{work.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Section Alur Kerja Sama Transparan -->
+  <section class="mp-section" id="alur-kerjasama">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Alur Kerja Sama</span>
+        <h2 class="heading-lg">4 Langkah Mudah Memulai Proyek Bersama Kami</h2>
+        <p>Proses kerja sama yang jelas, transparan, dan terarah sejak hari pertama hingga peluncuran.</p>
+      </div>
+
+      <div class="work-steps-grid">
+        {workSteps.map((ws) => (
+          <div class="ws-card">
+            <span class="ws-step-num">{ws.step}</span>
+            <h4 class="ws-title">{ws.title}</h4>
+            <p class="ws-desc">{ws.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Unified Closing CTA Banner -->
+  <CtaBanner
+    eyebrow="Wujudkan Bisnis Digital Anda"
+    title="Bangun Website Berperforma Tinggi & Kuasai Google Bersama MagangPro"
+    desc="Diskusikan kebutuhan proyek Anda dan dapatkan analisis awal gratis bersama tim pengembang kami di Kota Malang."
+    waLabel="Konsultasi Proyek via WhatsApp"
+    waMessage="Halo MagangPro, saya ingin mendiskusikan kebutuhan pembuatan website / optimasi SEO."
+  />
+</BaseLayout>
+
+<style>
+  /* Dual Grid Services */
+  .services-dual-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(28px, 4vw, 40px);
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 860px) {
+    .services-dual-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .service-large-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  }
+
+  .service-large-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+    border-color: rgba(198, 40, 40, 0.35);
+  }
+
+  .service-large-img {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background: #f1f5f9;
+  }
+
+  .service-large-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+
+  .service-large-card:hover .service-large-img img {
+    transform: scale(1.04);
+  }
+
+  .service-tag-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(15, 23, 42, 0.85);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    backdrop-filter: blur(6px);
+  }
+
+  .service-large-content {
+    padding: clamp(24px, 3.5vw, 32px);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .srv-cat {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--mp-red);
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .srv-title {
+    font-family: var(--mp-font-heading);
+    font-size: clamp(1.3rem, 2vw, 1.55rem);
+    color: #0f172a;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .srv-desc {
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+
+  .srv-points-box {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .srv-points-title {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+  }
+
+  .srv-points-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .srv-points-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: #334155;
+    line-height: 1.45;
+  }
+
+  .chk {
+    color: #16a34a;
+    font-weight: 800;
+    font-size: 0.85rem;
+  }
+
+  .srv-action {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .srv-action :global(.mp-button) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Works Grid */
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 1040px;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 760px) {
+    .works-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .work-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+  }
+
+  .work-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  }
+
+  .work-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #f1f5f9;
+  }
+
+  .work-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .work-card:hover .work-img {
+    transform: scale(1.04);
+  }
+
+  .work-cat-pill {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(15, 23, 42, 0.85);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    backdrop-filter: blur(6px);
+  }
+
+  .work-content {
+    padding: 22px;
+  }
+
+  .work-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.15rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+
+  .work-desc {
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Work Steps Grid */
+  .work-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .work-steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .work-steps-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ws-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 20px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  }
+
+  .ws-step-num {
+    font-family: var(--mp-font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--mp-red);
+    line-height: 1;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .ws-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.05rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+  }
+
+  .ws-desc {
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,1470 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import { blogPosts, type BlogPost } from '../../data/blog';
+
+export async function getStaticPaths() {
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: BlogPost;
+}
+
+const { post } = Astro.props;
+
+// 3 related articles (exclude current post)
+const relatedPosts = blogPosts
+  .filter((p) => p.slug !== post.slug)
+  .slice(0, 3);
+
+const pageTitle = `${post.title} | Blog MagangPro Malang`;
+const pageDescription = post.excerpt;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Article Main Content (Clean Light Layout without dark PageBanner) -->
+  <article class="article-detail-page mp-section">
+    <div class="mp-container article-container">
+      <!-- Breadcrumb Navigation -->
+      <nav class="article-breadcrumbs" aria-label="Breadcrumb">
+        <a href="/" class="crumb-link">Beranda</a>
+        <span class="crumb-separator">/</span>
+        <a href="/blog" class="crumb-link">Blog</a>
+        <span class="crumb-separator">/</span>
+        <span class="crumb-current">{post.category}</span>
+      </nav>
+
+      <!-- Category Badge & Read Time -->
+      <div class="article-badge-row">
+        <span class="category-pill">{post.category}</span>
+        <span class="read-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span>{post.readTime}</span>
+        </span>
+      </div>
+
+      <!-- Main Article Headline -->
+      <h1 class="article-main-title">{post.title}</h1>
+
+      <!-- Author and Date Meta Bar -->
+      <div class="article-meta-bar">
+        <div class="author-profile">
+          <div class="author-circle" aria-hidden="true">
+            {post.author.name.charAt(0)}
+          </div>
+          <div class="author-details">
+            <span class="author-name">{post.author.name}</span>
+            <span class="author-role">{post.author.role}</span>
+          </div>
+        </div>
+
+        <div class="meta-date-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Dipublikasikan: <strong>{post.date}</strong></span>
+        </div>
+      </div>
+
+      <!-- Featured Cover Image (#1) -->
+      <div class="featured-image-wrapper">
+        <img
+          src={post.image}
+          alt={post.title}
+          width="1100"
+          height="550"
+          loading="eager"
+          decoding="async"
+          class="featured-hero-img"
+        />
+      </div>
+
+      <div class="article-content-layout">
+        <!-- Main Reading Body -->
+        <div class="article-body">
+          <!-- Lead Intro Paragraph -->
+          <p class="article-lead-text">
+            {post.intro}
+          </p>
+
+          <!-- 1. Collapsible Table of Contents (Buka/Tutup) -->
+          <details class="table-of-contents-box" open>
+            <summary class="toc-summary">
+              <div class="toc-title-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="8" y1="6" x2="21" y2="6"></line>
+                  <line x1="8" y1="12" x2="21" y2="12"></line>
+                  <line x1="8" y1="18" x2="21" y2="18"></line>
+                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                </svg>
+                <span class="toc-title">Daftar Isi Pembahasan</span>
+              </div>
+              <span class="toc-toggle-indicator">
+                <span class="toggle-text">Buka / Tutup</span>
+                <svg class="toc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </summary>
+            <ol class="toc-list">
+              {post.sections.map((sec, idx) => (
+                <li>
+                  <a href={`#section-${idx + 1}`}>{sec.heading}</a>
+                </li>
+              ))}
+              <li>
+                <a href="#section-kesimpulan">Kesimpulan</a>
+              </li>
+              <li>
+                <a href="#section-faq">Pertanyaan Sering Diajukan (FAQ)</a>
+              </li>
+            </ol>
+          </details>
+
+          <!-- Section 1 & 2 -->
+          {post.sections.slice(0, 2).map((sec, idx) => (
+            <section class="content-section" id={`section-${idx + 1}`}>
+              <h2 class="section-subheading">{sec.heading}</h2>
+
+              {sec.body.map((p) => (
+                <p class="section-paragraph">{p}</p>
+              ))}
+
+              {sec.quote && (
+                <blockquote class="article-quote-box">
+                  <p>"{sec.quote}"</p>
+                </blockquote>
+              )}
+
+              {sec.list && sec.list.length > 0 && (
+                <ul class="section-check-list">
+                  {sec.list.map((item) => (
+                    <li>
+                      <span class="bullet-check">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </section>
+          ))}
+
+          <!-- 2. "Baca Juga" Inline Callout -->
+          <aside class="inline-read-also" aria-label="Artikel Rekomendasi">
+            <div class="read-also-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+              <span>BACA JUGA:</span>
+            </div>
+            <a href={`/blog/${post.readAlso.slug}`} class="read-also-link">
+              <span>{post.readAlso.title}</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </aside>
+
+          <!-- 3. Image #2 Inside Article -->
+          <figure class="article-secondary-figure">
+            <div class="second-image-wrapper">
+              <img
+                src={post.secondImage.src}
+                alt={post.secondImage.alt}
+                width="800"
+                height="450"
+                loading="lazy"
+                decoding="async"
+                class="secondary-article-img"
+              />
+            </div>
+            <figcaption class="secondary-image-caption">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>{post.secondImage.caption}</span>
+            </figcaption>
+          </figure>
+
+          <!-- Section 3 & onwards -->
+          {post.sections.slice(2).map((sec, idx) => (
+            <section class="content-section" id={`section-${idx + 3}`}>
+              <h2 class="section-subheading">{sec.heading}</h2>
+
+              {sec.body.map((p) => (
+                <p class="section-paragraph">{p}</p>
+              ))}
+
+              {sec.quote && (
+                <blockquote class="article-quote-box">
+                  <p>"{sec.quote}"</p>
+                </blockquote>
+              )}
+
+              {sec.list && sec.list.length > 0 && (
+                <ul class="section-check-list">
+                  {sec.list.map((item) => (
+                    <li>
+                      <span class="bullet-check">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </section>
+          ))}
+
+          <!-- Conclusion Section -->
+          <div class="article-conclusion-box" id="section-kesimpulan">
+            <h3 class="conclusion-title">Kesimpulan</h3>
+            <p>{post.conclusion}</p>
+          </div>
+
+          <!-- 4. FAQ Section under Conclusion -->
+          <section class="article-faq-section" id="section-faq">
+            <div class="faq-header">
+              <span class="faq-badge">TANYA JAWAB</span>
+              <h3 class="faq-section-title">Pertanyaan Sering Diajukan (FAQ)</h3>
+              <p class="faq-section-desc">Jawaban ringkas seputar pembahasan topik artikel ini.</p>
+            </div>
+
+            <div class="faq-accordion-list">
+              {post.faqs.map((faq, idx) => (
+                <details class="faq-item" open={idx === 0}>
+                  <summary class="faq-question">
+                    <span>{faq.question}</span>
+                    <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </summary>
+                  <div class="faq-answer">
+                    <p>{faq.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <!-- Tags Bar -->
+          <div class="article-tags-row">
+            <span class="tags-label">Topik Terkait:</span>
+            <div class="tags-pills">
+              {post.tags.map((t) => (
+                <span class="topic-tag-pill">#{t}</span>
+              ))}
+            </div>
+          </div>
+
+          <!-- In-Article Action Box -->
+          <div class="article-action-banner">
+            <div class="action-banner-content">
+              <span class="banner-badge">{post.ctaBox.badge}</span>
+              <h3 class="banner-title">{post.ctaBox.title}</h3>
+              <p class="banner-desc">{post.ctaBox.desc}</p>
+            </div>
+            <div class="banner-btn-wrap">
+              <a href={post.ctaBox.btnHref} class="banner-cta-button">
+                <span>{post.ctaBox.btnLabel}</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Author Bio Card -->
+          <div class="author-bio-card">
+            <div class="bio-avatar" aria-hidden="true">
+              {post.author.name.charAt(0)}
+            </div>
+            <div class="bio-info">
+              <h4 class="bio-name">{post.author.name}</h4>
+              <p class="bio-role">{post.author.role} di MagangPro Malang</p>
+              <p class="bio-desc">
+                Berdedikasi dalam mendampingi talenta muda vokasi dan mahasiswa untuk menjembatani kurikulum pendidikan dengan standar kompetensi industri teknologi dan pemasaran digital modern.
+              </p>
+            </div>
+          </div>
+
+          <!-- 5. "Bagikan Artikel" (Replaces "Kembali ke Semua Artikel") -->
+          <div class="article-share-section">
+            <div class="share-header">
+              <div class="share-title-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                <span class="share-heading">Bagikan Artikel Ini:</span>
+              </div>
+              <span class="share-desc">Bantu rekan dan teman Anda menemukan wawasan bermanfaat ini.</span>
+            </div>
+
+            <div class="share-buttons-grid">
+              <!-- WhatsApp -->
+              <a
+                href={`https://api.whatsapp.com/send?text=${encodeURIComponent(`${post.title}\n\nBaca artikel selengkapnya di: https://programmagang.web.id/blog/${post.slug}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-share-btn btn-wa"
+                aria-label="Bagikan ke WhatsApp"
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.587 1.961.947 2.801.947h.005c3.178 0 5.767-2.587 5.768-5.766.001-3.181-2.587-5.767-5.778-5.767zm7.423 5.765c-.002 4.091-3.328 7.417-7.421 7.417-.1.001-2.586-.549-3.414-.997l-3.805.998 1.018-3.719c-.488-.847-.746-1.815-.745-2.809.002-4.091 3.328-7.417 7.422-7.417 4.092 0 7.424 3.326 7.425 7.417z"></path>
+                </svg>
+                <span>WhatsApp</span>
+              </a>
+
+              <!-- Facebook -->
+              <a
+                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://programmagang.web.id/blog/${post.slug}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-share-btn btn-fb"
+                aria-label="Bagikan ke Facebook"
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+                <span>Facebook</span>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://programmagang.web.id/blog/${post.slug}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-share-btn btn-li"
+                aria-label="Bagikan ke LinkedIn"
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+
+              <!-- Copy Link Button with Live Tooltip -->
+              <button
+                type="button"
+                class="social-share-btn btn-copy"
+                id="copy-article-link-btn"
+                aria-label="Salin tautan artikel ke clipboard"
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copy-btn-text">Salin Tautan</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Related Articles (3 Cards Per Row) -->
+  <section class="mp-section mp-section--surface related-articles-section">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Rekomendasi Bacaan</span>
+        <h2 class="heading-lg">Artikel Terkait Lainnya</h2>
+        <p>Perluas wawasan digital dan panduan karier Anda melalui artikel edukatif lainnya.</p>
+      </div>
+
+      <div class="related-grid-3col">
+        {relatedPosts.map((item) => (
+          <article class="related-blog-card">
+            <a href={`/blog/${item.slug}`} class="related-thumb-link" tabindex="-1">
+              <div class="related-thumb-box">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  width="400"
+                  height="240"
+                  loading="lazy"
+                  decoding="async"
+                  class="related-img"
+                />
+                <span class="related-badge">{item.category}</span>
+              </div>
+            </a>
+
+            <div class="related-body">
+              <div class="related-meta">
+                <span>{item.date}</span>
+                <span>•</span>
+                <span>{item.readTime}</span>
+              </div>
+
+              <h3 class="related-title">
+                <a href={`/blog/${item.slug}`} class="related-title-link">
+                  {item.title}
+                </a>
+              </h3>
+
+              <p class="related-excerpt">{item.excerpt}</p>
+
+              <div class="related-footer">
+                <a href={`/blog/${item.slug}`} class="related-read-btn">
+                  <span>Baca Artikel</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Unified Closing CTA Banner -->
+  <CtaBanner
+    eyebrow="Siap Mengembangkan Diri Bersama Kami?"
+    title="Wujudkan Karier Impian di Dunia Digital Bersama MagangPro Malang"
+    desc="Dapatkan pembekalan langsung di proyek industri nyata dengan mentoring intensif di Kota Malang."
+    primaryBtn={{
+      label: "Daftar Program Magang",
+      href: "/program-magang"
+    }}
+    secondaryBtn={{
+      label: "Konsultasi WhatsApp",
+      href: "https://wa.me/62895639068080?text=Halo%20MagangPro,%20saya%20tertarik%20dengan%20program%20di%20MagangPro."
+    }}
+  />
+</BaseLayout>
+
+<script>
+  // Copy Link Button Handler
+  document.addEventListener('DOMContentLoaded', () => {
+    const copyBtn = document.getElementById('copy-article-link-btn');
+    const copyText = document.getElementById('copy-btn-text');
+
+    if (copyBtn && copyText) {
+      copyBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          const originalText = copyText.textContent;
+          copyText.textContent = 'Tersalin! ✓';
+          copyBtn.classList.add('copied');
+
+          setTimeout(() => {
+            copyText.textContent = originalText;
+            copyBtn.classList.remove('copied');
+          }, 2500);
+        } catch (err) {
+          console.error('Failed to copy: ', err);
+        }
+      });
+    }
+  });
+</script>
+
+<style>
+  /* ----------------------------------------------------
+     ARTICLE DETAIL WRAPPER (LIGHT CLEAN THEME)
+     ---------------------------------------------------- */
+  .article-detail-page {
+    padding-top: clamp(2.5rem, 5vw, 4rem);
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+    background-color: var(--mp-white);
+  }
+
+  .article-container {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .article-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--mp-muted);
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .crumb-link {
+    color: var(--mp-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .crumb-link:hover {
+    color: var(--mp-red);
+  }
+
+  .crumb-separator {
+    color: #cbd5e1;
+  }
+
+  .crumb-current {
+    color: var(--mp-ink);
+    font-weight: 600;
+  }
+
+  .article-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .category-pill {
+    display: inline-block;
+    padding: 0.35rem 0.95rem;
+    border-radius: 999px;
+    background-color: var(--mp-red-soft);
+    border: 1px solid rgba(198, 40, 40, 0.18);
+    color: var(--mp-red);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+
+  .read-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--mp-muted);
+    background-color: var(--mp-surface);
+    border: 1px solid var(--mp-border);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+  }
+
+  .article-main-title {
+    font-family: var(--mp-font-heading);
+    font-size: clamp(2rem, 4.2vw, 2.85rem);
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--mp-ink);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+  }
+
+  .article-meta-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.15rem 0;
+    border-top: 1px solid var(--mp-border);
+    border-bottom: 1px solid var(--mp-border);
+    margin-bottom: 2.25rem;
+    flex-wrap: wrap;
+  }
+
+  .author-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .author-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ef4444, #991b1b);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.2);
+  }
+
+  .author-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .author-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--mp-ink);
+  }
+
+  .author-role {
+    font-size: 0.8rem;
+    color: var(--mp-muted);
+  }
+
+  .meta-date-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--mp-muted);
+  }
+
+  .meta-date-box strong {
+    color: var(--mp-ink);
+  }
+
+  /* ----------------------------------------------------
+     FEATURED COVER IMAGE (#1)
+     ---------------------------------------------------- */
+  .featured-image-wrapper {
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    border-radius: var(--mp-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(17, 24, 39, 0.08);
+    border: 1px solid var(--mp-border);
+    background-color: #0f172a;
+  }
+
+  .featured-hero-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .article-lead-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--mp-ink);
+    font-weight: 500;
+    margin-bottom: 2.25rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  /* ----------------------------------------------------
+     1. COLLAPSIBLE TABLE OF CONTENTS (BUKA/TUTUP)
+     ---------------------------------------------------- */
+  .table-of-contents-box {
+    background-color: var(--mp-surface);
+    border: 1px solid var(--mp-border);
+    border-left: 4px solid var(--mp-red);
+    border-radius: var(--mp-radius-md);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
+    transition: background-color 0.2s ease;
+  }
+
+  .toc-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    gap: 1rem;
+  }
+
+  .toc-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .toc-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--mp-ink);
+  }
+
+  .toc-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+
+  .toc-toggle-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--mp-muted);
+  }
+
+  .toc-chevron {
+    transition: transform 0.25s ease;
+  }
+
+  .table-of-contents-box[open] .toc-chevron {
+    transform: rotate(180deg);
+  }
+
+  .toc-list {
+    margin-top: 1.15rem;
+    margin-left: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .toc-list li a {
+    color: var(--mp-text);
+    font-size: 0.925rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .toc-list li a:hover {
+    color: var(--mp-red);
+    text-decoration: underline;
+  }
+
+  /* ----------------------------------------------------
+     2. INLINE "BACA JUGA" CALLOUT
+     ---------------------------------------------------- */
+  .inline-read-also {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-left: 4px solid var(--mp-red);
+    border-radius: var(--mp-radius-md);
+    padding: 1rem 1.25rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+
+  .read-also-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--mp-red);
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+
+  .read-also-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--mp-ink);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .read-also-link:hover {
+    color: var(--mp-red);
+    transform: translateX(3px);
+  }
+
+  /* ----------------------------------------------------
+     3. SECOND IMAGE INSIDE ARTICLE BODY
+     ---------------------------------------------------- */
+  .article-secondary-figure {
+    margin: 2.5rem 0;
+  }
+
+  .second-image-wrapper {
+    border-radius: var(--mp-radius-md);
+    overflow: hidden;
+    border: 1px solid var(--mp-border);
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.06);
+    background-color: #0f172a;
+  }
+
+  .secondary-article-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .secondary-image-caption {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--mp-muted);
+    font-style: italic;
+    line-height: 1.5;
+    margin-top: 0.75rem;
+    padding: 0 0.5rem;
+  }
+
+  .secondary-image-caption svg {
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: var(--mp-red);
+  }
+
+  /* ----------------------------------------------------
+     CONTENT SECTIONS
+     ---------------------------------------------------- */
+  .content-section {
+    margin-bottom: 2.75rem;
+  }
+
+  .section-subheading {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--mp-ink);
+    margin-bottom: 1.15rem;
+    line-height: 1.4;
+    padding-top: 0.75rem;
+  }
+
+  .section-paragraph {
+    font-size: 1.025rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 1.25rem;
+  }
+
+  .article-quote-box {
+    margin: 1.75rem 0;
+    padding: 1.25rem 1.5rem;
+    background-color: #fef2f2;
+    border-left: 4px solid var(--mp-red);
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+    color: #991b1b;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  .section-check-list {
+    list-style: none;
+    margin: 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .section-check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #334155;
+  }
+
+  .bullet-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #dcfce7;
+    color: #15803d;
+    font-size: 0.8rem;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* ----------------------------------------------------
+     CONCLUSION BOX
+     ---------------------------------------------------- */
+  .article-conclusion-box {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--mp-radius-md);
+    padding: 1.5rem 1.75rem;
+    margin: 2.5rem 0 2rem;
+  }
+
+  .conclusion-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--mp-ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .article-conclusion-box p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #334155;
+  }
+
+  /* ----------------------------------------------------
+     4. FAQ SECTION BELOW CONCLUSION
+     ---------------------------------------------------- */
+  .article-faq-section {
+    background-color: var(--mp-surface);
+    border: 1px solid var(--mp-border);
+    border-radius: var(--mp-radius-lg);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .faq-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background-color: var(--mp-red-soft);
+    color: var(--mp-red);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-section-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--mp-ink);
+    margin-bottom: 0.35rem;
+  }
+
+  .faq-section-desc {
+    font-size: 0.875rem;
+    color: var(--mp-muted);
+  }
+
+  .faq-accordion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    background-color: var(--mp-white);
+    border: 1px solid var(--mp-border);
+    border-radius: var(--mp-radius-md);
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .faq-item:hover {
+    border-color: #cbd5e1;
+  }
+
+  .faq-item[open] {
+    border-color: var(--mp-red);
+    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.06);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--mp-ink);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    gap: 0.75rem;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-chevron {
+    color: var(--mp-muted);
+    transition: transform 0.25s ease, color 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .faq-item[open] .faq-chevron {
+    transform: rotate(180deg);
+    color: var(--mp-red);
+  }
+
+  .faq-answer {
+    padding: 0 1.25rem 1.15rem;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 0.85rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.925rem;
+    line-height: 1.7;
+    color: #475569;
+  }
+
+  /* ----------------------------------------------------
+     TAGS BAR
+     ---------------------------------------------------- */
+  .article-tags-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tags-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--mp-muted);
+  }
+
+  .tags-pills {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .topic-tag-pill {
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    background-color: var(--mp-surface);
+    border: 1px solid var(--mp-border);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--mp-text);
+  }
+
+  /* ----------------------------------------------------
+     IN-ARTICLE CTA BANNER
+     ---------------------------------------------------- */
+  .article-action-banner {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-radius: var(--mp-radius-lg);
+    padding: 2.25rem;
+    color: var(--mp-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.75rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.15);
+    flex-wrap: wrap;
+  }
+
+  .action-banner-content {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .banner-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background-color: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    color: #fca5a5;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  .banner-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--mp-white);
+    margin-bottom: 0.5rem;
+  }
+
+  .banner-desc {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+  }
+
+  .banner-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    background-color: var(--mp-red);
+    color: var(--mp-white);
+    font-size: 0.925rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .banner-cta-button:hover {
+    background-color: #b91c1c;
+    transform: translateY(-2px);
+  }
+
+  /* ----------------------------------------------------
+     AUTHOR BIO CARD
+     ---------------------------------------------------- */
+  .author-bio-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background-color: var(--mp-surface);
+    border: 1px solid var(--mp-border);
+    border-radius: var(--mp-radius-md);
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .bio-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ef4444, #991b1b);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .bio-info {
+    flex: 1;
+  }
+
+  .bio-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--mp-ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .bio-role {
+    font-size: 0.825rem;
+    color: var(--mp-red);
+    font-weight: 600;
+    margin-bottom: 0.65rem;
+  }
+
+  .bio-desc {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.65;
+  }
+
+  /* ----------------------------------------------------
+     5. "BAGIKAN ARTIKEL" SHARE WIDGET
+     ---------------------------------------------------- */
+  .article-share-section {
+    background-color: var(--mp-surface);
+    border: 1px solid var(--mp-border);
+    border-radius: var(--mp-radius-md);
+    padding: 1.5rem 1.75rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .share-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .share-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--mp-ink);
+  }
+
+  .share-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--mp-ink);
+  }
+
+  .share-desc {
+    font-size: 0.85rem;
+    color: var(--mp-muted);
+  }
+
+  .share-buttons-grid {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .social-share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.15rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .btn-wa {
+    background-color: #25d366;
+    color: #ffffff;
+  }
+
+  .btn-wa:hover {
+    background-color: #1eb954;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+  }
+
+  .btn-fb {
+    background-color: #1877f2;
+    color: #ffffff;
+  }
+
+  .btn-fb:hover {
+    background-color: #0d65d9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(24, 119, 242, 0.25);
+  }
+
+  .btn-li {
+    background-color: #0a66c2;
+    color: #ffffff;
+  }
+
+  .btn-li:hover {
+    background-color: #084e96;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10, 102, 194, 0.25);
+  }
+
+  .btn-copy {
+    background-color: var(--mp-white);
+    color: var(--mp-ink);
+    border-color: var(--mp-border);
+  }
+
+  .btn-copy:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+  }
+
+  .btn-copy.copied {
+    background-color: #dcfce7;
+    color: #15803d;
+    border-color: #86efac;
+  }
+
+  /* ----------------------------------------------------
+     RELATED ARTICLES (3 CARDS PER ROW)
+     ---------------------------------------------------- */
+  .related-articles-section {
+    border-top: 1px solid var(--mp-border);
+  }
+
+  .related-grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    margin-top: 2rem;
+  }
+
+  .related-blog-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--mp-white);
+    border-radius: var(--mp-radius-md);
+    border: 1px solid var(--mp-border);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .related-blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(17, 24, 39, 0.08);
+  }
+
+  .related-thumb-link {
+    display: block;
+    text-decoration: none;
+  }
+
+  .related-thumb-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9.6;
+    background-color: #0f172a;
+    overflow: hidden;
+  }
+
+  .related-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+
+  .related-blog-card:hover .related-img {
+    transform: scale(1.05);
+  }
+
+  .related-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.3rem 0.65rem;
+    font-size: 0.725rem;
+    font-weight: 600;
+    color: var(--mp-white);
+    background: rgba(17, 24, 39, 0.75);
+    backdrop-filter: blur(6px);
+    border-radius: 999px;
+  }
+
+  .related-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.25rem;
+  }
+
+  .related-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.775rem;
+    color: var(--mp-muted);
+    margin-bottom: 0.65rem;
+  }
+
+  .related-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0.65rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .related-title-link {
+    color: var(--mp-ink);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .related-title-link:hover {
+    color: var(--mp-red);
+  }
+
+  .related-excerpt {
+    font-size: 0.85rem;
+    color: var(--mp-text);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .related-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0.85rem;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .related-read-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: var(--mp-red);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+
+  .related-read-btn:hover {
+    transform: translateX(3px);
+  }
+
+  /* ----------------------------------------------------
+     RESPONSIVE BREAKPOINTS
+     ---------------------------------------------------- */
+  @media (max-width: 991px) {
+    .related-grid-3col {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .related-grid-3col {
+      grid-template-columns: 1fr;
+    }
+
+    .article-action-banner {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 1.5rem;
+    }
+
+    .banner-cta-button {
+      justify-content: center;
+    }
+
+    .author-bio-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .article-meta-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .share-buttons-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+
+    .social-share-btn {
+      justify-content: center;
+    }
+  }
+</style>

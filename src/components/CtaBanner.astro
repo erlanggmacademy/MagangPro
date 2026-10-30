@@ -1,0 +1,111 @@
+---
+import WhatsAppButton from './WhatsAppButton.astro';
+
+interface Props {
+  eyebrow?: string;
+  title?: string;
+  desc?: string;
+  waLabel?: string;
+  waMessage?: string;
+}
+
+const {
+  eyebrow = 'Siap Memulai Langkah Baru?',
+  title = 'Tingkatkan Kompetensi Nyata Bersama MagangPro',
+  desc = 'Jangan ragu untuk berdiskusi mengenai ketersediaan kuota magang, persyaratan sekolah/kampus, atau silabus pelatihan digital marketing untuk tim Anda.',
+  waLabel = 'Chat WhatsApp Admin',
+  waMessage = 'Halo MagangPro, saya ingin bertanya lebih lanjut mengenai program magang yang tersedia.',
+} = Astro.props;
+---
+
+<section class="mp-section mp-cta-banner">
+  <div class="mp-container">
+    <div class="banner-inner">
+      <span class="eyebrow eyebrow--light">{eyebrow}</span>
+      <h2 class="banner-title">
+        {title}
+      </h2>
+      <p class="banner-desc">
+        {desc}
+      </p>
+      <div class="banner-actions">
+        <WhatsAppButton
+          label={waLabel}
+          message={waMessage}
+          variant="whatsapp"
+          size="lg"
+        />
+      </div>
+      <div class="banner-location">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span>Mojolangu, Kota Malang, Jawa Timur 65142</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .mp-cta-banner {
+    background-color: var(--mp-ink);
+    color: var(--mp-white);
+    text-align: center;
+    padding-block: clamp(60px, 8vw, 90px);
+  }
+
+  .banner-inner {
+    max-width: 780px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eyebrow--light {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    margin-bottom: 14px;
+    display: inline-block;
+  }
+
+  .banner-title {
+    color: #ffffff;
+    font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+    margin-bottom: 16px;
+    line-height: 1.25;
+  }
+
+  .banner-desc {
+    color: #d1d5db;
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .banner-actions {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .banner-actions :global(.mp-button) {
+    margin-inline: auto;
+  }
+
+  .banner-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+</style>

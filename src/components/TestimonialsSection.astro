@@ -1,0 +1,238 @@
+---
+import { testimonialsData } from '../data/testimonials';
+---
+
+<section class="mp-section mp-testimonials-section" id="testimoni">
+  <div class="mp-container">
+    <div class="section-header text-center">
+      <span class="eyebrow eyebrow--red">TESTIMONIALS</span>
+      <h2 class="heading-lg">Apa Kata Peserta & Mitra Tentang MagangPro?</h2>
+      <p>
+        Cerita nyata dari alumni siswa SMK, mahasiswa, dan pemilik UMKM yang telah merasakan pendampingan intensif serta kurikulum industri terarah kami.
+      </p>
+    </div>
+
+    <!-- 3-Column Testimonials Track Matching Reference Design -->
+    <div class="testimonials-grid">
+      {testimonialsData.map((item) => (
+        <div class="testimonial-column">
+          <!-- Speech Bubble Card with Top Floating Number Badge -->
+          <div class="testimonial-bubble">
+            <div class="bubble-number-badge" style={`background: ${item.badgeColor};`}>
+              <span>{item.number}</span>
+            </div>
+            <p class="bubble-quote-text">{item.quote}</p>
+          </div>
+
+          <!-- Circular Avatar Ring with Dashed Border (Overlapping the bubble bottom) -->
+          <div class="testimonial-avatar-container">
+            <div class="avatar-dashed-ring">
+              <div class="avatar-letter-circle" style={`background: ${item.avatarBg};`}>
+                <span>{item.initials}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Author Info (Name and Role) with Subtle Pedestal Floor -->
+          <div class="testimonial-author-block">
+            <h3 class="author-name">{item.name}</h3>
+            <p class="author-role">{item.role}</p>
+            <div class="author-pedestal-shadow" aria-hidden="true"></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .mp-testimonials-section {
+    position: relative;
+    background-color: #fafbfc;
+    padding-top: clamp(60px, 7vw, 90px);
+    padding-bottom: clamp(70px, 8vw, 100px);
+    overflow: hidden;
+  }
+
+  .eyebrow--red {
+    color: var(--mp-red);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  .section-header.text-center {
+    text-align: center;
+    max-width: 740px;
+    margin-inline: auto;
+    margin-bottom: clamp(48px, 6vw, 72px);
+  }
+
+  .section-header.text-center p {
+    margin-inline: auto;
+  }
+
+  /* Grid: 3 columns matching reference screenshot */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(24px, 3vw, 36px);
+    align-items: flex-start;
+  }
+
+  @media (max-width: 992px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      max-width: 560px;
+      margin-inline: auto;
+      gap: 56px;
+    }
+  }
+
+  /* Column Container */
+  .testimonial-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  /* Speech Bubble Card */
+  .testimonial-bubble {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 26px;
+    padding: clamp(38px, 4vw, 44px) clamp(24px, 2.5vw, 32px) clamp(44px, 4.5vw, 52px);
+    box-shadow: 0 12px 36px -6px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.02);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 260ms cubic-bezier(0.16, 1, 0.3, 1);
+    min-height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .testimonial-column:hover .testimonial-bubble {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px -10px rgba(15, 23, 42, 0.12);
+  }
+
+  /* Top Number Badge (1, 2, 3) */
+  .bubble-number-badge {
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: var(--mp-font-body);
+    font-size: 0.875rem;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+    z-index: 3;
+    border: 2px solid #ffffff;
+  }
+
+  /* Quote Text */
+  .bubble-quote-text {
+    font-family: var(--mp-font-body);
+    font-size: clamp(0.875rem, 1.05vw, 0.9375rem);
+    color: #475569;
+    line-height: 1.68;
+    text-align: center;
+    font-style: normal;
+    margin: 0;
+  }
+
+  /* Circular Avatar Ring (Floating overlapping bottom of the bubble) */
+  .testimonial-avatar-container {
+    position: relative;
+    z-index: 5;
+    margin-top: -42px;
+    margin-bottom: 14px;
+  }
+
+  /* Red dashed decorative ring from reference */
+  .avatar-dashed-ring {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    border: 2px dashed rgba(198, 40, 40, 0.38);
+    background: #ffffff;
+    padding: 5px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 260ms ease;
+  }
+
+  .testimonial-column:hover .avatar-dashed-ring {
+    transform: scale(1.06);
+    border-color: var(--mp-red);
+  }
+
+  /* Letter initials circle */
+  .avatar-letter-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: var(--mp-font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Author Information Block */
+  .testimonial-author-block {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .author-name {
+    font-family: var(--mp-font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+    margin: 0 0 4px 0;
+  }
+
+  .author-role {
+    font-family: var(--mp-font-body);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--mp-red, #c62828);
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  /* Subtle floor pedestal perspective shadow from reference image */
+  .author-pedestal-shadow {
+    width: 180px;
+    height: 14px;
+    background: radial-gradient(ellipse at center, rgba(15, 23, 42, 0.08) 0%, rgba(15, 23, 42, 0) 70%);
+    margin-top: 12px;
+    pointer-events: none;
+  }
+</style>

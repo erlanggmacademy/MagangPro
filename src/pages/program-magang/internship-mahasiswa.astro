@@ -1,0 +1,468 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+const pageTitle = "Internship Mahasiswa di Malang — Magang Mandiri & MBKM | MagangPro";
+const pageDescription = "Program internship mahasiswa D3, D4, dan S1 berbasis proyek industri nyata di Kota Malang. Relevan untuk konversi SKS, portofolio profesional, dan persiapan karier industri digital.";
+
+const breadcrumbs = [
+  { label: 'Beranda', href: '/' },
+  { label: 'Program Magang', href: '/program-magang' },
+  { label: 'Internship Mahasiswa' },
+];
+
+const academicTracks = [
+  {
+    title: 'Software & Web Development',
+    audience: 'Teknik Informatika / Ilmu Komputer / Sistem Informasi',
+    desc: 'Membangun arsitektur website modern, optimasi kecepatan Core Web Vitals, implementasi komponen Astro & TypeScript, serta kolaborasi repositori Git skala profesional.',
+    deliverables: ['Website komersial aktif & responsif', 'Clean codebase dengan standar industri', 'Dokumentasi teknis & deployment cloud'],
+  },
+  {
+    title: 'Growth & SEO Specialist',
+    audience: 'Bisnis Digital / Manajemen Pemasaran / Sistem Informasi',
+    desc: 'Riset kata kunci kompetitif, audit teknikal SEO on-page & off-page, content clustering untuk domain komersial, serta analitik konversi data pengunjung.',
+    deliverables: ['Laporan audit SEO komprehensif', 'Peningkatan ranking kata kunci Google', 'Setup Google Search Console & Tag Manager'],
+  },
+  {
+    title: 'UI/UX Product Design',
+    audience: 'DKV / Multimedia / Desain Grafis / Human-Computer Interaction',
+    desc: 'Menyusun design system terstruktur di Figma, membuat user flow & interactive wireframes, perancangan prototipe antarmuka, serta usability testing.',
+    deliverables: ['Figma Design System & Styleguide', 'Interactive High-Fidelity Prototype', 'Case study UI/UX siap unggah ke Behance'],
+  },
+  {
+    title: 'Digital Business & Growth Strategy',
+    audience: 'Bisnis Digital / Ilmu Komunikasi / Manajemen',
+    desc: 'Perancangan kampanye promosi terintegrasi, riset pasar kompetitor, strategi retensi pelanggan via WhatsApp CRM, serta reporting performa mingguan.',
+    deliverables: ['Strategi kampanye digital multi-channel', 'Alur automasi komunikasi customer care', 'Laporan evaluasi performa bisnis digital'],
+  },
+];
+
+const academicSupports = [
+  {
+    number: '01',
+    title: 'Surat Penerimaan Resmi (LoA)',
+    desc: 'Penerbitan Letter of Acceptance (LoA) bertanda tangan & stempel pimpinan industri untuk kelengkapan administrasi dekanat atau program studi.',
+  },
+  {
+    number: '02',
+    title: 'Kesesuaian Rubrik Nilai Kampus',
+    desc: 'Mentor industri siap mengisi lembar evaluasi berkala dan penilaian akhir sesuai instrumen matriks konversi SKS yang disyaratkan perguruan tinggi.',
+  },
+  {
+    number: '03',
+    title: 'Pendampingan Laporan & Seminar',
+    desc: 'Bimbingan data dan studi kasus riil untuk penyusunan laporan magang resmi, serta ketersediaan tanda tangan pembimbing industri untuk sidang kampus.',
+  },
+  {
+    number: '04',
+    title: 'Portofolio Teruji Siap Kerja',
+    desc: 'Bukan sekadar surat keterangan, Anda membawa portofolio karya nyata yang dapat diverifikasi oleh recruiter saat melamar kerja setelah wisuda.',
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- 1. Unified Page Banner -->
+  <PageBanner
+    pill="Jalur Mahasiswa D3 / D4 / S1"
+    title="Internship Mahasiswa"
+    description="Program magang berbasis proyek industri riil di Kota Malang untuk memvalidasi teori kampus, memenuhi konversi SKS, dan membangun portofolio profesional siap kerja."
+    breadcrumbs={breadcrumbs}
+  />
+
+  <!-- 2. Section Intro Akademis -->
+  <section class="mp-section" id="intro-mahasiswa">
+    <div class="mp-container">
+      <div class="mhs-intro-grid">
+        <div class="mhs-intro-text">
+          <span class="eyebrow">Gap Teori & Industri</span>
+          <h2 class="heading-lg">Tuntaskan Teori di Kampus, Asah Pengalaman di MagangPro</h2>
+          <p class="lead-text">
+            Banyak mahasiswa menyelesaikan masa magang tanpa karya nyata yang dapat dibanggakan. Di MagangPro Malang, kami merancang program internship yang menempatkan Anda langsung di dapur proyek industri digital.
+          </p>
+          <p>
+            Anda akan berkolaborasi dalam tim lintas divisi: developer bekerja berdampingan dengan desainer UI/UX dan digital marketer. Pola kerja ini melatih soft skill komunikasi, problem-solving, serta pemahaman alur kerja modern yang dicari perusahaan teknologi.
+          </p>
+
+          <div class="mhs-meta-points">
+            <div class="point-item">
+              <span class="p-num">3–6</span>
+              <span class="p-text">Bulan Durasi Program (Disesuaikan Kalender SKS)</span>
+            </div>
+            <div class="point-item">
+              <span class="p-num">100%</span>
+              <span class="p-text">Proyek Nyata Terverifikasi untuk CV & LinkedIn</span>
+            </div>
+            <div class="point-item">
+              <span class="p-num">1-on-1</span>
+              <span class="p-text">Mentoring Langsung dari Praktisi Industri Malang</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mhs-cta-box">
+          <span class="cta-box-badge">Buka Peluang Karier</span>
+          <h3>Siap Menjadi Talenta Siap Kerja?</h3>
+          <p>
+            Konsultasikan rencana periode magang Anda, apakah untuk Magang Mandiri, MBKM, atau pemenuhan tugas akhir/skripsi terapan.
+          </p>
+          <ul class="mhs-check-list">
+            <li>✓ Terbuka untuk seluruh kampus di Indonesia</li>
+            <li>✓ Lokasi strategis dekat sentra kampus Malang</li>
+            <li>✓ Dukungan penuh surat & berkas administrasi kampus</li>
+          </ul>
+          <div class="btn-wrap">
+            <WhatsAppButton
+              label="Konsultasi Magang Mahasiswa"
+              message="Halo MagangPro, saya mahasiswa ingin bertanya ketersediaan posisi internship untuk konversi SKS / magang mandiri."
+              variant="primary"
+              size="md"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Section Track Spesialisasi -->
+  <section class="mp-section mp-section--surface" id="track-spesialisasi">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Pilihan Jalur Kompetensi</span>
+        <h2 class="heading-lg">4 Track Spesialisasi Proyek Mahasiswa</h2>
+        <p>Pilih fokus spesialisasi yang relevan dengan skripsi, minat riset, atau arah karier profesional Anda.</p>
+      </div>
+
+      <div class="tracks-grid">
+        {academicTracks.map((track) => (
+          <div class="track-card">
+            <span class="track-audience-pill">{track.audience}</span>
+            <h3 class="track-title">{track.title}</h3>
+            <p class="track-desc">{track.desc}</p>
+
+            <div class="deliverables-box">
+              <span class="del-heading">Output Riil yang Dihasilkan:</span>
+              <ul class="del-list">
+                {track.deliverables.map((d) => (
+                  <li>
+                    <span class="del-check">✓</span>
+                    <span>{d}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Section Dukungan Akademis & Konversi SKS -->
+  <section class="mp-section" id="dukungan-akademis">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Legalitas & Nilai</span>
+        <h2 class="heading-lg">Dukungan Penuh untuk Kebutuhan Kampus</h2>
+        <p>Kami menjamin seluruh berkas dan kriteria akademik terpenuhi secara tepat waktu dan profesional.</p>
+      </div>
+
+      <div class="academic-grid">
+        {academicSupports.map((item) => (
+          <div class="academic-card">
+            <span class="academic-num">{item.number}</span>
+            <h3 class="academic-title">{item.title}</h3>
+            <p class="academic-desc">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Unified Closing CTA Banner -->
+  <CtaBanner
+    eyebrow="Tingkatkan Nilai Diri Anda"
+    title="Raih Pengalaman Internship Industri Nyata di MagangPro"
+    desc="Diskusikan jadwal magang dan posisi yang Anda minati langsung dengan tim kami di Mojolangu Kota Malang."
+    waLabel="Konsultasi Magang Mahasiswa"
+    waMessage="Halo MagangPro, saya ingin mendaftar program internship mahasiswa di Kota Malang."
+  />
+</BaseLayout>
+
+<style>
+  /* Intro Grid */
+  .mhs-intro-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: clamp(32px, 5vw, 60px);
+    align-items: center;
+  }
+
+  @media (max-width: 920px) {
+    .mhs-intro-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .lead-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #1e293b;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .mhs-intro-text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 24px;
+  }
+
+  .mhs-meta-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding-top: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .mhs-meta-points {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .point-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 18px 14px;
+    text-align: center;
+  }
+
+  .p-num {
+    display: block;
+    font-family: var(--mp-font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--mp-red);
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+
+  .p-text {
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.4;
+  }
+
+  .mhs-cta-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: clamp(28px, 4vw, 36px);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  }
+
+  .cta-box-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--mp-red);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .mhs-cta-box h3 {
+    font-family: var(--mp-font-heading);
+    font-size: 1.35rem;
+    color: #0f172a;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .mhs-cta-box p {
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .mhs-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.84rem;
+    color: #334155;
+    font-weight: 600;
+  }
+
+  .btn-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .btn-wrap :global(.mp-button) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Tracks Grid */
+  .tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 820px) {
+    .tracks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .track-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    padding: clamp(26px, 3.5vw, 34px);
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .track-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  }
+
+  .track-audience-pill {
+    display: inline-block;
+    align-self: flex-start;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    margin-bottom: 12px;
+  }
+
+  .track-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.3rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .track-desc {
+    font-size: 0.875rem;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+
+  .deliverables-box {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 16px;
+    border: 1px solid #f1f5f9;
+  }
+
+  .del-heading {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+  }
+
+  .del-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .del-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: #334155;
+    line-height: 1.45;
+  }
+
+  .del-check {
+    color: #16a34a;
+    font-weight: 800;
+    font-size: 0.85rem;
+  }
+
+  /* Academic Grid */
+  .academic-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .academic-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .academic-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .academic-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 20px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  }
+
+  .academic-num {
+    font-family: var(--mp-font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--mp-red);
+    line-height: 1;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .academic-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.05rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+
+  .academic-desc {
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+</style>

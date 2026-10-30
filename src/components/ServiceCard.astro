@@ -1,0 +1,109 @@
+---
+import type { ServiceItem } from '../data/services';
+import WhatsAppButton from './WhatsAppButton.astro';
+
+interface Props {
+  service: ServiceItem;
+}
+
+const { service } = Astro.props;
+---
+
+<div class="mp-card service-card">
+  <div class="card-top">
+    <span class="mp-badge mp-badge--red">{service.badge}</span>
+    <h3 class="card-title">{service.title}</h3>
+    <p class="card-desc">{service.description}</p>
+  </div>
+
+  <div class="points-wrapper">
+    <span class="points-label">Ruang Lingkup & Materi:</span>
+    <ul class="points-list">
+      {service.points.map((point) => (
+        <li>
+          <svg class="point-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>{point}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="card-bottom">
+    <WhatsAppButton
+      label="Konsultasi Layanan"
+      message={service.waMessage}
+      variant="secondary"
+      size="md"
+      class="w-full"
+    />
+  </div>
+</div>
+
+<style>
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(24px, 2.5vw, 28px);
+    border-radius: var(--mp-radius-md);
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    color: var(--mp-ink);
+  }
+
+  .card-desc {
+    font-size: 0.875rem;
+    color: var(--mp-text);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .points-wrapper {
+    background: var(--mp-surface);
+    border: 1px solid var(--mp-border);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .points-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--mp-ink);
+    margin-bottom: 10px;
+  }
+
+  .points-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .points-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.8125rem;
+    color: var(--mp-text);
+    line-height: 1.4;
+  }
+
+  .point-icon {
+    color: var(--mp-red);
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+</style>

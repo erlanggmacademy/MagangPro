@@ -1,16 +1,359 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ProgramCard from '../components/ProgramCard.astro';
+import ExpandingServices from '../components/ExpandingServices.astro';
+import TestimonialsSection from '../components/TestimonialsSection.astro';
+import PortfolioShowcase from '../components/PortfolioShowcase.astro';
+import FaqSection from '../components/FaqSection.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { mainPrograms } from '../data/programs';
+
+const pageTitle = "Program Magang SMK & Mahasiswa dan Pelatihan Digital Marketing | MagangPro";
+const pageDescription = "MagangPro menyediakan informasi program magang SMK/PKL dan internship mahasiswa di bidang IT, digital marketing, bisnis digital, multimedia, serta pelatihan digital marketing untuk UMKM, instansi, dan perusahaan di Mojolangu, Kota Malang.";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- 1. Hero Section -->
+  <Hero />
+
+
+  <!-- 2. Mengapa Memilih MagangPro? (Comparison Section / Nilai Lebih) -->
+  <section class="mp-section mp-section--surface" id="keunggulan">
+    <div class="mp-container">
+      <div class="section-header">
+        <span class="eyebrow">Nilai Lebih</span>
+        <h2 class="heading-lg">Mengapa Memilih Magang di MagangPro?</h2>
+        <p>
+          Kami memastikan setiap peserta magang mendapatkan pengalaman belajar yang bermakna dan terstruktur sesuai standar kebutuhan industri.
+        </p>
+      </div>
+
+      <div class="comparison-grid">
+        <!-- Kolom Kendala Biasa -->
+        <div class="comparison-card comparison-card--negative">
+          <div class="comp-badge comp-badge--gray">Kendala Tempat Magang Konvensional</div>
+          <h3 class="comp-title">Tantangan yang Sering Dihadapi Peserta</h3>
+          <ul class="comp-list">
+            <li>
+              <div class="comp-icon-box comp-icon-box--cross">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </div>
+              <p>Diberikan tugas administratif yang tidak relevan dengan jurusan sekolah/kuliah.</p>
+            </li>
+            <li>
+              <div class="comp-icon-box comp-icon-box--cross">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </div>
+              <p>Minim pendampingan mentor teknis sehingga bingung bagaimana mengembangkan keahlian.</p>
+            </li>
+            <li>
+              <div class="comp-icon-box comp-icon-box--cross">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </div>
+              <p>Tidak menghasilkan portofolio nyata yang bisa dipamerkan saat lulus atau melamar kerja.</p>
+            </li>
+            <li>
+              <div class="comp-icon-box comp-icon-box--cross">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </div>
+              <p>Kurang bimbingan dalam menyusun laporan akhir PKL atau konversi magang kampus.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Kolom Standar MagangPro -->
+        <div class="comparison-card comparison-card--positive">
+          <div class="comp-badge comp-badge--red">Standar Pembelajaran MagangPro</div>
+          <h3 class="comp-title">Pengalaman Magang Terstruktur & Nyata</h3>
+          <ul class="comp-list">
+            <li>
+              <div class="comp-icon-box comp-icon-box--check">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p>Fokus pada proyek teknologi, digital marketing, desain, dan bisnis sesuai bidang jurusan.</p>
+            </li>
+            <li>
+              <div class="comp-icon-box comp-icon-box--check">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p>Pendampingan teknis langsung dengan feedback berkala untuk menajamkan skill nyata.</p>
+            </li>
+            <li>
+              <div class="comp-icon-box comp-icon-box--check">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p>Membangun portofolio karya nyata yang siap dicantumkan dalam CV dan LinkedIn.</p>
+            </li>
+            <li>
+              <div class="comp-icon-box comp-icon-box--check">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <p>Dukungan dokumen resmi, penilaian objektif, serta asistensi materi laporan magang.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Section Pilih Program Magang -->
+  <section class="mp-section" id="program-pilihan">
+    <div class="mp-container">
+      <div class="section-header">
+        <span class="eyebrow">Pilihan Program</span>
+        <h2 class="heading-lg">Program Magang Dirancang Sesuai Jenjang</h2>
+        <p>
+          Kami membedakan jalur Praktik Kerja Lapangan (PKL) untuk siswa SMK dan program internship untuk mahasiswa agar materi dan target capaian relevan.
+        </p>
+      </div>
+
+      <div class="program-cards-grid">
+        {mainPrograms.map((program) => (
+          <ProgramCard program={program} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Section Pelatihan Digital Marketing & Jasa Digital -->
+  <section class="mp-section mp-section--surface" id="pelatihan-jasa">
+    <div class="mp-container">
+      <div class="section-header">
+        <span class="eyebrow">Solusi Organisasi & Bisnis</span>
+        <h2 class="heading-lg">Pelatihan Digital Marketing & Layanan Digital</h2>
+        <p>
+          Selain program magang, MagangPro menyelenggarakan pelatihan peningkatan kapasitas digital untuk pelaku UMKM, staf instansi pemerintah, dan perusahaan.
+        </p>
+      </div>
+
+      <ExpandingServices />
+    </div>
+  </section>
+
+  <!-- 7. Section Testimoni Peserta & Mitra MagangPro -->
+  <TestimonialsSection />
+
+  <!-- 8. Section Portofolio & Galeri Aktivitas MagangPro -->
+  <PortfolioShowcase />
+
+  <!-- 8. FAQ Section with Schema.org FAQPage -->
+  <FaqSection />
+
+  <!-- 9. Closing Call to Action Banner -->
+  <section class="mp-section mp-cta-banner">
+    <div class="mp-container">
+      <div class="banner-inner">
+        <span class="eyebrow eyebrow--light">Siap Memulai Langkah Baru?</span>
+        <h2 class="banner-title">
+          Tingkatkan Kompetensi Nyata Bersama MagangPro
+        </h2>
+        <p class="banner-desc">
+          Jangan ragu untuk berdiskusi mengenai ketersediaan kuota magang, persyaratan sekolah/kampus, atau silabus pelatihan digital marketing untuk tim Anda.
+        </p>
+        <div class="banner-actions">
+          <WhatsAppButton
+            label="Chat WhatsApp Admin"
+            message="Halo MagangPro, saya ingin bertanya lebih lanjut mengenai program yang tersedia."
+            variant="whatsapp"
+            size="lg"
+          />
+        </div>
+        <div class="banner-location">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Mojolangu, Kota Malang, Jawa Timur 65142</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+
+  /* Program Cards Grid */
+  .program-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 1040px;
+    margin-inline: auto;
+  }
+
+  @media (min-width: 768px) {
+    .program-cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Comparison Section (Inspired by Sparks English) */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 1040px;
+    margin-inline: auto;
+  }
+
+  @media (min-width: 768px) {
+    .comparison-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .comparison-card {
+    background: #ffffff;
+    border-radius: var(--mp-radius-lg);
+    padding: clamp(24px, 3vw, 36px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .comparison-card--negative {
+    border: 1px solid var(--mp-border);
+    background: #fafafa;
+  }
+
+  .comparison-card--positive {
+    border: 2px solid var(--mp-red);
+    box-shadow: 0 16px 36px rgb(198 40 40 / 8%);
+  }
+
+  .comp-badge {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    margin-bottom: 14px;
+  }
+
+  .comp-badge--gray {
+    background: #e5e7eb;
+    color: #4b5563;
+  }
+
+  .comp-badge--red {
+    background: var(--mp-red-soft);
+    color: var(--mp-red);
+  }
+
+  .comp-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--mp-ink);
+  }
+
+  .comp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .comp-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .comp-list li p {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--mp-text);
+  }
+
+  .comp-icon-box {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .comp-icon-box--cross {
+    background: #fee2e2;
+    color: #dc2626;
+  }
+
+  .comp-icon-box--check {
+    background: #dcfce7;
+    color: #16a34a;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  /* CTA Banner */
+  .mp-cta-banner {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .banner-inner {
+    max-width: 780px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eyebrow--light {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+  }
+
+  .banner-title {
+    color: #ffffff;
+    font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+    margin-bottom: 16px;
+  }
+
+  .banner-desc {
+    color: #d1d5db;
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .banner-actions {
+    margin-bottom: 20px;
+  }
+
+  .banner-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+</style>

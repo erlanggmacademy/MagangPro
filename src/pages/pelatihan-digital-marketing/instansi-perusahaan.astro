@@ -1,0 +1,348 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+const pageTitle = "Pelatihan Digital Marketing Instansi & Perusahaan di Malang | MagangPro";
+const pageDescription = "Workshop in-house dan pelatihan kapasitas digital aparatur instansi pemerintah dan staf korporat di Kota Malang. Publikasi digital, iklan online, dan analitik data.";
+
+const breadcrumbs = [
+  { label: 'Beranda', href: '/' },
+  { label: 'Pelatihan & Jasa', href: '/pelatihan-digital-marketing' },
+  { label: 'Instansi & Perusahaan' },
+];
+
+const pillars = [
+  {
+    num: '01',
+    title: 'Digital PR & Komunikasi Publik Modern',
+    desc: 'Pengelolaan kanal publikasi instansi yang kredibel, penyusunan siaran pers ramah algoritma mesin pencari, serta manajemen respons cepat terhadap sentimen publik di media sosial.',
+    output: 'Standar Operasional Prosedur (SOP) komunikasi publik digital yang rapi dan terukur.',
+  },
+  {
+    num: '02',
+    title: 'Manajemen Kampanye Iklan Berbayar',
+    desc: 'Teknik merancang dan mengoptimalkan iklan digital melalui Meta Ads (Instagram/Facebook) dan Google Ads untuk sosialisasi program kerja atau promosi produk komersial.',
+    output: 'Efisiensi anggaran promosi dengan targeting audiens yang tepat sasaran.',
+  },
+  {
+    num: '03',
+    title: 'Pengukuran KPI & Dashboard Analitik',
+    desc: 'Penyusunan dashboard visual interaktif berbasis Google Looker Studio dan integrasi Google Analytics 4 (GA4) untuk memantau trafik pengunjung dan performa program.',
+    output: 'Laporan visual real-time yang siap dipresentasikan ke jajaran pimpinan.',
+  },
+  {
+    num: '04',
+    title: 'Standar Keamanan & Etika Publikasi',
+    desc: 'Protokol keamanan akun sosial media institusi, manajemen akses multi-admin, mitigasi krisis hoaks, serta etika penyampaian informasi sesuai regulasi ITE.',
+    output: 'Keamanan aset digital institusi terlindungi dari risiko pembajakan atau kebocoran data.',
+  },
+];
+
+const legalCompliances = [
+  {
+    title: 'Proposal & Term of Reference (ToR)',
+    desc: 'Kami menyusun proposal kegiatan lengkap dengan rincian silabus, jadwal sesi, profil instruktur, dan rincian anggaran yang transparan.',
+  },
+  {
+    title: 'Kelengkapan Pajak & Invoice Resmi',
+    desc: 'Dukungan berkas perpajakan resmi, faktur, invoice perusahaan, serta fleksibilitas mekanisme pembayaran termin pengadaan instansi.',
+  },
+  {
+    title: 'Perjanjian Kerja Sama (MoU)',
+    desc: 'Penandatanganan nota kesepahaman kerja sama legal antara pimpinan instansi/perusahaan dengan MagangPro.',
+  },
+  {
+    title: 'Sertifikat Pelatihan Berpredikat',
+    desc: 'Setiap staf yang lulus evaluasi menerima sertifikat resmi tanda kompetensi yang dapat dilampirkan dalam portofolio kinerja ASN/karyawan.',
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- 1. Unified Page Banner -->
+  <PageBanner
+    pill="Program Korporat & Pemerintahan"
+    title="Pelatihan Instansi & Perusahaan"
+    description="Program workshop in-house terstruktur untuk meningkatkan kompetensi digital staf organisasi dalam publikasi publik, kampanye terukur, dan analitik performa."
+    breadcrumbs={breadcrumbs}
+  />
+
+  <!-- 2. Section Intro Korporat -->
+  <section class="mp-section" id="intro-instansi">
+    <div class="mp-container">
+      <div class="instansi-intro-grid">
+        <div class="instansi-text-col">
+          <span class="eyebrow">Transformasi Kapasitas Tim</span>
+          <h2 class="heading-lg">Tingkatkan Efektivitas Komunikasi Digital Organisasi Anda</h2>
+          <p class="lead-text">
+            Perubahan dinamika informasi menuntut aparatur pemerintah dan tim korporat memiliki kecakapan digital yang relevan: mampu menyampaikan pesan kebijakan publik secara persuasif serta mengelola platform digital secara profesional.
+          </p>
+          <p>
+            MagangPro menyelenggarakan pelatihan *in-house* dan *hands-on workshop* dengan silabus adaptif. Materi tidak bersifat generik, melainkan disesuaikan langsung dengan studi kasus riil program kerja dinas, BUMD, maupun sasaran bisnis perusahaan Anda.
+          </p>
+
+          <div class="instansi-badges">
+            <span class="i-badge">✓ Pelatihan In-House di Kantor Klien</span>
+            <span class="i-badge">✓ Workshop di Studio MagangPro Malang</span>
+            <span class="i-badge">✓ Trainer Praktisi Berpengalaman</span>
+          </div>
+        </div>
+
+        <div class="instansi-img-col">
+          <img
+            src="/images/services/pelatihan-instansi.webp"
+            alt="Pelatihan Digital Marketing Instansi dan Korporat Malang"
+            width="600"
+            height="400"
+            loading="lazy"
+            decoding="async"
+            class="instansi-hero-img"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Section 4 Pilar Materi Khusus Instansi -->
+  <section class="mp-section mp-section--surface" id="silabus-instansi">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Silabus Khusus Organisasi</span>
+        <h2 class="heading-lg">Materi yang Relevan untuk Kebutuhan Kerja Modern</h2>
+        <p>Disusun oleh praktisi komunikasi digital dan software engineer untuk menjawab tantangan operasional harian tim Anda.</p>
+      </div>
+
+      <div class="instansi-pillars-grid">
+        {pillars.map((p) => (
+          <div class="i-pillar-card">
+            <span class="i-pillar-num">{p.num}</span>
+            <h3 class="i-pillar-title">{p.title}</h3>
+            <p class="i-pillar-desc">{p.desc}</p>
+            <div class="i-pillar-output">
+              <strong>Output Nyata:</strong> {p.output}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Section Dukungan Administrasi & Legalitas -->
+  <section class="mp-section" id="legalitas-pengadaan">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Akuntabilitas & Legalitas</span>
+        <h2 class="heading-lg">Dukungan Lengkap untuk Pengadaan Resmi</h2>
+        <p>Kami memahami standar administrasi dan kepatuhan anggaran instansi pemerintah maupun korporasi swasta.</p>
+      </div>
+
+      <div class="legal-grid">
+        {legalCompliances.map((item) => (
+          <div class="legal-card">
+            <div class="legal-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="legal-title">{item.title}</h3>
+            <p class="legal-desc">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Unified Closing CTA Banner -->
+  <CtaBanner
+    eyebrow="Tingkatkan Kapasitas Tim"
+    title="Jadwalkan In-House Training untuk Organisasi Anda"
+    desc="Diskusikan kebutuhan silabus, jumlah staf peserta, dan jadwal pelaksanaan bersama konsultan MagangPro."
+    waLabel="Konsultasi Pelatihan Korporat"
+    waMessage="Halo MagangPro, kami dari instansi/perusahaan ingin berkonsultasi mengenai in-house training digital marketing."
+  />
+</BaseLayout>
+
+<style>
+  /* Instansi Intro */
+  .instansi-intro-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .instansi-intro-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .lead-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #1e293b;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .instansi-text-col p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 24px;
+  }
+
+  .instansi-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .i-badge {
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .instansi-hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.09);
+    object-fit: cover;
+  }
+
+  /* Pillars Grid */
+  .instansi-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 1040px;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 780px) {
+    .instansi-pillars-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .i-pillar-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    padding: clamp(26px, 3.5vw, 34px);
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .i-pillar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  }
+
+  .i-pillar-num {
+    font-family: var(--mp-font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--mp-red);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .i-pillar-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .i-pillar-desc {
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 18px;
+    flex-grow: 1;
+  }
+
+  .i-pillar-output {
+    background: #f8fafc;
+    border-left: 3px solid var(--mp-red);
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.82rem;
+    color: #334155;
+    line-height: 1.5;
+  }
+
+  .i-pillar-output strong {
+    color: #0f172a;
+  }
+
+  /* Legal Grid */
+  .legal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .legal-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .legal-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .legal-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 20px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  }
+
+  .legal-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(198, 40, 40, 0.08);
+    color: var(--mp-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .legal-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.05rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+
+  .legal-desc {
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+</style>

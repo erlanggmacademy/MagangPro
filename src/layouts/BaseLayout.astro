@@ -1,0 +1,126 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingActions from '../components/FloatingActions.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  noindex?: boolean;
+  ogImage?: string;
+}
+
+const siteUrl = 'https://programmagang.web.id';
+const brandName = 'MagangPro';
+
+const {
+  title,
+  description,
+  canonical,
+  noindex = false,
+  ogImage = `${siteUrl}/images/og-magangpro.png`,
+} = Astro.props;
+
+// Ensure clean canonical URL without trailing slash
+const currentPath = Astro.url.pathname;
+const isHome = currentPath === '/' || currentPath === '';
+const cleanPath = currentPath === '/' ? '' : currentPath.replace(/\/+$/, '');
+const canonicalUrl = canonical || `${siteUrl}${cleanPath}`;
+
+// Schema.org JSON-LD Global Organization + WebSite per PRD Section 8.1
+const globalSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: brandName,
+      url: `${siteUrl}/`,
+      description:
+        'Program magang SMK dan mahasiswa serta pelatihan digital marketing untuk UMKM, instansi, dan perusahaan.',
+      telephone: '+62895639068080',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Mojolangu, Kota Malang',
+        addressRegion: 'Jawa Timur',
+        postalCode: '65142',
+        addressCountry: 'ID',
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+62895639068080',
+        contactType: 'customer support',
+        availableLanguage: ['Indonesian'],
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
+      name: brandName,
+      inLanguage: 'id-ID',
+      publisher: {
+        '@id': `${siteUrl}/#organization`,
+      },
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta
+      name="robots"
+      content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'}
+    />
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={brandName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="id_ID" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicon & Brand Theme -->
+    <link rel="icon" type="image/webp" href="/favicon.webp" />
+    <link rel="apple-touch-icon" href="/favicon.webp" />
+    <meta name="theme-color" content="#C62828" />
+
+    <!-- Schema.org JSON-LD Global -->
+    <script type="application/ld+json" set:html={JSON.stringify(globalSchema)} />
+  </head>
+  <body>
+    <!-- Skip to Content for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Lewati ke konten utama</a>
+
+    <!-- Header Navigation -->
+    <Header />
+
+    <!-- Main Content Area -->
+    <main id="main-content" class={!isHome ? 'has-fixed-header' : ''}>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <Footer />
+
+    <!-- Floating WhatsApp and Go to Top Actions -->
+    <FloatingActions />
+  </body>
+</html>

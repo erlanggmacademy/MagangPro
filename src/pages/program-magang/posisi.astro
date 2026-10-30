@@ -1,0 +1,428 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/PageBanner.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import { internshipPositions } from '../../data/programs';
+
+const pageTitle = "Posisi & Divisi Magang yang Tersedia di Malang | MagangPro";
+const pageDescription = "Daftar 6 posisi magang di MagangPro Malang: Web Development, Digital Marketing & SEO, Social Media & Content Creator, UI/UX Design, IT Support, dan Business Digital.";
+
+const breadcrumbs = [
+  { label: 'Beranda', href: '/' },
+  { label: 'Program Magang', href: '/program-magang' },
+  { label: 'Posisi Magang' },
+];
+
+const positionDetails = [
+  {
+    id: 'web-developer',
+    title: 'Web Development',
+    department: 'Teknologi & Software',
+    audience: 'SMK RPL / Mahasiswa Informatika & SI',
+    desc: 'Fokus pada pengembangan website modern, pemahaman semantic HTML, styling CSS responsif, JavaScript/TypeScript, arsitektur Astro, serta implementasi best practices Web Vitals.',
+    tasks: ['Membangun halaman web interaktif dari desain Figma', 'Optimasi performa & responsive layout multi-device', 'Deployment website ke cloud platform (Vercel/Cloudflare)'],
+    tools: ['Visual Studio Code', 'Git & GitHub', 'Astro', 'TypeScript', 'Node.js'],
+  },
+  {
+    id: 'digital-marketing-seo',
+    title: 'Digital Marketing & SEO',
+    department: 'Pemasaran Digital',
+    audience: 'SMK Bisnis Daring / Mahasiswa Marketing & Bisnis Digital',
+    desc: 'Mempelajari optimasi mesin pencari Google on-page & technical SEO, riset keyword berkonversi tinggi, pengelolaan Google Bisnis Profil lokal, dan analisis trafik web.',
+    tasks: ['Riset kata kunci komersial & audit SEO on-page', 'Optimasi titik lokasi Google Maps & ulasan UMKM', 'Monitoring performa via Google Search Console'],
+    tools: ['Google Search Console', 'Google Analytics 4', 'Ubersuggest / Ahrefs', 'Google Business Profile'],
+  },
+  {
+    id: 'social-media-content',
+    title: 'Social Media & Content Creator',
+    department: 'Creative & Media',
+    audience: 'SMK Multimedia / DKV / Mahasiswa Ilmu Komunikasi',
+    desc: 'Merancang ide konten video pendek vertikal (Reels/TikTok), penulisan naskah copywriting yang memikat, desain visual feeds pendukung, serta analisis engagement audiens.',
+    tasks: ['Produksi & editing video konten edukatif/promosi', 'Menyusun kalender konten bulanan & caption persuasif', 'Analisis metrik tayangan dan interaksi audiens'],
+    tools: ['CapCut', 'Canva Pro', 'Instagram / TikTok Studio', 'Notion Content Board'],
+  },
+  {
+    id: 'ui-ux-design',
+    title: 'UI/UX & Graphic Design',
+    department: 'Desain Kreatif',
+    audience: 'SMK DKV / Multimedia / Mahasiswa Desain Grafis',
+    desc: 'Perancangan identitas visual brand, pembuatan design system komponen di Figma, wireframing antarmuka website & aplikasi, serta pengujian kemudahan penggunaan (usability).',
+    tasks: ['Merancang UI mockup landing page komersial', 'Membuat brand styleguide & aset visual promosi', 'Menyusun interactive prototype untuk demo klien'],
+    tools: ['Figma', 'Adobe Illustrator', 'Photoshop', 'Behance'],
+  },
+  {
+    id: 'network-it-support',
+    title: 'IT Support & Infrastruktur',
+    department: 'Infrastruktur IT',
+    audience: 'SMK TKJ / Mahasiswa Sistem Informasi & Jaringan',
+    desc: 'Pengelolaan lingkungan perangkat lab kerja, konfigurasi jaringan lokal (LAN & WiFi), maintenance hardware/software, serta pemahaman cloud hosting dan DNS server.',
+    tasks: ['Setup & troubleshooting perangkat komputer lab', 'Konfigurasi manajemen bandwidth & router WiFi', 'Pengaturan akun email domain & hosting cPanel'],
+    tools: ['Mikrotik Winbox', 'cPanel Hosting', 'Windows/Linux OS', 'Hardware Diagnostics'],
+  },
+  {
+    id: 'digital-business',
+    title: 'Business Digital & Administrasi',
+    department: 'Bisnis & Operasional',
+    audience: 'SMK Pemasaran / OTKP / Mahasiswa Manajemen Bisnis',
+    desc: 'Membantu riset pasar industri, pengelolaan alur komunikasi pelanggan via WhatsApp Business CRM, pembuatan laporan data berkala, dan dokumentasi administrasi proyek.',
+    tasks: ['Handling komunikasi calon mitra via WhatsApp', 'Pengelolaan spreadsheet database prospek & klien', 'Penyusunan berkas administrasi & laporan mingguan'],
+    tools: ['WhatsApp Business CRM', 'Google Sheets', 'Google Docs', 'Trello / Notion'],
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- 1. Unified Page Banner -->
+  <PageBanner
+    pill="Divisi & Peluang Karier"
+    title="Posisi Magang"
+    description="Eksplorasi 6 bidang divisi magang yang tersedia di MagangPro Malang. Pilih posisi yang paling sesuai dengan minat dan keahlian jurusan Anda."
+    breadcrumbs={breadcrumbs}
+  />
+
+  <!-- 2. Section 6 Posisi Magang -->
+  <section class="mp-section" id="daftar-posisi">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Pilihan Divisi</span>
+        <h2 class="heading-lg">Temukan Peran Terbaik untuk Mengasah Skill Anda</h2>
+        <p>Setiap posisi didampingi oleh mentor praktisi industri dengan kurikulum penugasan berbasis studi kasus nyata.</p>
+      </div>
+
+      <div class="all-positions-grid">
+        {positionDetails.map((pos) => (
+          <div class="pos-full-card" id={pos.id}>
+            <div class="pos-card-head">
+              <span class="dept-badge">{pos.department}</span>
+              <span class="avail-badge">Tersedia Gelombang Baru</span>
+            </div>
+
+            <h3 class="pos-card-title">{pos.title}</h3>
+            <p class="pos-card-aud">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              <span>{pos.audience}</span>
+            </p>
+
+            <p class="pos-card-desc">{pos.desc}</p>
+
+            <div class="pos-tasks-box">
+              <span class="tasks-heading">Tanggung Jawab & Proyek:</span>
+              <ul class="tasks-checklist">
+                {pos.tasks.map((t) => (
+                  <li>
+                    <span class="task-check">✓</span>
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="pos-tools-box">
+              <span class="tools-heading">Tools & Ekosistem Kerja:</span>
+              <div class="tools-wrap">
+                {pos.tools.map((tool) => (
+                  <span class="pos-tool-pill">{tool}</span>
+                ))}
+              </div>
+            </div>
+
+            <div class="pos-card-cta">
+              <a
+                href={`https://wa.me/62895639068080?text=${encodeURIComponent(`Halo MagangPro, saya tertarik untuk mendaftar pada posisi: ${pos.title}. Apakah kuota pada periode terdekat masih tersedia?`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="apply-pos-btn"
+              >
+                <span>Daftar Posisi Ini</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Section Kolaborasi Tim Terintegrasi -->
+  <section class="mp-section mp-section--surface" id="kolaborasi-tim">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Simulasi Dunia Kerja</span>
+        <h2 class="heading-lg">Bekerja Sama Lintas Divisi Seperti di Perusahaan Nyata</h2>
+        <p>Anda tidak bekerja sendiri dalam isolasi. Semua divisi saling berinteraksi menyelesaikan proyek bersama.</p>
+      </div>
+
+      <div class="collab-flow-grid">
+        <div class="collab-card">
+          <div class="collab-step-num">01</div>
+          <h4>Riset & Strategi Bisnis</h4>
+          <p>Tim Digital Business & SEO meriset kebutuhan pasar, target audiens, dan kata kunci potensial untuk proyek klien.</p>
+        </div>
+
+        <div class="collab-card">
+          <div class="collab-step-num">02</div>
+          <h4>Desain Antarmuka & Konten</h4>
+          <p>Tim UI/UX merancang layout visual yang nyaman, sementara tim Content Creator menyiapkan naskah copywriting persuasif.</p>
+        </div>
+
+        <div class="collab-card">
+          <div class="collab-step-num">03</div>
+          <h4>Development & Infrastruktur</h4>
+          <p>Tim Web Developer mewujudkan rancangan menjadi website responsif dan cepat, didukung setup domain stabil oleh IT Support.</p>
+        </div>
+
+        <div class="collab-card">
+          <div class="collab-step-num">04</div>
+          <h4>Peluncuran & Evaluasi</h4>
+          <p>Website diluncurkan bersama, performa dianalisis via Google Search Console, dan dimasukkan ke dalam portofolio bersama.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Unified Closing CTA Banner -->
+  <CtaBanner
+    eyebrow="Tentukan Pilihan Anda"
+    title="Siap Mengembangkan Portofolio pada Posisi Impian?"
+    desc="Hubungi admin MagangPro untuk memeriksa ketersediaan slot posisi dan jadwal masuk gelombang berikutnya."
+    waLabel="Konsultasi Kuota Posisi"
+    waMessage="Halo MagangPro, saya ingin bertanya tentang ketersediaan kuota untuk posisi magang."
+  />
+</BaseLayout>
+
+<style>
+  /* All Positions Grid */
+  .all-positions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1080px;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 860px) {
+    .all-positions-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pos-full-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: clamp(26px, 3.5vw, 36px);
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  }
+
+  .pos-full-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.09);
+    border-color: rgba(198, 40, 40, 0.35);
+  }
+
+  .pos-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .dept-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--mp-red);
+    letter-spacing: 0.06em;
+  }
+
+  .avail-badge {
+    background: rgba(34, 197, 94, 0.12);
+    color: #16a34a;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 9999px;
+  }
+
+  .pos-card-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.35rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .pos-card-aud {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 16px;
+  }
+
+  .pos-card-desc {
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+
+  .pos-tasks-box {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 18px;
+  }
+
+  .tasks-heading {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+  }
+
+  .tasks-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tasks-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.81rem;
+    color: #334155;
+    line-height: 1.45;
+  }
+
+  .task-check {
+    color: #16a34a;
+    font-weight: 800;
+    font-size: 0.82rem;
+  }
+
+  .pos-tools-box {
+    margin-bottom: 22px;
+  }
+
+  .tools-heading {
+    display: block;
+    font-size: 0.72rem;
+    color: #94a3b8;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .tools-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .pos-tool-pill {
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 6px;
+  }
+
+  .pos-card-cta {
+    margin-top: auto;
+    padding-top: 10px;
+  }
+
+  .apply-pos-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 44px;
+    background: #f8fafc;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .apply-pos-btn:hover {
+    background: var(--mp-red);
+    color: #ffffff;
+    border-color: var(--mp-red);
+    box-shadow: 0 4px 14px rgba(198, 40, 40, 0.25);
+  }
+
+  /* Collab Grid */
+  .collab-flow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .collab-flow-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .collab-flow-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .collab-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 20px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  }
+
+  .collab-step-num {
+    font-family: var(--mp-font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--mp-red);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .collab-card h4 {
+    font-family: var(--mp-font-heading);
+    font-size: 1.05rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+  }
+
+  .collab-card p {
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+</style>

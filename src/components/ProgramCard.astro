@@ -1,0 +1,157 @@
+---
+import type { ProgramCategory } from '../data/programs';
+import WhatsAppButton from './WhatsAppButton.astro';
+
+interface Props {
+  program: ProgramCategory;
+}
+
+const { program } = Astro.props;
+---
+
+<div class="mp-card program-card">
+  <div class="card-header">
+    <span class="mp-badge mp-badge--red">{program.badge}</span>
+    <h3 class="card-title">{program.title}</h3>
+    <p class="target-text">
+      <strong>Target:</strong> {program.target}
+    </p>
+  </div>
+
+  <p class="card-desc">{program.description}</p>
+
+  <div class="card-highlights">
+    <span class="highlights-title">Keunggulan Program:</span>
+    <ul class="highlights-list">
+      {program.highlights.map((item) => (
+        <li>
+          <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="card-actions">
+    <WhatsAppButton
+      label="Daftar / Konsultasi"
+      message={program.waMessage}
+      variant="primary"
+      size="md"
+      class="w-full"
+    />
+    <a href={program.href} class="link-detail">
+      <span>Lihat Detail Program & Kurikulum</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<style>
+  .program-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(24px, 3vw, 32px);
+    border-radius: var(--mp-radius-lg);
+    background: #ffffff;
+  }
+
+  .card-header {
+    margin-bottom: 16px;
+  }
+
+  .card-title {
+    font-size: clamp(1.35rem, 2vw, 1.6rem);
+    margin-top: 12px;
+    margin-bottom: 8px;
+    color: var(--mp-ink);
+  }
+
+  .target-text {
+    font-size: 0.875rem;
+    color: var(--mp-muted);
+    line-height: 1.5;
+  }
+
+  .target-text strong {
+    color: var(--mp-ink);
+  }
+
+  .card-desc {
+    font-size: 0.9375rem;
+    color: var(--mp-text);
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .card-highlights {
+    background: var(--mp-surface);
+    border: 1px solid var(--mp-border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 28px;
+  }
+
+  .highlights-title {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--mp-ink);
+    margin-bottom: 12px;
+  }
+
+  .highlights-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .highlights-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.875rem;
+    color: var(--mp-text);
+    line-height: 1.4;
+  }
+
+  .check-icon {
+    color: var(--mp-red);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .link-detail {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--mp-ink);
+    transition: color 180ms ease, transform 180ms ease;
+  }
+
+  .link-detail:hover {
+    color: var(--mp-red);
+    transform: translateX(3px);
+  }
+</style>
