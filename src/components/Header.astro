@@ -181,12 +181,20 @@ const isHome = currentPath === '/' || currentPath === '';
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 76px;
+    height: var(--mp-header-height);
     gap: 20px;
     width: 100%;
     max-width: 1560px;
     margin-inline: auto;
     padding-inline: clamp(24px, 4.5vw, 64px);
+  }
+
+  @media (max-width: 768px) {
+    .header-inner {
+      height: var(--mp-header-height);
+      padding-inline: 16px;
+      gap: 12px;
+    }
   }
 
   /* Brand Logo */
@@ -198,12 +206,19 @@ const isHome = currentPath === '/' || currentPath === '';
   }
 
   .header-logo-img {
-    height: 48px;
+    height: 44px;
     width: auto;
-    max-width: 210px;
+    max-width: 200px;
     object-fit: contain;
     display: block;
     transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  @media (max-width: 768px) {
+    .header-logo-img {
+      height: 36px;
+      max-width: 150px;
+    }
   }
 
   .brand-logo:hover .header-logo-img {
@@ -339,7 +354,7 @@ const isHome = currentPath === '/' || currentPath === '';
   }
 
   :global(.header-cta) {
-    display: none;
+    display: none !important;
     background-color: #ffffff !important;
     color: #111827 !important;
     border: 1px solid #ffffff !important;
@@ -352,7 +367,7 @@ const isHome = currentPath === '/' || currentPath === '';
     text-decoration: none !important;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     :global(.header-cta) {
       display: inline-flex !important;
     }
@@ -366,19 +381,25 @@ const isHome = currentPath === '/' || currentPath === '';
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25) !important;
   }
 
-  /* Mobile Toggle */
+  /* Mobile Toggle - Minimalist Lines Only (No Card/Box) */
   .mobile-toggle {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 5px;
-    width: 42px;
-    height: 42px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
+    width: 38px;
+    height: 38px;
+    padding: 4px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
     cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .mobile-toggle:hover {
+    opacity: 0.8;
   }
 
   @media (min-width: 992px) {
@@ -388,11 +409,11 @@ const isHome = currentPath === '/' || currentPath === '';
   }
 
   .hamburger-bar {
-    width: 100%;
-    height: 2px;
+    width: 24px;
+    height: 2.5px;
     background-color: #ffffff;
-    border-radius: 2px;
-    transition: transform 200ms ease;
+    border-radius: 999px;
+    transition: transform 200ms ease, opacity 200ms ease;
   }
 
   /* Mobile Drawer */
