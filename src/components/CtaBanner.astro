@@ -7,6 +7,14 @@ interface Props {
   desc?: string;
   waLabel?: string;
   waMessage?: string;
+  primaryBtn?: {
+    label: string;
+    href: string;
+  };
+  secondaryBtn?: {
+    label: string;
+    href: string;
+  };
 }
 
 const {
@@ -15,6 +23,8 @@ const {
   desc = 'Jangan ragu untuk berdiskusi mengenai ketersediaan kuota magang, persyaratan sekolah/kampus, atau silabus pelatihan digital marketing untuk tim Anda.',
   waLabel = 'Chat WhatsApp Admin',
   waMessage = 'Halo MagangPro, saya ingin bertanya lebih lanjut mengenai program magang yang tersedia.',
+  primaryBtn,
+  secondaryBtn,
 } = Astro.props;
 ---
 
@@ -29,12 +39,34 @@ const {
         {desc}
       </p>
       <div class="banner-actions">
-        <WhatsAppButton
-          label={waLabel}
-          message={waMessage}
-          variant="whatsapp"
-          size="lg"
-        />
+        {primaryBtn ? (
+          <div class="banner-custom-actions">
+            <a href={primaryBtn.href} class="cta-custom-btn cta-btn-primary">
+              <span>{primaryBtn.label}</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            {secondaryBtn && (
+              <a
+                href={secondaryBtn.href}
+                class="cta-custom-btn cta-btn-secondary"
+                target={secondaryBtn.href.startsWith('http') ? '_blank' : undefined}
+                rel={secondaryBtn.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              >
+                <span>{secondaryBtn.label}</span>
+              </a>
+            )}
+          </div>
+        ) : (
+          <WhatsAppButton
+            label={waLabel}
+            message={waMessage}
+            variant="whatsapp"
+            size="lg"
+          />
+        )}
       </div>
       <div class="banner-location">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -99,6 +131,51 @@ const {
 
   .banner-actions :global(.mp-button) {
     margin-inline: auto;
+  }
+
+  .banner-custom-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-custom-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.95rem 1.75rem;
+    border-radius: 9999px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  .cta-btn-primary {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(239, 68, 68, 0.35);
+  }
+
+  .cta-btn-primary:hover {
+    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(239, 68, 68, 0.45);
+  }
+
+  .cta-btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+  }
+
+  .cta-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
   }
 
   .banner-location {
