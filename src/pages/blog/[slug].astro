@@ -42,12 +42,17 @@ const articleSchema = {
       author: {
         '@type': 'Person',
         name: post.author.name,
-        jobTitle: post.author.role
+        jobTitle: post.author.role,
+        url: 'https://programmagang.web.id/tentang-kami'
       },
       publisher: {
         '@type': 'Organization',
         name: 'MagangPro',
-        url: 'https://programmagang.web.id/'
+        url: 'https://programmagang.web.id/',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://programmagang.web.id/images/logo-magangpro.webp'
+        }
       },
       mainEntityOfPage: `https://programmagang.web.id/blog/${post.slug}`
     },
