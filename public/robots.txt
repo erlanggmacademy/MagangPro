@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://programmagang.web.id/sitemap-index.xml
+Sitemap: https://pixxelprodigital.web.id/sitemap-index.xml

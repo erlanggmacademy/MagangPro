@@ -9,16 +9,17 @@ const isHome = currentPath === '/' || currentPath === '';
 <header class={`mp-header ${!isHome ? 'mp-header--solid scrolled' : ''}`} id="main-header" data-is-home={isHome ? 'true' : 'false'}>
   <div class="header-inner">
     <!-- Brand Logo -->
-    <a href="/" class="brand-logo" aria-label="MagangPro - Beranda">
+    <a href="/" class="brand-logo" aria-label="PixxelPro - Beranda">
       <img
-        src="/images/logo-magangpro-light.webp"
-        alt="MagangPro"
-        width="186"
-        height="48"
+        src="/images/logo pixxelpro red transparent.webp"
+        alt="PixxelPro"
+        width="44"
+        height="49"
         class="header-logo-img"
         loading="eager"
         decoding="async"
       />
+      <span class="brand-name">Pixxel<span class="brand-accent">Pro</span></span>
     </a>
 
     <!-- Desktop Navigation -->
@@ -66,7 +67,7 @@ const isHome = currentPath === '/' || currentPath === '';
     <div class="header-actions">
       <WhatsAppButton
         label="Hubungi Kami"
-        message="Halo MagangPro, saya ingin berkonsultasi mengenai program magang dan pelatihan."
+        message="Halo PixxelPro, saya ingin berkonsultasi mengenai program magang dan pelatihan."
         variant="primary"
         size="sm"
         showIcon={false}
@@ -92,16 +93,17 @@ const isHome = currentPath === '/' || currentPath === '';
   <div id="mobile-nav-drawer" class="mobile-drawer" aria-hidden="true">
     <div class="mobile-drawer-inner">
       <div class="mobile-drawer-header">
-        <a href="/" class="drawer-logo" aria-label="MagangPro - Beranda">
+        <a href="/" class="drawer-logo" aria-label="PixxelPro - Beranda">
           <img
-            src="/images/logo-magangpro.webp"
-            alt="MagangPro"
-            width="135"
-            height="45"
+            src="/images/logo pixxelpro red transparent.webp"
+            alt="PixxelPro"
+            width="40"
+            height="44"
             class="drawer-logo-img"
             loading="lazy"
             decoding="async"
           />
+          <span class="drawer-brand-name">Pixxel<span class="brand-accent">Pro</span></span>
         </a>
         <button id="mobile-close-btn" class="close-btn" aria-label="Tutup navigasi menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -145,7 +147,7 @@ const isHome = currentPath === '/' || currentPath === '';
       <div class="mobile-drawer-footer">
         <WhatsAppButton
           label="Konsultasi WhatsApp"
-          message="Halo MagangPro, saya ingin berkonsultasi mengenai program magang dan pelatihan."
+          message="Halo PixxelPro, saya ingin berkonsultasi mengenai program magang dan pelatihan."
           variant="whatsapp"
           class="w-full"
         />
@@ -201,23 +203,54 @@ const isHome = currentPath === '/' || currentPath === '';
   .brand-logo {
     display: flex;
     align-items: center;
+    gap: 12px;
     text-decoration: none;
     line-height: 1;
   }
 
   .header-logo-img {
-    height: 44px;
+    height: 42px;
     width: auto;
-    max-width: 200px;
+    max-width: 160px;
     object-fit: contain;
     display: block;
+    background-color: #ffffff;
+    padding: 4px 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     transition: opacity 180ms ease, transform 180ms ease;
   }
 
+  .brand-name {
+    font-family: 'Paytone One', 'Poppins', sans-serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    transition: opacity 180ms ease;
+  }
+
+  .brand-accent {
+    color: var(--mp-red);
+  }
+
   @media (max-width: 768px) {
+    .brand-logo {
+      gap: 9px;
+    }
+
     .header-logo-img {
       height: 36px;
-      max-width: 150px;
+      max-width: 120px;
+      padding: 3px 5px;
+      border-radius: 6px;
+    }
+
+    .brand-name {
+      font-size: 1.2rem;
     }
   }
 
@@ -226,18 +259,32 @@ const isHome = currentPath === '/' || currentPath === '';
     transform: scale(1.02);
   }
 
+  .brand-logo:hover .brand-name {
+    opacity: 0.94;
+  }
+
   .drawer-logo {
     display: flex;
     align-items: center;
+    gap: 10px;
     text-decoration: none;
   }
 
   .drawer-logo-img {
-    height: 38px;
+    height: 40px;
     width: auto;
-    max-width: 145px;
+    max-width: 130px;
     object-fit: contain;
     display: block;
+  }
+
+  .drawer-brand-name {
+    font-family: 'Paytone One', 'Poppins', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--mp-ink);
+    line-height: 1;
   }
 
   /* Desktop Nav */

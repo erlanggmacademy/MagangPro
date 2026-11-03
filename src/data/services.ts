@@ -31,7 +31,7 @@ export const servicesData: ServiceItem[] = [
       'Strategi konten visual sederhana & cepat'
     ],
     href: '/pelatihan-digital-marketing/umkm',
-    waMessage: 'Halo MagangPro, saya ingin konsultasi mengenai Pelatihan Digital Marketing untuk UMKM.'
+    waMessage: 'Halo PixxelPro, saya ingin konsultasi mengenai Pelatihan Digital Marketing untuk UMKM.'
   },
   {
     id: 'pelatihan-instansi',
@@ -50,7 +50,7 @@ export const servicesData: ServiceItem[] = [
       'Praktik studi kasus langsung (hands-on workshop)'
     ],
     href: '/pelatihan-digital-marketing/instansi-perusahaan',
-    waMessage: 'Halo MagangPro, kami dari instansi/perusahaan ingin berkonsultasi mengenai program pelatihan tim.'
+    waMessage: 'Halo PixxelPro, kami dari instansi/perusahaan ingin berkonsultasi mengenai program pelatihan tim.'
   },
   {
     id: 'jasa-seo',
@@ -59,7 +59,7 @@ export const servicesData: ServiceItem[] = [
     badge: 'Layanan Jasa Digital',
     shortBadge: 'OPTIMASI SEO',
     tagline: 'Dominasi Halaman 1 Pencarian Google',
-    image: '/images/services/layanan-seo.webp',
+    image: '/images/services/layanan-optimasi-seo.webp',
     gradient: 'linear-gradient(135deg, #1e3a8a 0%, #1e40af 60%, #0f172a 100%)',
     description: 'Membantu website bisnis Anda tampil di halaman pencarian Google melalui perbaikan teknis SEO, arsitektur informasi terstruktur, dan strategi konten organik yang solid.',
     points: [
@@ -69,7 +69,7 @@ export const servicesData: ServiceItem[] = [
       'Monitoring berkala Google Search Console'
     ],
     href: '/jasa',
-    waMessage: 'Halo MagangPro, saya ingin berkonsultasi mengenai Layanan SEO Website.'
+    waMessage: 'Halo PixxelPro, saya ingin berkonsultasi mengenai Layanan SEO Website.'
   },
   {
     id: 'jasa-web-dev',
@@ -88,6 +88,6 @@ export const servicesData: ServiceItem[] = [
       'Bebas biaya pemeliharaan database rumit'
     ],
     href: '/jasa',
-    waMessage: 'Halo MagangPro, saya tertarik untuk berkonsultasi tentang pembuatan website modern.'
+    waMessage: 'Halo PixxelPro, saya tertarik untuk berkonsultasi tentang pembuatan website modern.'
   }
 ];

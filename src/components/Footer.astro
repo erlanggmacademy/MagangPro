@@ -8,16 +8,17 @@ const currentYear = new Date().getFullYear();
   <div class="mp-container footer-top">
     <!-- Brand Info Column -->
     <div class="footer-col footer-brand-col">
-      <a href="/" class="brand-logo" aria-label="MagangPro - Beranda">
+      <a href="/" class="brand-logo" aria-label="PixxelPro - Beranda">
         <img
-          src="/images/logo-magangpro.webp"
-          alt="MagangPro"
-          width="160"
+          src="/images/logo pixxelpro red transparent.webp"
+          alt="PixxelPro"
+          width="48"
           height="53"
           class="footer-logo-img"
           loading="lazy"
           decoding="async"
         />
+        <span class="footer-brand-name">Pixxel<span class="footer-brand-accent">Pro</span></span>
       </a>
       <p class="brand-desc">
         Pusat informasi dan program magang terstruktur untuk siswa SMK/PKL dan
@@ -118,7 +119,7 @@ const currentYear = new Date().getFullYear();
       <div class="footer-wa-action">
         <WhatsAppButton
           label="Chat via WhatsApp"
-          message="Halo MagangPro, saya ingin bertanya tentang informasi program."
+          message="Halo PixxelPro, saya ingin bertanya tentang informasi program."
           variant="whatsapp"
           size="sm"
           class="footer-wa-btn"
@@ -132,7 +133,7 @@ const currentYear = new Date().getFullYear();
     <div class="mp-container bottom-inner">
       <p class="copyright">
         &copy; {currentYear}
-        <strong>MagangPro</strong>. Hak cipta dilindungi undang-undang.
+        <strong>PixxelPro Digital Id</strong>. Hak cipta dilindungi undang-undang.
       </p>
       <div class="legal-links">
         <a href="/tentang-kami">Tentang Kami</a>
@@ -178,8 +179,9 @@ const currentYear = new Date().getFullYear();
   }
 
   .brand-logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    gap: 12px;
     text-decoration: none;
     margin-bottom: 16px;
     line-height: 1;
@@ -188,14 +190,31 @@ const currentYear = new Date().getFullYear();
   .footer-logo-img {
     height: 48px;
     width: auto;
-    max-width: 200px;
+    max-width: 160px;
     object-fit: contain;
     display: block;
     transition: opacity 180ms ease;
   }
 
-  .brand-logo:hover .footer-logo-img {
-    opacity: 0.9;
+  .footer-brand-name {
+    font-family: 'Paytone One', 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--mp-ink);
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 180ms ease;
+  }
+
+  .footer-brand-accent {
+    color: var(--mp-red);
+  }
+
+  .brand-logo:hover .footer-logo-img,
+  .brand-logo:hover .footer-brand-name {
+    opacity: 0.92;
   }
 
   .brand-desc {

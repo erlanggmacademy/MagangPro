@@ -1,0 +1,250 @@
+---
+export interface MitraItem {
+  name: string;
+  category: 'kampus' | 'smk' | 'industri';
+  categoryLabel: string;
+  logo: string;
+}
+
+const mitraList: MitraItem[] = [
+  {
+    name: 'Universitas Negeri Malang',
+    category: 'kampus',
+    categoryLabel: 'Perguruan Tinggi',
+    logo: '/images/mitra/um.webp',
+  },
+  {
+    name: 'Universitas Muhammadiyah Malang',
+    category: 'kampus',
+    categoryLabel: 'Perguruan Tinggi',
+    logo: '/images/mitra/umm.webp',
+  },
+  {
+    name: 'UIN Maulana Malik Ibrahim Malang',
+    category: 'kampus',
+    categoryLabel: 'Perguruan Tinggi',
+    logo: '/images/mitra/uin-malang.webp',
+  },
+  {
+    name: 'Politeknik Negeri Malang',
+    category: 'kampus',
+    categoryLabel: 'Perguruan Tinggi',
+    logo: '/images/mitra/polinema.webp',
+  },
+  {
+    name: 'Universitas Merdeka Malang',
+    category: 'kampus',
+    categoryLabel: 'Perguruan Tinggi',
+    logo: '/images/mitra/unmer.webp',
+  },
+  {
+    name: 'Politeknik Negeri Banyuwangi',
+    category: 'kampus',
+    categoryLabel: 'Perguruan Tinggi',
+    logo: '/images/mitra/poliwangi.webp',
+  },
+  {
+    name: 'SMKN 5 Malang',
+    category: 'smk',
+    categoryLabel: 'SMK Vokasi',
+    logo: '/images/mitra/smkn-5-malang.webp',
+  },
+  {
+    name: 'SMKN 11 Malang',
+    category: 'smk',
+    categoryLabel: 'SMK Vokasi',
+    logo: '/images/mitra/smkn-11-malang.webp',
+  },
+  {
+    name: 'SMKN 1 Turen',
+    category: 'smk',
+    categoryLabel: 'SMK Vokasi',
+    logo: '/images/mitra/smk-1-turen.webp',
+  },
+  {
+    name: 'SMKN 1 Pasuruan',
+    category: 'smk',
+    categoryLabel: 'SMK Vokasi',
+    logo: '/images/mitra/smkn-1-pasuruan.webp',
+  },
+  {
+    name: 'SMK PGRI 3 Malang (Skariga)',
+    category: 'smk',
+    categoryLabel: 'SMK Vokasi',
+    logo: '/images/mitra/skariga.webp',
+  },
+  {
+    name: 'Radar Kediri (Jawa Pos Group)',
+    category: 'industri',
+    categoryLabel: 'Mitra Media & Industri',
+    logo: '/images/mitra/radar-kediri.webp',
+  },
+];
+---
+
+<section class="mp-section mp-section--surface" id="mitra-kolaborasi">
+  <div class="mp-container">
+    <div class="section-header text-center">
+      <span class="eyebrow">Jaringan Kemitraan</span>
+      <h2 class="heading-lg">Dipercaya Puluhan Institusi Pendidikan & Industri</h2>
+      <p>
+        PixxelPro aktif berkolaborasi dengan berbagai SMK vokasi, politeknik, universitas terkemuka, serta media industri di Jawa Timur dalam program magang, PKL, dan pelatihan digital.
+      </p>
+    </div>
+
+    <!-- Responsive Grid of Partner Cards -->
+    <div class="mitra-grid">
+      {mitraList.map((item) => (
+        <div class="mitra-card">
+          <div class="mitra-logo-box">
+            <img
+              src={item.logo}
+              alt={`Logo ${item.name}`}
+              width="100"
+              height="80"
+              loading="lazy"
+              decoding="async"
+              class="mitra-logo-img"
+            />
+          </div>
+          <div class="mitra-details">
+            <span class="mitra-badge">{item.categoryLabel}</span>
+            <h3 class="mitra-name">{item.name}</h3>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom Collaboration Note -->
+    <div class="mitra-footer-note">
+      <div class="note-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <span>Terbuka untuk MoA & Kerja Sama Kemitraan Sekolah / Kampus Baru</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .mitra-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 1024px) {
+    .mitra-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .mitra-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+  }
+
+  .mitra-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 22px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  }
+
+  .mitra-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+    border-color: rgba(198, 40, 40, 0.35);
+  }
+
+  .mitra-logo-box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    padding: 6px;
+  }
+
+  .mitra-logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.06));
+    transition: transform 220ms ease;
+  }
+
+  .mitra-card:hover .mitra-logo-img {
+    transform: scale(1.08);
+  }
+
+  .mitra-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mitra-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--mp-red);
+    background: rgba(198, 40, 40, 0.08);
+    padding: 3px 10px;
+    border-radius: 9999px;
+    margin-bottom: 8px;
+  }
+
+  .mitra-name {
+    font-family: var(--mp-font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  .mitra-footer-note {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+  }
+
+  .note-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    background: #ffffff;
+    border: 1px dashed #cbd5e1;
+    border-radius: 9999px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: #475569;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  }
+
+  .note-pill svg {
+    color: var(--mp-red);
+    flex-shrink: 0;
+  }
+</style>
+

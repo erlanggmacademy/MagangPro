@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://programmagang.web.id',
+  site: 'https://pixxelprodigital.web.id',
   output: 'static',
   integrations: [sitemap()]
 });

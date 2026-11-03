@@ -4,8 +4,8 @@ import PageBanner from '../components/PageBanner.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import { blogPosts } from '../data/blog';
 
-const pageTitle = "Blog & Wawasan Digital | MagangPro Malang";
-const pageDescription = "Kumpulan artikel edukatif, panduan magang SMK & mahasiswa, tips strategi digital marketing UMKM, serta wawasan teknologi terkini dari praktisi MagangPro Malang.";
+const pageTitle = "Blog & Wawasan Digital | PixxelPro Malang";
+const pageDescription = "Artikel edukasi, panduan magang SMK & mahasiswa, strategi digital marketing UMKM, serta wawasan teknologi web terkini dari praktisi PixxelPro Malang.";
 
 const breadcrumbs = [
   { label: 'Beranda', href: '/' },
@@ -106,7 +106,11 @@ const breadcrumbs = [
               <div class="card-footer">
                 <div class="author-info">
                   <div class="author-avatar" aria-hidden="true">
-                    <span>{post.author.name.charAt(0)}</span>
+                    {post.author.avatar ? (
+                      <img src={post.author.avatar} alt={post.author.name} class="author-avatar-img" width="32" height="32" />
+                    ) : (
+                      <span>{post.author.name.charAt(0)}</span>
+                    )}
                   </div>
                   <div class="author-text">
                     <span class="author-name">{post.author.name}</span>
@@ -148,7 +152,7 @@ const breadcrumbs = [
   <!-- 3. Unified Closing CTA Banner -->
   <CtaBanner
     eyebrow="Ingin Praktik & Pengalaman Nyata?"
-    title="Wujudkan Karier Digital Anda Bersama MagangPro Malang"
+    title="Wujudkan Karier Digital Anda Bersama PixxelPro Malang"
     desc="Pelajari keahlian industri secara langsung lewat program magang terstruktur dan pelatihan intensif berorientasi hasil riil."
     primaryBtn={{
       label: "Daftar Program Magang",
@@ -419,6 +423,16 @@ const breadcrumbs = [
     font-size: 0.8rem;
     font-weight: 700;
     flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .author-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
   }
 
   .author-text {

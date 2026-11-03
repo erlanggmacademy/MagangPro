@@ -4,13 +4,14 @@ import Hero from '../components/Hero.astro';
 import ProgramCard from '../components/ProgramCard.astro';
 import ExpandingServices from '../components/ExpandingServices.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
+import MitraSection from '../components/MitraSection.astro';
 import PortfolioShowcase from '../components/PortfolioShowcase.astro';
 import FaqSection from '../components/FaqSection.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import { mainPrograms } from '../data/programs';
 
-const pageTitle = "Program Magang SMK & Mahasiswa dan Pelatihan Digital Marketing | MagangPro";
-const pageDescription = "MagangPro menyediakan informasi program magang SMK/PKL dan internship mahasiswa di bidang IT, digital marketing, bisnis digital, multimedia, serta pelatihan digital marketing untuk UMKM, instansi, dan perusahaan di Mojolangu, Kota Malang.";
+const pageTitle = "Program Magang SMK, Mahasiswa & Pelatihan | PixxelPro";
+const pageDescription = "Program magang SMK, PKL, internship mahasiswa, dan pelatihan digital marketing berbasis proyek riil bersama PixxelPro di Mojolangu, Kota Malang.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -18,12 +19,12 @@ const pageDescription = "MagangPro menyediakan informasi program magang SMK/PKL 
   <Hero />
 
 
-  <!-- 2. Mengapa Memilih MagangPro? (Comparison Section / Nilai Lebih) -->
+  <!-- 2. Mengapa Memilih PixxelPro? (Comparison Section / Nilai Lebih) -->
   <section class="mp-section mp-section--surface" id="keunggulan">
     <div class="mp-container">
       <div class="section-header">
         <span class="eyebrow">Nilai Lebih</span>
-        <h2 class="heading-lg">Mengapa Memilih Magang di MagangPro?</h2>
+        <h2 class="heading-lg">Mengapa Memilih Magang di PixxelPro?</h2>
         <p>
           Kami memastikan setiap peserta magang mendapatkan pengalaman belajar yang bermakna dan terstruktur sesuai standar kebutuhan industri.
         </p>
@@ -74,9 +75,9 @@ const pageDescription = "MagangPro menyediakan informasi program magang SMK/PKL 
           </ul>
         </div>
 
-        <!-- Kolom Standar MagangPro -->
+        <!-- Kolom Standar PixxelPro -->
         <div class="comparison-card comparison-card--positive">
-          <div class="comp-badge comp-badge--red">Standar Pembelajaran MagangPro</div>
+          <div class="comp-badge comp-badge--red">Standar Pembelajaran PixxelPro</div>
           <h3 class="comp-title">Pengalaman Magang Terstruktur & Nyata</h3>
           <ul class="comp-list">
             <li>
@@ -143,7 +144,7 @@ const pageDescription = "MagangPro menyediakan informasi program magang SMK/PKL 
         <span class="eyebrow">Solusi Organisasi & Bisnis</span>
         <h2 class="heading-lg">Pelatihan Digital Marketing & Layanan Digital</h2>
         <p>
-          Selain program magang, MagangPro menyelenggarakan pelatihan peningkatan kapasitas digital untuk pelaku UMKM, staf instansi pemerintah, dan perusahaan.
+          Selain program magang, PixxelPro menyelenggarakan pelatihan peningkatan kapasitas digital untuk pelaku UMKM, staf instansi pemerintah, dan perusahaan.
         </p>
       </div>
 
@@ -151,10 +152,13 @@ const pageDescription = "MagangPro menyediakan informasi program magang SMK/PKL 
     </div>
   </section>
 
-  <!-- 7. Section Testimoni Peserta & Mitra MagangPro -->
+  <!-- 7. Section Testimoni Peserta & Mitra PixxelPro -->
   <TestimonialsSection />
 
-  <!-- 8. Section Portofolio & Galeri Aktivitas MagangPro -->
+  <!-- 8. Section Mitra Institusi Pendidikan & Industri -->
+  <MitraSection />
+
+  <!-- 9. Section Portofolio & Galeri Aktivitas PixxelPro -->
   <PortfolioShowcase />
 
   <!-- 8. FAQ Section with Schema.org FAQPage -->
@@ -166,7 +170,7 @@ const pageDescription = "MagangPro menyediakan informasi program magang SMK/PKL 
       <div class="banner-inner">
         <span class="eyebrow eyebrow--light">Siap Memulai Langkah Baru?</span>
         <h2 class="banner-title">
-          Tingkatkan Kompetensi Nyata Bersama MagangPro
+          Tingkatkan Kompetensi Nyata Bersama PixxelPro
         </h2>
         <p class="banner-desc">
           Jangan ragu untuk berdiskusi mengenai ketersediaan kuota magang, persyaratan sekolah/kampus, atau silabus pelatihan digital marketing untuk tim Anda.
@@ -174,7 +178,7 @@ const pageDescription = "MagangPro menyediakan informasi program magang SMK/PKL 
         <div class="banner-actions">
           <WhatsAppButton
             label="Chat WhatsApp Admin"
-            message="Halo MagangPro, saya ingin bertanya lebih lanjut mengenai program yang tersedia."
+            message="Halo PixxelPro, saya ingin bertanya lebih lanjut mengenai program yang tersedia."
             variant="whatsapp"
             size="lg"
           />

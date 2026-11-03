@@ -5,8 +5,8 @@ import CtaBanner from '../components/CtaBanner.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import { portfolioData } from '../data/portfolio';
 
-const pageTitle = "Portofolio Karya & Galeri Aktivitas MagangPro Malang";
-const pageDescription = "Koleksi portofolio proyek industri nyata yang dikembangkan peserta magang SMK & mahasiswa di MagangPro Malang. Website modern, optimasi SEO, desain branding, dan dokumentasi lab.";
+const pageTitle = "Portofolio Karya & Galeri Aktivitas PixxelPro Malang";
+const pageDescription = "Portofolio proyek riil peserta magang SMK & mahasiswa di PixxelPro Malang. Website modern, riset SEO, desain grafis, dan dokumentasi aktivitas lab.";
 
 const breadcrumbs = [
   { label: 'Beranda', href: '/' },
@@ -58,6 +58,127 @@ const portfolioFlow = [
     desc: 'Hasil karya diluncurkan, didokumentasikan ke dalam portofolio pribadi, dan dipresentasikan sebagai materi ujian resmi PKL.',
   },
 ];
+
+export interface GalleryPhoto {
+  image: string;
+  title: string;
+  badge: string;
+  desc: string;
+}
+
+const magangGallery: GalleryPhoto[] = [
+  {
+    image: '/images/portfolio/magang-2.webp',
+    title: 'Praktik Lab & Riset SEO Siswa SMK',
+    badge: 'PKL Vokasi',
+    desc: 'Siswi SMKN 1 Purwosari fokus melakukan riset kata kunci dan optimasi konten digital marketing di lab komputer.'
+  },
+  {
+    image: '/images/portfolio/magang-3.webp',
+    title: 'Diskusi & Brainstorming Proyek Tim',
+    badge: 'Kolaborasi Tim',
+    desc: 'Peserta magang saling bertukar ide dan mereview progres kampanye digital marketing bersama.'
+  },
+  {
+    image: '/images/portfolio/magang-4.webp',
+    title: 'Produksi Desain Kreatif Siswa DKV',
+    badge: 'DKV & Multimedia',
+    desc: 'Sesi perancangan aset grafis promosi, feeds sosial media, dan identitas visual produk oleh tim DKV.'
+  },
+  {
+    image: '/images/portfolio/magang-5.webp',
+    title: 'Pengerjaan Proyek Riil Intensif',
+    badge: 'Hands-On Project',
+    desc: 'Aktivitas harian peserta magang mengerjakan penugasan proyek industri dengan pendampingan langsung mentor.'
+  },
+  {
+    image: '/images/portfolio/magang-6.webp',
+    title: 'Suasana Kerja Lab Magang Onsite',
+    badge: 'Lab Industri',
+    desc: 'Fasilitas kerja kondusif dengan workstation mandiri untuk memastikan jam terbang teknis maksimal.'
+  },
+  {
+    image: '/images/portfolio/magang-7.webp',
+    title: 'Peer Review & Koordinasi Tugas',
+    badge: 'Team Review',
+    desc: 'Sesi evaluasi rekan sejawat untuk memastikan kualitas kode dan output kampanye sebelum peluncuran.'
+  },
+  {
+    image: '/images/portfolio/magang-8.webp',
+    title: 'Praktik Bisnis Digital & Pemasaran',
+    badge: 'Bisnis Digital',
+    desc: 'Siswa jurusan pemasaran mempraktikkan strategi funneling dan manajemen leads secara langsung.'
+  },
+  {
+    image: '/images/portfolio/magang-9.webp',
+    title: 'Internship Mahasiswa Berbasis Proyek',
+    badge: 'Mahasiswa MBKM',
+    desc: 'Mahasiswa perguruan tinggi ternama di Malang menjalani program internship konversi SKS dan portofolio.'
+  },
+  {
+    image: '/images/portfolio/magang-10.webp',
+    title: 'Praktik Teknis TKJ & Administrasi Web',
+    badge: 'TKJ & IT',
+    desc: 'Peserta magang mendalami konfigurasi teknis web, optimasi server, dan audit performa online.'
+  }
+];
+
+const pelatihanGallery: GalleryPhoto[] = [
+  {
+    image: '/images/portfolio/pelatihan-1.webp',
+    title: 'Workshop Digital Marketing Mahasiswa',
+    badge: 'Edukasi Kampus',
+    desc: 'Pelatihan intensif praktik digital marketing dan optimasi konten berbasis studi kasus industri.'
+  },
+  {
+    image: '/images/portfolio/pelatihan-2.webp',
+    title: 'Pelatihan Digital Marketing SEO & Medsos',
+    badge: 'SMK Sunan Drajat',
+    desc: 'Sesi workshop di lab komputer mengajarkan teknik dominasi Google dan pembuatan konten promosi.'
+  },
+  {
+    image: '/images/portfolio/pelatihan-3.webp',
+    title: 'Pelatihan Analisa Usaha & Pemasaran',
+    badge: 'Instansi Pemerintah',
+    desc: 'Program bimbingan teknis bersama UPT dinas pemerintahan terkait strategi pemasaran produk.'
+  },
+  {
+    image: '/images/portfolio/pelatihan-4.webp',
+    title: 'Edukasi Literasi Digital Pelajar',
+    badge: 'Kelas Vokasi',
+    desc: 'Pemaparan komprehensif kepada siswa di ruang kelas mengenai peluang karier di era industri digital.'
+  },
+  {
+    image: '/images/portfolio/pelatihan-5.webp',
+    title: 'Bimtek Pemasaran Produk Kelautan',
+    badge: 'UPT PTKP3',
+    desc: 'In-house training formal bersama jajaran pengelola usaha dan aparatur terkait evaluasi pasar.'
+  },
+  {
+    image: '/images/portfolio/pelatihan-6.webp',
+    title: 'Pendampingan Praktik Konten & Pemasaran',
+    badge: 'Hands-on UMKM',
+    desc: 'Bimbingan tatap muka pembuatan materi promosi dan penataan toko online pelaku usaha lokal.'
+  },
+  {
+    image: '/images/portfolio/pelatihan-7.webp',
+    title: 'Rapat Strategi & Pelatihan Tim Agency',
+    badge: 'Internal Training',
+    desc: 'Sesi upgrade skill dan pemetaan rencana eksekusi proyek digital marketing bersama jajaran tim.'
+  },
+  {
+    image: '/images/portfolio/pelatihan-8.webp',
+    title: 'One Day Training Disdik Kab. Kediri',
+    badge: 'Dinas Pendidikan',
+    desc: 'Pelatihan digital marketing skala besar untuk pembekalan kemandirian kerja mandiri peserta.'
+  },
+  {
+    image: '/images/portfolio/pelatihan-9.webp',
+    title: 'Workshop Strategi Funnel Marketing',
+    badge: 'Funnel Marketing',
+    desc: 'Presentasi dan simulasi strategi funnel penjualan digital di hadapan puluhan siswa vokasi.'
+  }
+];
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -72,9 +193,25 @@ const portfolioFlow = [
   <!-- 2. Section Showcase Portofolio & Filter Interaktif -->
   <section class="mp-section" id="galeri-portofolio">
     <div class="mp-container">
+      <!-- Quick Anchor Jump Bar -->
+      <nav class="portfolio-section-jump" aria-label="Pintas Bagian Halaman">
+        <a href="#galeri-portofolio" class="jump-pill active">
+          <span>Katalog Proyek</span>
+          <span class="jump-count">{portfolioData.length}</span>
+        </a>
+        <a href="#galeri-magang" class="jump-pill">
+          <span>Galeri Magang & PKL</span>
+          <span class="jump-count">{magangGallery.length}</span>
+        </a>
+        <a href="#galeri-pelatihan" class="jump-pill">
+          <span>Galeri Pelatihan & Workshop</span>
+          <span class="jump-count">{pelatihanGallery.length}</span>
+        </a>
+      </nav>
+
       <div class="section-header text-center">
         <span class="eyebrow">Katalog Proyek</span>
-        <h2 class="heading-lg">Karya Nyata Peserta MagangPro</h2>
+        <h2 class="heading-lg">Karya Nyata Peserta PixxelPro</h2>
         <p>Gunakan filter di bawah untuk melihat karya berdasarkan kategori website, pemasaran digital, desain visual, atau dokumentasi lab.</p>
       </div>
 
@@ -128,7 +265,7 @@ const portfolioFlow = [
 
               <div class="item-action-footer">
                 <a
-                  href={`https://wa.me/62895639068080?text=${encodeURIComponent(`Halo MagangPro, saya tertarik menanyakan detail portofolio: ${item.title}`)}`}
+                  href={`https://wa.me/62895639068080?text=${encodeURIComponent(`Halo PixxelPro, saya tertarik menanyakan detail portofolio: ${item.title}`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   class="inquire-btn"
@@ -147,13 +284,117 @@ const portfolioFlow = [
     </div>
   </section>
 
+  <!-- 3. Section Galeri Magang (9 Foto Asli) -->
+  <section class="mp-section mp-section--surface" id="galeri-magang">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Dokumentasi Praktik Industri</span>
+        <h2 class="heading-lg">Galeri Aktivitas Peserta Magang & PKL</h2>
+        <p>Potret nyata suasana belajar, mentoring teknis harian, kerja tim kolaboratif, hingga penyelesaian proyek industri para peserta magang SMK dan mahasiswa di PixxelPro.</p>
+      </div>
+
+      <div class="real-gallery-grid">
+        {magangGallery.map((item) => (
+          <div
+            class="gallery-photo-card"
+            data-gallery-item
+            data-img={item.image}
+            data-title={item.title}
+            data-desc={item.desc}
+            data-badge={item.badge}
+            role="button"
+            tabindex="0"
+            aria-label={`Lihat foto ${item.title}`}
+          >
+            <div class="gallery-img-wrap">
+              <img
+                src={item.image}
+                alt={item.title}
+                width="600"
+                height="354"
+                loading="lazy"
+                decoding="async"
+                class="gallery-img"
+              />
+              <span class="photo-badge">{item.badge}</span>
+              <span class="zoom-indicator-btn" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </span>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">{item.title}</h3>
+              <p class="gallery-desc">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Section Galeri Pelatihan (9 Foto Asli) -->
+  <section class="mp-section" id="galeri-pelatihan">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow">Rekam Jejak Edukasi & Pelatihan</span>
+        <h2 class="heading-lg">Galeri Pelatihan & Workshop Profesional</h2>
+        <p>Dokumentasi penyelenggaraan seminar digital marketing, workshop UMKM, in-house training instansi pemerintahan, dan program literasi vokasi sekolah.</p>
+      </div>
+
+      <div class="real-gallery-grid">
+        {pelatihanGallery.map((item) => (
+          <div
+            class="gallery-photo-card"
+            data-gallery-item
+            data-img={item.image}
+            data-title={item.title}
+            data-desc={item.desc}
+            data-badge={item.badge}
+            role="button"
+            tabindex="0"
+            aria-label={`Lihat foto ${item.title}`}
+          >
+            <div class="gallery-img-wrap">
+              <img
+                src={item.image}
+                alt={item.title}
+                width="600"
+                height="354"
+                loading="lazy"
+                decoding="async"
+                class="gallery-img"
+              />
+              <span class="photo-badge photo-badge--pelatihan">{item.badge}</span>
+              <span class="zoom-indicator-btn" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </span>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-title">{item.title}</h3>
+              <p class="gallery-desc">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- 3. Section Standar Kualitas Portofolio (Impact Stats) -->
   <section class="mp-section mp-section--surface" id="standar-portofolio">
     <div class="mp-container">
       <div class="section-header text-center">
         <span class="eyebrow">Nilai Lebih Portofolio</span>
-        <h2 class="heading-lg">Standar Mutu Karya di MagangPro</h2>
-        <p>Mengapa portofolio alumni MagangPro selalu diperhitungkan saat melamar kerja ke perusahaan teknologi?</p>
+        <h2 class="heading-lg">Standar Mutu Karya di PixxelPro</h2>
+        <p>Mengapa portofolio alumni PixxelPro selalu diperhitungkan saat melamar kerja ke perusahaan teknologi?</p>
       </div>
 
       <div class="impact-stats-grid">
@@ -193,10 +434,44 @@ const portfolioFlow = [
   <CtaBanner
     eyebrow="Ingin Membangun Portofolio Nyata?"
     title="Tingkatkan Nilai Diri Anda dengan Karya Industri Riil"
-    desc="Bergabunglah dalam program magang SMK atau internship mahasiswa di MagangPro Kota Malang dan miliki portofolio profesional pertama Anda."
+    desc="Bergabunglah dalam program magang SMK atau internship mahasiswa di PixxelPro Kota Malang dan miliki portofolio profesional pertama Anda."
     waLabel="Konsultasi Magang Sekarang"
-    waMessage="Halo MagangPro, saya ingin bertanya tentang cara bergabung dan membangun portofolio proyek di MagangPro."
+    waMessage="Halo PixxelPro, saya ingin bertanya tentang cara bergabung dan membangun portofolio proyek di PixxelPro."
   />
+
+  <!-- Interactive Lightbox Modal for Real Galleries -->
+  <div id="gallery-lightbox" class="gallery-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="lightbox-overlay" id="lightbox-backdrop"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close-btn" id="lightbox-close" aria-label="Tutup pratinjau foto">&times;</button>
+      
+      <!-- Tombol Navigasi Panah Kiri & Kanan -->
+      <button class="lightbox-nav-btn lightbox-nav-btn--prev" id="lightbox-prev" aria-label="Foto sebelumnya (Panah Kiri)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <button class="lightbox-nav-btn lightbox-nav-btn--next" id="lightbox-next" aria-label="Foto berikutnya (Panah Kanan)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="lightbox-media-wrap">
+        <img id="lightbox-img" src="" alt="" />
+      </div>
+
+      <div class="lightbox-caption">
+        <div class="lightbox-meta-row">
+          <span class="lightbox-badge" id="lightbox-badge"></span>
+          <span class="lightbox-counter" id="lightbox-counter">1 / 9</span>
+        </div>
+        <h4 id="lightbox-title" class="lightbox-title"></h4>
+        <p id="lightbox-desc" class="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
 
 <script>
@@ -224,8 +499,138 @@ const portfolioFlow = [
     });
   }
 
+  // Interactive Lightbox for Galeri Magang & Pelatihan with Arrow Navigation
+  function initGalleryLightbox() {
+    const lightbox = document.getElementById('gallery-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement | null;
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    const lightboxBadge = document.getElementById('lightbox-badge');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+    const closeBtn = document.getElementById('lightbox-close');
+    const prevBtn = document.getElementById('lightbox-prev');
+    const nextBtn = document.getElementById('lightbox-next');
+    const backdrop = document.getElementById('lightbox-backdrop');
+
+    if (!lightbox || !lightboxImg || !lightboxTitle || !lightboxDesc || !lightboxBadge) return;
+
+    let currentItems: HTMLElement[] = [];
+    let currentIndex = 0;
+
+    function renderItem(index: number) {
+      if (!currentItems.length) return;
+      // Handle wrapping
+      if (index < 0) {
+        currentIndex = currentItems.length - 1;
+      } else if (index >= currentItems.length) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+
+      const card = currentItems[currentIndex];
+      const img = card.getAttribute('data-img') || '';
+      const title = card.getAttribute('data-title') || '';
+      const desc = card.getAttribute('data-desc') || '';
+      const badge = card.getAttribute('data-badge') || '';
+
+      if (lightboxImg) {
+        lightboxImg.style.opacity = '0.35';
+        lightboxImg.src = img;
+        lightboxImg.alt = title;
+        lightboxImg.onload = () => {
+          lightboxImg.style.opacity = '1';
+        };
+      }
+
+      if (lightboxTitle) lightboxTitle.textContent = title;
+      if (lightboxDesc) lightboxDesc.textContent = desc;
+      if (lightboxBadge) lightboxBadge.textContent = badge;
+      if (lightboxCounter) {
+        lightboxCounter.textContent = `${currentIndex + 1} / ${currentItems.length}`;
+      }
+    }
+
+    function openModal(card: HTMLElement) {
+      // Group items by current active section (e.g., galeri-magang or galeri-pelatihan)
+      const parentSection = card.closest('section');
+      if (parentSection) {
+        currentItems = Array.from(parentSection.querySelectorAll<HTMLElement>('[data-gallery-item]'));
+      } else {
+        currentItems = Array.from(document.querySelectorAll<HTMLElement>('[data-gallery-item]'));
+      }
+
+      const foundIdx = currentItems.indexOf(card);
+      currentIndex = foundIdx !== -1 ? foundIdx : 0;
+
+      renderItem(currentIndex);
+
+      lightbox?.classList.add('is-open');
+      lightbox?.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      lightbox?.classList.remove('is-open');
+      lightbox?.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        if (!lightbox?.classList.contains('is-open') && lightboxImg) {
+          lightboxImg.src = '';
+        }
+      }, 200);
+    }
+
+    function showNext() {
+      renderItem(currentIndex + 1);
+    }
+
+    function showPrev() {
+      renderItem(currentIndex - 1);
+    }
+
+    const cards = document.querySelectorAll<HTMLElement>('[data-gallery-item]');
+    cards.forEach((card) => {
+      card.addEventListener('click', () => openModal(card));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModal(card);
+        }
+      });
+    });
+
+    closeBtn?.addEventListener('click', closeModal);
+    backdrop?.addEventListener('click', closeModal);
+    prevBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showPrev();
+    });
+    nextBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showNext();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox?.classList.contains('is-open')) return;
+
+      if (e.key === 'Escape') {
+        closeModal();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        showNext();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        showPrev();
+      }
+    });
+  }
+
   // Run on page load
-  document.addEventListener('DOMContentLoaded', initPortfolioFilter);
+  document.addEventListener('DOMContentLoaded', () => {
+    initPortfolioFilter();
+    initGalleryLightbox();
+  });
 </script>
 
 <style>
@@ -544,6 +949,402 @@ const portfolioFlow = [
     font-size: 0.84rem;
     color: #64748b;
     line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Portfolio Quick Anchor Jump Bar */
+  .portfolio-section-jump {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+
+  .jump-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #475569;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 9999px;
+    transition: all 180ms ease;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  }
+
+  .jump-pill:hover,
+  .jump-pill.active {
+    color: var(--mp-red);
+    border-color: rgba(198, 40, 40, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(198, 40, 40, 0.1);
+  }
+
+  .jump-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    color: #64748b;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    transition: all 180ms ease;
+  }
+
+  .jump-pill:hover .jump-count,
+  .jump-pill.active .jump-count {
+    background: var(--mp-red);
+    color: #ffffff;
+  }
+
+  /* Real Gallery Grid (Magang & Pelatihan) */
+  .real-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1240px;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 1024px) {
+    .real-gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .real-gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
+  .gallery-photo-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .gallery-photo-card:hover,
+  .gallery-photo-card:focus-visible {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+    border-color: rgba(198, 40, 40, 0.4);
+  }
+
+  .gallery-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #0f172a;
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+
+  .gallery-photo-card:hover .gallery-img,
+  .gallery-photo-card:focus-visible .gallery-img {
+    transform: scale(1.05);
+  }
+
+  .photo-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(15, 23, 42, 0.85);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .photo-badge--pelatihan {
+    background: rgba(185, 28, 28, 0.9);
+  }
+
+  .zoom-indicator-btn {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all 0.2s ease;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .gallery-photo-card:hover .zoom-indicator-btn,
+  .gallery-photo-card:focus-visible .zoom-indicator-btn {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .gallery-info {
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: #ffffff;
+  }
+
+  .gallery-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+    line-height: 1.35;
+    transition: color 0.18s ease;
+  }
+
+  .gallery-photo-card:hover .gallery-title,
+  .gallery-photo-card:focus-visible .gallery-title {
+    color: var(--mp-red);
+  }
+
+  .gallery-desc {
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Interactive Lightbox Modal */
+  .gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+  }
+
+  .gallery-lightbox.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .lightbox-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .lightbox-container {
+    position: relative;
+    z-index: 10;
+    max-width: 960px;
+    width: 100%;
+    max-height: 92vh;
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+    display: flex;
+    flex-direction: column;
+    animation: lightboxZoomIn 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes lightboxZoomIn {
+    from {
+      transform: scale(0.92);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .lightbox-close-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 26px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: background 160ms ease, transform 160ms ease;
+  }
+
+  .lightbox-close-btn:hover {
+    background: var(--mp-red);
+    transform: rotate(90deg);
+  }
+
+  /* Panah Navigasi Kiri & Kanan */
+  .lightbox-nav-btn {
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(15, 23, 42, 0.78);
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 25;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background 180ms ease, transform 180ms ease, border-color 180ms ease;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  }
+
+  .lightbox-nav-btn:hover {
+    background: var(--mp-red);
+    border-color: var(--mp-red);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .lightbox-nav-btn:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  .lightbox-nav-btn--prev {
+    left: 16px;
+  }
+
+  .lightbox-nav-btn--next {
+    right: 16px;
+  }
+
+  @media (max-width: 640px) {
+    .lightbox-nav-btn {
+      width: 42px;
+      height: 42px;
+      top: 38%;
+    }
+
+    .lightbox-nav-btn--prev {
+      left: 8px;
+    }
+
+    .lightbox-nav-btn--next {
+      right: 8px;
+    }
+  }
+
+  .lightbox-media-wrap {
+    width: 100%;
+    max-height: 66vh;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .lightbox-media-wrap img {
+    max-width: 100%;
+    max-height: 66vh;
+    object-fit: contain;
+    display: block;
+    transition: opacity 0.2s ease;
+  }
+
+  .lightbox-caption {
+    padding: 20px 26px;
+    background: #0f172a;
+    color: #ffffff;
+  }
+
+  .lightbox-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .lightbox-counter {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.12);
+    padding: 3px 12px;
+    border-radius: 9999px;
+    letter-spacing: 0.04em;
+  }
+
+  .lightbox-badge {
+    display: inline-block;
+    background: var(--mp-red);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .lightbox-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+  }
+
+  .lightbox-desc {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.55;
     margin: 0;
   }
 </style>

@@ -34,7 +34,7 @@ export const mainPrograms: ProgramCategory[] = [
       'Peningkatan portofolio nyata'
     ],
     href: '/program-magang/magang-smk-pkl',
-    waMessage: 'Halo MagangPro, saya ingin informasi pendaftaran program PKL SMK.'
+    waMessage: 'Halo PixxelPro, saya ingin informasi pendaftaran program PKL SMK.'
   },
   {
     id: 'internship-mahasiswa',
@@ -49,7 +49,7 @@ export const mainPrograms: ProgramCategory[] = [
       'Portofolio profesional siap kerja'
     ],
     href: '/program-magang/internship-mahasiswa',
-    waMessage: 'Halo MagangPro, saya ingin bertanya tentang program internship mahasiswa.'
+    waMessage: 'Halo PixxelPro, saya ingin bertanya tentang program internship mahasiswa.'
   }
 ];
 

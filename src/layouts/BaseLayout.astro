@@ -13,15 +13,15 @@ interface Props {
   pageSchema?: object | object[];
 }
 
-const siteUrl = 'https://programmagang.web.id';
-const brandName = 'MagangPro';
+const siteUrl = 'https://pixxelprodigital.web.id';
+const brandName = 'PixxelPro Digital Id';
 
 const {
   title,
   description,
   canonical,
   noindex = false,
-  ogImage = `${siteUrl}/images/og-magangpro.png`,
+  ogImage = `${siteUrl}/images/og-pixxelpro.png`,
   pageSchema,
 } = Astro.props;
 
@@ -39,11 +39,12 @@ const globalSchema = {
       '@type': 'Organization',
       '@id': `${siteUrl}/#organization`,
       name: brandName,
+      alternateName: 'PixxelPro',
       url: `${siteUrl}/`,
-      logo: `${siteUrl}/images/logo-magangpro.webp`,
-      image: `${siteUrl}/images/og-magangpro.png`,
+      logo: `${siteUrl}/images/logo-pixxelpro.webp`,
+      image: `${siteUrl}/images/og-pixxelpro.png`,
       description:
-        'Program magang SMK dan mahasiswa serta pelatihan digital marketing untuk UMKM, instansi, dan perusahaan.',
+        'Program magang SMK dan mahasiswa serta pelatihan digital marketing untuk UMKM, instansi, dan perusahaan bersama PixxelPro Digital Id.',
       telephone: '+62895639068080',
       address: {
         '@type': 'PostalAddress',

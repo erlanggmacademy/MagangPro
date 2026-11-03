@@ -6,9 +6,9 @@ import { testimonialsData } from '../data/testimonials';
   <div class="mp-container">
     <div class="section-header text-center">
       <span class="eyebrow eyebrow--red">TESTIMONIALS</span>
-      <h2 class="heading-lg">Apa Kata Peserta & Mitra Tentang MagangPro?</h2>
+      <h2 class="heading-lg">Apa Kata Peserta Magang Tentang PixxelPro?</h2>
       <p>
-        Cerita nyata dari alumni siswa SMK, mahasiswa, dan pemilik UMKM yang telah merasakan pendampingan intensif serta kurikulum industri terarah kami.
+        Cerita nyata dari siswi SMK dan mahasiswa yang telah merasakan pendampingan intensif, praktik proyek industri riil, serta kurikulum terarah di PixxelPro.
       </p>
     </div>
 
@@ -27,9 +27,21 @@ import { testimonialsData } from '../data/testimonials';
           <!-- Circular Avatar Ring with Dashed Border (Overlapping the bubble bottom) -->
           <div class="testimonial-avatar-container">
             <div class="avatar-dashed-ring">
-              <div class="avatar-letter-circle" style={`background: ${item.avatarBg};`}>
-                <span>{item.initials}</span>
-              </div>
+              {item.image ? (
+                <img
+                  src={item.image}
+                  alt={`Foto ${item.name}`}
+                  class="avatar-photo"
+                  width="74"
+                  height="74"
+                  loading="lazy"
+                  decoding="async"
+                />
+              ) : (
+                <div class="avatar-letter-circle" style={`background: ${item.avatarBg};`}>
+                  <span>{item.initials}</span>
+                </div>
+              )}
             </div>
           </div>
 
@@ -181,6 +193,16 @@ import { testimonialsData } from '../data/testimonials';
   .testimonial-column:hover .avatar-dashed-ring {
     transform: scale(1.06);
     border-color: var(--mp-red);
+  }
+
+  /* Real Avatar Photo */
+  .avatar-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
   }
 
   /* Letter initials circle */

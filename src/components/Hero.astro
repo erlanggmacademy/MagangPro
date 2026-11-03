@@ -3,20 +3,12 @@ import WhatsAppButton from './WhatsAppButton.astro';
 ---
 
 <section class="stodio-hero-section">
-  <!-- Full-Bleed Edge-to-Edge Cinematic Hero Canvas (Hampir Satu Layar) -->
+  <!-- Full-Bleed Edge-to-Edge Dark Hero Canvas (Tanpa Gambar / Dark Minimalist Canvas) -->
   <div class="hero-canvas">
-    <!-- Background Image with Ambient Dark Overlay -->
+    <!-- Ambient Graphic Background Accents (Subtle Glow & Grid) -->
     <div class="hero-bg-layer" aria-hidden="true">
-      <img
-        src="/images/hero/hero-stodio.webp"
-        alt="Creative tech student developer working in modern studio"
-        width="1376"
-        height="768"
-        class="hero-bg-img"
-        loading="eager"
-        decoding="async"
-      />
-      <div class="hero-overlay"></div>
+      <div class="hero-ambient-glow"></div>
+      <div class="hero-grid-pattern"></div>
     </div>
 
     <!-- Wide Container for Hero Content (Takes up almost 1 full screen) -->
@@ -36,9 +28,9 @@ import WhatsAppButton from './WhatsAppButton.astro';
         </div>
 
         <h1 class="hero-headline">
-          Bangun Keterampilan<br />
-          Digital & Teknologi<br />
-          Bersama MagangPro.
+          Ayo Gabung Magang,<br />
+          Kuasai Skill Digital<br />
+          Bersama PixxelPro.
         </h1>
       </div>
 
@@ -75,7 +67,7 @@ import WhatsAppButton from './WhatsAppButton.astro';
         <div class="hero-cta-group">
           <WhatsAppButton
             label="Daftar via WhatsApp"
-            message="Halo MagangPro, saya ingin mendaftar dan menanyakan kuota program magang."
+            message="Halo PixxelPro, saya ingin mendaftar dan menanyakan kuota program magang."
             variant="primary"
             size="md"
             class="stodio-btn stodio-btn--primary"
@@ -143,56 +135,38 @@ import WhatsAppButton from './WhatsAppButton.astro';
     position: relative;
     width: 100%;
     overflow: hidden;
-    background-color: #060606;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #07080a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  /* Background Image with Blur Effect & Visibility of person on the right */
+  /* Ambient Graphic Background Layer (Clean Modern Dark Canvas without image) */
   .hero-bg-layer {
     position: absolute;
-    inset: -12px; /* Inset to prevent edge fringing when blurred */
+    inset: 0;
     z-index: 1;
     overflow: hidden;
+    pointer-events: none;
   }
 
-  .hero-bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 70% 32%;
-    filter: grayscale(25%) blur(12px) brightness(0.9) contrast(1.08);
-    transform: scale(1.06);
-  }
-
-  /* Overlay: Soft White Translucent Mist (kaya tadi) + Left Dark Mask (Orang kanan terlihat jelas & tidak terlalu buram) */
-  .hero-overlay {
+  /* Subtle Ambient Glows - PixxelPro signature subtle red accent & soft white illumination */
+  .hero-ambient-glow {
     position: absolute;
     inset: 0;
     background:
-      /* Soft white translucent mist wash (pendaran kabut putih dari versi yang disukai user) */
-      radial-gradient(
-        circle at 60% 42%,
-        rgba(255, 255, 255, 0.22) 0%,
-        rgba(255, 255, 255, 0.06) 45%,
-        transparent 75%
-      ),
-      /* Horizontal contrast mask: Dark on left for text readability, clear on right so the person is visible and not too blurry */
-      linear-gradient(
-        90deg,
-        rgba(4, 4, 4, 0.94) 0%,
-        rgba(4, 4, 4, 0.82) 38%,
-        rgba(4, 4, 4, 0.44) 68%,
-        rgba(4, 4, 4, 0.24) 85%,
-        rgba(4, 4, 4, 0.42) 100%
-      ),
-      /* Vertical vignette for header & bottom divider */
-      linear-gradient(
-        180deg,
-        rgba(4, 4, 4, 0.5) 0%,
-        transparent 25%,
-        transparent 75%,
-        rgba(4, 4, 4, 0.88) 100%
-      );
+      radial-gradient(circle at 82% 28%, rgba(229, 57, 53, 0.12) 0%, rgba(229, 57, 53, 0.03) 42%, transparent 70%),
+      radial-gradient(circle at 18% 75%, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
+  }
+
+  /* Subtle modern dot/grid matrix pattern to add tech depth without an image */
+  .hero-grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 36px 36px;
+    mask-image: radial-gradient(circle at 60% 40%, black 35%, transparent 85%);
+    -webkit-mask-image: radial-gradient(circle at 60% 40%, black 35%, transparent 85%);
+    opacity: 0.55;
   }
 
   /* Content Wrapper: Takes up almost 1 full screen (HAMPIR SATU LAYAR) */

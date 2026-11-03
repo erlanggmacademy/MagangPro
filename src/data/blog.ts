@@ -32,6 +32,7 @@ export interface BlogPost {
   author: {
     name: string;
     role: string;
+    avatar?: string;
   };
   tags: string[];
   featured?: boolean;
@@ -60,8 +61,8 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'post-1',
     slug: 'panduan-magang-smk-pkl-malang',
-    title: 'Panduan Lengkap Magang SMK & PKL di Malang: Syarat, Durasi, dan Tips Lolos',
-    excerpt: 'Segala hal mendasar yang perlu dipersiapkan siswa SMK jurusan RPL, TKJ, DKV, dan Pemasaran sebelum mengajukan surat permohonan magang resmi ke industri digital.',
+    title: 'Panduan Lengkap Magang SMK & PKL di Malang: Syarat & Tips Lolos',
+    excerpt: 'Hal mendasar yang perlu dipersiapkan siswa SMK jurusan RPL, TKJ, DKV, dan Bisnis sebelum mengajukan surat permohonan magang ke industri digital.',
     category: 'Panduan Magang',
     categorySlug: 'panduan-magang',
     date: '30 Oktober 2026',
@@ -69,7 +70,7 @@ export const blogPosts: BlogPost[] = [
     image: '/images/blog/blog-magang-smk.webp',
     secondImage: {
       src: '/images/blog/blog-magang-smk-detail.webp',
-      alt: 'Sesi Asistensi dan Mentoring Magang SMK di Lab MagangPro Malang',
+      alt: 'Sesi Asistensi dan Mentoring Magang SMK di Lab PixxelPro Malang',
       caption: 'Peserta magang SMK mendapatkan pendampingan langsung dari mentor industri dalam menyelesaikan tugas proyek riil di lab onsite Mojolangu Malang.',
     },
     readAlso: {
@@ -77,8 +78,9 @@ export const blogPosts: BlogPost[] = [
       slug: 'portofolio-nyata-vs-ipk-dunia-kerja',
     },
     author: {
-      name: 'Mentor MagangPro',
-      role: 'Koordinator Vokasi & DUDI',
+      name: 'Erlang Sinatrya',
+      role: 'Tim Mahasiswa RPL di PixxelPro',
+      avatar: '/images/penulis/erlang.webp',
     },
     tags: ['Magang SMK', 'PKL Malang', 'Vokasi DUDI', 'Tips PKL'],
     featured: true,
@@ -108,11 +110,11 @@ export const blogPosts: BlogPost[] = [
         heading: '3. Durasi Pelaksanaan dan Ketentuan Waktu',
         body: [
           'Setiap SMK memiliki ketentuan durasi magang yang bervariasi sesuai kurikulum yang diterapkan (Kurikulum Merdeka atau SMK Pusat Keunggulan):',
-          'Durasi yang paling umum adalah 3 bulan (satu triwulan) atau 6 bulan (satu semester penuh). MagangPro memfasilitasi kedua skema durasi tersebut dengan pembagian target proyek harian dan mingguan yang terukur.',
+          'Durasi yang paling umum adalah 3 bulan (satu triwulan) atau 6 bulan (satu semester penuh). PixxelPro memfasilitasi kedua skema durasi tersebut dengan pembagian target proyek harian dan mingguan yang terukur.',
         ],
       },
       {
-        heading: '4. Tips Menghadapi Hari Pertama Masuk Lab MagangPro',
+        heading: '4. Tips Menghadapi Hari Pertama Masuk Lab PixxelPro',
         body: [
           'Kesan pertama sangat penting. Pada hari pertama onboarding, mentor industri akan membagikan roadmap proyek, akun tools kolaborasi, dan pembagian kelompok kerja.',
           'Pastikan hadir tepat waktu (08.30 WIB), kenakan seragam sekolah rapi atau pakaian kasual sopan berkerah, dan jangan ragu untuk bertanya saat sesi pengenalan tools kerja.',
@@ -122,31 +124,31 @@ export const blogPosts: BlogPost[] = [
     conclusion: 'Dengan persiapan dokumen yang matang, komitmen belajar yang konsisten, dan pemilihan mitra industri yang tepat, masa PKL Anda di Kota Malang akan menjadi batu loncatan berharga untuk membangun portofolio karier profesional.',
     faqs: [
       {
-        question: 'Apakah program magang SMK di MagangPro dipungut biaya?',
-        answer: 'Program PKL/magang SMK di MagangPro diselenggarakan melalui kemitraan sekolah dan jalur seleksi berkas resmi tanpa pungutan biaya pendidikan terselubung.',
+        question: 'Apakah program magang SMK di PixxelPro dipungut biaya?',
+        answer: 'Program PKL/magang SMK di PixxelPro diselenggarakan melalui kemitraan sekolah dan jalur seleksi berkas resmi tanpa pungutan biaya pendidikan terselubung.',
       },
       {
         question: 'Berapa lama proses penerbitan surat balasan penerimaan magang?',
         answer: 'Setelah surat permohonan resmi sekolah dan data siswa dikirimkan via WhatsApp atau email, surat balasan resmi diterbitkan dalam 1 hingga 2 hari kerja.',
       },
       {
-        question: 'Apakah MagangPro membantu penyusunan bab laporan PKL sekolah?',
+        question: 'Apakah PixxelPro membantu penyusunan bab laporan PKL sekolah?',
         answer: 'Ya, setiap peserta magang mendapatkan bimbingan struktur laporan, lembar penilaian pembimbing industri, dan sertifikat resmi berpredikat setelah menyelesaikan program.',
       },
     ],
     ctaBox: {
       badge: 'Konsultasi Kuota PKL SMK',
-      title: 'Amankan Kuota Magang SMK Anda di MagangPro Malang',
+      title: 'Amankan Kuota Magang SMK Anda di PixxelPro Malang',
       desc: 'Kuota terbatas 8–12 siswa per gelombang untuk menjamin kualitas bimbingan 1-on-1 bersama praktisi industri.',
       btnLabel: 'Hubungi Admin via WhatsApp',
-      btnHref: 'https://wa.me/62895639068080?text=Halo%20MagangPro,%20saya%20siswa%20SMK%20ingin%20konsultasi%20ketersediaan%20kuota%20PKL.',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20siswa%20SMK%20ingin%20konsultasi%20ketersediaan%20kuota%20PKL.',
     },
   },
   {
     id: 'post-2',
     slug: 'strategi-local-seo-google-maps-umkm',
-    title: 'Strategi Efektif Local SEO Google Maps untuk Mendongkrak Omzet UMKM Lokal',
-    excerpt: 'Cara terbukti mengoptimasi Google Profil Bisnis agar toko atau jasa Anda tampil di 3 besar pencarian lokal Google Maps tanpa harus bakar anggaran iklan mahal.',
+    title: 'Strategi Local SEO Google Maps untuk Mendongkrak Omzet UMKM',
+    excerpt: 'Cara optimasi Google Profil Bisnis agar toko atau jasa Anda tampil di 3 besar pencarian lokal Google Maps tanpa harus bakar anggaran iklan mahal.',
     category: 'Digital Marketing',
     categorySlug: 'digital-marketing',
     date: '30 Oktober 2026',
@@ -162,8 +164,9 @@ export const blogPosts: BlogPost[] = [
       slug: 'tren-web-development-modern-ssg',
     },
     author: {
-      name: 'Lead SEO Strategist',
-      role: 'Praktisi Digital Marketing',
+      name: 'Erlang Sinatrya',
+      role: 'Tim Mahasiswa RPL di PixxelPro',
+      avatar: '/images/penulis/erlang.webp',
     },
     tags: ['Local SEO', 'Google Maps', 'Digital Marketing UMKM', 'Bisnis Lokal Malang'],
     intro: 'Bagi pemilik usaha kuliner, jasa service, toko oleh-oleh, hingga klinik kesehatan di Kota Malang, Google Maps bukan lagi sekadar penunjuk arah jalan. Google Maps kini menjadi mesin pencetak pembeli nomor satu saat konsumen mencari kebutuhan mendesak di sekitar mereka.',
@@ -219,7 +222,7 @@ export const blogPosts: BlogPost[] = [
     ],
     ctaBox: {
       badge: 'Pelatihan Khusus Pelaku Usaha',
-      title: 'Tingkatkan Penjualan Bisnis Anda Lewat Pelatihan UMKM MagangPro',
+      title: 'Tingkatkan Penjualan Bisnis Anda Lewat Pelatihan UMKM PixxelPro',
       desc: 'Bimbingan privat praktik langsung setup dan optimasi Google Maps serta strategi konten mandiri.',
       btnLabel: 'Daftar Workshop UMKM',
       btnHref: '/pelatihan-digital-marketing/umkm',
@@ -228,8 +231,8 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'post-3',
     slug: 'portofolio-nyata-vs-ipk-dunia-kerja',
-    title: 'Mengapa Bukti Portofolio Riil Lebih Dilirik Industri Dibanding Sekadar Nilai IPK',
-    excerpt: 'Perusahaan teknologi masa kini mengutamakan bukti karya nyata di GitHub, Figma, dan live web yang dapat diverifikasi langsung dibanding transkrip nilai teoritis.',
+    title: 'Mengapa Portofolio Riil Lebih Dilirik Industri Dibanding IPK',
+    excerpt: 'Perusahaan masa kini mengutamakan bukti karya nyata di GitHub, Figma, dan live web yang dapat diverifikasi langsung dibanding transkrip nilai teoritis.',
     category: 'Karier & Soft Skills',
     categorySlug: 'karier-soft-skills',
     date: '30 Oktober 2026',
@@ -245,8 +248,9 @@ export const blogPosts: BlogPost[] = [
       slug: 'panduan-magang-smk-pkl-malang',
     },
     author: {
-      name: 'Tim Talent Acquisition',
-      role: 'Karier & Kemitraan',
+      name: 'Erlang Sinatrya',
+      role: 'Tim Mahasiswa RPL di PixxelPro',
+      avatar: '/images/penulis/erlang.webp',
     },
     tags: ['Portofolio Karier', 'Tips Masuk Kerja', 'Rekrutmen Industri', 'Karier Digital'],
     intro: 'Banyak sarjana baru dan lulusan vokasi terkejut saat menghadapi bursa kerja: nilai IPK cumlaude tidak serta-merta menjamin panggilan wawancara kerja di perusahaan teknologi modern. Mengapa pergeseran ini terjadi, dan bagaimana cara memenangkan persaingan kerja di era digital?',
@@ -271,9 +275,9 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: '3. Bagaimana Peserta MagangPro Mengisi Portofolio Mereka',
+        heading: '3. Bagaimana Peserta PixxelPro Mengisi Portofolio Mereka',
         body: [
-          'Di MagangPro Malang, kami tidak memberikan tugas fiktif seperti membuat aplikasi kalkulator atau kloning to-do list biasa.',
+          'Di PixxelPro Malang, kami tidak memberikan tugas fiktif seperti membuat aplikasi kalkulator atau kloning to-do list biasa.',
           'Setiap peserta magang ditugaskan menggarap website rilisan aktif untuk mitra UMKM lokal, membenahi struktur SEO bisnis nyata, atau merancang aset visual yang benar-benar dicetak dan digunakan pelanggan.',
         ],
       },
@@ -295,7 +299,7 @@ export const blogPosts: BlogPost[] = [
     ],
     ctaBox: {
       badge: 'Portofolio Industri Terverifikasi',
-      title: 'Bangun Bukti Karya Nyata Anda di MagangPro Malang',
+      title: 'Bangun Bukti Karya Nyata Anda di PixxelPro Malang',
       desc: 'Dapatkan bimbingan 1-on-1 dari mentor berpengalaman untuk menghasilkan portofolio proyek yang siap dipajang di CV dan LinkedIn.',
       btnLabel: 'Lihat Posisi Magang Tersedia',
       btnHref: '/program-magang/posisi',
@@ -304,8 +308,8 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'post-4',
     slug: 'konversi-sks-magang-mahasiswa-mbkm',
-    title: 'Konversi SKS Magang Mahasiswa: Alur Administrasi dan Standar Penilaian Kampus',
-    excerpt: 'Tahapan praktis mahasiswa dalam mempersiapkan surat rekomendasi dekanat, pengisian logbook harian proyek, hingga presentasi sidang evaluasi magang.',
+    title: 'Konversi SKS Magang Mahasiswa: Alur dan Penilaian Kampus',
+    excerpt: 'Tahapan praktis mahasiswa dalam mempersiapkan surat rekomendasi kampus, logbook harian proyek magang, hingga presentasi sidang evaluasi resmi.',
     category: 'Panduan Magang',
     categorySlug: 'panduan-magang',
     date: '30 Oktober 2026',
@@ -321,8 +325,9 @@ export const blogPosts: BlogPost[] = [
       slug: 'etika-kerja-komunikasi-onsite-startup',
     },
     author: {
-      name: 'Akademik MagangPro',
-      role: 'Hubungan Perguruan Tinggi',
+      name: 'Erlang Sinatrya',
+      role: 'Tim Mahasiswa RPL di PixxelPro',
+      avatar: '/images/penulis/erlang.webp',
     },
     tags: ['Magang Mahasiswa', 'Konversi SKS', 'Internship Malang', 'Administrasi Kampus'],
     intro: 'Bagi mahasiswa perguruan tinggi di Malang maupun luar kota, program magang industri mandiri atau skema MBKM memberikan kesempatan emas untuk mengonversi aktivitas kerja industri nyata menjadi bobot 10 hingga 20 Satuan Kredit Semester (SKS). Namun, kelancaran proses konversi sangat bergantung pada kepatuhan administrasi dan kualitas laporan magang.',
@@ -342,7 +347,7 @@ export const blogPosts: BlogPost[] = [
         ],
         list: [
           'Pengajuan Surat Rekomendasi Magang dari Dekanat Fakultas atau Koordinator Program Studi.',
-          'Penerbitan Surat Penerimaan (LoA - Letter of Acceptance) resmi berstempel dari MagangPro.',
+          'Penerbitan Surat Penerimaan (LoA - Letter of Acceptance) resmi berstempel dari PixxelPro.',
           'Penandatanganan Lembar Komitmen Rencana Kerja Magang antara mahasiswa, dosen pembimbing, dan mentor industri.',
         ],
       },
@@ -350,13 +355,13 @@ export const blogPosts: BlogPost[] = [
         heading: '3. Kedisiplinan Pengisian Logbook Harian',
         body: [
           'Salah satu alasan penolakan konversi SKS di kampus adalah catatan logbook yang tidak detail atau terlambat diisi.',
-          'Di MagangPro, setiap peserta magang dibimbing untuk mendokumentasikan kegiatan harian berbasis sprint: apa yang dikerjakan, kendala teknis yang dihadapi, serta solusi pemecahan yang diterapkan.',
+          'Di PixxelPro, setiap peserta magang dibimbing untuk mendokumentasikan kegiatan harian berbasis sprint: apa yang dikerjakan, kendala teknis yang dihadapi, serta solusi pemecahan yang diterapkan.',
         ],
       },
       {
         heading: '4. Format Penilaian Objektif dan Sertifikat Berpredikat',
         body: [
-          'Pada akhir periode (3 hingga 6 bulan), MagangPro menerbitkan Berita Acara Penilaian Magang resmi yang menilai aspek kedisiplinan kerja, penguasaan teknis, dan kemampuan kolaborasi tim, disertai Sertifikat Magang Resmi.',
+          'Pada akhir periode (3 hingga 6 bulan), PixxelPro menerbitkan Berita Acara Penilaian Magang resmi yang menilai aspek kedisiplinan kerja, penguasaan teknis, dan kemampuan kolaborasi tim, disertai Sertifikat Magang Resmi.',
         ],
       },
     ],
@@ -367,18 +372,18 @@ export const blogPosts: BlogPost[] = [
         answer: 'Bisa, program internship onsite kami di Malang terbuka untuk mahasiswa dari seluruh universitas di Indonesia selama bersedia hadir di lab Mojolangu Malang.',
       },
       {
-        question: 'Berapa bobot SKS yang umumnya dapat dikonversi di MagangPro?',
+        question: 'Berapa bobot SKS yang umumnya dapat dikonversi di PixxelPro?',
         answer: 'Tergantung kebijakan program studi masing-masing, biasanya berkisar antara 10 hingga 20 SKS untuk program magang mandiri berdurasi 1 semester (4–6 bulan).',
       },
       {
-        question: 'Apakah MagangPro menyediakan surat evaluasi tengah semester (mid-term)?',
+        question: 'Apakah PixxelPro menyediakan surat evaluasi tengah semester (mid-term)?',
         answer: 'Ya, mentor kami siap mengisi formulir monev (monitoring dan evaluasi) tengah periode yang diminta oleh dosen pembimbing lapangan kampus.',
       },
     ],
     ctaBox: {
       badge: 'Program Magang Mahasiswa',
       title: 'Konsultasikan Kebutuhan Konversi SKS Kampus Anda',
-      desc: 'MagangPro siap menerbitkan berkas resmi dan mendukung kelancaran administrasi akademik Anda.',
+      desc: 'PixxelPro siap menerbitkan berkas resmi dan mendukung kelancaran administrasi akademik Anda.',
       btnLabel: 'Pelajari Jalur Magang Mahasiswa',
       btnHref: '/program-magang/internship-mahasiswa',
     },
@@ -386,8 +391,8 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'post-5',
     slug: 'tren-web-development-modern-ssg',
-    title: 'Tren Web Development Modern: Mengapa Arsitektur SSG Jauh Lebih Cepat dan Aman',
-    excerpt: 'Mengulas keunggulan Static Site Generation yang menghasilkan load time sub-detik, PageSpeed 95+, ramah SEO Google, dan bebas dari celah injeksi database.',
+    title: 'Tren Web Development Modern: Keunggulan Arsitektur SSG Cepat',
+    excerpt: 'Keunggulan Static Site Generation yang menghasilkan load time sub-detik, skor PageSpeed 95+, ramah SEO Google, dan bebas celah injeksi database.',
     category: 'Teknologi & Web',
     categorySlug: 'teknologi-web',
     date: '30 Oktober 2026',
@@ -403,8 +408,9 @@ export const blogPosts: BlogPost[] = [
       slug: 'strategi-local-seo-google-maps-umkm',
     },
     author: {
-      name: 'Fullstack Engineer',
-      role: 'Divisi Teknologi MagangPro',
+      name: 'Erlang Sinatrya',
+      role: 'Tim Mahasiswa RPL di PixxelPro',
+      avatar: '/images/penulis/erlang.webp',
     },
     tags: ['Web Development', 'Astro SSG', 'PageSpeed', 'Teknologi Modern'],
     intro: 'Dalam lanskap pengembangan web era sekarang, kecepatan muat halaman (*load speed*) bukan lagi sekadar pelengkap kenyamanan pengguna, melainkan faktor penentu mutlak peringkat pencarian Google dan tingkat konversi penjualan bisnis.',
@@ -430,9 +436,9 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: '3. Mengapa MagangPro Mengadopsi Framework Astro',
+        heading: '3. Mengapa PixxelPro Mengadopsi Framework Astro',
         body: [
-          'Di MagangPro Malang, kami menggunakan teknologi Astro untuk membangun website klien dan materi pembelajaran peserta magang.',
+          'Di PixxelPro Malang, kami menggunakan teknologi Astro untuk membangun website klien dan materi pembelajaran peserta magang.',
           'Astro mengusung filosofi *Zero-JS by Default*, artinya JavaScript hanya dimuat pada komponen interaktif yang benar-benar membutuhkan interaksi (seperti slider atau filter pencarian), sementara sisa halaman tetap berbobot super ringan.',
         ],
       },
@@ -448,13 +454,13 @@ export const blogPosts: BlogPost[] = [
         answer: 'Untuk toko online ribuan produk yang stoknya berubah tiap menit, arsitektur hybrid (SSG + SSR) atau Jamstack modern dengan checkout API eksternal adalah kombinasi paling ideal.',
       },
       {
-        question: 'Berapa rata-rata skor PageSpeed website buatan MagangPro?',
+        question: 'Berapa rata-rata skor PageSpeed website buatan PixxelPro?',
         answer: 'Seluruh arsitektur website yang kami kembangkan dirancang untuk mencapai skor Google PageSpeed di kisaran 90 hingga 100 pada perangkat mobile dan desktop.',
       },
     ],
     ctaBox: {
       badge: 'Solusi Pembuatan Website',
-      title: 'Bangun Website Berkecepatan Tinggi Bersama MagangPro',
+      title: 'Bangun Website Berkecepatan Tinggi Bersama PixxelPro',
       desc: 'Kami membangun website bisnis Anda dengan arsitektur modern SSG yang aman, responsif, dan siap merajai Google.',
       btnLabel: 'Konsultasi Jasa Website',
       btnHref: '/jasa',
@@ -463,8 +469,8 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'post-6',
     slug: 'etika-kerja-komunikasi-onsite-startup',
-    title: 'Etika Komunikasi dan Kebiasaan Kerja Profesional di Lingkungan Startup',
-    excerpt: 'Tips beradaptasi dengan budaya kerja tim tangkas: tata krama diskusi Slack/WhatsApp, komitmen deadline sprint, serta keterbukaan menerima masukan review.',
+    title: 'Etika Komunikasi dan Kebiasaan Kerja Profesional di Startup',
+    excerpt: 'Tips beradaptasi dengan budaya kerja tim tangkas: tata krama komunikasi online, komitmen deadline sprint, dan keterbukaan menerima evaluasi review.',
     category: 'Karier & Soft Skills',
     categorySlug: 'karier-soft-skills',
     date: '30 Oktober 2026',
@@ -473,15 +479,16 @@ export const blogPosts: BlogPost[] = [
     secondImage: {
       src: '/images/blog/blog-etika-komunikasi-detail.webp',
       alt: 'Sesi Diskusi Standup Meeting dan Kolaborasi Tim Lintas Divisi',
-      caption: 'Rutinitas standup meeting pagi hari di MagangPro untuk menyinkronkan target tugas antar tim developer, desainer, dan digital marketer.',
+      caption: 'Rutinitas standup meeting pagi hari di PixxelPro untuk menyinkronkan target tugas antar tim developer, desainer, dan digital marketer.',
     },
     readAlso: {
       title: 'Konversi SKS Magang Mahasiswa: Alur Administrasi dan Standar Penilaian Kampus',
       slug: 'konversi-sks-magang-mahasiswa-mbkm',
     },
     author: {
-      name: 'Head of Operations',
-      role: 'Budaya Kerja & Mentoring',
+      name: 'Erlang Sinatrya',
+      role: 'Tim Mahasiswa RPL di PixxelPro',
+      avatar: '/images/penulis/erlang.webp',
     },
     tags: ['Soft Skills', 'Budaya Startup', 'Komunikasi Tim', 'Kesiapan Kerja'],
     intro: 'Bagi banyak siswa vokasi dan mahasiswa, masa magang adalah pengalaman pertama bersentuhan dengan dinamika dunia kerja profesional yang sesungguhnya. Seringkali, tantangan terbesar bukan terletak pada kemampuan teknis koding atau mendesain, melainkan pada kemampuan adaptasi soft skills dan komunikasi interpersonal.',
@@ -508,7 +515,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: '3. Menyikapi Sesi Code Review dan Kritik Desain Secara Dewasa',
         body: [
-          'Di MagangPro, setiap karya kode dan desain akan melalui sesi asistensi review bersama mentor praktisi. Pemula sering merasa tersinggung saat karyanya dikritik.',
+          'Di PixxelPro, setiap karya kode dan desain akan melalui sesi asistensi review bersama mentor praktisi. Pemula sering merasa tersinggung saat karyanya dikritik.',
           'Pahamilah bahwa review bukan kritik terhadap kepribadian Anda, melainkan upaya menjaga standar mutu produk yang diserahkan ke klien.',
         ],
       },
@@ -526,7 +533,7 @@ export const blogPosts: BlogPost[] = [
         answer: 'Tidak perlu cemas. Pada minggu pertama magang, Anda akan dibimbing dalam sesi orientasi tim untuk mengenal alur kerja kolaboratif secara bertahap.',
       },
       {
-        question: 'Apakah ada aturan jam kerja dan dress code di lab MagangPro?',
+        question: 'Apakah ada aturan jam kerja dan dress code di lab PixxelPro?',
         answer: 'Jam kerja operasional adalah Senin–Jumat pukul 08.30–16.30 WIB dengan pakaian kasual rapi sopan (atau seragam sekolah bagi siswa SMK).',
       },
       {
@@ -536,9 +543,9 @@ export const blogPosts: BlogPost[] = [
     ],
     ctaBox: {
       badge: 'Lingkungan Belajar Onsite Kondusif',
-      title: 'Rasakan Budaya Kerja Nyata di Laboratorium MagangPro Malang',
+      title: 'Rasakan Budaya Kerja Nyata di Laboratorium PixxelPro Malang',
       desc: 'Bimbingan terstruktur yang tidak hanya mengasah keahlian teknis Anda, tetapi juga membentuk mentalitas profesional siap industri.',
-      btnLabel: 'Kenali Profil MagangPro',
+      btnLabel: 'Kenali Profil PixxelPro',
       btnHref: '/tentang-kami',
     },
   },
