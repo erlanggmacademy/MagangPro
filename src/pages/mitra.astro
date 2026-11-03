@@ -1,0 +1,643 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageBanner from '../components/PageBanner.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import { mitraList, mitraCategories } from '../data/mitra';
+
+const pageTitle = "Mitra Kolaborasi & Jaringan Kemitraan | PixxelPro Digital Malang";
+const pageDescription = "Daftar institusi pendidikan dan mitra industri resmi PixxelPro: universitas, politeknik, SMK vokasi, dan media terkemuka di Jawa Timur dalam program magang, PKL, serta pelatihan digital.";
+
+const breadcrumbs = [
+  { label: 'Beranda', href: '/' },
+  { label: 'Mitra Kolaborasi' },
+];
+
+const stats = [
+  { value: '12+', label: 'Mitra Institusi Resmi' },
+  { value: '100%', label: 'Proyek Nyata Industri' },
+  { value: 'Resmi', label: 'MoU & MoA Kemitraan' },
+  { value: 'Kota Malang', label: 'Pusat Inkubator & Lab' },
+];
+
+const partnershipModels = [
+  {
+    icon: 'briefcase',
+    title: 'Penyaluran PKL SMK Vokasi',
+    desc: 'Kerja sama penerimaan Praktik Kerja Lapangan (PKL) untuk siswa jurusan RPL, TKJ, DKV, Multimedia, dan Bisnis Daring dengan kurikulum industri dan logbook resmi.',
+  },
+  {
+    icon: 'graduation',
+    title: 'Internship Mahasiswa & MBKM',
+    desc: 'Program magang intensif berbasis proyek nyata bagi mahasiswa rumpun informatika, sistem informasi, dan komunikasi dengan kemudahan konversi SKS kampus.',
+  },
+  {
+    icon: 'presentation',
+    title: 'Guru / Dosen Tamu & Kuliah Umum',
+    desc: 'Praktisi PixxelPro siap hadir membagikan wawasan industri, tren teknologi modern, dan strategi digital marketing terkini di lingkungan sekolah atau kampus mitra.',
+  },
+  {
+    icon: 'award',
+    title: 'Penyusunan Portofolio & Sertifikasi',
+    desc: 'Setiap peserta magang dari institusi mitra dibimbing menghasilkan karya nyata terpublikasi dan memperoleh sertifikat penilaian kompetensi resmi dari industri.',
+  },
+];
+
+const workflowSteps = [
+  {
+    num: '01',
+    title: 'Inisiasi Kontak & Diskusi Kebutuhan',
+    desc: 'Pihak sekolah, kampus, atau instansi menghubungi admin kemitraan PixxelPro untuk mendiskusikan jumlah kuota, jurusan, dan periode magang yang direncanakan.',
+  },
+  {
+    num: '02',
+    title: 'Penyusunan MoU / MoA Kemitraan',
+    desc: 'Penandatanganan dokumen kerja sama resmi (MoU/MoA) antara pimpinan institusi pendidikan dan manajemen PixxelPro guna kepastian legalitas akademik.',
+  },
+  {
+    num: '03',
+    title: 'Penempatan & Mentoring Intensif',
+    desc: 'Peserta magang diterima dan langsung ditempatkan dalam divisi proyek dengan bimbingan mentor industri secara berkala sesuai standar operasional.',
+  },
+  {
+    num: '04',
+    title: 'Evaluasi Hasil & Pelaporan Nilai',
+    desc: 'Di akhir periode, PixxelPro menerbitkan lembar penilaian resmi, sertifikat kompetensi, dan verifikasi portofolio untuk diserahkan ke pihak sekolah/kampus.',
+  },
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- 1. Official Page Banner (Exact Match with Portfolio, Jasa, etc.) -->
+  <PageBanner
+    pill="Jaringan Kemitraan & Kolaborasi"
+    title="Mitra Kolaborasi"
+    description="Sinergi berkelanjutan bersama perguruan tinggi terkemuka, SMK kejuruan unggulan, dan institusi media di Jawa Timur untuk mencetak generasi talenta digital siap kerja."
+    breadcrumbs={breadcrumbs}
+  />
+
+  <!-- 2. Stats Strip -->
+  <section class="mitra-stats-section">
+    <div class="mp-container">
+      <div class="stats-pills-row">
+        {stats.map((s) => (
+          <div class="stat-pill-item">
+            <strong class="stat-value">{s.value}</strong>
+            <span class="stat-label">{s.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Mitra Directory Section with Interactive Category Filter -->
+  <section class="mp-section" id="daftar-mitra">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow eyebrow--red">JARINGAN INSTITUSI</span>
+        <h2 class="heading-lg">Daftar Mitra Kampus, Sekolah, & Industri</h2>
+        <p>
+          Institusi pendidikan dan mitra media terpercaya yang telah mempercayakan penguatan kompetensi digital siswa dan mahasiswanya di PixxelPro.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="mitra-filter-bar">
+        {mitraCategories.map((cat, idx) => (
+          <button
+            type="button"
+            class={`mitra-filter-btn ${idx === 0 ? 'is-active' : ''}`}
+            data-filter={cat.slug}
+          >
+            {cat.label}
+          </button>
+        ))}
+      </div>
+
+      <!-- Partners Directory Grid -->
+      <div class="mitra-directory-grid" id="mitra-grid">
+        {mitraList.map((item) => (
+          <article class="partner-card" data-category={item.category}>
+            <div class="partner-card-header">
+              <div class="partner-logo-frame">
+                <img
+                  src={item.logo}
+                  alt={`Logo ${item.name}`}
+                  width="90"
+                  height="72"
+                  loading="lazy"
+                  decoding="async"
+                  class="partner-logo-img"
+                />
+              </div>
+              <div class="partner-badge-wrap">
+                <span class={`category-tag category-tag--${item.category}`}>
+                  {item.categoryLabel}
+                </span>
+                <span class="city-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  {item.city}
+                </span>
+              </div>
+            </div>
+
+            <div class="partner-card-body">
+              <h3 class="partner-name">{item.name}</h3>
+              <p class="partner-desc">{item.description}</p>
+
+              <div class="partner-focus-wrap">
+                {item.focus.map((f) => (
+                  <span class="focus-pill">{f}</span>
+                ))}
+              </div>
+            </div>
+
+            <div class="partner-card-footer">
+              <a
+                href={`https://wa.me/62895639068080?text=${encodeURIComponent(`Halo PixxelPro, saya dari pihak institusi pendidikan/industri ingin menanyakan informasi kerja sama kemitraan seperti ${item.name}.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="partner-inquire-link"
+              >
+                <span>Ajukan Kerja Sama Serupa</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Partnership Models (Bentuk Kerja Sama) -->
+  <section class="mp-section mp-section--surface" id="bentuk-kerja-sama">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow eyebrow--red">RUANG LINGKUP</span>
+        <h2 class="heading-lg">Bentuk Kerja Sama Kemitraan yang Kami Layani</h2>
+        <p>
+          Kami merancang skema kerja sama fleksibel dan adaptif yang dapat disesuaikan dengan kurikulum serta kalender akademik institusi Anda.
+        </p>
+      </div>
+
+      <div class="models-grid">
+        {partnershipModels.map((m) => (
+          <div class="model-card">
+            <div class="model-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="model-title">{m.title}</h3>
+            <p class="model-desc">{m.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Workflow Steps (Alur Pengajuan Kemitraan) -->
+  <section class="mp-section" id="alur-kemitraan">
+    <div class="mp-container">
+      <div class="section-header text-center">
+        <span class="eyebrow eyebrow--red">ALUR KEMITRAAN</span>
+        <h2 class="heading-lg">4 Langkah Mudah Menjalin Kerja Sama</h2>
+        <p>
+          Proses inisiasi MoU dan penempatan peserta yang transparan, terstruktur, dan tidak berbelit-belit.
+        </p>
+      </div>
+
+      <div class="workflow-steps-grid">
+        {workflowSteps.map((step) => (
+          <div class="workflow-step-card">
+            <span class="step-num-badge">{step.num}</span>
+            <h3 class="step-title">{step.title}</h3>
+            <p class="step-desc">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Partnership Call to Action Banner -->
+  <CtaBanner
+    eyebrow="Mari Bersinergi Membangun Talenta Digital"
+    title="Institusi Anda Tertarik Berkolaborasi Bersama PixxelPro?"
+    desc="Diskusikan kuota magang PKL SMK, skema internship MBKM mahasiswa, atau agenda pelatihan industri bersama tim kemitraan kami sekarang juga."
+    waLabel="Konsultasi Kemitraan WhatsApp"
+    waMessage="Halo PixxelPro, kami dari pihak institusi/sekolah/kampus ingin berdiskusi mengenai penyusunan MoU kemitraan magang & pelatihan."
+  />
+</BaseLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll<HTMLButtonElement>('.mitra-filter-btn');
+    const cards = document.querySelectorAll<HTMLElement>('.partner-card');
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach((b) => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+
+        const filter = btn.dataset.filter || 'all';
+
+        cards.forEach((card) => {
+          const cat = card.dataset.category;
+          if (filter === 'all' || cat === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  /* ----------------------------------------------------
+     2. STATS PILLS ROW
+     ---------------------------------------------------- */
+  .mitra-stats-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--mp-border);
+  }
+
+  .stats-pills-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 860px) {
+    .stats-pills-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .stat-pill-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 18px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: transform 180ms ease, border-color 180ms ease;
+  }
+
+  .stat-pill-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(198, 40, 40, 0.35);
+  }
+
+  .stat-value {
+    font-family: var(--mp-font-heading);
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: var(--mp-red);
+    line-height: 1.1;
+  }
+
+  .stat-label {
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: #64748b;
+  }
+
+  /* ----------------------------------------------------
+     3. MITRA DIRECTORY & FILTERS
+     ---------------------------------------------------- */
+  .mitra-filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .mitra-filter-btn {
+    padding: 9px 20px;
+    font-family: var(--mp-font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: all 180ms ease;
+  }
+
+  .mitra-filter-btn:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+  }
+
+  .mitra-filter-btn.is-active {
+    background: var(--mp-red);
+    color: #ffffff;
+    border-color: var(--mp-red);
+    box-shadow: 0 4px 14px rgba(198, 40, 40, 0.3);
+  }
+
+  .mitra-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .mitra-directory-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 680px) {
+    .mitra-directory-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .partner-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  }
+
+  .partner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.09);
+    border-color: rgba(198, 40, 40, 0.35);
+  }
+
+  .partner-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .partner-logo-frame {
+    width: 80px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    border: 1px solid #edf2f7;
+    border-radius: 12px;
+    padding: 6px;
+    flex-shrink: 0;
+  }
+
+  .partner-logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .partner-badge-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .category-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 3px 9px;
+    border-radius: 9999px;
+  }
+
+  .category-tag--kampus {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+  }
+
+  .category-tag--smk {
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+  }
+
+  .category-tag--industri {
+    background: #f5f3ff;
+    color: #6d28d9;
+    border: 1px solid #ddd6fe;
+  }
+
+  .city-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 500;
+  }
+
+  .partner-card-body {
+    flex-grow: 1;
+    margin-bottom: 18px;
+  }
+
+  .partner-name {
+    font-family: var(--mp-font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+    margin: 0 0 10px;
+  }
+
+  .partner-desc {
+    font-size: 0.875rem;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0 0 14px;
+  }
+
+  .partner-focus-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .focus-pill {
+    font-size: 0.725rem;
+    font-weight: 600;
+    background: #f1f5f9;
+    color: #334155;
+    padding: 3px 8px;
+    border-radius: 6px;
+  }
+
+  .partner-card-footer {
+    padding-top: 14px;
+    border-top: 1px dashed #e2e8f0;
+  }
+
+  .partner-inquire-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--mp-red);
+    text-decoration: none;
+    transition: all 180ms ease;
+  }
+
+  .partner-inquire-link:hover {
+    color: var(--mp-red-dark);
+    transform: translateX(3px);
+  }
+
+  /* ----------------------------------------------------
+     4. PARTNERSHIP MODELS
+     ---------------------------------------------------- */
+  .models-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .models-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .models-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .model-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+  }
+
+  .model-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  }
+
+  .model-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(198, 40, 40, 0.08);
+    color: var(--mp-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .model-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+    margin: 0 0 10px;
+  }
+
+  .model-desc {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ----------------------------------------------------
+     5. WORKFLOW STEPS
+     ---------------------------------------------------- */
+  .workflow-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 992px) {
+    .workflow-steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .workflow-steps-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .workflow-step-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 22px;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+  }
+
+  .step-num-badge {
+    display: inline-block;
+    font-family: var(--mp-font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--mp-red);
+    line-height: 1;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+  }
+
+  .step-title {
+    font-family: var(--mp-font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+    margin: 0 0 8px;
+  }
+
+  .step-desc {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+</style>

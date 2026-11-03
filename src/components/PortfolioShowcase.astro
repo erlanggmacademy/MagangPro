@@ -28,6 +28,7 @@ import WhatsAppButton from './WhatsAppButton.astro';
         <article
           class="luxury-portfolio-card"
           data-category={item.category}
+          data-tags={item.tags.join(' ')}
           style={`--card-custom-bg: ${item.cardBg};`}
         >
           <!-- Top Media Area with Dissolve Gradient Overlay -->
@@ -122,8 +123,9 @@ import WhatsAppButton from './WhatsAppButton.astro';
         const filter = btn.dataset.filter || 'all';
 
         cards.forEach((card) => {
-          const category = card.dataset.category;
-          if (filter === 'all' || category === filter) {
+          const category = (card.dataset.category || '').toLowerCase();
+          const tags = (card.dataset.tags || '').toLowerCase();
+          if (filter === 'all' || category.includes(filter) || tags.includes(filter)) {
             card.style.display = 'flex';
             setTimeout(() => {
               card.style.opacity = '1';

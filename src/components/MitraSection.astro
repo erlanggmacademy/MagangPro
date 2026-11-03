@@ -1,85 +1,6 @@
 ---
-export interface MitraItem {
-  name: string;
-  category: 'kampus' | 'smk' | 'industri';
-  categoryLabel: string;
-  logo: string;
-}
-
-const mitraList: MitraItem[] = [
-  {
-    name: 'Universitas Negeri Malang',
-    category: 'kampus',
-    categoryLabel: 'Perguruan Tinggi',
-    logo: '/images/mitra/um.webp',
-  },
-  {
-    name: 'Universitas Muhammadiyah Malang',
-    category: 'kampus',
-    categoryLabel: 'Perguruan Tinggi',
-    logo: '/images/mitra/umm.webp',
-  },
-  {
-    name: 'UIN Maulana Malik Ibrahim Malang',
-    category: 'kampus',
-    categoryLabel: 'Perguruan Tinggi',
-    logo: '/images/mitra/uin-malang.webp',
-  },
-  {
-    name: 'Politeknik Negeri Malang',
-    category: 'kampus',
-    categoryLabel: 'Perguruan Tinggi',
-    logo: '/images/mitra/polinema.webp',
-  },
-  {
-    name: 'Universitas Merdeka Malang',
-    category: 'kampus',
-    categoryLabel: 'Perguruan Tinggi',
-    logo: '/images/mitra/unmer.webp',
-  },
-  {
-    name: 'Politeknik Negeri Banyuwangi',
-    category: 'kampus',
-    categoryLabel: 'Perguruan Tinggi',
-    logo: '/images/mitra/poliwangi.webp',
-  },
-  {
-    name: 'SMKN 5 Malang',
-    category: 'smk',
-    categoryLabel: 'SMK Vokasi',
-    logo: '/images/mitra/smkn-5-malang.webp',
-  },
-  {
-    name: 'SMKN 11 Malang',
-    category: 'smk',
-    categoryLabel: 'SMK Vokasi',
-    logo: '/images/mitra/smkn-11-malang.webp',
-  },
-  {
-    name: 'SMKN 1 Turen',
-    category: 'smk',
-    categoryLabel: 'SMK Vokasi',
-    logo: '/images/mitra/smk-1-turen.webp',
-  },
-  {
-    name: 'SMKN 1 Pasuruan',
-    category: 'smk',
-    categoryLabel: 'SMK Vokasi',
-    logo: '/images/mitra/smkn-1-pasuruan.webp',
-  },
-  {
-    name: 'SMK PGRI 3 Malang (Skariga)',
-    category: 'smk',
-    categoryLabel: 'SMK Vokasi',
-    logo: '/images/mitra/skariga.webp',
-  },
-  {
-    name: 'Radar Kediri (Jawa Pos Group)',
-    category: 'industri',
-    categoryLabel: 'Mitra Media & Industri',
-    logo: '/images/mitra/radar-kediri.webp',
-  },
-];
+import { mitraList } from '../data/mitra';
+import WhatsAppButton from './WhatsAppButton.astro';
 ---
 
 <section class="mp-section mp-section--surface" id="mitra-kolaborasi">
@@ -115,14 +36,36 @@ const mitraList: MitraItem[] = [
       ))}
     </div>
 
-    <!-- Bottom Collaboration Note -->
-    <div class="mitra-footer-note">
-      <div class="note-pill">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-          <polyline points="22 4 12 14.01 9 11.01"></polyline>
-        </svg>
-        <span>Terbuka untuk MoA & Kerja Sama Kemitraan Sekolah / Kampus Baru</span>
+    <!-- Bottom Collaboration CTA Box -->
+    <div class="mitra-cta-box">
+      <div class="mitra-cta-content">
+        <div class="cta-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <span>Terbuka untuk MoA & Kerja Sama Kemitraan Sekolah / Kampus Baru</span>
+        </div>
+        <h3 class="cta-title">Ingin Menjalin Kemitraan Edukasi & Industri?</h3>
+        <p class="cta-desc">
+          Kami siap berkolaborasi dalam penyaluran magang PKL SMK, internship MBKM perguruan tinggi, kuliah tamu, maupun pelatihan kapasitas digital terarah.
+        </p>
+      </div>
+
+      <div class="mitra-cta-actions">
+        <a href="/mitra" class="btn-mitra-page">
+          <span>Lihat Halaman Khusus Mitra</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <WhatsAppButton
+          label="Konsultasi Kerja Sama"
+          message="Halo PixxelPro, kami dari instansi/sekolah/kampus ingin berdiskusi mengenai kerja sama kemitraan magang & pelatihan."
+          variant="whatsapp"
+          size="md"
+        />
       </div>
     </div>
   </div>
@@ -222,29 +165,109 @@ const mitraList: MitraItem[] = [
     margin: 0;
   }
 
-  .mitra-footer-note {
+  /* Mitra CTA Box */
+  .mitra-cta-box {
+    margin-top: clamp(40px, 5vw, 60px);
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: clamp(28px, 4vw, 42px);
     display: flex;
-    justify-content: center;
-    margin-top: 36px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.3);
   }
 
-  .note-pill {
+  @media (max-width: 900px) {
+    .mitra-cta-box {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  .mitra-cta-content {
+    max-width: 620px;
+  }
+
+  .cta-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 10px 22px;
-    background: #ffffff;
-    border: 1px dashed #cbd5e1;
-    border-radius: 9999px;
-    font-size: 0.84rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    color: #475569;
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    color: #fca5a5;
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    padding: 6px 14px;
+    border-radius: 9999px;
+    margin-bottom: 12px;
   }
 
-  .note-pill svg {
-    color: var(--mp-red);
+  .cta-badge svg {
+    color: #ef4444;
+  }
+
+  .cta-title {
+    font-family: var(--mp-font-heading);
+    font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+    margin: 0 0 10px;
+  }
+
+  .cta-desc {
+    font-size: 0.925rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .mitra-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
     flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 900px) {
+    .mitra-cta-actions {
+      justify-content: center;
+    }
+  }
+
+  .btn-mitra-page {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    background: #ffffff;
+    color: #0f172a;
+    font-family: var(--mp-font-body);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 180ms ease;
+    box-shadow: 0 4px 14px rgba(255, 255, 255, 0.12);
+  }
+
+  .btn-mitra-page:hover {
+    background: #f1f5f9;
+    color: var(--mp-red);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-mitra-page svg {
+    transition: transform 180ms ease;
+  }
+
+  .btn-mitra-page:hover svg {
+    transform: translateX(4px);
   }
 </style>
-

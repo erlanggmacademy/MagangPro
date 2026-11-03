@@ -20,6 +20,7 @@ export const navigationItems: NavItem[] = [
       { title: 'Informasi Program Magang', href: '/program-magang', desc: 'Gambaran umum program dan kurikulum praktik' },
       { title: 'Magang SMK / PKL', href: '/program-magang/magang-smk-pkl', desc: 'Untuk jurusan RPL, TKJ, Multimedia, DKV, Bisnis' },
       { title: 'Internship Mahasiswa', href: '/program-magang/internship-mahasiswa', desc: 'Untuk mahasiswa IT, Bisnis Digital, Marketing' },
+      { title: 'Mitra Kampus & SMK', href: '/mitra', desc: 'Jaringan kemitraan institusi pendidikan & industri' },
       { title: 'Posisi Magang', href: '/program-magang/posisi', desc: 'Daftar bidang dan posisi yang tersedia' },
       { title: 'Kompetensi yang Dipelajari', href: '/program-magang/kompetensi', desc: 'Keahlian teknis dan soft skill yang dibangun' },
       { title: 'Alur Pendaftaran', href: '/program-magang/alur-pendaftaran', desc: 'Tahapan dan tata cara pendaftaran magang' },

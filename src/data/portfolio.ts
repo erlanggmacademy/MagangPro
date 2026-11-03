@@ -19,19 +19,19 @@ export interface PortfolioItem {
 export const portfolioData: PortfolioItem[] = [
   {
     id: 'qris-run-bi',
-    title: 'Qris Run Bank Indonesia Kediri',
-    category: 'design',
-    categoryLabel: 'Desain & Media Event',
-    badge: 'Event Nasional',
-    rating: '⭐ 5K Race Day',
+    title: 'Aplikasi Pendaftaran Qris Run Bank Indonesia Kediri',
+    category: 'web',
+    categoryLabel: 'Aplikasi Web & Sistem Event',
+    badge: 'Aplikasi & Event Nasional',
+    rating: '⭐ 5K Race Registration',
     pill1: 'Bank Indonesia',
-    pill2: 'Grafis Promosi',
-    role: 'Perancangan Visual & Desain Publikasi Media',
-    summary: 'Perancangan materi publikasi visual, reminder race day, serta materi promosi media sosial untuk gelaran Syiar 5K QRIS Run bersama Bank Indonesia Kediri.',
+    pill2: 'Aplikasi Pendaftaran',
+    role: 'Pengembangan Aplikasi Pendaftaran & Sistem Event QRIS Run',
+    summary: 'Pengembangan aplikasi web sistem pendaftaran online peserta lomba lari, manajemen kuota tiket/race slot, integrasi pembayaran QRIS real-time, verifikasi race pack, serta publikasi digital event Syi\'ar 5K QRIS Run bersama Bank Indonesia Kediri.',
     image: '/images/portfolio/qris-run.webp',
     cardBg: '#1c2838',
     btnLabel: 'Tanya Detail Proyek',
-    tags: ['Graphic Design', 'Social Media', 'Bank Indonesia'],
+    tags: ['Aplikasi Web', 'Sistem Pendaftaran', 'QRIS Payment', 'Bank Indonesia'],
     clientOrContext: 'Bank Indonesia Perwakilan Kediri'
   },
   {

@@ -227,7 +227,7 @@ const pelatihanGallery: GalleryPhoto[] = [
       <!-- Portfolio Grid -->
       <div class="portfolio-cards-grid" id="portfolio-grid">
         {portfolioData.map((item) => (
-          <article class="portfolio-item-card" data-category={item.category}>
+          <article class="portfolio-item-card" data-category={item.category} data-tags={item.tags.join(' ')}>
             <div class="item-media-wrap">
               <img
                 src={item.image}
@@ -488,8 +488,9 @@ const pelatihanGallery: GalleryPhoto[] = [
         const filter = btn.getAttribute('data-filter');
 
         cards.forEach((card) => {
-          const category = card.getAttribute('data-category');
-          if (filter === 'all' || category === filter) {
+          const category = (card.getAttribute('data-category') || '').toLowerCase();
+          const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+          if (filter === 'all' || category.includes(filter) || tags.includes(filter)) {
             card.style.display = 'flex';
           } else {
             card.style.display = 'none';
