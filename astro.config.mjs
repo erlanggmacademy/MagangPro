@@ -6,5 +6,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://pixxelprodigital.web.id',
   output: 'static',
+  trailingSlash: 'never',
+  build: {
+    format: 'file',
+  },
   integrations: [sitemap()]
 });
