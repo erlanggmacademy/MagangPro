@@ -3,7 +3,7 @@ import { navigationItems } from '../data/navigation';
 import WhatsAppButton from './WhatsAppButton.astro';
 
 const currentPath = Astro.url.pathname;
-const isHome = currentPath === '/' || currentPath === '';
+const isHome = currentPath === '/' || currentPath === '' || currentPath === '/index.html' || currentPath === '/index';
 ---
 
 <header class={`mp-header ${!isHome ? 'mp-header--solid scrolled' : ''}`} id="main-header" data-is-home={isHome ? 'true' : 'false'}>
@@ -26,7 +26,7 @@ const isHome = currentPath === '/' || currentPath === '';
     <nav class="desktop-nav" aria-label="Navigasi Utama">
       <ul class="nav-list">
         {navigationItems.map((item) => {
-          const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
+          const isActive = (item.href === '/' && isHome) || (item.href !== '/' && currentPath.startsWith(item.href));
           const hasChildren = item.children && item.children.length > 0;
 
           return (

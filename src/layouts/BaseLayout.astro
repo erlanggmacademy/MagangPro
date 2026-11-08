@@ -27,8 +27,8 @@ const {
 
 // Ensure clean canonical URL without trailing slash
 const currentPath = Astro.url.pathname;
-const isHome = currentPath === '/' || currentPath === '';
-const cleanPath = currentPath === '/' ? '' : currentPath.replace(/\/+$/, '');
+const isHome = currentPath === '/' || currentPath === '' || currentPath === '/index.html' || currentPath === '/index';
+const cleanPath = isHome ? '' : currentPath.replace(/\/+$/, '').replace(/\.html$/, '');
 const canonicalUrl = canonical || `${siteUrl}${cleanPath}`;
 
 // Schema.org JSON-LD Global Organization + WebSite per PRD Section 8.1
