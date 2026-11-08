@@ -3,10 +3,20 @@ import WhatsAppButton from './WhatsAppButton.astro';
 ---
 
 <section class="stodio-hero-section">
-  <!-- Full-Bleed Edge-to-Edge Dark Hero Canvas (Tanpa Gambar / Dark Minimalist Canvas) -->
+  <!-- Full-Bleed Edge-to-Edge Dark Hero Canvas (Cinematic Real Backdrop) -->
   <div class="hero-canvas">
-    <!-- Ambient Graphic Background Accents (Subtle Glow & Grid) -->
+    <!-- Ambient Graphic Background Accents (Real Photo Backdrop + Cinematic Vignette + Subtle Glow & Grid) -->
     <div class="hero-bg-layer" aria-hidden="true">
+      <img
+        src="/images/hero/hero-pixxelpro.webp"
+        alt="Aktivitas dan kolaborasi peserta magang di workstation PixxelPro Malang"
+        width="1280"
+        height="720"
+        class="hero-bg-img"
+        loading="eager"
+        decoding="async"
+      />
+      <div class="hero-overlay"></div>
       <div class="hero-ambient-glow"></div>
       <div class="hero-grid-pattern"></div>
     </div>
@@ -139,13 +149,69 @@ import WhatsAppButton from './WhatsAppButton.astro';
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  /* Ambient Graphic Background Layer (Clean Modern Dark Canvas without image) */
+  /* Ambient Graphic Background Layer (Cinematic Real Photo + Modern Dark Canvas) */
   .hero-bg-layer {
     position: absolute;
     inset: 0;
     z-index: 1;
     overflow: hidden;
     pointer-events: none;
+  }
+
+  /* Real Photo Background with Cinematic Depth & Zoom-Out Framing */
+  .hero-bg-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: clamp(720px, 66vw, 1320px);
+    height: 100%;
+    object-fit: cover;
+    object-position: 62% 30%;
+    filter: grayscale(10%) brightness(0.72) contrast(1.1);
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 20%, black 50%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 20%, black 50%);
+  }
+
+  /* Cinematic Vignette Overlay: Maximum black contrast on the left for text, soft translucent on the right for real mentor & student */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(7, 8, 10, 0.98) 0%,
+        rgba(7, 8, 10, 0.92) 35%,
+        rgba(7, 8, 10, 0.55) 68%,
+        rgba(7, 8, 10, 0.3) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(7, 8, 10, 0.6) 0%,
+        transparent 22%,
+        transparent 74%,
+        rgba(7, 8, 10, 0.98) 100%
+      );
+  }
+
+  @media (max-width: 768px) {
+    .hero-bg-img {
+      width: 100%;
+      left: 0;
+      right: 0;
+      object-position: 60% 25%;
+      filter: grayscale(20%) brightness(0.48) contrast(1.1);
+      mask-image: none;
+      -webkit-mask-image: none;
+    }
+    .hero-overlay {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(7, 8, 10, 0.94) 0%,
+          rgba(7, 8, 10, 0.84) 48%,
+          rgba(7, 8, 10, 0.98) 100%
+        );
+    }
   }
 
   /* Subtle Ambient Glows - PixxelPro signature subtle red accent & soft white illumination */
