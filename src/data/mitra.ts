@@ -30,6 +30,17 @@ export const mitraList: MitraItem[] = [
     focus: ['Internship MBKM', 'Konversi SKS', 'Proyek Nyata Industri']
   },
   {
+    id: 'universitas-brawijaya',
+    name: 'Universitas Brawijaya (UB)',
+    shortName: 'UB Malang',
+    category: 'kampus',
+    categoryLabel: 'Perguruan Tinggi',
+    logo: '/images/mitra/universitas-brawijaya.webp',
+    city: 'Kota Malang',
+    description: 'Kolaborasi penempatan magang mandiri & internship MBKM mahasiswa rumpun teknologi informasi, ilmu komputer, dan komunikasi bisnis digital.',
+    focus: ['Internship Mandiri/MBKM', 'Web Engineering', 'Proyek Nyata']
+  },
+  {
     id: 'umm',
     name: 'Universitas Muhammadiyah Malang',
     shortName: 'UMM',
@@ -150,5 +161,37 @@ export const mitraList: MitraItem[] = [
     description: 'Kolaborasi strategis pengembangan portal web kompetisi akademik (KKA) 2026 dan publikasi ekosistem literasi digital di Jawa Timur.',
     focus: ['Portal Web Event', 'Publikasi Media', 'Sinergi Industri']
   },
+  {
+    id: 'lpk-insan-kamil',
+    name: 'LPK Pesantren Insan Kamil',
+    shortName: 'LPK Insan Kamil',
+    category: 'industri',
+    categoryLabel: 'Lembaga Pelatihan Kerja',
+    logo: '/images/mitra/lpk-insan-kamil.webp',
+    city: 'Jawa Timur',
+    description: 'Kemitraan pelatihan vokasi dan peningkatan kompetensi digital aplikatif bagi peserta pelatihan kerja dan santri siap industri.',
+    focus: ['Pelatihan Vokasi', 'Skill Digital', 'Kesiapan Kerja']
+  },
+  {
+    id: 'saka-souvenir',
+    name: 'Saka Souvenir (Corporate Gift)',
+    shortName: 'Saka Souvenir',
+    category: 'industri',
+    categoryLabel: 'Mitra Industri & UMKM',
+    logo: '/images/mitra/saka-souvenir.webp',
+    city: 'Kota Malang',
+    description: 'Kolaborasi pengembangan channel pemasaran digital, web katalog produk corporate gift kustom, dan optimasi visibilitas brand industri.',
+    focus: ['Digital Marketing', 'Katalog Web', 'SEO & Branding']
+  },
+  {
+    id: 'katun-outbound-adventure',
+    name: 'Katun Outbound Adventure',
+    shortName: 'Katun Outbound',
+    category: 'industri',
+    categoryLabel: 'Mitra Industri & Pariwisata',
+    logo: '/images/mitra/katun-outbound-adventure.webp',
+    city: 'Kota Batu / Malang',
+    description: 'Kerja sama strategis digitalisasi layanan provider outbound, pengelolaan website promosi, serta sinergi kegiatan team building industri.',
+    focus: ['Website Promosi', 'Pemasaran Digital', 'Team Building']
+  },
 ];
-
