@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://pixxelprodigital.web.id',
+  site: 'https://pixxelpro.web.id',
   output: 'static',
   trailingSlash: 'never',
   build: {

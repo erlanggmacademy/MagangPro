@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pixxelprodigital.web.id/sitemap-index.xml
+Sitemap: https://pixxelpro.web.id/sitemap-index.xml

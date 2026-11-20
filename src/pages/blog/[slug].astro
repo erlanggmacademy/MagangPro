@@ -30,12 +30,12 @@ const articleSchema = {
   '@graph': [
     {
       '@type': 'Article',
-      '@id': `https://pixxelprodigital.web.id/blog/${post.slug}#article`,
+      '@id': `https://pixxelpro.web.id/blog/${post.slug}#article`,
       headline: post.title,
       description: post.excerpt,
       image: [
-        `https://pixxelprodigital.web.id${post.image}`,
-        `https://pixxelprodigital.web.id${post.secondImage.src}`
+        `https://pixxelpro.web.id${post.image}`,
+        `https://pixxelpro.web.id${post.secondImage.src}`
       ],
       datePublished: '2026-10-30T08:00:00+07:00',
       dateModified: '2026-10-30T08:00:00+07:00',
@@ -43,22 +43,22 @@ const articleSchema = {
         '@type': 'Person',
         name: post.author.name,
         jobTitle: post.author.role,
-        url: 'https://pixxelprodigital.web.id/tentang-kami'
+        url: 'https://pixxelpro.web.id/tentang-kami'
       },
       publisher: {
         '@type': 'Organization',
         name: 'PixxelPro Digital Id',
-        url: 'https://pixxelprodigital.web.id/',
+        url: 'https://pixxelpro.web.id/',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://pixxelprodigital.web.id/images/logo-pixxelpro.webp'
+          url: 'https://pixxelpro.web.id/images/logo-pixxelpro.webp'
         }
       },
-      mainEntityOfPage: `https://pixxelprodigital.web.id/blog/${post.slug}`
+      mainEntityOfPage: `https://pixxelpro.web.id/blog/${post.slug}`
     },
     {
       '@type': 'FAQPage',
-      '@id': `https://pixxelprodigital.web.id/blog/${post.slug}#faq`,
+      '@id': `https://pixxelpro.web.id/blog/${post.slug}#faq`,
       mainEntity: post.faqs.map((faq) => ({
         '@type': 'Question',
         name: faq.question,
@@ -75,7 +75,7 @@ const articleSchema = {
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  ogImage={`https://pixxelprodigital.web.id${post.image}`}
+  ogImage={`https://pixxelpro.web.id${post.image}`}
   pageSchema={articleSchema}
 >
   <!-- Article Main Content (Clean Light Layout without dark PageBanner) -->
@@ -382,7 +382,7 @@ const articleSchema = {
             <div class="share-buttons-grid">
               <!-- WhatsApp -->
               <a
-                href={`https://api.whatsapp.com/send?text=${encodeURIComponent(`${post.title}\n\nBaca artikel selengkapnya di: https://pixxelprodigital.web.id/blog/${post.slug}`)}`}
+                href={`https://api.whatsapp.com/send?text=${encodeURIComponent(`${post.title}\n\nBaca artikel selengkapnya di: https://pixxelpro.web.id/blog/${post.slug}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="social-share-btn btn-wa"
@@ -396,7 +396,7 @@ const articleSchema = {
 
               <!-- Facebook -->
               <a
-                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://pixxelprodigital.web.id/blog/${post.slug}`)}`}
+                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://pixxelpro.web.id/blog/${post.slug}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="social-share-btn btn-fb"
@@ -410,7 +410,7 @@ const articleSchema = {
 
               <!-- LinkedIn -->
               <a
-                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://pixxelprodigital.web.id/blog/${post.slug}`)}`}
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://pixxelpro.web.id/blog/${post.slug}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="social-share-btn btn-li"

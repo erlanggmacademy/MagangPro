@@ -91,7 +91,7 @@ async function createOgImage() {
       <!-- Bottom Domain Watermark -->
       <g transform="translate(80, 560)">
         <text x="0" y="0" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600" fill="#94a3b8">
-          📍 Mojolangu, Lowokwaru, Kota Malang  •  🌐 programmagang.web.id
+          📍 Mojolangu, Lowokwaru, Kota Malang  •  🌐 pixxelpro.web.id
         </text>
       </g>
     </svg>
