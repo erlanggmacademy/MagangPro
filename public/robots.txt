@@ -1,4 +1,60 @@
+# ==============================================================================
+# Robots.txt - PixxelPro Digital (https://pixxelpro.web.id)
+# Ramah Mesin Pencari & AI Search Engine (AEO & GEO Ready)
+# ==============================================================================
+
+# 1. Aturan Umum untuk Seluruh Mesin Pencari (Google, Bing, Yahoo, Yandex, DuckDuckGo)
 User-agent: *
 Allow: /
+Disallow: /404.html
 
+# 2. Crawler AI Search & Generative AI (GEO / AEO Friendly)
+# Mengizinkan bot AI merayapi konten, studi kasus, dan artikel blog untuk dikutip dalam jawaban AI
+
+# OpenAI (ChatGPT, SearchGPT, GPTBot)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google Gemini & Vertex AI
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI Search
+User-agent: PerplexityBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# 3. Peta Situs Resmi (XML Sitemaps)
 Sitemap: https://pixxelpro.web.id/sitemap-index.xml
+Sitemap: https://pixxelpro.web.id/sitemap-0.xml
+
+# 4. Host Domain Resmi
+Host: https://pixxelpro.web.id
+Sitemap: https://pixxelpro.web.id/sitemap-0.xml
+
+# 4. Host Domain Resmi
+Host: https://pixxelpro.web.id
