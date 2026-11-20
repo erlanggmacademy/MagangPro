@@ -37,8 +37,8 @@ const articleSchema = {
         `https://pixxelpro.web.id${post.image}`,
         `https://pixxelpro.web.id${post.secondImage.src}`
       ],
-      datePublished: '2026-10-30T08:00:00+07:00',
-      dateModified: '2026-10-30T08:00:00+07:00',
+      datePublished: post.isoDate || '2026-11-20T08:00:00+07:00',
+      dateModified: post.isoDate || '2026-11-20T08:00:00+07:00',
       author: {
         '@type': 'Person',
         name: post.author.name,
@@ -226,7 +226,7 @@ const articleSchema = {
               </svg>
               <span>BACA JUGA:</span>
             </div>
-            <a href={`/blog/${post.readAlso.slug}`} class="read-also-link">
+            <a href={post.readAlso.slug.startsWith('/') ? post.readAlso.slug : `/blog/${post.readAlso.slug}`} class="read-also-link">
               <span>{post.readAlso.title}</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
