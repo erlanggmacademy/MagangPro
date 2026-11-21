@@ -64,6 +64,9 @@ html {
   background-color: var(--mp-white);
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -71,11 +74,19 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
   background-color: var(--mp-white);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 main {
   flex: 1;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 main.has-fixed-header {
@@ -88,10 +99,18 @@ main.has-fixed-header {
 
 img,
 svg,
-video {
+video,
+canvas,
+iframe {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+/* Prevent text overflow on narrow screens */
+h1, h2, h3, h4, h5, h6, p, a, li, span, blockquote, dt, dd {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 a {
@@ -160,8 +179,10 @@ p {
 
 /* Container & Layout */
 .mp-container {
-  width: min(calc(100% - 40px), var(--mp-container));
+  width: 100%;
+  max-width: var(--mp-container);
   margin-inline: auto;
+  padding-inline: clamp(16px, 4.5vw, 24px);
 }
 
 .mp-section {

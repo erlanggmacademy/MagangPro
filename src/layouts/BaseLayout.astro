@@ -10,6 +10,7 @@ interface Props {
   canonical?: string;
   noindex?: boolean;
   ogImage?: string;
+  ogType?: string;
   pageSchema?: object | object[];
 }
 
@@ -22,6 +23,7 @@ const {
   canonical,
   noindex = false,
   ogImage = `${siteUrl}/images/og-pixxelpro.png`,
+  ogType = 'website',
   pageSchema,
 } = Astro.props;
 
@@ -98,7 +100,7 @@ const globalSchema = {
     />
 
     <!-- Open Graph Metadata -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={brandName} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

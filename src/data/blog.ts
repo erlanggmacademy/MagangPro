@@ -14,6 +14,7 @@ export interface BlogPost {
   id: string;
   slug: string;
   title: string;
+  metaTitle?: string;
   excerpt: string;
   category: string;
   categorySlug: string;
@@ -21,6 +22,7 @@ export interface BlogPost {
   isoDate?: string;
   readTime: string;
   image: string;
+  imageAlt?: string;
   secondImage: {
     src: string;
     alt: string;
@@ -55,9 +57,518 @@ export const blogCategories = [
   { label: 'Panduan Magang', slug: 'panduan-magang' },
   { label: 'Internship Mahasiswa', slug: 'internship-mahasiswa' },
   { label: 'Teknologi & Web', slug: 'teknologi-web' },
+  { label: 'Digital Agency', slug: 'digital-agency' },
 ];
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: 'post-6',
+    slug: 'magang-mahasiswa-teknik-informatika-malang',
+    title: 'Magang Mahasiswa Teknik Informatika Malang, Panduan Lengkap untuk Pemula',
+    metaTitle: 'Magang Mahasiswa Teknik Informatika Malang, Panduan Lengkap untuk Pemula',
+    excerpt: 'Panduan magang mahasiswa teknik informatika Malang: manfaat, bidang kerja, syarat, dan tips memilih tempat. Kenali program PixxelPro Digital sekarang.',
+    category: 'Internship Mahasiswa',
+    categorySlug: 'internship-mahasiswa',
+    date: '21 November 2026',
+    isoDate: '2026-11-21T08:00:00+07:00',
+    readTime: '12 menit baca',
+    featured: true,
+    image: '/images/blog/magang-mahasiswa-teknik.webp',
+    imageAlt: 'Mahasiswa teknik informatika magang di Malang',
+    secondImage: {
+      src: '/images/blog/magang-mahasiswa-teknik-2.webp',
+      alt: 'Mentor membimbing mahasiswa magang menulis kode',
+      caption: 'Mentor membimbing mahasiswa magang teknik informatika dalam menulis kode dan mengembangkan proyek website nyata.',
+    },
+    readAlso: {
+      title: 'Jurusan SMK dan Kuliah yang Relevan untuk Magang di Digital Agency',
+      slug: 'jurusan-magang-digital-agency',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'magang mahasiswa teknik informatika Malang',
+      'PixxelPro Digital',
+      'Malang Raya',
+      'web development',
+      'sistem informasi bisnis',
+      'portofolio',
+      'kerja praktik',
+      'Badan Pusat Statistik',
+    ],
+    intro: 'Magang mahasiswa teknik informatika Malang adalah program kerja praktik di perusahaan atau lembaga digital Malang Raya untuk melatih keterampilan pemrograman dan proyek nyata.',
+    sections: [
+      {
+        heading: 'Mengapa magang penting bagi mahasiswa teknik informatika?',
+        body: [
+          'Data BPS Agustus 2025 mencatat tingkat pengangguran terbuka lulusan Diploma IV, S1, S2, dan S3 sebesar 5,39 persen, sehingga pengalaman kerja nyata menjadi pembeda penting.',
+          'Angka tersebut berasal dari Berita Resmi Statistik Badan Pusat Statistik yang dirilis 5 November 2025. Pada periode yang sama, tingkat pengangguran terbuka nasional tercatat 4,85 persen atau setara 7,46 juta orang dari sekitar 154 juta angkatan kerja.',
+          'Data ini menunjukkan bahwa gelar sarjana belum otomatis menjamin pekerjaan, sehingga mahasiswa perlu menambah bukti kemampuan di luar ruang kuliah.',
+          'Data ini tidak membuktikan bahwa magang pasti mengurangi pengangguran, tetapi magang memberi bahan nyata untuk dinilai pemberi kerja.',
+        ],
+      },
+      {
+        heading: 'Apa manfaat konkret magang untuk mahasiswa?',
+        body: [
+          'Manfaat utama magang adalah pengalaman kerja nyata yang dapat dibuktikan melalui hasil proyek, bukan sekadar nilai di transkrip.',
+        ],
+        list: [
+          'Mahasiswa mengenal alur kerja tim digital, mulai dari brief, pengerjaan, revisi, hingga serah terima.',
+          'Mahasiswa membangun portofolio berupa website, sistem, atau dokumentasi proyek.',
+          'Mahasiswa memperluas jejaring dengan praktisi dan sesama peserta.',
+          'Mahasiswa menemukan bidang yang paling sesuai, apakah pengembangan web, analisis sistem, jaringan, atau desain antarmuka.',
+        ],
+      },
+      {
+        heading: 'Apa itu magang mahasiswa teknik informatika di Malang?',
+        body: [
+          'Magang mahasiswa teknik informatika adalah praktik kerja terbimbing di organisasi digital, tempat mahasiswa menerapkan pemrograman, basis data, dan jaringan pada proyek nyata selama periode tertentu.',
+          'Magang berbeda dari kuliah karena mahasiswa bekerja untuk kebutuhan nyata dengan tenggat dan standar kerja.',
+          'Pelaksanaannya dapat berupa kerja praktik yang menjadi bagian kurikulum, magang mandiri, atau program kerja sama antara kampus dan perusahaan.',
+          'Di Malang Raya, pilihan tempat magang mencakup agensi digital, perusahaan rintisan, instansi, hingga UMKM yang membutuhkan dukungan teknologi.',
+        ],
+      },
+      {
+        heading: 'Untuk siapa magang ini cocok dan kapan waktu terbaik?',
+        body: [
+          'Magang ini cocok bagi mahasiswa teknik informatika, sistem informasi, ilmu komputer, dan pendidikan teknik informatika yang ingin menguji kemampuan pada proyek nyata.',
+          'Mahasiswa dari luar Malang juga dapat mengikuti selama tempat magang membuka peluang tersebut dan kesepakatan pelaksanaan sudah jelas.',
+          'Waktu terbaik magang umumnya setelah mahasiswa menguasai dasar pemrograman dan basis data, misalnya pada semester menengah hingga akhir.',
+          'Ketentuan resmi tetap mengikuti buku panduan program studi, sehingga mahasiswa perlu memeriksanya sebelum mendaftar.',
+        ],
+      },
+      {
+        heading: 'Bidang kerja apa yang bisa dipelajari saat magang?',
+        body: [
+          'Mahasiswa teknik informatika umumnya dapat mempelajari pengembangan web, sistem informasi bisnis, jaringan, desain antarmuka, dan optimasi mesin pencari melalui proyek digital selama magang.',
+          'Pengembangan web adalah bidang paling umum karena hampir setiap bisnis membutuhkan website. Mahasiswa dapat belajar membangun tampilan halaman, merapikan kode, memperbaiki galat, dan memastikan website nyaman dibuka di ponsel.',
+          'Sistem informasi bisnis menghubungkan teknologi dengan proses usaha. Mahasiswa dapat belajar memetakan kebutuhan pengguna, merancang alur data, dan menyusun dokumentasi sistem sederhana untuk UMKM.',
+          'Jaringan dan infrastruktur mencakup pengelolaan perangkat, koneksi, dan layanan hosting. Mahasiswa dapat belajar dasar pemeliharaan sistem, keamanan akun, dan pencadangan data pada skala yang sesuai tingkat kemampuan.',
+          'Desain antarmuka memastikan produk digital mudah dipahami pengguna. Mahasiswa dapat berlatih menyusun tata letak, memilih warna, dan menerjemahkan desain menjadi halaman web yang berfungsi.',
+          'SEO teknis membantu website mudah ditemukan mesin pencari. Mahasiswa dapat mempelajari struktur heading, kecepatan halaman, data terstruktur, dan cara membaca laporan performa website.',
+        ],
+      },
+      {
+        heading: 'Bagaimana alur program magang pada umumnya?',
+        body: [
+          'Alur magang umumnya mencakup pendaftaran, seleksi atau diskusi, penentuan bidang kerja, pelaksanaan proyek dengan pendampingan, evaluasi, dan penyusunan laporan sesuai kesepakatan para pihak.',
+        ],
+        list: [
+          'Pendaftaran: peserta mengirim data diri, CV, dan informasi kampus.',
+          'Diskusi: peserta dan pihak tempat magang menyepakati bidang, durasi, dan jadwal.',
+          'Penugasan: peserta menerima tugas bertahap dari yang sederhana ke yang lebih kompleks.',
+          'Pendampingan: pembimbing memberi arahan dan umpan balik atas hasil kerja.',
+          'Evaluasi: hasil kerja ditinjau dan dicocokkan dengan target belajar.',
+          'Penutupan: peserta menyusun laporan atau ringkasan portofolio sesuai kebutuhan kampus.',
+        ],
+      },
+      {
+        heading: 'Apa saja syarat dan persiapan sebelum mendaftar magang?',
+        body: [
+          'Syarat magang umumnya meliputi surat pengantar kampus, CV, portofolio sederhana, kesiapan waktu, serta kesepakatan tugas dan durasi dengan tempat magang.',
+          'Setiap tempat magang dapat menetapkan persyaratan sendiri, sehingga mahasiswa perlu membaca informasi resmi sebelum mendaftar.',
+          'Portofolio pemula tidak harus rumit. Tiga proyek kecil yang berfungsi, rapi, dan dijelaskan dengan baik umumnya lebih bermanfaat daripada banyak proyek yang belum selesai.',
+        ],
+        list: [
+          'CV singkat yang memuat jurusan, semester, dan keterampilan.',
+          'Tautan hasil latihan, misalnya repositori kode atau proyek kuliah.',
+          'Pemahaman dasar HTML, CSS, JavaScript, basis data, atau jaringan sesuai minat.',
+          'Perangkat kerja pribadi dan koneksi internet yang stabil bila diperlukan.',
+          'Surat dari kampus dan format laporan yang diminta program studi.',
+        ],
+      },
+      {
+        heading: 'Bagaimana cara memilih tempat magang yang tepat di Malang?',
+        body: [
+          'Tempat magang yang tepat dinilai dari kesesuaian bidang, kualitas pendampingan, kejelasan proyek, fleksibilitas durasi, dan hasil kerja yang dapat dijadikan portofolio oleh mahasiswa.',
+          'Setiap jenis tempat memiliki batasan. Perusahaan besar biasanya menawarkan struktur yang rapi tetapi kuota terbatas, sedangkan agensi atau perusahaan kecil sering memberi cakupan tugas lebih luas dengan struktur yang lebih ringkas.',
+        ],
+        list: [
+          'Kesesuaian bidang: tugas harus selaras dengan minat dan kompetensi jurusan.',
+          'Pendampingan: harus ada pihak yang memberi arahan dan umpan balik.',
+          'Proyek nyata: tugas sebaiknya berupa pekerjaan yang benar-benar digunakan, bukan hanya pekerjaan administrasi.',
+          'Fleksibilitas: durasi dan jadwal perlu dapat disesuaikan dengan kuliah.',
+          'Kejelasan administrasi: ketentuan surat, laporan, dan penilaian harus disepakati sejak awal.',
+        ],
+      },
+      {
+        heading: 'Apa perbedaan magang dengan belajar mandiri atau kerja lepas?',
+        body: [
+          'Magang menawarkan proyek nyata, pendampingan, dan umpan balik profesional, sedangkan belajar mandiri dan kerja lepas menekankan kebebasan, kecepatan, dan tanggung jawab penuh pada hasil sendiri.',
+          'Belajar mandiri cocok untuk membangun dasar teknis dan dapat dilakukan kapan saja. Kerja lepas cocok bagi mahasiswa yang sudah percaya diri mencari klien sendiri, tetapi risikonya termasuk kesepakatan yang kurang jelas dan minim bimbingan.',
+          'Magang berada di antara keduanya: mahasiswa mendapat lingkungan kerja yang terstruktur dengan risiko lebih terkendali. Ketiganya dapat dikombinasikan, misalnya belajar mandiri sebelum magang lalu mengambil proyek lepas setelahnya.',
+        ],
+      },
+      {
+        heading: 'Apa kesalahan umum mahasiswa saat magang?',
+        body: [
+          'Kesalahan umum saat magang meliputi tidak menetapkan target belajar, enggan bertanya, mengabaikan dokumentasi, dan tidak menyimpan bukti hasil kerja untuk portofolio.',
+        ],
+        list: [
+          'Tidak punya target belajar sehingga kegiatan terasa tidak terarah.',
+          'Menunda bertanya hingga masalah kecil membesar.',
+          'Tidak mendokumentasikan proses, padahal catatan membantu laporan dan portofolio.',
+          'Mempublikasikan hasil kerja tanpa izin, padahal sebagian proyek bersifat rahasia.',
+          'Mengabaikan komunikasi dan tenggat, padahal kedisiplinan menjadi bagian penilaian.',
+        ],
+      },
+      {
+        heading: 'Tips agar magang menghasilkan portofolio yang kuat',
+        body: [
+          'Portofolio magang yang kuat dibangun dengan mencatat tugas, menyimpan hasil kerja yang boleh dipublikasikan, menulis studi kasus singkat, dan meminta umpan balik pembimbing berkala.',
+          'Mulailah dengan mencatat masalah, solusi, dan hasil pada setiap tugas. Setelah itu, tanyakan kepada pembimbing mana hasil yang boleh ditampilkan.',
+          'Studi kasus singkat berisi latar belakang, peran, langkah kerja, dan hasil akan lebih mudah dipahami perekrut dibanding daftar tugas saja. Pilih hasil terbaik, bukan semuanya, agar portofolio tetap fokus.',
+        ],
+      },
+      {
+        heading: 'Apa yang ditawarkan PixxelPro Digital untuk peserta magang?',
+        body: [
+          'PixxelPro Digital adalah agensi digital yang menyediakan layanan website, SEO, dan pemasaran digital, sekaligus menjadi wadah magang bagi siswa SMK dan mahasiswa.',
+          'Bidang usaha PixxelPro Digital mencakup digital marketing, jasa pembuatan website, SEO, social media marketing, branding online, copywriting, jurnalistik, serta pusat pengembangan pendidikan dan magang.',
+          'Program magang bertujuan memberi pengalaman kerja nyata, mengembangkan keterampilan sesuai jurusan, membangun portofolio, dan menghubungkan dunia pendidikan dengan industri digital.',
+          'PixxelPro Digital menerima peserta dari berbagai latar belakang pendidikan, terutama Bisnis Digital, Rekayasa Perangkat Lunak, Multimedia, Desain Komunikasi Visual, dan Teknik Komputer dan Jaringan.',
+          'Mahasiswa teknik informatika dengan minat pengembangan web, sistem, atau jaringan dapat mendiskusikan kecocokan bidang langsung dengan tim.',
+          'PixxelPro Digital terbuka bagi peserta dari Malang Raya maupun luar kota. Sistem pelaksanaan, termasuk jadwal dan durasi, mengikuti kesepakatan antara peserta dan perusahaan.',
+        ],
+      },
+    ],
+    conclusion: 'Magang yang berhasil membutuhkan tempat yang sesuai bidang, target belajar yang jelas, pendampingan yang baik, dan bukti hasil kerja yang tersimpan rapi sebagai portofolio. Tetapkan target belajar sebelum mendaftar. Bandingkan tempat magang dengan lima parameter: bidang, pendampingan, proyek, fleksibilitas, dan administrasi. Siapkan CV, portofolio sederhana, dan dokumen kampus. Dokumentasikan setiap tugas dan minta izin sebelum mempublikasikan hasil kerja. Bila Anda mahasiswa dari Malang Raya atau luar kota yang ingin membangun pengalaman di dunia digital, kenali PixxelPro Digital melalui website resmi dan hubungi tim untuk mendiskusikan bidang, jadwal, dan sistem magang yang sesuai.',
+    faqs: [
+      {
+        question: 'Berapa lama durasi magang mahasiswa teknik informatika?',
+        answer: 'Durasi magang bervariasi dan umumnya mengikuti ketentuan kampus serta kesepakatan dengan tempat magang. Mahasiswa perlu memeriksa kebutuhan program studi sebelum menentukan lamanya.',
+      },
+      {
+        question: 'Apakah mahasiswa teknik informatika harus jago coding sebelum magang?',
+        answer: 'Tidak harus mahir, tetapi dasar pemrograman membantu mahasiswa mengikuti tugas lebih cepat. Semangat belajar, kemauan bertanya, dan kedisiplinan sama pentingnya dengan kemampuan teknis awal.',
+      },
+      {
+        question: 'Apakah magang di Malang bisa dilakukan oleh mahasiswa dari luar kota?',
+        answer: 'Bisa, selama tempat magang membuka peluang tersebut. PixxelPro Digital, misalnya, terbuka bagi peserta dari Malang Raya maupun luar kota dengan sistem pelaksanaan sesuai kesepakatan.',
+      },
+      {
+        question: 'Apa saja yang perlu disiapkan untuk mendaftar magang?',
+        answer: 'Siapkan CV, surat pengantar kampus, portofolio sederhana, serta informasi jadwal kuliah. Persyaratan lengkap sebaiknya dikonfirmasi langsung kepada tempat magang yang dituju.',
+      },
+      {
+        question: 'Apakah magang pasti berujung pada pekerjaan tetap?',
+        answer: 'Tidak ada jaminan. Magang memberi pengalaman, portofolio, dan jejaring yang meningkatkan kesiapan kerja, tetapi keputusan perekrutan bergantung pada kebutuhan perusahaan dan kemampuan peserta.',
+      },
+      {
+        question: 'Bagaimana cara memilih antara magang web, sistem informasi, atau jaringan?',
+        answer: 'Pilih berdasarkan mata kuliah yang paling dinikmati dan jenis proyek yang ingin ditunjukkan dalam portofolio. Bila belum yakin, diskusikan dengan pembimbing agar tugas awal mencakup beberapa bidang.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Program Magang Mahasiswa Teknik Informatika',
+      title: 'Cari Tempat Magang Teknik Informatika di Malang?',
+      desc: 'PixxelPro Digital membuka kesempatan magang bagi mahasiswa teknik informatika dengan proyek digital nyata, pendampingan mentor, dan portofolio kerja.',
+      btnLabel: 'Konsultasi Magang via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20mahasiswa%20teknik%20informatika%20ingin%20konsultasi%20posisi%20dan%20kuota%20magang.',
+    },
+  },
+  {
+    id: 'post-5',
+    slug: 'apa-itu-digital-agency-layanan-umkm-malang',
+    title: 'Apa Itu Digital Agency dan Layanan yang Dibutuhkan UMKM di Malang',
+    metaTitle: 'Apa Itu Digital Agency dan Layanan untuk UMKM Malang',
+    excerpt: 'Kenali apa itu digital agency, layanan digital marketing, dan cara memilih mitra untuk UMKM di Malang. Temukan layanan sesuai kebutuhan bisnis.',
+    category: 'Digital Agency',
+    categorySlug: 'digital-agency',
+    date: '21 November 2026',
+    isoDate: '2026-11-21T08:00:00+07:00',
+    readTime: '10 menit baca',
+    featured: false,
+    image: '/images/blog/digital-agency.webp',
+    imageAlt: 'tim-digital-agency-malang-menyusun-strategi-pemasaran-umkm',
+    secondImage: {
+      src: '/images/blog/digital agency.webp',
+      alt: 'pemilik-umkm-malang-menganalisis-performa-pemasaran-digital',
+      caption: 'Pemilik UMKM Malang menganalisis performa pemasaran digital dan mengevaluasi hasil kampanye bersama tim agency.',
+    },
+    readAlso: {
+      title: 'Magang Digital Agency Malang untuk SMK & Mahasiswa',
+      slug: 'magang-digital-agency-malang',
+    },
+    author: {
+      name: 'Tim Konten PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'apa itu digital agency',
+      'digital marketing',
+      'SEO',
+      'social media marketing',
+      'website bisnis',
+      'iklan digital',
+      'UMKM Malang',
+    ],
+    intro: 'Digital agency adalah perusahaan atau tim profesional yang membantu bisnis merencanakan dan menjalankan pemasaran serta aktivitas digital, seperti website, SEO, media sosial, dan iklan online, sesuai tujuan usaha.',
+    sections: [
+      {
+        heading: 'Poin Utama Pembahasan',
+        body: [
+          'Berikut poin-poin utama yang perlu dipahami tentang digital agency dan layanan digital untuk UMKM di Malang:',
+        ],
+        list: [
+          'Digital agency membantu bisnis membangun kehadiran digital dan menjangkau calon pelanggan secara terarah.',
+          'UMKM dapat memilih layanan sesuai masalah utama, bukan harus mengambil semua layanan sekaligus.',
+          'Strategi digital menggabungkan konten, kanal, pengukuran, dan pengalaman pelanggan.',
+          'Pemilihan agency perlu mempertimbangkan proses kerja, transparansi, portofolio, dan kecocokan anggaran.',
+        ],
+      },
+      {
+        heading: 'Apa Itu Digital Agency?',
+        body: [
+          'Digital agency adalah mitra profesional yang membantu bisnis menggunakan kanal dan teknologi digital untuk mencapai tujuan pemasaran atau operasional.',
+          'Layanannya dapat berupa strategi, produksi konten, pengembangan website, optimasi mesin pencari, pengelolaan media sosial, hingga kampanye iklan.',
+          'Berbeda dari sekadar penyedia satu pekerjaan, digital agency biasanya menggabungkan beberapa keahlian dalam satu tim.',
+          'Namun, cakupan tiap agency tidak sama. Ada agency yang fokus pada SEO, ada yang kuat di konten sosial, dan ada pula yang menyediakan layanan terpadu.',
+          'Bagi UMKM, digital agency dapat menjadi sumber keahlian tambahan ketika bisnis belum memiliki tim pemasaran digital internal.',
+          'Agency membantu menyusun prioritas, menjalankan pekerjaan teknis, dan membaca hasil agar keputusan pemasaran tidak hanya berdasarkan perkiraan.',
+        ],
+      },
+      {
+        heading: 'Mengapa Digital Agency Relevan untuk UMKM di Malang?',
+        body: [
+          'Digital agency Malang dapat membantu usaha lokal menghubungkan promosi online dengan kebutuhan pelanggan di wilayah Malang Raya dan pasar yang lebih luas. Strategi lokal dapat mencakup informasi lokasi, profil bisnis, konten produk, dan halaman layanan yang relevan.',
+          'Konteks usaha di Malang beragam, mulai dari kuliner, jasa, pendidikan, pariwisata, kerajinan, hingga perdagangan. Setiap kategori memiliki perilaku pembelian berbeda.',
+          'Usaha kuliner mungkin membutuhkan pencarian lokal dan konten visual, sedangkan jasa profesional dapat memerlukan website yang menjelaskan layanan dan membangun kepercayaan.',
+          'Kebutuhan lokal bukan berarti seluruh promosi harus dibatasi pada satu kota. UMKM dapat menargetkan pelanggan sekitar untuk transaksi langsung sekaligus menggunakan marketplace atau website untuk melayani pesanan dari daerah lain. Agency yang baik akan membantu menentukan batas wilayah, pesan, dan kanal berdasarkan kapasitas usaha.',
+        ],
+      },
+      {
+        heading: 'Layanan Digital Agency Apa yang Dibutuhkan UMKM?',
+        body: [
+          'Layanan digital agency yang tepat adalah layanan yang menyelesaikan hambatan pemasaran paling penting bagi bisnis, misalnya sulit ditemukan, konten tidak konsisten, website kurang jelas, atau iklan belum terukur.',
+          'SEO membantu calon pelanggan menemukan informasi melalui mesin pencari. Social media marketing membantu membangun komunikasi dan menampilkan produk.',
+          'Website menjadi pusat informasi yang dapat memuat katalog, layanan, lokasi, kontak, dan formulir. Iklan digital dapat memperluas jangkauan secara berbayar ketika target, materi, dan anggaran sudah ditentukan.',
+          'UMKM tidak harus membeli seluruh layanan sekaligus. Usaha baru dapat memulai dari identitas digital yang rapi dan konten dasar.',
+          'Usaha yang sudah memiliki trafik tetapi sedikit pertanyaan mungkin perlu memperbaiki halaman penawaran, pesan, atau proses kontak. Pemilihan layanan sebaiknya berangkat dari data dan tujuan.',
+        ],
+      },
+      {
+        heading: 'Bagaimana Cara Kerja Digital Agency?',
+        body: [
+          'Cara kerja digital agency umumnya dimulai dengan memahami bisnis, menetapkan tujuan, merancang strategi, mengeksekusi pekerjaan, lalu mengevaluasi hasil secara berkala.',
+          'Tahap awal meliputi diskusi tentang produk, pelanggan, keunggulan, kompetitor, anggaran, dan kondisi kanal yang sudah dimiliki.',
+          'Setelah itu, agency menyusun ruang lingkup pekerjaan, jadwal, indikator kinerja, serta kebutuhan materi dari pemilik usaha. Kesepakatan yang jelas mengurangi risiko perbedaan ekspektasi.',
+          'Pada tahap pelaksanaan, tim dapat melakukan riset kata kunci, menyusun kalender konten, membuat desain, mengembangkan halaman, atau mengatur kampanye.',
+          'Laporan berkala perlu menjelaskan aktivitas, hasil, kendala, dan langkah berikutnya. Angka seperti jangkauan atau klik harus dibaca bersama tujuan bisnis, bukan dianggap keberhasilan otomatis.',
+        ],
+      },
+      {
+        heading: 'Apa Manfaat Digital Marketing bagi UMKM?',
+        body: [
+          'Digital marketing membantu UMKM memperkenalkan produk, memudahkan pelanggan mencari informasi, menjaga komunikasi, dan mengukur respons terhadap promosi dengan lebih terstruktur.',
+          'Kehadiran digital yang konsisten dapat memperkuat kepercayaan karena calon pelanggan dapat melihat detail produk, ulasan, lokasi, cara pemesanan, dan informasi usaha. Konten edukatif juga membantu menjawab pertanyaan sebelum pelanggan menghubungi penjual.',
+          'Manfaat tersebut tidak otomatis menghasilkan penjualan. Hasil dipengaruhi kualitas produk, harga, layanan, ketersediaan, persaingan, dan kesesuaian pesan.',
+          'Digital marketing sebaiknya dipandang sebagai bagian dari sistem bisnis yang mendukung penjualan, bukan pengganti kualitas produk maupun pelayanan.',
+        ],
+      },
+      {
+        heading: 'Statistik Digital yang Perlu Dipahami UMKM',
+        body: [
+          'Data penggunaan internet menunjukkan peluang menjangkau pelanggan secara online, tetapi angka nasional tidak menjamin hasil yang sama untuk setiap usaha atau wilayah.',
+          'APJII dalam Profil Internet Indonesia 2025 melaporkan penetrasi internet Indonesia sebesar 80,66 persen, atau sekitar 229,4 juta pengguna. Data tersebut memberi konteks bahwa internet merupakan kanal penting untuk komunikasi dan pencarian informasi.',
+          'Kementerian Koperasi mengutip data IDEA bahwa 25,42 juta UMKM telah onboarding digital hingga Desember 2023, dan jumlahnya mencapai 25,45 juta pada Mei 2024.',
+          'BRIN pada 24 Juli 2025 menyampaikan bahwa UMKM berjumlah sekitar 66 juta unit pada 2024 dan berkontribusi 61,07 persen terhadap PDB. Data ini menunjukkan skala sektor dan kebutuhan peningkatan kemampuan digital, bukan jaminan efektivitas satu layanan.',
+        ],
+      },
+      {
+        heading: 'Bagaimana Memilih Digital Agency di Malang?',
+        body: [
+          'Memilih digital agency perlu didasarkan pada kecocokan kebutuhan, proses kerja yang dapat dipahami, bukti pekerjaan relevan, dan kesepakatan yang transparan.',
+          'Periksa apakah agency memahami model bisnis, pelanggan, serta tantangan usaha. Mintalah contoh pekerjaan yang relevan dan penjelasan peran tim.',
+          'Portofolio perlu dibaca dengan kritis: tanyakan ruang lingkup pekerjaan, periode, indikator yang digunakan, dan bagian yang benar-benar dikerjakan agency.',
+          'Pastikan proposal menyebut deliverable, jumlah revisi, jadwal, akses akun, biaya tambahan, serta format laporan. Hindari keputusan berdasarkan janji posisi teratas atau penjualan pasti.',
+          'Untuk UMKM, komunikasi yang mudah dan kemampuan menjelaskan hal teknis dengan bahasa sederhana sering lebih berguna daripada presentasi yang penuh istilah.',
+        ],
+      },
+      {
+        heading: 'Apa Perbedaan Digital Agency dan Freelancer?',
+        body: [
+          'Digital agency biasanya menawarkan tim dan proses lintas keahlian, sedangkan freelancer umumnya bekerja secara mandiri atau berkolaborasi dengan tenaga lain sesuai proyek.',
+          'Freelancer cocok untuk pekerjaan spesifik dengan ruang lingkup jelas, seperti desain beberapa materi, penulisan artikel, atau pengaturan kanal tertentu.',
+          'Biaya dan komunikasi bisa lebih sederhana, tetapi kapasitas bergantung pada satu orang dan ketersediaan keahliannya.',
+          'Digital agency dapat lebih sesuai ketika bisnis membutuhkan beberapa layanan yang saling terhubung, koordinasi rutin, atau kapasitas produksi lebih besar. Namun, agency tidak selalu lebih baik atau lebih murah. Pilihan ideal bergantung pada kompleksitas, anggaran, kecepatan, dan kebutuhan pengawasan.',
+        ],
+      },
+      {
+        heading: 'Kesalahan Umum Saat Menggunakan Jasa Digital Agency',
+        body: [
+          'Kesalahan paling umum adalah membeli layanan tanpa tujuan, mengharapkan hasil instan, dan tidak menyediakan informasi yang dibutuhkan tim pemasaran.',
+          'Sebagian pemilik usaha memilih paket karena terlihat lengkap, padahal belum memahami kebutuhan.',
+          'Kesalahan lain adalah menilai keberhasilan hanya dari jumlah pengikut, impresi, atau desain yang menarik tanpa melihat pertanyaan pelanggan, prospek, transaksi, dan biaya.',
+          'UMKM juga perlu menghindari ketergantungan penuh pada agency untuk akses akun. Pastikan bisnis tetap menjadi pemilik akun, domain, data, dan aset kreatif sesuai perjanjian. Bangun komunikasi dua arah dan lakukan evaluasi berdasarkan indikator yang disepakati.',
+        ],
+      },
+    ],
+    conclusion: 'Digital agency dapat menjadi mitra pertumbuhan bagi UMKM di Malang ketika layanan yang dipilih sesuai kebutuhan dan tujuan bisnis. Mulailah dengan masalah yang paling nyata, tetapkan ruang lingkup kerja, dan evaluasi hasil menggunakan indikator yang relevan. Strategi yang terarah, komunikasi terbuka, serta pemahaman pelanggan lebih penting daripada mengambil banyak layanan sekaligus.',
+    faqs: [
+      {
+        question: 'Apakah UMKM kecil perlu digital agency?',
+        answer: 'Tidak selalu. UMKM dapat memulai secara mandiri dan menggunakan agency ketika membutuhkan keahlian, waktu, atau kapasitas tambahan.',
+      },
+      {
+        question: 'Apakah digital agency menjamin penjualan?',
+        answer: 'Tidak. Agency dapat membantu strategi dan pelaksanaan pemasaran, tetapi penjualan dipengaruhi banyak faktor bisnis.',
+      },
+      {
+        question: 'Apakah layanan digital agency harus bulanan?',
+        answer: 'Tidak selalu. Sebagian pekerjaan dapat berbentuk proyek, sedangkan pengelolaan konten, SEO, dan iklan biasanya memerlukan proses berkelanjutan.',
+      },
+      {
+        question: 'Apa layanan pertama yang sebaiknya dipilih?',
+        answer: 'Pilih berdasarkan hambatan utama. Jika usaha sulit ditemukan, evaluasi SEO dan profil bisnis; jika calon pelanggan belum memahami produk, perbaiki konten dan halaman informasi.',
+      },
+      {
+        question: 'Bagaimana mengukur kinerja agency?',
+        answer: 'Gunakan indikator sesuai tujuan, seperti kunjungan berkualitas, pertanyaan masuk, prospek, transaksi, biaya per prospek, dan kualitas laporan.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Layanan Digital Agency untuk UMKM Malang',
+      title: 'Butuh Mitra Digital untuk Mengembangkan Bisnis Anda?',
+      desc: 'PixxelPro Digital menyediakan layanan website, SEO, social media marketing, dan branding online untuk UMKM di Malang dan sekitarnya.',
+      btnLabel: 'Konsultasi Layanan via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20pemilik%20UMKM%20dan%20ingin%20konsultasi%20layanan%20digital%20marketing.',
+    },
+  },
+  {
+    id: 'post-4',
+    slug: 'jurusan-magang-digital-agency',
+    title: 'Jurusan SMK dan Kuliah yang Relevan untuk Magang di Digital Agency',
+    metaTitle: 'Jurusan yang Cocok untuk Magang Digital Agency',
+    excerpt: 'Cari tahu jurusan yang relevan untuk magang digital agency, dari Bisnis Digital hingga TKJ. Kenali contoh tugas dan siapkan pendaftaran Anda.',
+    category: 'Panduan Magang',
+    categorySlug: 'panduan-magang',
+    date: '21 November 2026',
+    isoDate: '2026-11-21T08:00:00+07:00',
+    readTime: '8 menit baca',
+    featured: false,
+    image: '/images/blog/Kolaborasi-peserta-lintas-jurusan.webp',
+    secondImage: {
+      src: '/images/blog/Diskusi-desain-website-peserta-magang.webp',
+      alt: 'Peserta magang berdiskusi tentang desain website dalam proyek digital agency',
+      caption: 'Peserta magang dari berbagai jurusan berdiskusi tentang desain dan struktur website dalam proyek digital agency.',
+    },
+    readAlso: {
+      title: 'Apa Itu Digital Agency dan Layanan yang Dibutuhkan UMKM di Malang',
+      slug: 'apa-itu-digital-agency-layanan-umkm-malang',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'jurusan magang digital agency',
+      'magang Bisnis Digital Malang',
+      'magang RPL',
+      'magang Multimedia',
+      'magang DKV',
+      'magang TKJ',
+      'PKL jurusan digital',
+    ],
+    intro: 'Jurusan magang digital agency yang relevan mencakup Bisnis Digital, RPL, Multimedia, DKV, dan TKJ karena tiap bidang mendukung pekerjaan digital.',
+    sections: [
+      {
+        heading: 'Poin Utama Pembahasan',
+        body: [
+          'Berikut poin-poin utama tentang jurusan yang relevan untuk magang di digital agency:',
+        ],
+        list: [
+          'Keselarasan jurusan membantu peserta memilih tugas belajar yang realistis.',
+          'Satu proyek digital dapat melibatkan beberapa kompetensi sekaligus.',
+          'Portofolio sebaiknya menunjukkan proses dan kontribusi pribadi.',
+          'Calon peserta perlu mengonfirmasi tugas yang tersedia sebelum mendaftar.',
+        ],
+      },
+      {
+        heading: 'Jurusan apa saja yang cocok untuk magang digital agency?',
+        body: [
+          'Lima jurusan yang relevan untuk program PixxelPro Digital adalah Bisnis Digital, RPL, Multimedia, DKV, dan TKJ.',
+          'Digital agency mengerjakan kebutuhan yang saling berhubungan, mulai dari strategi pemasaran hingga pengembangan website.',
+          'Karena itu, peserta dengan latar pendidikan berbeda dapat berkontribusi melalui kompetensi masing-masing.',
+          'Kesesuaian akhir tetap bergantung pada kebutuhan proyek, kemampuan peserta, dan arahan pembimbing.',
+        ],
+      },
+      {
+        heading: 'Apa contoh aktivitas untuk siswa Bisnis Digital?',
+        body: [
+          'Siswa Bisnis Digital dapat menghubungkan pengetahuan pemasaran dengan riset audiens, perencanaan konten, dan evaluasi komunikasi digital.',
+          'Contoh tugas belajar meliputi mengidentifikasi target audiens, mengamati kompetitor, menyusun ide konten, membuat kalender publikasi, dan memahami dasar pemasaran melalui media sosial.',
+          'Peserta juga dapat mempelajari SEO dasar, seperti memahami maksud pencarian dan menempatkan kata kunci secara wajar.',
+          'Dalam latihan proyek, peserta dapat diminta menyusun rancangan kampanye sederhana untuk sebuah produk.',
+          'Hasilnya dapat berupa ringkasan audiens, tujuan komunikasi, ide konten, dan indikator evaluasi. Peserta perlu memahami bahwa rekomendasi pemasaran harus berdasarkan informasi yang tersedia, bukan asumsi atau angka yang dibuat-buat.',
+        ],
+      },
+      {
+        heading: 'Bagaimana kompetensi RPL digunakan dalam proyek digital?',
+        body: [
+          'Kompetensi RPL berkaitan dengan logika pemrograman, pengembangan website, pengujian, dan pemeliharaan fitur digital.',
+          'Peserta RPL dapat mempelajari bagaimana kebutuhan pengguna diterjemahkan menjadi struktur halaman dan fungsi website. Aktivitas latihan bisa mencakup membuat komponen sederhana, memperbaiki tampilan responsif, menguji tautan, atau mendokumentasikan bug.',
+          'Contohnya, peserta membantu memeriksa formulir pada halaman website. Mereka menguji apakah kolom dapat diisi, pesan kesalahan muncul dengan jelas, dan tampilan tetap terbaca pada perangkat berbeda. Pekerjaan dilakukan sesuai tingkat kemampuan serta akses yang diberikan pembimbing.',
+        ],
+      },
+      {
+        heading: 'Apa peran Multimedia dan DKV di digital agency?',
+        body: [
+          'Multimedia dan DKV mendukung produksi aset visual serta penyampaian pesan melalui desain yang konsisten dan mudah dipahami.',
+          'Peserta Multimedia dapat berlatih mengolah gambar, video, atau materi audiovisual. Sementara itu, peserta DKV dapat mempelajari hierarki visual, tipografi, warna, tata letak, dan konsistensi identitas merek.',
+          'Keduanya dapat bekerja sama dalam membuat materi media sosial atau visual pendukung artikel.',
+          'Sebelum membuat desain, peserta perlu memahami tujuan konten dan siapa audiensnya.',
+          'Desain yang menarik belum tentu efektif apabila pesan utama sulit dibaca atau tidak sesuai konteks. Simpan hasil kerja sebagai portofolio hanya jika penggunaan dan publikasinya telah mendapat izin.',
+        ],
+      },
+      {
+        heading: 'Bagaimana jurusan TKJ dapat berkontribusi?',
+        body: [
+          'Kompetensi TKJ dapat mendukung pemahaman infrastruktur jaringan, perangkat kerja, konektivitas, dan pemecahan masalah teknis dasar.',
+          'Dalam lingkungan kerja digital, koneksi dan perangkat yang berfungsi baik membantu tim menjalankan aktivitasnya.',
+          'Peserta TKJ dapat mengembangkan keterampilan diagnosis dasar, dokumentasi kendala, serta pemahaman konfigurasi jaringan sesuai ruang lingkup dan pengawasan yang diberikan.',
+          'Tugas teknis harus dibatasi pada sistem yang memang menjadi kewenangan perusahaan. Peserta tidak boleh mencoba mengakses akun, server, atau jaringan tanpa izin. Etika keamanan informasi merupakan bagian penting dari kesiapan kerja.',
+        ],
+      },
+      {
+        heading: 'Bagaimana memilih tugas sesuai jurusan?',
+        body: [
+          'Pilih tugas berdasarkan kompetensi yang ingin dikembangkan, tingkat kemampuan saat ini, dan hasil belajar yang dapat dievaluasi.',
+          'Buat daftar tiga kemampuan yang ingin dilatih, lalu diskusikan dengan calon pembimbing. Tanyakan contoh tugas, perangkat yang digunakan, bentuk umpan balik, dan apakah pekerjaan dapat didokumentasikan.',
+          'Jika tugas lintas bidang tersedia, sepakati batas tanggung jawab agar peserta tidak kehilangan fokus pembelajaran.',
+          'Calon peserta dapat mengenal bidang layanan melalui beranda PixxelPro Digital dan mengonfirmasi ketersediaan penempatan melalui kanal resmi.',
+        ],
+      },
+    ],
+    conclusion: 'Jurusan yang berbeda dapat saling melengkapi di digital agency. Kenali kompetensi inti, pilih tugas yang sesuai, dan bicarakan target belajar sebelum program dimulai.',
+    faqs: [
+      {
+        question: 'Apakah jurusan yang berbeda bisa magang di satu digital agency?',
+        answer: 'Bisa, karena pekerjaan digital agency dapat melibatkan pemasaran, desain, website, dan dukungan teknis. Penempatan mengikuti kebutuhan dan kesepakatan.',
+      },
+      {
+        question: 'Apakah peserta harus sudah mahir sebelum magang?',
+        answer: 'Tidak selalu. Peserta perlu memiliki dasar sesuai jurusan dan kesiapan belajar. Tingkat kemampuan akan memengaruhi jenis tugas yang sesuai.',
+      },
+      {
+        question: 'Apakah siswa DKV bisa belajar SEO?',
+        answer: 'Bisa mempelajari dasar SEO sebagai pengetahuan lintas bidang, terutama hubungan antara desain, keterbacaan, dan pengalaman pengguna.',
+      },
+      {
+        question: 'Apakah hasil tugas boleh dimasukkan ke portofolio?',
+        answer: 'Boleh jika perusahaan atau pemilik proyek memberi izin dan informasi rahasia telah dilindungi.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Program Magang Lintas Jurusan',
+      title: 'Ingin Magang di Digital Agency Sesuai Jurusan Anda?',
+      desc: 'PixxelPro Digital membuka kesempatan magang bagi siswa dan mahasiswa dari jurusan Bisnis Digital, RPL, Multimedia, DKV, dan TKJ.',
+      btnLabel: 'Tanya Posisi & Kuota Magang',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20ingin%20konsultasi%20posisi%20magang%20sesuai%20jurusan%20saya.',
+    },
+  },
   {
     id: 'post-1',
     slug: 'tempat-pkl-jurusan-tkj-malang',
