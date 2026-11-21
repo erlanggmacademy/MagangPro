@@ -21,7 +21,7 @@ const relatedPosts = blogPosts
   .filter((p) => p.slug !== post.slug)
   .slice(0, 3);
 
-const pageTitle = `${post.title} | PixxelPro`;
+const pageTitle = `${post.metaTitle || post.title} | PixxelPro`;
 const pageDescription = post.excerpt;
 
 // Schema JSON-LD (SEO, AEO, GEO) for Article & FAQPage
@@ -76,6 +76,7 @@ const articleSchema = {
   title={pageTitle}
   description={pageDescription}
   ogImage={`https://pixxelpro.web.id${post.image}`}
+  ogType="article"
   pageSchema={articleSchema}
 >
   <!-- Article Main Content (Clean Light Layout without dark PageBanner) -->
@@ -136,7 +137,7 @@ const articleSchema = {
       <div class="featured-image-wrapper">
         <img
           src={post.image}
-          alt={post.title}
+          alt={post.imageAlt || post.title}
           width="1100"
           height="550"
           loading="eager"
@@ -551,11 +552,16 @@ const articleSchema = {
     padding-top: clamp(2.5rem, 5vw, 4rem);
     padding-bottom: clamp(3rem, 6vw, 5rem);
     background-color: var(--mp-white);
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
   }
 
   .article-container {
+    width: 100%;
     max-width: 860px;
-    margin: 0 auto;
+    margin-inline: auto;
+    padding-inline: clamp(16px, 4.5vw, 24px);
   }
 
   .article-breadcrumbs {
@@ -621,12 +627,14 @@ const articleSchema = {
 
   .article-main-title {
     font-family: var(--mp-font-heading);
-    font-size: clamp(2rem, 4.2vw, 2.85rem);
+    font-size: clamp(1.85rem, 4.2vw, 2.85rem);
     font-weight: 800;
     line-height: 1.3;
     color: var(--mp-ink);
     margin-bottom: 1.5rem;
     letter-spacing: -0.5px;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .article-meta-bar {
@@ -1511,6 +1519,74 @@ const articleSchema = {
   }
 
   @media (max-width: 640px) {
+    .article-main-title {
+      font-size: clamp(1.35rem, 5vw, 1.85rem);
+      line-height: 1.3;
+    }
+
+    .section-subheading {
+      font-size: 1.25rem;
+      line-height: 1.35;
+    }
+
+    .article-quote-box {
+      padding: 1rem 1.15rem;
+      font-size: 0.95rem;
+      margin: 1.25rem 0;
+    }
+
+    .inline-read-also {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.85rem 1rem;
+    }
+
+    .read-also-link {
+      min-width: 0;
+      width: 100%;
+      font-size: 0.9rem;
+    }
+
+    .action-banner-content {
+      min-width: 0;
+      width: 100%;
+    }
+
+    .table-of-contents-box {
+      padding: 1rem;
+    }
+
+    .toc-list {
+      margin-left: 1.15rem;
+      padding-left: 0.25rem;
+    }
+
+    .article-faq-section {
+      padding: 1.25rem 1rem;
+    }
+
+    .faq-question {
+      padding: 0.85rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .faq-answer {
+      padding: 0 1rem 1rem;
+    }
+
+    .article-conclusion-box {
+      padding: 1.25rem 1rem;
+    }
+
+    .author-bio-card {
+      padding: 1.25rem 1rem;
+    }
+
+    .article-share-section {
+      padding: 1.25rem 1rem;
+    }
+
     .related-grid-3col {
       grid-template-columns: 1fr;
     }
@@ -1518,7 +1594,7 @@ const articleSchema = {
     .article-action-banner {
       flex-direction: column;
       align-items: stretch;
-      padding: 1.5rem;
+      padding: 1.5rem 1.25rem;
     }
 
     .banner-cta-button {
@@ -1545,6 +1621,18 @@ const articleSchema = {
 
     .social-share-btn {
       justify-content: center;
+      padding: 0.6rem 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .share-buttons-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .social-share-btn {
+      width: 100%;
     }
   }
 </style>
