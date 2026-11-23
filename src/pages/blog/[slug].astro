@@ -215,6 +215,10 @@ const articleSchema = {
                   ))}
                 </ul>
               )}
+
+              {sec.bodyAfter && sec.bodyAfter.map((p) => (
+                <p class="section-paragraph">{p}</p>
+              ))}
             </section>
           ))}
 
@@ -284,6 +288,10 @@ const articleSchema = {
                   ))}
                 </ul>
               )}
+
+              {sec.bodyAfter && sec.bodyAfter.map((p) => (
+                <p class="section-paragraph">{p}</p>
+              ))}
             </section>
           ))}
 
@@ -291,6 +299,25 @@ const articleSchema = {
           <div class="article-conclusion-box" id="section-kesimpulan">
             <h3 class="conclusion-title">Kesimpulan</h3>
             <p>{post.conclusion}</p>
+            {post.conclusionList && post.conclusionList.length > 0 && (
+              <ul class="section-check-list" style="margin-top: 1rem; margin-bottom: 1rem;">
+                {post.conclusionList.map((item) => (
+                  <li>
+                    <span class="bullet-check">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {post.conclusionClosing && (
+              Array.isArray(post.conclusionClosing) ? (
+                post.conclusionClosing.map((p) => (
+                  <p style="margin-top: 1rem;">{p}</p>
+                ))
+              ) : (
+                <p style="margin-top: 1rem;">{post.conclusionClosing}</p>
+              )
+            )}
           </div>
 
           <!-- 4. FAQ Section under Conclusion -->
