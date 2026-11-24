@@ -268,33 +268,35 @@ const articleSchema = {
             <section class="content-section" id={`section-${idx + 3}`}>
               <h2 class="section-subheading">{sec.heading}</h2>
 
-              {idx === 1 && (
-                <div class="article-incontent-cta">
-                  <a
-                    href={`https://wa.me/62895639068080?text=${encodeURIComponent(`Halo PixxelPro, saya sedang membaca artikel "${post.title}" dan ingin konsultasi mengenai program magang di PixxelPro Digital.`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="incontent-cta-banner-link"
-                    title="Konsultasi Program Magang PixxelPro Digital via WhatsApp"
-                  >
-                    <picture>
-                      <source srcset="/images/cta/hubungi-kami-sekarang.webp" type="image/webp" />
-                      <img
-                        src="/images/cta/hubungi-kami-sekarang.png"
-                        alt="PixxelPro Digital Program Magang Terbaik di Malang - Hubungi Kami Sekarang"
-                        width="2048"
-                        height="809"
-                        loading="lazy"
-                        decoding="async"
-                        class="incontent-cta-banner-img"
-                      />
-                    </picture>
-                  </a>
-                </div>
-              )}
+              {sec.body.map((p, pIdx) => (
+                <>
+                  <p class="section-paragraph">{p}</p>
 
-              {sec.body.map((p) => (
-                <p class="section-paragraph">{p}</p>
+                  {idx === 1 && pIdx === Math.min(1, sec.body.length - 1) && (
+                    <div class="article-incontent-cta">
+                      <a
+                        href={`https://wa.me/62895639068080?text=${encodeURIComponent(`Halo PixxelPro, saya sedang membaca artikel "${post.title}" dan ingin konsultasi mengenai program magang di PixxelPro Digital.`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="incontent-cta-banner-link"
+                        title="Konsultasi Program Magang PixxelPro Digital via WhatsApp"
+                      >
+                        <picture>
+                          <source srcset="/images/cta/hubungi-kami-sekarang.webp" type="image/webp" />
+                          <img
+                            src="/images/cta/hubungi-kami-sekarang.png"
+                            alt="PixxelPro Digital Program Magang Terbaik di Malang - Hubungi Kami Sekarang"
+                            width="2048"
+                            height="809"
+                            loading="lazy"
+                            decoding="async"
+                            class="incontent-cta-banner-img"
+                          />
+                        </picture>
+                      </a>
+                    </div>
+                  )}
+                </>
               ))}
 
               {sec.quote && (
