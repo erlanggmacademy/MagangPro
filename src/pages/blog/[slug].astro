@@ -268,6 +268,31 @@ const articleSchema = {
             <section class="content-section" id={`section-${idx + 3}`}>
               <h2 class="section-subheading">{sec.heading}</h2>
 
+              {idx === 1 && (
+                <div class="article-incontent-cta">
+                  <a
+                    href={`https://wa.me/62895639068080?text=${encodeURIComponent(`Halo PixxelPro, saya sedang membaca artikel "${post.title}" dan ingin konsultasi mengenai program magang di PixxelPro Digital.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="incontent-cta-banner-link"
+                    title="Konsultasi Program Magang PixxelPro Digital via WhatsApp"
+                  >
+                    <picture>
+                      <source srcset="/images/cta/hubungi-kami-sekarang.webp" type="image/webp" />
+                      <img
+                        src="/images/cta/hubungi-kami-sekarang.png"
+                        alt="PixxelPro Digital Program Magang Terbaik di Malang - Hubungi Kami Sekarang"
+                        width="2048"
+                        height="809"
+                        loading="lazy"
+                        decoding="async"
+                        class="incontent-cta-banner-img"
+                      />
+                    </picture>
+                  </a>
+                </div>
+              )}
+
               {sec.body.map((p) => (
                 <p class="section-paragraph">{p}</p>
               ))}
@@ -925,6 +950,39 @@ const articleSchema = {
     flex-shrink: 0;
     margin-top: 3px;
     color: var(--mp-red);
+  }
+
+  /* ----------------------------------------------------
+     IN-CONTENT CTA BANNER (HUBUNGI KAMI SEKARANG)
+     ---------------------------------------------------- */
+  .article-incontent-cta {
+    margin: 2.25rem 0;
+    width: 100%;
+  }
+
+  .incontent-cta-banner-link {
+    display: block;
+    width: 100%;
+    border-radius: var(--mp-radius-md);
+    overflow: hidden;
+    border: 1px solid var(--mp-border);
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    background-color: #0f172a;
+    text-decoration: none;
+  }
+
+  .incontent-cta-banner-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(220, 38, 38, 0.2);
+    border-color: rgba(220, 38, 38, 0.4);
+  }
+
+  .incontent-cta-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
   }
 
   /* ----------------------------------------------------

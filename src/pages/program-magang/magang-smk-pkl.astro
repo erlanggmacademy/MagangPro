@@ -5,7 +5,7 @@ import CtaBanner from '../../components/CtaBanner.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 
 const pageTitle = "Program Magang SMK & Tempat PKL di Malang | PixxelPro";
-const pageDescription = "Tempat PKL dan magang SMK di Malang untuk jurusan RPL, TKJ, DKV, & Bisnis Digital. Bimbingan mentor industri, proyek nyata, dan laporan resmi.";
+const pageDescription = "Tempat PKL dan magang SMK di Malang untuk jurusan RPL, TKJ, DKV, Bisnis Digital, & Pariwisata. Bimbingan mentor industri, proyek nyata, dan laporan resmi.";
 
 const breadcrumbs = [
   { label: 'Beranda', href: '/' },
@@ -25,10 +25,10 @@ const smkMajors = [
   {
     code: 'TKJ',
     name: 'Teknik Komputer & Jaringan',
-    badge: 'Infrastruktur & Jaringan',
-    desc: 'Mempelajari administrasi sistem komputer, konfigurasi jaringan lokal (LAN/WiFi), pengelolaan hosting & domain, serta troubleshooting perangkat ruang kerja.',
-    tasks: ['Setup & konfigurasi DNS domain website', 'Maintenance sistem & keamanan jaringan', 'Troubleshooting perangkat kerja & sistem komputer'],
-    tools: ['Mikrotik Basics', 'Cloud CPanel', 'Command Line', 'Hardware Tools'],
+    badge: 'Sistem Web & Perangkat Lunak',
+    desc: 'Mempelajari administrasi sistem komputer kerja, pengelolaan web hosting & domain cPanel, konfigurasi DNS/SSL, instalasi perangkat lunak, serta pemeliharaan sistem web.',
+    tasks: ['Setup domain, DNS records, SSL & akun email hosting', 'Instalasi & troubleshooting perangkat lunak kerja', 'Backup data sistem berkala & pemeliharaan performa web'],
+    tools: ['Cloud cPanel', 'DNS Manager', 'Command Line', 'FTP Client'],
   },
   {
     code: 'MM',
@@ -49,18 +49,19 @@ const smkMajors = [
   {
     code: 'BD & PM',
     name: 'Bisnis Digital & Pemasaran',
-    badge: 'Pemasaran & SEO',
-    desc: 'Praktik riset kata kunci Google, optimasi profil Google Bisnis Lokal UMKM, copywriting konten promosi, dan analisis perkembangan audiens.',
-    tasks: ['Optimasi Google Maps & kata kunci lokal', 'Menulis artikel SEO informatif', 'Pemasaran produk via WhatsApp CRM'],
-    tools: ['Google Search Console', 'Google Bisnis Profil', 'Meta Suite', 'WhatsApp Business'],
+    badge: 'Pemasaran & Bisnis Digital',
+    desc: 'Praktik riset kata kunci Google, optimasi profil Google Bisnis Lokal UMKM, copywriting konten promosi, pengelolaan database prospek, dan customer care via WhatsApp CRM.',
+    tasks: ['Optimasi Google Maps & kata kunci lokal', 'Menulis artikel SEO informatif', 'Pemasaran produk & customer CRM via WhatsApp'],
+    tools: ['Google Search Console', 'Google Bisnis Profil', 'Meta Suite', 'WhatsApp Business CRM'],
   },
   {
-    code: 'OTKP',
-    name: 'Manajemen Perkantoran / OTKP',
-    badge: 'Administrasi Digital',
-    desc: 'Pengelolaan data inventaris berbasis spreadsheet cloud, administrasi dokumen kerja sama, komunikasi layanan pelanggan, dan pengarsipan digital rapi.',
-    tasks: ['Pencatatan database pelanggan & absensi', 'Penyusunan draft surat & MoU mitra', 'Customer care handling via WhatsApp'],
-    tools: ['Google Sheets', 'Google Docs', 'Notion', 'Drive Cloud'],
+    code: 'UPW / PAR',
+    name: 'Usaha Layanan Pariwisata / Perhotelan',
+    badge: 'Pariwisata & Event Organizer',
+    desc: 'Praktik industri pengelolaan bisnis event organizer, pemanduan wisata (tour guide & leader), serta PIC kegiatan outdoor (outbound, rafting) di Katun Outbound Adventure (durasi 3–6 bulan).',
+    tasks: ['Perencanaan & operasional bisnis event organizer (EO)', 'PIC & fasilitator kegiatan outbound, rafting, & gathering', 'Pemanduan wisata (tour guide & tour leader) serta standar hospitality'],
+    toolsLabel: 'Skill yang Dibutuhkan:',
+    tools: ['Standard Grooming & Greeting', 'Public Speaking', 'Event Rundown Planner', 'Safety & Outbound Equipment'],
   },
 ];
 
@@ -198,7 +199,7 @@ const pklBenefits = [
             </div>
 
             <div class="major-tools">
-              <span class="tools-label">Tools yang Digunakan:</span>
+              <span class="tools-label">{major.toolsLabel || 'Tools yang Digunakan:'}</span>
               <div class="tools-pills">
                 {major.tools.map((t) => (
                   <span class="t-pill">{t}</span>

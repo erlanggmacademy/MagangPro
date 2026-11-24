@@ -6,7 +6,7 @@ export interface FaqItem {
 export const faqList: FaqItem[] = [
   {
     question: 'Siapa saja yang dapat mendaftar program magang di PixxelPro?',
-    answer: 'Program magang terbuka untuk siswa SMK aktif yang membutuhkan tempat PKL (jurusan RPL, TKJ, Multimedia, DKV, Bisnis Digital, Pemasaran) serta mahasiswa D3/D4/S1 dari jurusan terkait teknologi informasi, desain, dan bisnis digital.'
+    answer: 'Program magang terbuka untuk siswa SMK aktif yang membutuhkan tempat PKL (jurusan RPL, TKJ, Multimedia, DKV, Bisnis Digital, Pemasaran, Perhotelan & Usaha Layanan Pariwisata) serta mahasiswa D3/D4/S1 dari jurusan terkait teknologi informasi, desain, bisnis digital, dan pariwisata (MBP & DEP).'
   },
   {
     question: 'Bagaimana alur pendaftaran magang di PixxelPro?',

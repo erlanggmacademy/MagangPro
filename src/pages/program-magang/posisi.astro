@@ -5,7 +5,7 @@ import CtaBanner from '../../components/CtaBanner.astro';
 import { internshipPositions } from '../../data/programs';
 
 const pageTitle = "Posisi & Divisi Magang yang Tersedia di Malang | PixxelPro";
-const pageDescription = "Daftar 6 divisi magang di PixxelPro Malang: Web Dev, SEO & Digital Marketing, Content Creator, UI/UX Design, IT Support, dan Bisnis Digital.";
+const pageDescription = "Daftar 6 divisi magang di PixxelPro Malang: Web Dev, SEO & Bisnis Digital, Content Creator, UI/UX Design, IT Support, dan Pariwisata Event.";
 
 const breadcrumbs = [
   { label: 'Beranda', href: '/' },
@@ -24,13 +24,18 @@ const positionDetails = [
     tools: ['Visual Studio Code', 'Git & GitHub', 'Astro', 'TypeScript', 'Node.js'],
   },
   {
-    id: 'digital-marketing-seo',
-    title: 'Digital Marketing & SEO',
-    department: 'Pemasaran Digital',
-    audience: 'SMK Bisnis Daring / Mahasiswa Marketing & Bisnis Digital',
-    desc: 'Mempelajari optimasi mesin pencari Google on-page & technical SEO, riset keyword berkonversi tinggi, pengelolaan Google Bisnis Profil lokal, dan analisis trafik web.',
-    tasks: ['Riset kata kunci komersial & audit SEO on-page', 'Optimasi titik lokasi Google Maps & ulasan UMKM', 'Monitoring performa via Google Search Console'],
-    tools: ['Google Search Console', 'Google Analytics 4', 'Ubersuggest / Ahrefs', 'Google Business Profile'],
+    id: 'digital-marketing-business',
+    title: 'Digital Marketing, SEO & Bisnis Digital',
+    department: 'Pemasaran & Bisnis Digital',
+    audience: 'SMK Bisnis Daring & Pemasaran / Mahasiswa Marketing, Bisnis Digital & Manajemen',
+    desc: 'Mempelajari optimasi mesin pencari Google (SEO), riset keyword & pasar, optimasi Google Bisnis Profil lokal, strategi konten promosi, pengelolaan komunikasi prospek via WhatsApp CRM, serta pelaporan data berkala.',
+    tasks: [
+      'Riset kata kunci komersial, audit SEO on-page & Google Search Console',
+      'Optimasi titik lokasi Google Bisnis Profil & ulasan bisnis lokal',
+      'Handling alur komunikasi prospek/klien via WhatsApp Business CRM',
+      'Penyusunan spreadsheet database prospek, analitik trafik, & laporan mingguan',
+    ],
+    tools: ['Google Search Console', 'Google Business Profile', 'WhatsApp Business CRM', 'Google Sheets / Docs', 'Meta Suite'],
   },
   {
     id: 'social-media-content',
@@ -52,21 +57,28 @@ const positionDetails = [
   },
   {
     id: 'network-it-support',
-    title: 'IT Support & Infrastruktur',
-    department: 'Infrastruktur IT',
-    audience: 'SMK TKJ / Mahasiswa Sistem Informasi & Jaringan',
-    desc: 'Pengelolaan lingkungan perangkat ruang kerja, konfigurasi jaringan lokal (LAN & WiFi), maintenance hardware/software, serta pemahaman cloud hosting dan DNS server.',
-    tasks: ['Setup & troubleshooting perangkat komputer ruang kerja', 'Konfigurasi manajemen bandwidth & router WiFi', 'Pengaturan akun email domain & hosting cPanel'],
-    tools: ['Mikrotik Winbox', 'cPanel Hosting', 'Windows/Linux OS', 'Hardware Diagnostics'],
+    title: 'IT Support & Pengelolaan Sistem Web',
+    department: 'Sistem & Perangkat Lunak',
+    audience: 'SMK TKJ / Mahasiswa Sistem Informasi & Komputer',
+    desc: 'Pengelolaan perangkat lunak ruang kerja, administrasi web server & hosting (cPanel, domain, DNS, SSL), pemeliharaan sistem komputer, serta asistensi teknis deployment website.',
+    tasks: ['Setup & troubleshooting perangkat lunak komputer kerja', 'Pengaturan domain, DNS, SSL, & hosting cPanel', 'Backup data berkala & pemeliharaan server website'],
+    tools: ['cPanel Hosting', 'DNS & Domain Manager', 'FTP / File Manager', 'Windows/Linux OS'],
   },
   {
-    id: 'digital-business',
-    title: 'Business Digital & Administrasi',
-    department: 'Bisnis & Operasional',
-    audience: 'SMK Pemasaran / OTKP / Mahasiswa Manajemen Bisnis',
-    desc: 'Membantu riset pasar industri, pengelolaan alur komunikasi pelanggan via WhatsApp Business CRM, pembuatan laporan data berkala, dan dokumentasi administrasi proyek.',
-    tasks: ['Handling komunikasi calon mitra via WhatsApp', 'Pengelolaan spreadsheet database prospek & klien', 'Penyusunan berkas administrasi & laporan mingguan'],
-    tools: ['WhatsApp Business CRM', 'Google Sheets', 'Google Docs', 'Trello / Notion'],
+    id: 'tourism-event-organizer',
+    title: 'Pariwisata & Event Organizer (EO)',
+    department: 'Pariwisata & Event Kreatif',
+    audience: 'SMK Usaha Perjalanan Wisata / Mahasiswa MBP & DEP (Pariwisata)',
+    desc: 'Pengelolaan bisnis event organizer (EO), perancangan paket tur, leadership acara, serta koordinasi lapangan untuk kegiatan outdoor (outbound, rafting, gathering) di Katun Outbound Adventure dengan durasi magang 3 hingga 6 bulan.',
+    tasks: [
+      'Perencanaan & operasional bisnis event organizer (EO)',
+      'Leader organizer & PIC kegiatan outbound, rafting, dan gathering wisata',
+      'Pemanduan wisata lapangan (Tour Guide & Tour Leader)',
+      'Penerapan standar pelayanan prima (grooming, greeting, & hospitality)',
+      'Public speaking, ice breaking, & manajemen peserta kelompok wisata',
+    ],
+    toolsLabel: 'Skill yang Dibutuhkan:',
+    tools: ['Standar Grooming & Greeting', 'Public Speaking & MC', 'Event Rundown Planner', 'Outbound & Safety Gear', 'Hospitality Guidelines'],
   },
 ];
 ---
@@ -76,7 +88,7 @@ const positionDetails = [
   <PageBanner
     pill="Divisi & Peluang Karier"
     title="Posisi Magang"
-    description="Eksplorasi 6 bidang divisi magang yang tersedia di PixxelPro Malang. Pilih posisi yang paling sesuai dengan minat dan keahlian jurusan Anda."
+    description="Eksplorasi 6 bidang divisi magang yang tersedia di PixxelPro Malang dan mitra industri. Pilih posisi yang paling sesuai dengan minat dan keahlian jurusan Anda."
     breadcrumbs={breadcrumbs}
   />
 
@@ -121,7 +133,7 @@ const positionDetails = [
             </div>
 
             <div class="pos-tools-box">
-              <span class="tools-heading">Tools & Ekosistem Kerja:</span>
+              <span class="tools-heading">{pos.toolsLabel || 'Tools & Ekosistem Kerja:'}</span>
               <div class="tools-wrap">
                 {pos.tools.map((tool) => (
                   <span class="pos-tool-pill">{tool}</span>
@@ -173,7 +185,7 @@ const positionDetails = [
 
         <div class="collab-card">
           <div class="collab-step-num">03</div>
-          <h4>Development & Infrastruktur</h4>
+          <h4>Development & Sistem Web</h4>
           <p>Tim Web Developer mewujudkan rancangan menjadi website responsif dan cepat, didukung setup domain stabil oleh IT Support.</p>
         </div>
 

@@ -17,7 +17,7 @@ export interface PositionItem {
   description: string;
   skills: string[];
   status: string;
-  iconType: 'code' | 'seo' | 'media' | 'design' | 'network' | 'business';
+  iconType: 'code' | 'seo' | 'media' | 'design' | 'network' | 'business' | 'tourism';
 }
 
 export const mainPrograms: ProgramCategory[] = [
@@ -25,7 +25,7 @@ export const mainPrograms: ProgramCategory[] = [
     id: 'smk-pkl',
     title: 'Program Magang SMK / PKL',
     badge: 'Siswa SMK / Vokasi',
-    target: 'Siswa SMK Jurusan RPL, TKJ, Multimedia, DKV, & Pemasaran',
+    target: 'Siswa SMK Jurusan RPL, TKJ, Multimedia, DKV, Bisnis, & Pariwisata / Perhotelan',
     description: 'Program Praktik Kerja Lapangan (PKL) terstruktur untuk mengasah keterampilan teknis, etika kerja profesional, dan kesiapan industri sesuai kompetensi keahlian sekolah.',
     highlights: [
       'Kurikulum berbasis proyek industri',
@@ -40,7 +40,7 @@ export const mainPrograms: ProgramCategory[] = [
     id: 'internship-mahasiswa',
     title: 'Internship Mahasiswa',
     badge: 'Mahasiswa D3 / D4 / S1',
-    target: 'Mahasiswa Informatika, Sistem Informasi, Bisnis Digital, & Marketing',
+    target: 'Mahasiswa Informatika, Sistem Informasi, Bisnis Digital, Pariwisata (MBP/DEP), & Marketing',
     description: 'Program magang berbasis proyek riil dan studi kasus komprehensif untuk mahasiswa guna memvalidasi teori akademis ke dalam kebutuhan industri digital modern.',
     highlights: [
       'Penugasan proyek dan studi kasus terapan',
@@ -65,13 +65,13 @@ export const internshipPositions: PositionItem[] = [
     iconType: 'code'
   },
   {
-    id: 'digital-marketing-seo',
-    title: 'Digital Marketing & SEO',
-    department: 'Pemasaran Digital',
-    targetAudience: 'Bisnis Digital / Pemasaran / Umum',
-    description: 'Mempelajari optimasi mesin pencari on-page & off-page, riset keyword, konten terarah, dan analitik trafik.',
-    skills: ['Riset Keyword', 'Technical & On-Page SEO', 'Google Search Console', 'Content Strategy'],
-    status: 'Tanyakan Ketersediaan',
+    id: 'digital-marketing-business',
+    title: 'Digital Marketing, SEO & Bisnis Digital',
+    department: 'Pemasaran & Bisnis Digital',
+    targetAudience: 'Bisnis Digital / Pemasaran / Manajemen / Umum',
+    description: 'Mempelajari optimasi mesin pencari (SEO), riset pasar industri, strategi konten pemasaran, pengelolaan komunikasi prospek via WhatsApp CRM, dan analitik bisnis digital.',
+    skills: ['Technical & On-Page SEO', 'Riset Keyword & Pasar', 'Customer CRM Communication', 'Spreadsheet Data Reporting'],
+    status: 'Tersedia Gelombang Baru',
     iconType: 'seo'
   },
   {
@@ -96,22 +96,22 @@ export const internshipPositions: PositionItem[] = [
   },
   {
     id: 'network-it-support',
-    title: 'IT Support & Infrastruktur',
-    department: 'Infrastruktur IT',
+    title: 'IT Support & Pengelolaan Sistem Web',
+    department: 'Sistem & Perangkat Lunak',
     targetAudience: 'TKJ / Sistem Informasi',
-    description: 'Pengelolaan lingkungan komputasi dasar, troubleshooting perangkat lunak/keras, serta konfigurasi jaringan.',
-    skills: ['Networking Basics', 'Hardware & OS Setup', 'Cloud & Hosting Basics', 'System Maintenance'],
+    description: 'Pengelolaan perangkat lunak kerja, pemeliharaan sistem komputer, serta administrasi web hosting dan domain.',
+    skills: ['Software & OS Setup', 'cPanel & Hosting Basics', 'Domain & DNS Management', 'Web System Maintenance'],
     status: 'Tanyakan Ketersediaan',
     iconType: 'network'
   },
   {
-    id: 'digital-business',
-    title: 'Business Digital & Administrasi',
-    department: 'Bisnis & Operasional',
-    targetAudience: 'Bisnis Digital / Manajemen / Adm. Perkantoran',
-    description: 'Membantu riset pasar, komunikasi pelanggan via WhatsApp CRM, serta administrasi proyek digital.',
-    skills: ['Customer Communication', 'Spreadsheet Reporting', 'Market Research', 'Admin Workflow'],
-    status: 'Tanyakan Ketersediaan',
-    iconType: 'business'
+    id: 'tourism-event-organizer',
+    title: 'Pariwisata & Event Organizer (EO)',
+    department: 'Pariwisata & Event Kreatif',
+    targetAudience: 'SMK Pariwisata / Mahasiswa MBP & DEP',
+    description: 'Pengelolaan bisnis event organizer, pemanduan wisata (tour guide/leader), serta operasional kegiatan outbound & rafting di Katun Outbound Adventure (3–6 bulan).',
+    skills: ['Event & Tour Planning', 'Public Speaking & Greeting', 'Grooming & Hospitality', 'Outbound & Rafting Handling'],
+    status: 'Tersedia Gelombang Baru',
+    iconType: 'tourism'
   }
 ];
