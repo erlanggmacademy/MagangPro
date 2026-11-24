@@ -61,9 +61,2198 @@ export const blogCategories = [
   { label: 'Internship Mahasiswa', slug: 'internship-mahasiswa' },
   { label: 'Teknologi & Web', slug: 'teknologi-web' },
   { label: 'Digital Agency', slug: 'digital-agency' },
+  { label: 'Jasa Website', slug: 'jasa-website' },
+  { label: 'Jurnalistik', slug: 'jurnalistik' },
 ];
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: 'post-36',
+    slug: 'portofolio-pkl-dkv-desain-grafis',
+    title: 'Cara Membangun Portofolio Desain Grafis Selama PKL DKV',
+    metaTitle: 'Cara Membuat Portofolio PKL DKV yang Meyakinkan',
+    excerpt: 'Pelajari cara menyusun portofolio PKL DKV dari karya desain, proses kreatif, hingga studi kasus. Bangun bukti kompetensi secara jujur dan terarah.',
+    category: 'Panduan Magang',
+    categorySlug: 'panduan-magang',
+    date: '02 Desember 2026',
+    isoDate: '2026-12-02T12:00:00+07:00',
+    readTime: '10 menit baca',
+    featured: false,
+    image: '/images/blog/peserta-pkl-dkv-menyusun-portofolio-desain-grafis.webp',
+    imageAlt: 'peserta-pkl-dkv-menyusun-portofolio-desain-grafis',
+    secondImage: {
+      src: '/images/blog/mentor-meninjau-presentasi-studi-kasus-desain-magang-dkv.webp',
+      alt: 'mentor-meninjau-presentasi-studi-kasus-desain-magang-dkv',
+      caption: 'Mentor meninjau presentasi studi kasus desain magang DKV.',
+    },
+    readAlso: {
+      title: 'Magang DKV dan Praktik Desain Konten Media Sosial di Malang',
+      slug: 'magang-dkv-desain-konten-media-sosial',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'portofolio PKL DKV',
+      'portofolio desain grafis SMK',
+      'contoh portofolio anak DKV',
+      'studi kasus desain',
+      'karya magang desain',
+      'cara membuat portofolio desain pemula',
+      'PixxelPro Digital',
+    ],
+    intro: 'Portofolio PKL DKV adalah kumpulan karya terpilih yang memperlihatkan kemampuan desain, proses kreatif, dan kontribusi peserta selama praktik kerja.',
+    sections: [
+      {
+        heading: 'Ringkasan Inti',
+        body: [],
+        list: [
+          'Portofolio menunjukkan bukti kompetensi, bukan sekadar kumpulan gambar.',
+          'Pilih karya yang relevan dan jelaskan brief, proses, keputusan, serta peran pribadi.',
+          'Pastikan izin publikasi diperoleh sebelum menampilkan karya dari proyek klien.',
+        ],
+      },
+      {
+        heading: 'Apa itu portofolio PKL DKV?',
+        body: [
+          'Portofolio PKL DKV adalah kumpulan karya terpilih yang menunjukkan kemampuan, proses berpikir, dan kontribusi peserta selama menjalani praktik kerja. Portofolio membantu guru, mentor, atau calon pemberi kerja memahami kemampuan peserta melalui bukti yang konkret.',
+          'Portofolio bukan sekadar folder berisi gambar akhir. Karya perlu disertai konteks singkat, seperti tujuan desain, audiens, media, peran pribadi, perangkat yang digunakan, dan tantangan yang diselesaikan. Penjelasan tersebut membantu pembaca menilai proses, bukan hanya estetika.',
+          'Tidak semua pekerjaan selama PKL otomatis boleh dipublikasikan. Peserta harus memeriksa izin penggunaan karya, aset, nama klien, dan data internal. Jika belum memperoleh izin, gunakan versi latihan atau studi kasus fiktif yang tidak membocorkan informasi proyek.',
+        ],
+      },
+      {
+        heading: 'Karya apa yang layak dimasukkan ke portofolio?',
+        body: [
+          'Pilih karya yang menunjukkan variasi kompetensi dan kualitas pengerjaan, bukan hanya jumlah. Untuk peserta DKV, karya dapat mencakup poster, feed media sosial, flyer, identitas visual, ilustrasi, atau wireframe jika memang dikerjakan dan boleh ditampilkan.',
+          'Desain feed dan carousel: Tampilkan tujuan konten, target audiens, pesan utama, serta bagaimana hierarki visual membantu pembaca mengikuti informasi. Jika menampilkan satu rangkaian carousel, sertakan beberapa slide yang mewakili alur dan konsistensi desain.',
+          'Flyer atau poster digital: Jelaskan konteks penggunaan, ukuran media, informasi utama, dan alasan pemilihan komposisi. Pastikan teks yang ditampilkan tetap terbaca dan elemen visual tidak mengganggu pesan.',
+        ],
+      },
+      {
+        heading: 'Identitas visual dan wireframe dalam portofolio',
+        body: [
+          'Jika membuat konsep identitas visual, tampilkan elemen yang memang menjadi bagian dari tugas, seperti logo, warna, tipografi, dan contoh penerapan. Jangan mengklaim sebagai identitas final sebuah perusahaan jika karya hanya berupa eksplorasi atau latihan.',
+          'Wireframe dapat menunjukkan kemampuan menyusun struktur informasi dan alur pengguna. Jelaskan masalah yang ingin diselesaikan, siapa pengguna yang dituju, dan alasan penempatan elemen. Hindari menampilkan data akun atau informasi sensitif pada tangkapan layar.',
+        ],
+      },
+      {
+        heading: 'Bagaimana menyusun studi kasus desain dalam portofolio?',
+        body: [
+          'Studi kasus yang baik menjelaskan masalah, proses, keputusan, dan hasil secara ringkas. Struktur ini membuat portofolio lebih informatif daripada sekadar menampilkan mockup yang menarik.',
+          'Mulailah dengan ringkasan kebutuhan. Tuliskan jenis materi, audiens, pesan, dan kanal publikasi. Jika proyek berasal dari klien, gunakan deskripsi umum yang telah disetujui dan hindari informasi rahasia.',
+          'Sertakan sketsa, moodboard, atau beberapa alternatif yang relevan apabila diizinkan. Pilih dokumentasi yang menunjukkan perkembangan gagasan, bukan semua file mentah tanpa kurasi.',
+        ],
+      },
+      {
+        heading: 'Menjelaskan keputusan desain dan peran pribadi',
+        body: [
+          'Terangkan alasan pemilihan warna, tipografi, layout, atau gaya ilustrasi. Hubungkan keputusan tersebut dengan tujuan komunikasi. Penjelasan harus jujur dan tidak melebih-lebihkan dampak yang tidak pernah diukur.',
+          'Jika proyek dikerjakan bersama tim, sebutkan bagian yang benar-benar dikerjakan sendiri dan kontribusi anggota lain secara proporsional. Kejujuran tentang peran merupakan sinyal profesional yang penting.',
+        ],
+      },
+      {
+        heading: 'Bagaimana cara membuat portofolio meski pengalaman masih sedikit?',
+        body: [
+          'Portofolio pemula dapat dibangun dari tugas sekolah, proyek latihan mandiri, dan karya PKL yang diizinkan. Kualitas kurasi serta penjelasan proses lebih penting daripada memaksakan banyak karya.',
+          'Pilih beberapa karya terbaik yang mewakili kemampuan berbeda. Perbaiki presentasi dengan konsistensi ukuran gambar, latar yang sederhana, tipografi yang mudah dibaca, dan keterangan singkat. Jangan mengubah hasil proyek klien sehingga seolah-olah kontribusi pribadi lebih besar.',
+          'Jika belum memiliki proyek yang boleh dipublikasikan, buat studi kasus fiktif dengan merek rekaan. Beri label jelas sebagai proyek konsep atau latihan mandiri. Cara ini memungkinkan peserta menunjukkan kemampuan tanpa mengungkap pekerjaan internal tempat magang.',
+        ],
+      },
+      {
+        heading: 'Apa kesalahan yang sering membuat portofolio DKV kurang meyakinkan?',
+        body: [
+          'Portofolio menjadi kurang meyakinkan ketika terlalu banyak karya tanpa kurasi, tidak ada konteks, visual tidak konsisten, atau kontribusi peserta tidak dijelaskan. Kesalahan lain adalah menggunakan aset tanpa izin dan mengklaim hasil tim sebagai karya individu.',
+          'Hindari menampilkan setiap tugas hanya karena pernah dikerjakan. Pilih karya yang paling relevan dengan bidang yang dituju. Periksa ejaan, resolusi gambar, urutan halaman, dan tautan sebelum membagikan portofolio.',
+          'Jangan membuat klaim performa seperti peningkatan penjualan atau engagement jika tidak memiliki data yang dapat diverifikasi. Jika hasil belum diukur, jelaskan output yang benar-benar dibuat dan proses yang dilakukan.',
+        ],
+      },
+      {
+        heading: 'Bagaimana menjaga etika saat menampilkan karya PKL?',
+        body: [
+          'Etika portofolio dimulai dari meminta izin. Karya klien, logo, materi kampanye, data audiens, dan dokumen internal dapat memiliki batas penggunaan. Peserta harus mengikuti kebijakan tempat magang dan arahan mentor sebelum mengunggah materi.',
+          'Jika izin tidak diberikan, buat ulang konsep dengan brief fiktif dan aset yang sah digunakan. Jangan menghapus watermark atau mengubah atribusi untuk membuat karya pihak lain tampak sebagai karya sendiri.',
+          'Simpan file kerja dengan rapi dan buat salinan cadangan sesuai kebijakan. Hindari menyimpan data sensitif pada perangkat atau akun pribadi tanpa izin. Sikap ini menunjukkan bahwa peserta memahami tanggung jawab profesional, bukan hanya kemampuan visual.',
+        ],
+      },
+    ],
+    conclusion: 'Bangun portofolio sejak awal PKL dengan mencatat brief, proses, revisi, dan hasil yang boleh didokumentasikan.',
+    conclusionClosing: 'Kurasi karya yang paling kuat, jelaskan kontribusi secara jujur, dan minta izin sebelum mempublikasikan aset proyek. Untuk memahami jenis kompetensi dan aktivitas DKV yang tercantum dalam program PixxelPro, baca halaman kompetensi yang dipelajari dan program magang SMK/PKL. Informasi tersebut dapat membantu peserta menentukan jenis karya yang relevan untuk dikembangkan.',
+    faqs: [
+      {
+        question: 'Berapa banyak karya yang harus ada dalam portofolio PKL DKV?',
+        answer: 'Tidak ada jumlah universal. Pilih karya yang paling relevan dan dapat dijelaskan proses serta kontribusinya. Beberapa studi kasus yang kuat lebih baik daripada banyak karya tanpa konteks.',
+      },
+      {
+        question: 'Apakah tugas sekolah boleh dimasukkan ke portofolio?',
+        answer: 'Boleh, selama karya tersebut memang dibuat sendiri atau kontribusinya dijelaskan dengan jujur. Beri label jika karya merupakan tugas sekolah atau proyek konsep.',
+      },
+      {
+        question: 'Bolehkah menampilkan desain klien dari tempat PKL?',
+        answer: 'Hanya jika mendapat izin sesuai kebijakan tempat magang dan pemilik proyek. Jangan menampilkan informasi rahasia atau data internal.',
+      },
+      {
+        question: 'Apa isi studi kasus desain yang baik?',
+        answer: 'Sertakan brief, tujuan, audiens, proses, keputusan desain, hasil, dan peran pribadi. Pastikan setiap informasi akurat dan tidak mengungkap data rahasia.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Portofolio PKL DKV',
+      title: 'Ingin Membangun Portofolio Desain Selama PKL?',
+      desc: 'PixxelPro Digital membuka kesempatan PKL DKV dengan proyek desain nyata dan pendampingan untuk membangun portofolio.',
+      btnLabel: 'Tanya Posisi PKL DKV via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20tertarik%20dengan%20program%20magang%20dan%20ingin%20konsultasi%20posisi.',
+    },
+  },
+  {
+    id: 'post-35',
+    slug: 'magang-mahasiswa-ilmu-komunikasi-malang',
+    title: 'Magang Mahasiswa Ilmu Komunikasi Malang di Pixxelpro Digital dan Cara Memilih Tempat yang Tepat',
+    metaTitle: 'Magang Mahasiswa Ilmu Komunikasi Malang di Pixxelpro Digital',
+    excerpt: 'Cari magang mahasiswa ilmu komunikasi Malang? Kenali bidang jurnalistik, content writer, media sosial, dan digital marketing, lalu konsultasi via WhatsApp.',
+    category: 'Internship Mahasiswa',
+    categorySlug: 'internship-mahasiswa',
+    date: '02 Desember 2026',
+    isoDate: '2026-12-02T10:00:00+07:00',
+    readTime: '18 menit baca',
+    featured: true,
+    image: '/images/blog/magang-ilmu-komunikasi-malang-mentoring.webp',
+    imageAlt: 'mahasiswa-ilmu-komunikasi-berdiskusi-rencana-konten-bersama-mentor',
+    secondImage: {
+      src: '/images/blog/magang-ilmu-komunikasi-malang-portofolio.webp',
+      alt: 'mahasiswa-magang-menyusun-portofolio-konten-dan-laporan-magang',
+      caption: 'Mahasiswa magang menyusun portofolio konten dan laporan magang di laptop.',
+    },
+    readAlso: {
+      title: 'Magang Jurnalistik Mahasiswa dan Content Writer sebagai Jalur Karier Komunikasi di Malang',
+      slug: 'magang-jurnalistik-mahasiswa',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'magang mahasiswa ilmu komunikasi Malang',
+      'internship ilmu komunikasi Malang',
+      'magang jurnalistik mahasiswa',
+      'magang content writer',
+      'magang social media mahasiswa',
+      'magang manajemen digital marketing',
+      'PixxelPro Digital',
+    ],
+    intro: 'Magang mahasiswa ilmu komunikasi Malang di Pixxelpro Digital memberi pengalaman kerja nyata di bidang jurnalistik, content writing, media sosial, dan pemasaran digital sebelum lulus.',
+    sections: [
+      {
+        heading: 'Ringkasan Inti',
+        body: [],
+        list: [
+          'Magang mahasiswa ilmu komunikasi Malang paling bermanfaat bila berbasis proyek nyata, memiliki mentor, dan menghasilkan portofolio yang dapat ditunjukkan kepada calon pemberi kerja.',
+          'Survei NACE mencatat tingkat konversi magang menjadi karyawan penuh waktu sebesar 63,1 persen untuk peserta magang 2024-25 pada pemberi kerja di Amerika Serikat.',
+          'Bidang yang sesuai meliputi jurnalistik, content writer, media sosial, dan manajemen digital marketing.',
+          'PixxelPro Digital di Mojolangu, Kota Malang, menjalankan program internship mahasiswa berbasis proyek riil, dengan konfirmasi posisi melalui WhatsApp.',
+        ],
+      },
+      {
+        heading: 'Apa itu magang mahasiswa ilmu komunikasi di Pixxelpro Digital?',
+        body: [
+          'Magang mahasiswa ilmu komunikasi di Pixxelpro Digital adalah praktik kerja terarah tempat mahasiswa menerapkan teori komunikasi pada proyek konten, media sosial, dan pemasaran nyata.',
+          'Pixxelpro Digital adalah perusahaan yang melayani kebutuhan komunikasi dan pemasaran digital klien, seperti pengelolaan media sosial, pembuatan website, optimasi mesin pencari, penulisan konten, dan branding online. Dalam program magang, mahasiswa ilmu komunikasi ikut mengerjakan sebagian pekerjaan tersebut di bawah arahan mentor.',
+          'Di Malang, pilihan tempat magang komunikasi cukup beragam, mulai dari media, instansi, hingga agency. Pixxelpro Digital menarik bagi mahasiswa karena satu tempat dapat memperkenalkan beberapa peran sekaligus, misalnya penulisan, media sosial, dan analitik kinerja konten.',
+        ],
+      },
+      {
+        heading: 'Mengapa magang mahasiswa ilmu komunikasi perlu dilakukan sebelum lulus?',
+        body: [
+          'Magang mahasiswa ilmu komunikasi membantu mahasiswa membuktikan keterampilan lewat karya nyata, memahami budaya kerja industri, dan memperkuat peluang diterima kerja setelah lulus.',
+          'Badan Pusat Statistik mencatat Tingkat Pengangguran Terbuka lulusan Diploma IV, S1, S2, dan S3 sebesar 5,39 persen pada Sakernas Agustus 2025, sedikit di atas angka nasional sebesar 4,85 persen. Angka ini menunjukkan bahwa ijazah saja belum menjamin lulusan cepat terserap kerja.',
+          'Manfaat praktis magang bagi mahasiswa ilmu komunikasi ada tiga. Pertama, mahasiswa memiliki portofolio yang dapat ditunjukkan saat melamar kerja. Kedua, mahasiswa mengenal alat dan alur kerja industri secara langsung. Ketiga, mahasiswa membangun jejaring profesional yang dapat memberi rekomendasi.',
+        ],
+      },
+      {
+        heading: 'Bidang magang apa saja yang cocok untuk mahasiswa ilmu komunikasi?',
+        body: [
+          'Bidang magang yang cocok untuk mahasiswa ilmu komunikasi meliputi jurnalistik, content writer, pengelolaan media sosial, dan manajemen digital marketing, sesuai minat dan kompetensi mahasiswa.',
+          'Magang jurnalistik mahasiswa melatih riset, verifikasi fakta, wawancara, dan penulisan berita sesuai kaidah jurnalistik. Mahasiswa belajar menulis pembuka berita yang jelas, memilih sudut pandang, dan menjaga akurasi.',
+          'Magang content writer berfokus pada tulisan untuk kebutuhan merek, seperti artikel blog, naskah media sosial, deskripsi produk, dan copywriting. Mahasiswa belajar riset kata kunci, menyusun kerangka artikel, dan menyesuaikan gaya bahasa dengan audiens.',
+        ],
+      },
+      {
+        heading: 'Bagaimana cara kerja magang berbasis proyek di Pixxelpro Digital?',
+        body: [
+          'Magang berbasis proyek di Pixxelpro Digital berjalan dari pengarahan tugas, pengerjaan bersama mentor, peninjauan hasil, hingga publikasi atau penyerahan karya kepada klien dan tim.',
+          'Alur kerjanya biasanya dimulai dari brief, yaitu ringkasan tujuan, audiens, dan batasan pekerjaan. Mahasiswa kemudian melakukan riset, menyusun draf, meminta masukan mentor, merevisi, dan menyerahkan hasil akhir.',
+          'Umpan balik berkala membuat kemampuan mahasiswa meningkat lebih cepat dibanding bekerja sendiri. Situs PixxelPro Digital menyebut programnya berbasis proyek riil dengan pendampingan mentor dan umpan balik berkala, sehingga mahasiswa tidak hanya mengerjakan tugas administratif.',
+        ],
+      },
+      {
+        heading: 'Apa yang ditawarkan PixxelPro Digital untuk mahasiswa magang di Malang?',
+        body: [
+          'PixxelPro Digital di Mojolangu, Kota Malang, menawarkan program internship mahasiswa berbasis proyek riil dengan mentor, dukungan dokumen resmi, dan peluang membangun portofolio profesional.',
+          'Layanan perusahaan mencakup digital marketing, pembuatan website, SEO, social media marketing, branding online, copywriting, dan jurnalistik. Ragam layanan ini memberi konteks proyek yang luas bagi mahasiswa komunikasi.',
+          'Halaman internship mahasiswa PixxelPro Digital menyebut program untuk mahasiswa D3, D4, dan S1 dengan penugasan proyek dan studi kasus terapan, kolaborasi tim lintas disiplin, kesesuaian konversi SKS atau magang mandiri, serta portofolio profesional.',
+        ],
+      },
+      {
+        heading: 'Bagaimana mahasiswa memadukan latar belakang komunikasi dan manajemen dalam magang?',
+        body: [
+          'Mahasiswa ilmu komunikasi umumnya kuat pada pesan dan audiens, sedangkan mahasiswa manajemen kuat pada perencanaan dan pengukuran, sehingga keduanya saling melengkapi dalam proyek digital marketing.',
+          'Mahasiswa ilmu komunikasi memakai kemampuan menulis, analisis audiens, penyusunan pesan, etika penyampaian informasi, dan pemahaman media. Kompetensi ini berguna pada penulisan artikel, naskah media sosial, siaran pers, dan strategi konten.',
+          'Dalam tim campuran, mahasiswa komunikasi dapat memimpin penulisan pesan, sedangkan mahasiswa manajemen dapat memimpin jadwal dan pelaporan. Kolaborasi seperti ini mencerminkan cara kerja tim agency yang sebenarnya.',
+        ],
+      },
+      {
+        heading: 'Faktor apa yang perlu dipertimbangkan saat memilih tempat magang komunikasi di Malang?',
+        body: [
+          'Faktor utama memilih tempat magang komunikasi di Malang meliputi kesesuaian proyek dengan jurusan, kualitas mentor, kejelasan tugas, dukungan dokumen kampus, dan peluang menghasilkan portofolio.',
+        ],
+        list: [
+          'Kesesuaian proyek dengan jurusan: Tanyakan apakah tugas harian berkaitan dengan penulisan, media sosial, atau pemasaran.',
+          'Kualitas pendampingan: Pastikan ada mentor yang memberi umpan balik berkala.',
+          'Kejelasan tugas dan target: Tugas yang jelas membantu mahasiswa mengukur kemajuan.',
+          'Dukungan dokumen: Periksa apakah tempat magang dapat membantu surat pengantar dan penilaian.',
+          'Lokasi dan jadwal: Pertimbangkan jarak, sistem pelaksanaan, dan jadwal kuliah.',
+          'Peluang portofolio: Tanyakan apakah karya hasil magang boleh dicantumkan sebagai bukti kemampuan.',
+        ],
+      },
+      {
+        heading: 'Bagaimana menyusun portofolio dan laporan magang yang kuat?',
+        body: [
+          'Portofolio magang yang kuat berisi karya terpilih, penjelasan peran, tujuan, proses, dan hasil, sedangkan laporan magang mencatat kegiatan, pembelajaran, dan capaian secara runtut.',
+          'Mahasiswa sebaiknya menyimpan karya sejak minggu pertama magang. Setiap karya dicatat bersama konteks, yaitu siapa audiensnya, apa tujuannya, dan peran mahasiswa di dalamnya.',
+          'Laporan magang dapat disusun mingguan agar mudah dirangkum. Catatan mingguan juga membantu mahasiswa mengingat tugas yang telah dikerjakan saat menyusun laporan akhir untuk kampus.',
+        ],
+      },
+      {
+        heading: 'Bagaimana alur mendaftar magang di PixxelPro Digital?',
+        body: [
+          'Alur mendaftar magang di PixxelPro Digital dimulai dengan memilih bidang, menyiapkan surat pengantar kampus atau CV singkat, lalu mengonfirmasi posisi dan jadwal melalui WhatsApp resmi.',
+          'Langkah pertama adalah menentukan bidang yang diminati, misalnya penulisan, media sosial, atau digital marketing. Langkah kedua adalah menyiapkan surat pengantar dari kampus atau CV singkat yang memuat pengalaman dan contoh karya.',
+          'Langkah ketiga adalah menghubungi tim PixxelPro Digital melalui WhatsApp resmi untuk menanyakan ketersediaan posisi dan jadwal periode. Sistem pelaksanaan, termasuk pembagian jadwal dan metode kerja, dibahas saat sesi koordinasi pendaftaran.',
+        ],
+      },
+    ],
+    conclusion: 'Magang mahasiswa ilmu komunikasi Malang memberi manfaat lebih besar saat bidangnya sesuai minat, tugasnya berbasis proyek nyata, dan mentornya aktif memberi umpan balik.',
+    conclusionList: [
+      'Tentukan bidang yang paling sesuai dengan minat, mulai dari jurnalistik, content writer, media sosial, hingga digital marketing.',
+      'Nilai tempat magang dari kejelasan tugas, pendampingan, dukungan dokumen, dan peluang portofolio.',
+      'Simpan karya dan catatan kegiatan sejak minggu pertama agar portofolio dan laporan mudah disusun.',
+      'Hubungi PixxelPro Digital melalui WhatsApp resmi untuk menanyakan posisi, jadwal, dan kecocokan bidang.',
+    ],
+    conclusionClosing: 'Untuk pendalaman, baca magang jurnalistik mahasiswa dan content writer. Kenali lebih jauh PixxelPro Digital dan program magangnya sebelum menentukan pilihan.',
+    faqs: [
+      {
+        question: 'Apakah mahasiswa ilmu komunikasi bisa magang di Pixxelpro Digital?',
+        answer: 'Bisa. Mahasiswa ilmu komunikasi dapat magang di Pixxelpro Digital pada bidang penulisan, media sosial, jurnalistik, dan pemasaran digital. Kecocokan bidang dan ketersediaan posisi sebaiknya ditanyakan langsung melalui WhatsApp.',
+      },
+      {
+        question: 'Berapa lama durasi magang mahasiswa ilmu komunikasi?',
+        answer: 'Durasi magang mahasiswa ilmu komunikasi bervariasi menurut aturan kampus dan kesepakatan dengan tempat magang. PixxelPro Digital menyebut sistem pelaksanaan sesuai kesepakatan, sehingga periode dikonfirmasi saat koordinasi pendaftaran.',
+      },
+      {
+        question: 'Apakah magang di Pixxelpro Digital bisa dikonversi menjadi SKS?',
+        answer: 'Halaman internship PixxelPro Digital menyebut kesesuaian konversi SKS atau magang mandiri. Ketentuan akhir tetap mengikuti aturan program studi dan kampus masing-masing.',
+      },
+      {
+        question: 'Apakah mahasiswa dari luar Malang bisa mendaftar magang di PixxelPro Digital?',
+        answer: 'Bisa. PixxelPro Digital terbuka bagi peserta dari luar Malang Raya. Sistem pelaksanaan dan jadwal dibahas bersama tim melalui WhatsApp agar sesuai dengan kondisi mahasiswa.',
+      },
+      {
+        question: 'Apa yang perlu disiapkan sebelum melamar magang komunikasi?',
+        answer: 'Mahasiswa perlu menyiapkan surat pengantar kampus atau CV singkat, beberapa contoh karya, dan gambaran bidang yang diminati. Contoh karya dapat berupa tulisan, desain, atau konsep konten yang pernah dibuat.',
+      },
+      {
+        question: 'Apakah magang pasti berujung pada pekerjaan tetap?',
+        answer: 'Tidak. Magang tidak menjamin pekerjaan tetap karena hasilnya bergantung pada kinerja mahasiswa dan kebutuhan perusahaan.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Magang Ilmu Komunikasi Malang',
+      title: 'Cari Magang Ilmu Komunikasi di Malang? Konsultasi Sekarang!',
+      desc: 'PixxelPro Digital membuka kesempatan magang bagi mahasiswa ilmu komunikasi dan manajemen di Malang dan luar kota.',
+      btnLabel: 'Tanya Posisi Magang via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20tertarik%20dengan%20program%20magang%20dan%20ingin%20konsultasi%20posisi.',
+    },
+  },
+  {
+    id: 'post-34',
+    slug: 'magang-jurnalistik-mahasiswa',
+    title: 'Magang Jurnalistik Mahasiswa dan Content Writer sebagai Jalur Karier Komunikasi di Malang',
+    metaTitle: 'Magang Jurnalistik Mahasiswa dan Content Writer Malang',
+    excerpt: 'Pelajari magang jurnalistik mahasiswa dan magang content writer di Malang, tugas harian, keterampilan, dan tips portofolio. Tanyakan posisi via WhatsApp.',
+    category: 'Internship Mahasiswa',
+    categorySlug: 'internship-mahasiswa',
+    date: '02 Desember 2026',
+    isoDate: '2026-12-02T08:00:00+07:00',
+    readTime: '14 menit baca',
+    featured: false,
+    image: '/images/blog/magang-content-writer-penyuntingan.webp',
+    imageAlt: 'mahasiswa-magang-content-writer-menyunting-draf-artikel-bersama-editor',
+    secondImage: {
+      src: '/images/blog/magang-jurnalistik-mahasiswa-wawancara.webp',
+      alt: 'mahasiswa-magang-jurnalistik-mewawancarai-pemilik-usaha-lokal',
+      caption: 'Mahasiswa magang jurnalistik mewawancarai pemilik usaha lokal di Malang.',
+    },
+    readAlso: {
+      title: 'Magang Mahasiswa Ilmu Komunikasi Malang di Pixxelpro Digital dan Cara Memilih Tempat yang Tepat',
+      slug: 'magang-mahasiswa-ilmu-komunikasi-malang',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'magang jurnalistik mahasiswa',
+      'magang content writer',
+      'magang mahasiswa ilmu komunikasi Malang',
+      'internship ilmu komunikasi Malang',
+      'riset dan verifikasi fakta',
+      'wawancara',
+      'penyuntingan',
+      'copywriting',
+      'SEO',
+      'portofolio tulisan',
+      'PixxelPro Digital',
+    ],
+    intro: 'Magang jurnalistik mahasiswa melatih riset, wawancara, dan penulisan berita yang akurat, sedangkan magang content writer melatih tulisan persuasif yang dioptimalkan untuk pencarian dan kebutuhan audiens.',
+    sections: [
+      {
+        heading: 'Ringkasan Inti',
+        body: [],
+        list: [
+          'Reuters Institute Digital News Report 2026 mencatat 64 persen warga Indonesia memperoleh berita dari platform media sosial dan video.',
+          'Magang jurnalistik menekankan fakta, verifikasi, dan etika, sedangkan magang content writer menekankan tujuan merek dan kebutuhan pencarian.',
+          'Kedua magang melatih riset, kejelasan bahasa, ketelitian, dan kemampuan menerima revisi.',
+          'Portofolio sebaiknya memuat karya terpilih beserta konteks, peran, tujuan, dan hasil.',
+        ],
+      },
+      {
+        heading: 'Mengapa magang jurnalistik mahasiswa makin relevan di era media sosial?',
+        body: [
+          'Magang jurnalistik mahasiswa makin relevan karena publik Indonesia kini banyak mengakses berita lewat media sosial, sehingga akurasi dan kemampuan menulis ringkas menjadi keterampilan yang dibutuhkan.',
+          'Halaman Indonesia pada Reuters Institute Digital News Report 2026 menyebut platform seperti WhatsApp, YouTube, Facebook, dan TikTok sangat populer, dan 64 persen warga Indonesia melaporkan memperoleh berita dari platform tersebut. Data ini berasal dari survei yang dilaporkan responden, bukan dari penghitungan lalu lintas situs.',
+          'Konsekuensinya, calon jurnalis dan penulis harus bersaing dengan beragam konten di linimasa yang sama. Tulisan yang jelas, akurat, dan mudah diverifikasi lebih mudah dipercaya dibanding konten yang hanya mengejar perhatian.',
+        ],
+      },
+      {
+        heading: 'Apa perbedaan magang jurnalistik mahasiswa dan magang content writer?',
+        body: [
+          'Magang jurnalistik mahasiswa menekankan fakta, verifikasi, dan kepentingan publik, sedangkan magang content writer menekankan tujuan merek, kebutuhan pencarian, dan ajakan bertindak kepada audiens.',
+          'Dalam jurnalistik, tulisan disusun untuk menginformasikan publik. Wartawan memeriksa fakta, mengonfirmasi kepada narasumber, dan memegang kode etik, sehingga kepentingan pembaca ditempatkan di atas kepentingan pihak tertentu.',
+          'Dalam content writing, tulisan disusun untuk membantu merek berkomunikasi dengan audiensnya. Penulis konten memikirkan kata kunci, struktur yang mudah dipindai, nada merek, dan langkah yang diharapkan dari pembaca, seperti menghubungi atau mendaftar.',
+        ],
+      },
+      {
+        heading: 'Apa saja tugas harian dalam magang jurnalistik mahasiswa?',
+        body: [
+          'Tugas harian magang jurnalistik mahasiswa mencakup riset narasumber, verifikasi fakta, wawancara, penulisan berita atau feature, penyuntingan, dan penyesuaian naskah untuk kanal publikasi.',
+          'Riset dimulai dari memahami topik, mencari narasumber yang relevan, dan membaca dokumen pendukung. Verifikasi berarti memeriksa informasi pada lebih dari satu sumber sebelum ditulis. Mahasiswa belajar membedakan fakta, pendapat, dan dugaan.',
+          'Mahasiswa menyiapkan daftar pertanyaan, melakukan wawancara, mencatat jawaban dengan teliti, lalu menyusun berita dengan pembuka yang menjawab unsur utama kejadian. Latihan ini membangun kebiasaan menulis lugas dan runtut.',
+        ],
+      },
+      {
+        heading: 'Apa saja tugas harian dalam magang content writer?',
+        body: [
+          'Tugas harian magang content writer mencakup riset topik dan kata kunci, penyusunan kerangka, penulisan artikel, copywriting media sosial, penyuntingan, serta pembaruan konten berdasarkan performa.',
+          'Pekerjaan dimulai dari memahami audiens dan tujuan konten. Mahasiswa meriset pertanyaan yang sering dicari pembaca, lalu menyusun kerangka dengan judul dan subjudul yang jelas.',
+          'Setelah itu mahasiswa menulis draf, menyunting, dan menyerahkan hasil kepada mentor untuk ditinjau. Tulisan yang sudah terbit dapat dipantau performanya, misalnya jumlah pembaca dan waktu baca, kemudian diperbarui bila perlu.',
+        ],
+      },
+      {
+        heading: 'Keterampilan apa yang dilatih melalui magang jurnalistik dan content writer?',
+        body: [
+          'Magang jurnalistik dan content writer melatih riset, kejelasan bahasa, ketelitian, manajemen tenggat, empati pada audiens, dan kemampuan menerima revisi dari editor atau mentor.',
+        ],
+        list: [
+          'Riset: Mahasiswa belajar mencari, menyaring, dan mencatat sumber dengan rapi.',
+          'Kejelasan bahasa: Kalimat dilatih agar singkat, tepat, dan mudah dipahami pembaca awam.',
+          'Ketelitian: Fakta, nama, angka, dan ejaan diperiksa sebelum tulisan terbit.',
+          'Manajemen tenggat: Mahasiswa belajar membagi waktu antara riset, penulisan, dan revisi.',
+          'Empati pada audiens: Penulis belajar memahami kebutuhan dan tingkat pengetahuan pembaca.',
+          'Penerimaan revisi: Catatan editor dipakai untuk memperbaiki tulisan, bukan dianggap sebagai kegagalan.',
+        ],
+      },
+      {
+        heading: 'Bagaimana memilih tempat magang penulisan yang tepat di Malang?',
+        body: [
+          'Pilih tempat magang penulisan di Malang yang memberi tugas menulis nyata, menyediakan editor atau mentor, mengizinkan karya masuk portofolio, dan sejalan dengan arah karier mahasiswa.',
+          'Mahasiswa dapat mengajukan beberapa pertanyaan sebelum memutuskan. Apakah tugasnya benar-benar menulis, siapa yang meninjau tulisan, dan apakah hasil karya boleh ditampilkan sebagai portofolio.',
+          'PixxelPro Digital menjalankan layanan copywriting dan jurnalistik di samping SEO dan social media marketing, sehingga proyek penulisan dapat berkaitan dengan kebutuhan klien nyata. Pembahasan menyeluruh tentang peluang di bidang ini tersedia pada artikel pilar magang mahasiswa ilmu komunikasi Malang.',
+        ],
+      },
+      {
+        heading: 'Apa kesalahan umum mahasiswa dalam magang jurnalistik dan content writer?',
+        body: [
+          'Kesalahan umum dalam magang jurnalistik dan content writer meliputi menyalin sumber tanpa verifikasi, menulis tanpa memahami audiens, mengabaikan revisi, dan tidak menyimpan karya untuk portofolio.',
+          'Menyalin sumber tanpa verifikasi berisiko menyebarkan informasi keliru dan melanggar etika kepenulisan. Mahasiswa perlu menulis ulang dengan kata sendiri, mencantumkan sumber, dan memeriksa kebenaran informasi.',
+          'Menulis tanpa memahami audiens membuat tulisan terasa umum. Mahasiswa perlu bertanya siapa pembacanya, apa yang mereka cari, dan tindakan apa yang diharapkan setelah membaca.',
+        ],
+      },
+      {
+        heading: 'Bagaimana menyusun portofolio tulisan dari hasil magang?',
+        body: [
+          'Portofolio tulisan dari hasil magang sebaiknya memuat tiga sampai lima karya terpilih, masing-masing dengan konteks, peran penulis, tujuan, dan tautan publikasi bila tersedia.',
+          'Pilih karya yang menunjukkan ragam kemampuan, misalnya satu berita atau feature, satu artikel yang dioptimalkan untuk pencarian, dan satu contoh copywriting. Keragaman ini memperlihatkan kemampuan menyesuaikan gaya dengan kebutuhan.',
+          'Untuk tulisan klien, mintalah izin terlebih dahulu dan hindari membuka informasi rahasia. Portofolio yang rapi dan jujur lebih dipercaya dibanding portofolio yang berlebihan.',
+        ],
+      },
+    ],
+    conclusion: 'Magang jurnalistik mahasiswa dan magang content writer sama-sama membangun kemampuan menulis, tetapi tujuan, standar etika, dan ukuran keberhasilannya berbeda sehingga pilihan harus selaras dengan karier.',
+    conclusionList: [
+      'Pilih magang jurnalistik bila tertarik pada verifikasi fakta, wawancara, dan kepentingan publik.',
+      'Pilih magang content writer bila tertarik pada tulisan untuk merek, SEO, dan copywriting.',
+      'Simpan karya terpilih dan tulis konteksnya agar portofolio mudah dipahami.',
+    ],
+    conclusionClosing: 'Lanjutkan membaca magang social media mahasiswa dan magang manajemen digital marketing untuk melihat peran lain yang dapat dipilih. Gambaran besar program tersedia pada artikel pilar magang mahasiswa ilmu komunikasi Malang.',
+    faqs: [
+      {
+        question: 'Apakah magang jurnalistik harus dari jurusan ilmu komunikasi?',
+        answer: 'Tidak harus. Kemampuan menulis, ketelitian, dan rasa ingin tahu lebih menentukan. Namun, mahasiswa ilmu komunikasi umumnya sudah mengenal dasar penulisan berita, etika, dan analisis media sehingga lebih mudah beradaptasi.',
+      },
+      {
+        question: 'Apakah content writer perlu menguasai SEO?',
+        answer: 'Pengetahuan dasar SEO sangat membantu content writer. Content writer perlu memahami kata kunci, maksud pencarian, struktur judul, dan cara menulis jawaban yang jelas, sehingga artikel lebih mudah ditemukan pembaca.',
+      },
+      {
+        question: 'Apakah tulisan hasil magang boleh dimasukkan ke portofolio?',
+        answer: 'Boleh, selama mahasiswa mendapat izin dari tempat magang dan tidak membuka informasi rahasia klien. Mahasiswa dapat menampilkan tulisan beserta penjelasan peran dan tujuannya.',
+      },
+      {
+        question: 'Bagaimana cara bertanya tentang magang penulisan di PixxelPro Digital?',
+        answer: 'Mahasiswa dapat menghubungi PixxelPro Digital melalui WhatsApp resmi, menyampaikan jurusan dan bidang penulisan yang diminati, lalu menanyakan ketersediaan posisi dan jadwal periode.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Magang Jurnalistik & Content Writer',
+      title: 'Tertarik Magang Jurnalistik atau Content Writer?',
+      desc: 'PixxelPro Digital membuka kesempatan magang penulisan bagi mahasiswa ilmu komunikasi dan jurusan terkait di Malang.',
+      btnLabel: 'Tanya Posisi Magang via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20tertarik%20dengan%20program%20magang%20dan%20ingin%20konsultasi%20posisi.',
+    },
+  },
+  {
+    id: 'post-33',
+    slug: 'magang-dkv-desain-konten-media-sosial',
+    title: 'Magang DKV dan Praktik Desain Konten Media Sosial di Malang',
+    metaTitle: 'Magang DKV Desain Konten Media Sosial di Malang',
+    excerpt: 'Pelajari proses desain konten media sosial saat magang DKV, dari brief, layout, carousel hingga evaluasi. Kenali kompetensi yang dibutuhkan.',
+    category: 'Panduan Magang',
+    categorySlug: 'panduan-magang',
+    date: '01 Desember 2026',
+    isoDate: '2026-12-01T12:00:00+07:00',
+    readTime: '11 menit baca',
+    featured: false,
+    image: '/images/blog/peserta-magang-dkv-rancang-konten-media-sosial-promosi.webp',
+    imageAlt: 'peserta-magang-dkv-rancang-konten-media-sosial-promosi',
+    secondImage: {
+      src: '/images/blog/tim-kreatif-tinjau-konsistensi-desain-carousel-identitas-visual.webp',
+      alt: 'tim-kreatif-tinjau-konsistensi-desain-carousel-identitas-visual',
+      caption: 'Tim kreatif meninjau konsistensi desain carousel dan identitas visual.',
+    },
+    readAlso: {
+      title: 'Cara Membangun Portofolio Desain Grafis Selama PKL DKV',
+      slug: 'portofolio-pkl-dkv-desain-grafis',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'magang DKV desain konten media sosial',
+      'magang desain konten media sosial',
+      'desain feed Instagram',
+      'praktik desain carousel',
+      'desain promosi digital',
+      'konten visual untuk UMKM',
+      'PixxelPro Digital',
+    ],
+    intro: 'Magang DKV desain konten media sosial melatih peserta menerjemahkan brief menjadi feed, carousel, dan materi promosi yang jelas serta konsisten.',
+    sections: [
+      {
+        heading: 'Ringkasan Inti',
+        body: [],
+        list: [
+          'Desain media sosial menggabungkan prinsip DKV dengan tujuan komunikasi digital.',
+          'Proses dimulai dari brief, pesan utama, konsep visual, layout, review, hingga ekspor.',
+          'Konsistensi merek, keterbacaan, hak cipta, dan akurasi informasi perlu diperhatikan.',
+        ],
+      },
+      {
+        heading: 'Mengapa desain konten media sosial relevan untuk peserta DKV?',
+        body: [
+          'Desain konten media sosial relevan bagi peserta DKV karena menggabungkan prinsip komunikasi visual dengan kebutuhan publikasi digital. Peserta perlu menyampaikan pesan secara cepat, konsisten, dan sesuai karakter audiens serta identitas merek.',
+          'Konten media sosial dapat berupa feed tunggal, carousel, story, sampul video, atau materi kampanye. Setiap format memiliki konteks dan ukuran yang berbeda. Desainer perlu memastikan pesan tetap terbaca pada layar ponsel dan elemen penting tidak tertutup antarmuka platform.',
+          'Desain konten juga mempertemukan DKV dengan strategi komunikasi. Sebelum membuat visual, peserta perlu mengetahui tujuan konten: memberi informasi, memperkenalkan produk, mengajak audiens melakukan tindakan, atau membangun konsistensi identitas merek.',
+        ],
+      },
+      {
+        heading: 'Bagaimana proses membuat desain konten media sosial?',
+        body: [
+          'Proses pembuatan desain konten media sosial dimulai dari memahami brief dan audiens, menyusun pesan, mengembangkan konsep visual, membuat layout, memeriksa desain, lalu menyiapkan file sesuai format publikasi.',
+          'Memahami tujuan dan audiens: Tanyakan siapa yang akan melihat konten, informasi apa yang harus diingat, dan tindakan apa yang diharapkan. Konten untuk edukasi membutuhkan struktur informasi yang berbeda dari konten promosi produk. Pemahaman audiens membantu menentukan bahasa visual dan tingkat detail.',
+          'Menyusun pesan utama: Pilih satu pesan utama agar desain tidak dipenuhi terlalu banyak informasi. Headline perlu jelas, sedangkan detail tambahan ditempatkan sebagai informasi pendukung. Jika materi memuat harga, tanggal, lokasi, atau syarat, periksa kembali akurasinya sebelum desain final.',
+        ],
+      },
+      {
+        heading: 'Mengembangkan konsep visual dan menyusun layout',
+        body: [
+          'Gunakan referensi untuk menentukan arah visual, bukan menyalin desain pihak lain. Tentukan palet warna, tipografi, gaya foto atau ilustrasi, serta elemen grafis yang sesuai identitas merek. Pastikan semua aset memiliki izin penggunaan.',
+          'Atur hierarki informasi, kontras, jarak, dan ruang kosong. Periksa desain dalam ukuran layar ponsel, bukan hanya pada monitor besar. Pastikan teks penting tidak terlalu kecil dan kontras warna cukup.',
+          'Ekspor sesuai format dan dimensi yang diminta. Beri nama file yang konsisten, simpan versi final, dan lakukan pemeriksaan ejaan. Jika konten terdiri atas beberapa slide, periksa kesinambungan alur dari awal sampai akhir.',
+        ],
+      },
+      {
+        heading: 'Apa perbedaan desain feed, carousel, story, dan banner?',
+        body: [
+          'Setiap format konten memiliki fungsi komunikasi yang berbeda. Feed tunggal cocok untuk satu pesan utama, carousel membantu menyampaikan informasi bertahap, story mendukung komunikasi singkat dan cepat, sedangkan banner website mengikuti kebutuhan tata letak halaman.',
+          'Feed tunggal perlu memiliki fokus visual yang kuat dan pesan ringkas. Elemen utama harus segera terlihat ketika audiens menggulir halaman. Hindari menumpuk terlalu banyak detail yang membuat informasi utama kehilangan penekanan.',
+          'Carousel dapat digunakan untuk panduan, edukasi, atau penjelasan berurutan. Slide pertama perlu memberi konteks, slide berikutnya menyampaikan satu gagasan per bagian, dan slide akhir dapat merangkum atau mengarahkan tindakan. Konsistensi grid dan gaya visual menjaga pengalaman membaca.',
+        ],
+      },
+      {
+        heading: 'Story, banner, dan konsistensi identitas merek',
+        body: [
+          'Format vertikal cocok untuk informasi singkat dan interaksi cepat. Pastikan elemen utama berada di area aman dan tidak tertutup tombol antarmuka. Gunakan teks seperlunya agar audiens dapat memahami pesan dalam waktu singkat.',
+          'Banner website perlu mempertimbangkan ukuran layar, ruang teks, dan hubungan visual dengan halaman tujuan. Pesan dan tombol ajakan harus jelas, sedangkan gambar pendukung tidak boleh mengganggu keterbacaan.',
+          'Konsistensi merek dibangun dengan penggunaan elemen visual yang terarah dan berulang. Palet warna, tipografi, gaya ilustrasi, bentuk, dan aturan logo perlu diterapkan secara konsisten tanpa membuat seluruh konten terlihat monoton.',
+        ],
+      },
+      {
+        heading: 'Bagaimana mengevaluasi kualitas desain konten media sosial?',
+        body: [
+          'Evaluasi desain perlu melihat keterbacaan, kejelasan pesan, konsistensi merek, ketepatan format, dan kesesuaian dengan brief. Jika data performa tersedia dan peserta diberi akses, metrik dapat menjadi bahan evaluasi tambahan, tetapi jangan mengklaim dampak tanpa bukti.',
+          'Lakukan pemeriksaan visual dengan melihat desain pada perangkat berbeda. Minta orang lain membaca pesan utama tanpa penjelasan tambahan. Jika mereka sulit memahami maksud desain, sederhanakan struktur atau perjelas hierarki.',
+          'Ketika membahas performa, bedakan kualitas desain dari faktor lain seperti waktu publikasi, kualitas caption, relevansi topik, dan karakter audiens. Desain merupakan salah satu bagian dari keseluruhan komunikasi digital, bukan satu-satunya penentu hasil.',
+        ],
+      },
+      {
+        heading: 'Apa yang perlu diperhatikan terkait hak cipta dan aset visual?',
+        body: [
+          'Peserta harus menggunakan foto, ilustrasi, font, ikon, dan template yang memiliki izin penggunaan sesuai kebutuhan. Aset yang ditemukan melalui pencarian internet tidak otomatis bebas digunakan untuk proyek komersial.',
+          'Simpan catatan sumber aset dan lisensinya jika diperlukan. Gunakan aset dari pustaka resmi, materi yang disediakan pemilik proyek, atau karya buatan sendiri. Jangan menghapus watermark atau mengklaim karya orang lain sebagai hasil pribadi.',
+          'Perhatikan pula kerahasiaan materi klien. Jangan mengunggah draft, kalender konten, data audiens, atau kampanye yang belum dipublikasikan tanpa persetujuan. Kebiasaan ini penting bagi peserta yang ingin bekerja di bidang kreatif dan pemasaran digital.',
+        ],
+      },
+    ],
+    conclusion: 'Desain konten media sosial merupakan salah satu ruang praktik yang relevan bagi siswa DKV karena membutuhkan kemampuan visual sekaligus pemahaman audiens.',
+    conclusionClosing: 'Peserta perlu bekerja berdasarkan brief, memeriksa keterbacaan, menjaga identitas merek, dan memastikan aset digunakan secara sah. PixxelPro Digital mencantumkan layout feed sosial media dan desain flyer digital promosi sebagai contoh aktivitas bidang DKV. Untuk memastikan kesesuaian program dengan kebutuhan sekolah, calon peserta dapat membaca halaman program PKL dan mengonfirmasi detail penempatan kepada tim PixxelPro.',
+    faqs: [
+      {
+        question: 'Apakah siswa DKV bisa magang membuat konten media sosial?',
+        answer: 'Bisa, jika ruang lingkup program dan kebutuhan penempatan mencakup desain konten. PixxelPro mencantumkan layout feed sosial media dan flyer digital sebagai contoh penugasan bidang DKV.',
+      },
+      {
+        question: 'Apa saja format desain konten yang perlu dipahami?',
+        answer: 'Peserta dapat mempelajari feed tunggal, carousel, story, sampul video, dan banner website. Setiap format perlu disesuaikan dengan tujuan, ukuran, dan kanal publikasi.',
+      },
+      {
+        question: 'Apakah desain konten harus selalu mengikuti tren?',
+        answer: 'Tidak. Tren dapat menjadi referensi, tetapi desain tetap harus sesuai identitas merek, kebutuhan audiens, keterbacaan, dan tujuan komunikasi.',
+      },
+      {
+        question: 'Bagaimana cara mengetahui desain sudah efektif?',
+        answer: 'Periksa apakah pesan utama mudah dipahami, informasi akurat, visual konsisten, dan format sesuai brief. Gunakan data performa hanya jika tersedia dan dapat diakses secara sah.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Magang DKV & Desain Konten',
+      title: 'Tertarik Magang DKV di Bidang Desain Konten Media Sosial?',
+      desc: 'PixxelPro Digital membuka kesempatan magang DKV untuk praktik desain feed, carousel, dan materi promosi digital.',
+      btnLabel: 'Tanya Posisi Magang via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20tertarik%20dengan%20program%20magang%20dan%20ingin%20konsultasi%20posisi.',
+    },
+  },
+  {
+    id: 'post-32',
+    slug: 'pkl-smk',
+    title: 'Program PKL SMK di PixxelPro Digital',
+    metaTitle: 'Tempat PKL SMK di Malang: Program Praktik & Cara Daftar',
+    excerpt: 'Cari tempat PKL SMK? Praktik langsung di bidang digital dengan pembimbingan. Melayani siswa Malang Raya & luar kota. Daftar sekarang!',
+    category: 'Panduan Magang',
+    categorySlug: 'panduan-magang',
+    date: '01 Desember 2026',
+    isoDate: '2026-12-01T10:00:00+07:00',
+    readTime: '8 menit baca',
+    featured: false,
+    image: '/images/blog/tempat-pkl-smk-praktik-bersama-pembimbing.webp',
+    imageAlt: 'tempat-pkl-smk-praktik-bersama-pembimbing',
+    secondImage: {
+      src: '/images/blog/pkl-smk-diskusi-rencana-proyek-2.webp',
+      alt: 'pkl-smk-diskusi-rencana-proyek',
+      caption: 'Siswa PKL SMK berdiskusi rencana proyek bersama pembimbing.',
+    },
+    readAlso: {
+      title: 'Program Magang PixxelPro Digital',
+      slug: 'program-magang',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'tempat PKL SMK',
+      'PKL SMK Malang',
+      'praktik kerja lapangan',
+      'magang SMK',
+      'PixxelPro Digital',
+    ],
+    intro: 'Mencari tempat PKL SMK yang memberi pengalaman praktik langsung di bidang digital? PixxelPro Digital menyelenggarakan program PKL bagi siswa SMK dengan pembimbingan selama pelaksanaan. Program ini melayani siswa dari Malang Raya maupun luar kota.',
+    sections: [
+      {
+        heading: 'Mengenal Program PKL SMK',
+        body: [
+          'PKL atau Praktik Kerja Lapangan adalah kegiatan belajar di dunia kerja yang menjadi bagian dari pendidikan SMK. Di PixxelPro Digital, siswa mempraktikkan keterampilan dari jurusannya pada pekerjaan di bidang digital, seperti pengembangan website, digital marketing, dan multimedia.',
+          'Siswa tidak hanya mengamati, tetapi mengerjakan tugas dengan arahan pembimbing sehingga kegiatan PKL relevan dengan jurusan dan kebutuhan laporan sekolah.',
+          'Program ini terbuka bagi siswa dari Malang Raya dan luar kota. Sekolah yang mencari tempat PKL SMK di luar wilayah Malang tetap dapat berkonsultasi dengan tim.',
+        ],
+      },
+      {
+        heading: 'Siapa yang Dapat Mengikuti Program?',
+        body: [
+          'Program PKL ini diperuntukkan bagi siswa SMK yang akan melaksanakan PKL, terutama dari jurusan yang berkaitan dengan bidang digital seperti RPL dan DKV.',
+          'Untuk Siswa: Siswa dari jurusan lain yang tertarik pada dunia digital dapat menanyakan kesesuaian program langsung kepada tim sebelum mendaftar.',
+          'Untuk Sekolah: Guru pembimbing dan koordinator PKL dapat menghubungi tim untuk membahas kebutuhan, jadwal, dan ketentuan PKL di sekolah masing-masing.',
+        ],
+      },
+      {
+        heading: 'Kegiatan dan Proyek yang Dikerjakan',
+        body: [
+          'Kegiatan PKL disesuaikan dengan bidang kompetensi siswa. Secara umum, siswa melalui tahapan berikut.',
+          'Pengenalan Lingkungan Kerja: Siswa mengenal tim, alur kerja, dan aturan kerja sebelum mulai mengerjakan tugas.',
+          'Pengerjaan Tugas Sesuai Bidang: Siswa mengerjakan tugas yang berkaitan dengan jurusannya, misalnya membantu pembuatan website, menyiapkan konten promosi digital, atau merancang materi visual.',
+          'Evaluasi dan Dokumentasi: Hasil kerja ditinjau bersama pembimbing, lalu didokumentasikan untuk keperluan laporan PKL.',
+        ],
+      },
+      {
+        heading: 'Kompetensi yang Dikembangkan',
+        body: [
+          'Selain keterampilan teknis sesuai jurusan, PKL melatih kemampuan yang dibutuhkan di dunia kerja:',
+        ],
+        list: [
+          'Keterampilan teknis di bidang digital',
+          'Disiplin dan tanggung jawab dalam bekerja',
+          'Komunikasi dengan rekan kerja dan pembimbing',
+          'Kerja sama dalam tim',
+          'Penyusunan laporan dan dokumentasi kegiatan',
+        ],
+      },
+      {
+        heading: 'Alur Pelaksanaan dan Pembimbingan',
+        body: [
+          'Tahapan Pelaksanaan:',
+        ],
+        list: [
+          'Sekolah atau siswa menghubungi tim dan menyampaikan kebutuhan PKL.',
+          'Tim PixxelPro Digital memberikan konfirmasi dan arahan pelaksanaan.',
+          'Siswa mengikuti pengenalan lingkungan kerja dan pembagian tugas.',
+          'Siswa mengerjakan tugas dengan pembimbingan.',
+          'Siswa menyusun laporan dan mengikuti evaluasi di akhir PKL.',
+        ],
+        bodyAfter: [
+          'Pembimbingan: Siswa didampingi pembimbing yang memberi arahan tugas dan masukan atas hasil kerja. Guru pembimbing sekolah dapat berkoordinasi dengan tim untuk memantau perkembangan siswa.',
+          'Informasi Pelaksanaan: Jadwal dan lama PKL mengikuti ketentuan sekolah dan disepakati bersama tim sebelum PKL dimulai. Untuk informasi biaya, fasilitas, serta sertifikat atau surat keterangan PKL, silakan tanyakan langsung kepada tim PixxelPro Digital.',
+        ],
+      },
+      {
+        heading: 'Persyaratan dan Cara Pendaftaran',
+        body: [
+          'Persyaratan umumnya mengikuti ketentuan PKL dari sekolah, yaitu:',
+        ],
+        list: [
+          'Siswa SMK yang akan melaksanakan PKL',
+          'Surat pengantar atau permohonan PKL dari sekolah',
+          'Kesediaan mengikuti aturan kerja dan arahan pembimbing',
+        ],
+        bodyAfter: [
+          'Persyaratan lengkap dan terbaru dikonfirmasi oleh tim saat pendaftaran.',
+          'Cara Mendaftar: Siapkan persyaratan dari sekolah. Isi formulir pendaftaran atau hubungi tim melalui WhatsApp yang tersedia di halaman ini. Tunggu konfirmasi dari tim PixxelPro Digital. Ikuti arahan selanjutnya hingga jadwal PKL ditetapkan.',
+          'Sedang mencari tempat PKL SMK? Hubungi tim PixxelPro Digital sekarang melalui tombol pendaftaran atau WhatsApp di halaman ini.',
+        ],
+      },
+    ],
+    conclusion: 'Program PKL SMK di PixxelPro Digital memberikan pengalaman praktik langsung di bidang digital dengan pembimbingan dan dukungan dokumen.',
+    faqs: [
+      {
+        question: 'Jurusan SMK apa saja yang dapat mengikuti PKL?',
+        answer: 'Program ini ditujukan terutama bagi jurusan yang berkaitan dengan bidang digital, seperti RPL dan DKV. Jurusan lain dapat berkonsultasi dengan tim mengenai kesesuaiannya.',
+      },
+      {
+        question: 'Apakah PixxelPro Digital menerima siswa dari luar kota?',
+        answer: 'Ya. Program ini melayani siswa dari Malang Raya dan luar kota. Silakan berkonsultasi dengan tim sebelum mendaftar.',
+      },
+      {
+        question: 'Apa yang perlu disiapkan siswa sebelum PKL?',
+        answer: 'Siapkan surat pengantar dari sekolah, pahami jurusan dan bidang yang diminati, serta siapkan diri untuk mengikuti aturan kerja dan arahan pembimbing.',
+      },
+      {
+        question: 'Apakah siswa dari satu sekolah dapat mendaftar bersama?',
+        answer: 'Hal ini dapat dibahas langsung dengan tim PixxelPro Digital sesuai kebutuhan sekolah dan kesiapan pelaksanaan.',
+      },
+      {
+        question: 'Apakah siswa harus menyusun laporan PKL?',
+        answer: 'Sebagian besar sekolah mewajibkan laporan PKL. Kegiatan siswa dapat didokumentasikan sebagai bahan laporan sesuai ketentuan sekolah.',
+      },
+      {
+        question: 'Berapa biaya PKL dan apakah ada sertifikat?',
+        answer: 'Informasi biaya serta sertifikat atau surat keterangan PKL disampaikan langsung oleh tim PixxelPro Digital saat konsultasi pendaftaran.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Program PKL SMK',
+      title: 'Cari Tempat PKL SMK di Malang? Daftar Sekarang!',
+      desc: 'Praktik langsung di bidang digital dengan pembimbingan. Terbuka untuk siswa SMK dari Malang Raya dan luar kota.',
+      btnLabel: 'Daftar PKL via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20tertarik%20dengan%20program%20magang%20dan%20ingin%20konsultasi%20posisi.',
+    },
+  },
+  {
+    id: 'post-31',
+    slug: 'pelatihan-jurnalistik-sekolah-siswa-guru',
+    title: 'Pelatihan Jurnalistik Sekolah untuk Siswa dan Guru',
+    metaTitle: 'Pelatihan Jurnalistik Sekolah untuk Siswa dan Guru',
+    excerpt: 'Pelatihan jurnalistik sekolah membekali siswa dan guru dengan teknik berita, wawancara, editing, dan etika media. Kenali dukungan digital PixxelPro Digital.',
+    category: 'Jurnalistik',
+    categorySlug: 'jurnalistik',
+    date: '01 Desember 2026',
+    isoDate: '2026-12-01T08:00:00+07:00',
+    readTime: '12 menit baca',
+    featured: false,
+    image: '/images/blog/pelatihan-jurnalistik-siswa-smk-di-pixxelpro-digital-malang.webp',
+    imageAlt: 'pelatihan-jurnalistik-siswa-smk-di-pixxelpro-digital-malang',
+    secondImage: {
+      src: '/images/blog/siswa-smk-presentasi-proyek-jurnalistik-di-pixxelpro-digital-malang.webp',
+      alt: 'siswa-smk-presentasi-proyek-jurnalistik-di-pixxelpro-digital-malang',
+      caption: 'Siswa SMK presentasi proyek jurnalistik di PixxelPro Digital Malang.',
+    },
+    readAlso: {
+      title: 'Proses Publikasi Berita Kegiatan Sekolah yang Efektif',
+      slug: 'publikasi-berita-kegiatan-sekolah',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'pelatihan jurnalistik sekolah',
+      'literasi media',
+      'reporter siswa',
+      'teknik wawancara',
+      'penulisan berita',
+      'editing',
+      'etika publikasi',
+      'PixxelPro Digital',
+    ],
+    intro: 'Pelatihan jurnalistik sekolah mengajarkan siswa dan guru mencari fakta, mewawancarai narasumber, menulis berita, menyunting, serta menerbitkan konten etis.',
+    sections: [
+      {
+        heading: 'Ringkasan Inti',
+        body: [],
+        list: [
+          'Pelatihan membangun keterampilan komunikasi dan literasi informasi.',
+          'Materi mencakup unsur berita, wawancara, penulisan, editing, dan etika.',
+          'Praktik liputan memberi pengalaman langsung dengan bimbingan guru.',
+          'Tim media sekolah membutuhkan pembagian peran dan prosedur publikasi.',
+        ],
+      },
+      {
+        heading: 'Apa manfaat pelatihan jurnalistik sekolah?',
+        body: [
+          'Pelatihan jurnalistik sekolah membantu peserta memahami cara mengolah informasi menjadi berita yang akurat, menarik, dan bertanggung jawab. Kegiatan ini mengembangkan keterampilan menulis, bertanya, mengamati, bekerja sama, serta berpikir kritis.',
+          'Siswa belajar membedakan fakta dan opini, mengenali sumber, serta menyusun informasi secara runtut. Keterampilan tersebut dapat digunakan dalam majalah sekolah, website, buletin, laporan kegiatan, dan proyek pembelajaran lintas mata pelajaran.',
+          'Guru memperoleh metode untuk membimbing siswa melakukan liputan secara aman dan terstruktur. Pelatihan juga dapat memperkuat budaya dokumentasi sekolah, asalkan publikasi tidak mengabaikan privasi atau menjadikan siswa sebagai alat promosi tanpa persetujuan.',
+        ],
+      },
+      {
+        heading: 'Materi apa saja yang perlu dipelajari peserta?',
+        body: [
+          'Materi pelatihan jurnalistik sekolah sebaiknya menggabungkan dasar teori dengan praktik sederhana. Peserta perlu memahami unsur berita, sumber informasi, wawancara, penulisan, editing, dan etika publikasi.',
+          'Materi dasar meliputi siapa, apa, kapan, di mana, mengapa, dan bagaimana suatu peristiwa terjadi. Peserta belajar memilih fakta utama, menulis judul yang jelas, serta membuat paragraf pembuka yang langsung menjawab inti berita.',
+          'Materi lanjutan dapat mencakup teknik observasi, penulisan caption, fotografi jurnalistik, pemeriksaan fakta, pengelolaan website, dan distribusi konten. Materi dipilih sesuai tingkat pengalaman peserta dan fasilitas sekolah.',
+        ],
+      },
+      {
+        heading: 'Bagaimana mengajarkan teknik wawancara kepada siswa?',
+        body: [
+          'Teknik wawancara dapat diajarkan melalui latihan menyusun pertanyaan, mendengarkan jawaban, mencatat informasi, dan melakukan konfirmasi. Siswa perlu memahami bahwa wawancara adalah proses mencari keterangan, bukan sekadar mengumpulkan kutipan.',
+          'Mulailah dengan topik yang dekat dengan lingkungan sekolah, seperti kegiatan kelas atau program ekstrakurikuler. Siswa membuat daftar pertanyaan terbuka yang mendorong narasumber menjelaskan tujuan, proses, dan pengalaman.',
+          'Setelah latihan, siswa menyusun ringkasan jawaban dan memeriksa kembali informasi penting. Guru dapat memberi umpan balik pada ketepatan pertanyaan, kesopanan, dan kemampuan menjaga konteks kutipan.',
+        ],
+      },
+      {
+        heading: 'Bagaimana praktik menulis berita dalam pelatihan?',
+        body: [
+          'Praktik menulis berita membantu peserta menerapkan materi dengan mengolah peristiwa nyata menjadi naskah singkat. Latihan sebaiknya memiliki tujuan jelas dan kesempatan revisi.',
+          'Peserta dapat melakukan liputan kegiatan sekolah yang telah mendapat izin. Mereka mengumpulkan fakta dasar, mencatat kutipan, memilih foto, lalu menulis berita dengan struktur informasi utama di awal dan detail setelahnya.',
+          'Guru atau editor siswa memeriksa fakta, alur, ejaan, dan kelengkapan konteks. Naskah yang belum siap tidak harus langsung diterbitkan. Proses revisi menjadi bagian penting pembelajaran agar peserta memahami standar kualitas.',
+        ],
+      },
+      {
+        heading: 'Bagaimana membentuk tim jurnalistik sekolah?',
+        body: [
+          'Tim jurnalistik sekolah membutuhkan pembagian peran, jadwal kerja, panduan editorial, dan jalur persetujuan. Struktur sederhana membantu siswa bekerja teratur tanpa membuat kegiatan terasa seperti beban administratif.',
+          'Peran dapat mencakup reporter, fotografer, editor, pengelola website, dan koordinator liputan. Pada tim kecil, satu siswa dapat memegang lebih dari satu tugas dengan pendampingan. Guru pembina bertanggung jawab memastikan kegiatan sesuai kebijakan sekolah.',
+          'Buat kalender liputan berdasarkan agenda sekolah dan topik edukatif. Setiap artikel memiliki penanggung jawab dan status kerja, seperti bahan terkumpul, penulisan, editing, persetujuan, dan terbit. Catatan tersebut membantu tim mengelola tenggat.',
+        ],
+      },
+      {
+        heading: 'Apa etika yang harus dipahami reporter siswa?',
+        body: [
+          'Reporter siswa harus menghormati privasi, meminta izin, menyampaikan informasi secara akurat, dan menghindari tindakan yang merugikan pihak lain. Etika menjadi dasar setiap proses liputan.',
+          'Siswa tidak boleh mengarang kutipan, mengubah fakta, menyebarkan rumor, atau memotret situasi pribadi tanpa izin. Informasi tentang teman sekolah harus ditangani secara hati-hati, terutama jika menyangkut data pribadi atau kondisi sensitif.',
+          'Guru pembina perlu menetapkan prosedur ketika siswa menemukan informasi yang berisiko atau belum terverifikasi. Reporter dapat diarahkan untuk menghentikan publikasi dan meminta bantuan orang dewasa yang bertanggung jawab.',
+        ],
+      },
+      {
+        heading: 'Bagaimana mengukur keberhasilan pelatihan jurnalistik?',
+        body: [
+          'Keberhasilan pelatihan dapat dinilai dari peningkatan keterampilan peserta dan kualitas hasil praktik, bukan hanya jumlah artikel yang diterbitkan. Penilaian perlu sesuai tujuan pembelajaran.',
+          'Gunakan rubrik sederhana yang memeriksa ketepatan fakta, kelengkapan unsur berita, struktur, bahasa, kutipan, dan etika. Bandingkan tugas awal dengan tugas akhir untuk melihat perkembangan peserta.',
+          'Umpan balik sebaiknya spesifik dan membangun. Tunjukkan bagian yang sudah kuat serta hal yang perlu diperbaiki. Sekolah juga dapat menilai konsistensi tim, kerja sama, dan kemampuan mengikuti proses editorial.',
+        ],
+      },
+      {
+        heading: 'Jurnalistik sekolah di era informasi digital',
+        body: [
+          'Jurnalistik sekolah membantu siswa menghadapi arus informasi digital dengan kebiasaan memeriksa sumber dan menyampaikan fakta. Keterampilan ini relevan saat siswa membaca, membuat, dan membagikan konten di internet.',
+          'APJII mencatat penetrasi internet Indonesia sebesar 80,66 persen pada 2025. Angka tersebut memperlihatkan luasnya penggunaan internet, sekaligus menegaskan pentingnya pendidikan literasi media dan tanggung jawab dalam publikasi digital.',
+          'Pelatihan perlu menjelaskan bahwa konten yang cepat dibagikan belum tentu benar. Peserta harus memeriksa sumber, tanggal, konteks, dan bukti sebelum menyebarkan informasi. Sekolah dapat menggunakan latihan analisis berita untuk membangun kebiasaan tersebut.',
+        ],
+      },
+      {
+        heading: 'Pelatihan jurnalistik sekolah di Malang',
+        body: [
+          'Sekolah di Malang dapat menyelenggarakan pelatihan jurnalistik melalui ekstrakurikuler, kegiatan pengembangan diri, atau kerja sama dengan praktisi komunikasi. Materi dapat disesuaikan dengan kebutuhan tim media dan fasilitas sekolah.',
+          'Wilayah Jawa memiliki penetrasi internet 84,69 persen menurut APJII pada 2025. Kondisi ini membuat keterampilan publikasi digital relevan, tetapi pelatihan tetap perlu memperhatikan akses perangkat, koneksi, dan kemampuan peserta yang beragam.',
+          'Sekolah dapat mengembangkan kolaborasi dengan penyedia layanan digital untuk mengenalkan alur kerja konten dan website. PixxelPro Digital dapat dihubungi melalui kanal resminya untuk konsultasi kebutuhan digital serta memperoleh informasi terbaru mengenai kesempatan magang atau pengalaman praktik.',
+        ],
+      },
+    ],
+    conclusion: 'Pelatihan jurnalistik sekolah membangun keterampilan mencari fakta, menulis, wawancara, editing, dan literasi media.',
+    conclusionClosing: 'Praktik yang aman membutuhkan pembina, pembagian peran, rubrik penilaian, dan prosedur persetujuan. Untuk kebutuhan pengembangan konten digital atau informasi tempat magang, sekolah dan siswa dapat menghubungi kanal resmi PixxelPro Digital.',
+    faqs: [
+      {
+        question: 'Apakah pelatihan jurnalistik cocok untuk pemula?',
+        answer: 'Ya. Materi dapat dimulai dari unsur berita, observasi, wawancara dasar, dan latihan menulis singkat dengan pendampingan.',
+      },
+      {
+        question: 'Apakah siswa harus langsung menerbitkan berita?',
+        answer: 'Tidak. Siswa dapat berlatih dan merevisi naskah terlebih dahulu. Publikasi dilakukan setelah fakta, izin, dan standar sekolah terpenuhi.',
+      },
+      {
+        question: 'Siapa yang sebaiknya menjadi pembina jurnalistik sekolah?',
+        answer: 'Guru atau staf yang mampu membimbing penulisan, etika, dan proses publikasi dapat menjadi pembina, dengan dukungan pihak sekolah.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Pelatihan Jurnalistik Sekolah',
+      title: 'Ingin Mengembangkan Tim Jurnalistik di Sekolah Anda?',
+      desc: 'PixxelPro Digital membantu sekolah di Malang membangun kemampuan jurnalistik siswa dan guru dengan pendampingan konten digital.',
+      btnLabel: 'Konsultasi Konten via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20ingin%20konsultasi%20kebutuhan%20konten%20dan%20penulisan%20artikel.',
+    },
+  },
+  {
+    id: 'post-30',
+    slug: 'program-magang',
+    title: 'Program Magang PixxelPro Digital',
+    metaTitle: 'Tempat Magang Malang: Daftar PKL, Prakerin & Internship',
+    excerpt: 'Cari tempat magang Malang? Pilih PKL, Prakerin, Magang Industri, atau Internship sesuai kompetensi. Melayani Malang Raya & luar kota.',
+    category: 'Panduan Magang',
+    categorySlug: 'panduan-magang',
+    date: '30 November 2026',
+    isoDate: '2026-11-30T12:00:00+07:00',
+    readTime: '8 menit baca',
+    featured: true,
+    image: '/images/blog/tempat-magang-malang-peserta-diskusi.webp',
+    imageAlt: 'tempat-magang-malang-peserta-diskusi',
+    secondImage: {
+      src: '/images/blog/program-magang-pilihan-kompetensi-2.webp',
+      alt: 'program-magang-pilihan-kompetensi',
+      caption: 'Peserta magang memilih program berdasarkan kompetensi dan jurusan.',
+    },
+    readAlso: {
+      title: 'Program Magang Digital Marketing di PixxelPro Digital',
+      slug: 'magang-digital-marketing',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'tempat magang Malang',
+      'PKL',
+      'prakerin',
+      'magang industri',
+      'internship',
+      'PixxelPro Digital',
+    ],
+    intro: 'Mencari tempat magang Malang yang sesuai dengan bidang dan kebutuhan Anda? PixxelPro Digital menyediakan program magang di bidang digital, mulai dari PKL, prakerin, magang industri, hingga internship. Program ini melayani siswa SMK, mahasiswa, serta sekolah dan kampus dari Malang Raya maupun luar kota.',
+    sections: [
+      {
+        heading: 'Ringkasan Program Magang di PixxelPro Digital',
+        body: [
+          'Istilah PKL, prakerin, magang industri, dan internship sering dipakai bergantian karena sama-sama berarti belajar langsung di dunia kerja. Perbedaannya biasanya terletak pada jenjang pendidikan peserta dan istilah yang dipakai oleh sekolah atau kampus.',
+          'PKL (Praktik Kerja Lapangan): PKL umumnya diikuti siswa SMK sebagai bagian dari kurikulum. Peserta menerapkan keterampilan dari jurusannya dalam kegiatan kerja di bidang digital dengan arahan pembimbing.',
+          'Prakerin (Praktik Kerja Industri): Prakerin adalah sebutan lain yang dipakai sejumlah sekolah untuk praktik kerja di dunia usaha dan industri. Pelaksanaannya serupa dengan PKL, yaitu belajar langsung sambil dibimbing.',
+          'Magang Industri: Magang industri cocok bagi peserta yang ingin mengenal alur kerja di lingkungan industri digital, baik dari SMK maupun perguruan tinggi, sesuai ketentuan sekolah atau kampus masing-masing.',
+          'Internship: Internship adalah istilah magang yang banyak dipakai mahasiswa dan lulusan baru untuk menambah pengalaman kerja dan memperkuat portofolio.',
+        ],
+      },
+      {
+        heading: 'Pilihan Program Berdasarkan Kompetensi',
+        body: [
+          'Program magang dikelompokkan berdasarkan bidang kompetensi, sehingga peserta dapat memilih yang paling sesuai dengan jurusan dan tujuan belajarnya.',
+          'Pengembangan Website: PKL RPL dan Magang Web Developer Ã¢â‚¬â€ Cocok bagi siswa jurusan RPL dan mahasiswa yang ingin belajar membuat website melalui proyek, mulai dari perancangan tampilan hingga pengujian hasil.',
+          'Digital Marketing Ã¢â‚¬â€ Cocok bagi peserta yang tertarik pada pembuatan konten, pengelolaan media sosial, dan strategi promosi digital.',
+          'Multimedia: PKL DKV dan Magang Jurnalistik Ã¢â‚¬â€ Cocok bagi siswa DKV dan peserta yang tertarik pada desain visual, produksi konten kreatif, serta penulisan jurnalistik.',
+          'Informasi lengkap tiap program, termasuk kegiatan dan persyaratannya, dapat Anda tanyakan langsung kepada tim PixxelPro Digital.',
+        ],
+      },
+      {
+        heading: 'Siapa yang Cocok Mengikuti Program Magang?',
+        body: [
+          'Siswa SMK: Siswa yang akan melaksanakan PKL atau prakerin dan ingin berpraktik di bidang digital sesuai jurusannya.',
+          'Mahasiswa: Mahasiswa yang membutuhkan tempat magang atau internship untuk menambah pengalaman, menyusun laporan, dan membangun portofolio.',
+          'Sekolah dan Kampus: Guru pembimbing, koordinator PKL, maupun koordinator magang kampus yang sedang mencari mitra tempat magang untuk peserta didiknya.',
+        ],
+      },
+      {
+        heading: 'Tips Memilih Tempat Magang di Malang',
+        body: [
+          'Sebelum menentukan pilihan, pertimbangkan hal-hal berikut:',
+        ],
+        list: [
+          'Kesesuaian program dengan jurusan dan kompetensi yang ingin dikembangkan',
+          'Kejelasan kegiatan yang akan dikerjakan selama magang',
+          'Adanya pembimbingan dan masukan atas hasil kerja',
+          'Kesesuaian jadwal dengan ketentuan sekolah atau kampus',
+          'Hasil yang dapat dibawa pulang, seperti laporan dan portofolio',
+        ],
+      },
+      {
+        heading: 'Alur Umum dan Cara Mendaftar',
+        body: [],
+        list: [
+          'Tentukan program yang sesuai dengan jurusan dan tujuan Anda.',
+          'Siapkan persyaratan dari sekolah atau kampus.',
+          'Hubungi tim PixxelPro Digital melalui formulir pendaftaran atau WhatsApp yang tersedia di halaman ini.',
+          'Tunggu konfirmasi dan arahan pelaksanaan dari tim.',
+        ],
+        bodyAfter: [
+          'Siap mencari tempat magang di Malang? Hubungi tim PixxelPro Digital melalui tombol pendaftaran atau WhatsApp di halaman ini.',
+        ],
+      },
+    ],
+    conclusion: 'PixxelPro Digital menyediakan program magang di bidang digital untuk siswa SMK dan mahasiswa, mulai dari PKL, prakerin, magang industri, hingga internship.',
+    faqs: [
+      {
+        question: 'Apa perbedaan PKL, prakerin, magang industri, dan internship?',
+        answer: 'Keempatnya merujuk pada kegiatan belajar di dunia kerja. PKL dan prakerin umumnya dipakai di SMK, sedangkan magang industri dan internship lebih sering dipakai di perguruan tinggi dan dunia profesional.',
+      },
+      {
+        question: 'Apakah PixxelPro Digital menerima peserta dari luar kota?',
+        answer: 'Ya. PixxelPro Digital melayani peserta dari Malang Raya dan luar kota. Peserta dari luar kota dapat berkonsultasi dengan tim sebelum mendaftar.',
+      },
+      {
+        question: 'Program mana yang cocok untuk saya?',
+        answer: 'Pilihlah berdasarkan jurusan dan minat Anda, misalnya pengembangan website, digital marketing, atau multimedia. Jika masih ragu, tim PixxelPro Digital siap membantu menentukan program yang sesuai.',
+      },
+      {
+        question: 'Berapa lama durasi magang?',
+        answer: 'Durasi mengikuti ketentuan sekolah atau kampus masing-masing dan dibahas bersama tim sebelum program dimulai.',
+      },
+      {
+        question: 'Apakah ada biaya dan sertifikat?',
+        answer: 'Informasi biaya serta sertifikat atau surat keterangan magang disampaikan langsung oleh tim PixxelPro Digital saat konsultasi pendaftaran.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Program Magang PixxelPro Digital',
+      title: 'Cari Tempat Magang di Malang? Daftar Sekarang!',
+      desc: 'PKL, Prakerin, Magang Industri, atau Internship di bidang digital. Terbuka untuk siswa SMK dan mahasiswa.',
+      btnLabel: 'Tanya Kuota & Posisi Magang',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20tertarik%20dengan%20program%20magang%20dan%20ingin%20konsultasi%20posisi.',
+    },
+  },
+
+  {
+    id: 'post-29',
+    slug: 'magang-mahasiswa',
+    title: 'Program Magang Mahasiswa di PixxelPro Digital',
+    metaTitle: 'Magang Mahasiswa Web Developer: Program & Cara Mendaftar',
+    excerpt: 'Magang mahasiswa web developer dengan proyek website dan pembimbingan. Melayani kampus Malang Raya & luar kota. Lihat syarat & cara daftar.',
+    category: 'Internship Mahasiswa',
+    categorySlug: 'internship-mahasiswa',
+    date: '30 November 2026',
+    isoDate: '2026-11-30T10:00:00+07:00',
+    readTime: '8 menit baca',
+    featured: false,
+    image: '/images/blog/magang-web-developer-mahasiswa-kode-website.webp',
+    imageAlt: 'magang-web-developer-mahasiswa-kode-website',
+    secondImage: {
+      src: '/images/blog/magang-mahasiswa-presentasi-prototipe-2.webp',
+      alt: 'magang-mahasiswa-presentasi-prototipe',
+      caption: 'Mahasiswa magang mempresentasikan prototipe proyek website.',
+    },
+    readAlso: {
+      title: 'Program Magang PixxelPro Digital',
+      slug: 'program-magang',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'magang mahasiswa',
+      'magang web developer mahasiswa',
+      'magang web developer',
+      'proyek website',
+      'PixxelPro Digital',
+    ],
+    intro: 'Mencari tempat magang mahasiswa yang memberi pengalaman langsung di bidang digital? PixxelPro Digital menyelenggarakan program magang mahasiswa dengan fokus pada pengembangan website, termasuk magang web developer mahasiswa. Program ini melayani mahasiswa dari kampus di Malang Raya maupun luar kota.',
+    sections: [
+      {
+        heading: 'Mengenal Program Magang Mahasiswa',
+        body: [
+          'Program magang mahasiswa di PixxelPro Digital memberi kesempatan belajar di lingkungan kerja digital sambil menerapkan ilmu dari bangku kuliah. Pada jalur magang web developer, peserta terlibat dalam pengerjaan proyek website bersama pembimbing.',
+          'Bagi mahasiswa yang mencari magang web developer untuk menambah pengalaman, menyusun laporan magang, dan membangun portofolio, program ini menjadi tempat belajar sambil praktik.',
+        ],
+      },
+      {
+        heading: 'Siapa yang Dapat Mengikuti Program?',
+        body: [
+          'Program ini ditujukan bagi mahasiswa yang membutuhkan tempat magang di bidang pengembangan website, terutama dari program studi teknologi informasi, seperti Informatika, Sistem Informasi, dan Teknik Komputer.',
+          'Untuk Mahasiswa: Mahasiswa dari program studi lain yang tertarik pada pengembangan website dapat menanyakan kesesuaian program langsung kepada tim sebelum mendaftar.',
+          'Untuk Kampus: Koordinator magang atau dosen pembimbing dapat menghubungi tim PixxelPro Digital untuk membahas kebutuhan magang dan koordinasi pelaksanaan.',
+        ],
+      },
+      {
+        heading: 'Kegiatan dan Proyek yang Dikerjakan',
+        body: [
+          'Selama magang web developer, mahasiswa mengerjakan proyek website dengan arahan pembimbing. Secara umum, kegiatan mencakup tahapan berikut.',
+          'Analisis Kebutuhan dan Rancangan: Mahasiswa memahami tujuan proyek, lalu menyusun struktur halaman dan rancangan antarmuka website.',
+          'Pengembangan Website: Rancangan dikembangkan menjadi halaman website yang berfungsi, dengan memanfaatkan keterampilan pemrograman yang dipelajari di perkuliahan.',
+          'Pengujian dan Peningkatan Kualitas: Hasil pekerjaan diuji, diperiksa kesalahannya, dan ditingkatkan agar website nyaman digunakan di berbagai perangkat.',
+          'Dokumentasi dan Presentasi Hasil: Mahasiswa mendokumentasikan pekerjaannya dan memaparkan hasilnya sebagai bahan laporan magang dan portofolio.',
+        ],
+      },
+      {
+        heading: 'Kompetensi yang Dikembangkan',
+        body: [
+          'Magang web developer melatih kompetensi yang relevan dengan karier di bidang teknologi:',
+        ],
+        list: [
+          'Pengembangan tampilan dan fungsi website',
+          'Penerapan logika pemrograman pada proyek',
+          'Pengujian dan perbaikan kualitas hasil kerja',
+          'Penyusunan dokumentasi teknis dan laporan magang',
+          'Komunikasi, kerja tim, dan manajemen waktu',
+        ],
+        bodyAfter: [
+          'Hasil pekerjaan selama magang dapat menjadi bahan portofolio saat melamar pekerjaan atau magang berikutnya.',
+        ],
+      },
+      {
+        heading: 'Alur Pelaksanaan dan Pembimbingan',
+        body: [
+          'Tahapan Pelaksanaan:',
+        ],
+        list: [
+          'Mahasiswa atau kampus menghubungi tim dan menyampaikan kebutuhan magang.',
+          'Tim PixxelPro Digital memberikan konfirmasi dan arahan pelaksanaan.',
+          'Peserta mengikuti pengenalan program dan pembagian tugas proyek.',
+          'Peserta mengerjakan proyek website dengan pembimbingan.',
+          'Peserta menyusun laporan magang dan mengikuti evaluasi akhir.',
+        ],
+        bodyAfter: [
+          'Pembimbingan: Peserta didampingi pembimbing yang mengarahkan pengerjaan proyek dan memberi masukan. Dosen pembimbing dari kampus dapat berkoordinasi dengan tim mengenai perkembangan mahasiswa.',
+          'Informasi Pelaksanaan: Durasi dan jadwal magang mengikuti ketentuan kampus dan disepakati bersama tim sebelum program dimulai. Informasi mengenai lokasi pelaksanaan, biaya, serta sertifikat atau surat keterangan magang disampaikan langsung oleh tim saat konsultasi pendaftaran.',
+        ],
+      },
+      {
+        heading: 'Persyaratan dan Cara Pendaftaran',
+        body: [
+          'Persyaratan umumnya mengikuti ketentuan magang dari kampus, yaitu:',
+        ],
+        list: [
+          'Mahasiswa aktif dari perguruan tinggi',
+          'Surat pengantar atau permohonan magang dari kampus',
+          'Data diri dan, bila ada, contoh karya atau portofolio',
+          'Kesediaan mengikuti arahan pembimbing dan jadwal pelaksanaan',
+        ],
+        bodyAfter: [
+          'Persyaratan lengkap dan terbaru dikonfirmasi oleh tim saat Anda mendaftar atau berkonsultasi.',
+          'Cara Mendaftar: Siapkan persyaratan dari kampus. Isi formulir pendaftaran atau hubungi tim PixxelPro Digital melalui WhatsApp yang tersedia di halaman ini. Tunggu konfirmasi dari tim. Ikuti arahan selanjutnya hingga jadwal magang ditetapkan.',
+          'Siap memulai magang mahasiswa? Hubungi tim PixxelPro Digital melalui tombol pendaftaran atau WhatsApp di halaman ini.',
+        ],
+      },
+    ],
+    conclusion: 'Program magang mahasiswa di PixxelPro Digital memberikan pengalaman langsung mengerjakan proyek website dengan pembimbingan dan dukungan dokumen.',
+    faqs: [
+      {
+        question: 'Apakah harus bisa coding untuk mengikuti magang web developer?',
+        answer: 'Pemahaman dasar pemrograman dari perkuliahan sangat membantu. Jika Anda ragu dengan kemampuan awal, konsultasikan dengan tim PixxelPro Digital sebelum mendaftar.',
+      },
+      {
+        question: 'Program studi apa saja yang dapat mendaftar?',
+        answer: 'Program ini terutama ditujukan bagi mahasiswa teknologi informasi. Mahasiswa dari program studi lain dapat berkonsultasi mengenai kesesuaian program.',
+      },
+      {
+        question: 'Apakah PixxelPro Digital menerima mahasiswa dari luar kota?',
+        answer: 'Ya. PixxelPro Digital melayani mahasiswa dari kampus di Malang Raya dan luar kota. Silakan berkonsultasi dengan tim sebelum mendaftar.',
+      },
+      {
+        question: 'Apa yang didapat setelah menyelesaikan magang?',
+        answer: 'Peserta memperoleh pengalaman mengerjakan proyek website serta bahan untuk laporan magang dan portofolio. Informasi sertifikat atau surat keterangan disampaikan oleh tim.',
+      },
+      {
+        question: 'Berapa lama durasi dan biaya magang?',
+        answer: 'Durasi mengikuti ketentuan kampus, sedangkan informasi biaya disampaikan langsung oleh tim PixxelPro Digital saat konsultasi pendaftaran.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Program Magang Mahasiswa',
+      title: 'Siap Memulai Magang Web Developer di PixxelPro Digital?',
+      desc: 'Kerjakan proyek website nyata dengan pembimbingan. Terbuka untuk mahasiswa dari Malang Raya dan luar kota.',
+      btnLabel: 'Daftar Magang via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20tertarik%20dengan%20program%20magang%20dan%20ingin%20konsultasi%20posisi.',
+    },
+  },
+  {
+    id: 'post-28',
+    slug: 'magang-digital-marketing',
+    title: 'Program Magang Digital Marketing di PixxelPro Digital',
+    metaTitle: 'Magang Digital Marketing: Praktik Langsung & Cara Daftar',
+    excerpt: 'Magang digital marketing untuk mahasiswa & siswa SMK: praktik konten, media sosial, dan analisis dengan pembimbingan. Daftar sekarang!',
+    category: 'Panduan Magang',
+    categorySlug: 'panduan-magang',
+    date: '30 November 2026',
+    isoDate: '2026-11-30T08:00:00+07:00',
+    readTime: '8 menit baca',
+    featured: false,
+    image: '/images/blog/magang-digital-marketing-analisis-performa.webp',
+    imageAlt: 'magang-digital-marketing-analisis-performa',
+    secondImage: {
+      src: '/images/blog/magang-digital-marketing-rencana-konten-2.webp',
+      alt: 'magang-digital-marketing-rencana-konten',
+      caption: 'Peserta magang digital marketing menyusun rencana konten promosi.',
+    },
+    readAlso: {
+      title: 'Program Magang PixxelPro Digital',
+      slug: 'program-magang',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'magang digital marketing',
+      'perencanaan konten',
+      'media sosial',
+      'SEO',
+      'analisis performa',
+      'PixxelPro Digital',
+    ],
+    intro: 'Ingin belajar strategi promosi digital langsung dari praktiknya? PixxelPro Digital menyelenggarakan program magang digital marketing bagi mahasiswa dan siswa SMK yang tertarik pada konten, media sosial, dan promosi online. Program ini melayani peserta dari Malang Raya maupun luar kota.',
+    sections: [
+      {
+        heading: 'Mengenal Program Magang Digital Marketing',
+        body: [
+          'Digital marketing adalah kegiatan memasarkan produk, layanan, atau merek melalui kanal digital seperti website, media sosial, dan mesin pencari. Dalam program magang digital marketing di PixxelPro Digital, peserta belajar menjalankan kegiatan tersebut dengan pembimbingan.',
+          'Program ini cocok bagi peserta yang ingin memahami cara kerja promosi digital, sekaligus membangun pengalaman dan portofolio di bidang pemasaran online.',
+        ],
+      },
+      {
+        heading: 'Siapa yang Dapat Mengikuti Program?',
+        body: [
+          'Program ini terbuka bagi mahasiswa dan siswa SMK yang tertarik pada pemasaran digital, pembuatan konten, dan analisis performa promosi online.',
+          'Untuk Mahasiswa dan Siswa SMK: Peserta dari berbagai jurusan, misalnya bisnis, komunikasi, desain, atau teknologi informasi, dapat berkonsultasi dengan tim untuk memastikan kesesuaian program dengan kebutuhan magang.',
+          'Untuk Sekolah dan Kampus: Guru pembimbing, dosen pembimbing, atau koordinator magang dapat menghubungi tim untuk membahas kebutuhan dan ketentuan pelaksanaan.',
+        ],
+      },
+      {
+        heading: 'Kegiatan dan Proyek yang Dikerjakan',
+        body: [
+          'Kegiatan magang digital marketing umumnya mengikuti siklus promosi digital berikut.',
+          'Perencanaan Konten: Peserta mempelajari target audiens, menentukan tema, dan menyusun rencana konten promosi.',
+          'Pembuatan dan Publikasi Konten: Peserta membuat materi promosi, seperti teks dan visual untuk media sosial atau website, lalu mempublikasikannya sesuai arahan pembimbing.',
+          'Dasar Optimasi Mesin Pencari (SEO): Peserta mengenal dasar SEO, yaitu cara membuat konten lebih mudah ditemukan oleh orang yang mencari informasi di mesin pencari.',
+          'Analisis Performa: Peserta membaca data performa konten, seperti jangkauan dan interaksi, lalu menarik kesimpulan untuk perbaikan strategi berikutnya.',
+        ],
+      },
+      {
+        heading: 'Kompetensi yang Dikembangkan',
+        body: [
+          'Magang digital marketing melatih kompetensi yang dibutuhkan di dunia pemasaran online:',
+        ],
+        list: [
+          'Perencanaan dan pembuatan konten promosi',
+          'Pengelolaan media sosial secara terarah',
+          'Pemahaman dasar SEO dan perilaku pencari informasi',
+          'Membaca data dan menyusun ringkasan performa',
+          'Komunikasi dan kerja sama tim kreatif',
+        ],
+      },
+      {
+        heading: 'Alur Pelaksanaan dan Pembimbingan',
+        body: [
+          'Tahapan Pelaksanaan:',
+        ],
+        list: [
+          'Peserta atau institusi menghubungi tim dan menyampaikan kebutuhan magang.',
+          'Tim PixxelPro Digital memberikan konfirmasi dan arahan pelaksanaan.',
+          'Peserta mengikuti pengenalan program dan pembagian tugas.',
+          'Peserta menjalankan kegiatan digital marketing dengan pembimbingan.',
+          'Peserta menyusun laporan dan mengikuti evaluasi di akhir program.',
+        ],
+        bodyAfter: [
+          'Pembimbingan: Pembimbing memberi arahan tugas, meninjau hasil konten, dan memberi masukan agar peserta terus berkembang. Pembimbing dari sekolah atau kampus dapat berkoordinasi dengan tim mengenai perkembangan peserta.',
+          'Informasi Pelaksanaan: Durasi dan jadwal magang mengikuti ketentuan sekolah atau kampus dan dibahas bersama tim sebelum program dimulai. Informasi biaya, fasilitas, serta sertifikat atau surat keterangan magang disampaikan langsung oleh tim saat konsultasi pendaftaran.',
+        ],
+      },
+      {
+        heading: 'Persyaratan dan Cara Pendaftaran',
+        body: [
+          'Persyaratan umumnya mengikuti ketentuan magang dari sekolah atau kampus, yaitu:',
+        ],
+        list: [
+          'Mahasiswa atau siswa SMK yang akan melaksanakan magang',
+          'Surat pengantar atau permohonan magang dari sekolah atau kampus',
+          'Ketertarikan pada konten dan promosi digital',
+          'Kesediaan mengikuti arahan pembimbing dan jadwal pelaksanaan',
+        ],
+        bodyAfter: [
+          'Persyaratan lengkap dan terbaru dikonfirmasi oleh tim saat Anda mendaftar atau berkonsultasi.',
+          'Cara Mendaftar: Siapkan persyaratan dari sekolah atau kampus. Isi formulir pendaftaran atau hubungi tim PixxelPro Digital melalui WhatsApp yang tersedia di halaman ini. Tunggu konfirmasi dari tim. Ikuti arahan selanjutnya hingga jadwal magang ditetapkan.',
+          'Tertarik magang digital marketing? Hubungi tim PixxelPro Digital melalui tombol pendaftaran atau WhatsApp di halaman ini.',
+        ],
+      },
+    ],
+    conclusion: 'Program magang digital marketing di PixxelPro Digital melatih peserta dengan praktik langsung di bidang konten, media sosial, SEO, dan analisis performa.',
+    faqs: [
+      {
+        question: 'Apakah harus punya pengalaman digital marketing sebelumnya?',
+        answer: 'Tidak harus. Ketertarikan dan kemauan belajar menjadi modal penting. Jika Anda ragu dengan kemampuan awal, konsultasikan dengan tim sebelum mendaftar.',
+      },
+      {
+        question: 'Apakah siswa SMK dapat mengikuti magang digital marketing?',
+        answer: 'Program ini terbuka bagi mahasiswa dan siswa SMK. Silakan konsultasikan kesesuaian jurusan Anda dengan tim PixxelPro Digital.',
+      },
+      {
+        question: 'Apakah PixxelPro Digital menerima peserta dari luar kota?',
+        answer: 'Ya. PixxelPro Digital melayani peserta dari Malang Raya dan luar kota. Peserta dari luar kota dapat berkonsultasi dengan tim sebelum mendaftar.',
+      },
+      {
+        question: 'Apa yang dapat dibawa pulang setelah magang?',
+        answer: 'Peserta memperoleh pengalaman praktik promosi digital serta bahan untuk laporan magang dan portofolio, seperti contoh konten yang pernah dikerjakan.',
+      },
+      {
+        question: 'Berapa durasi, biaya, dan apakah ada sertifikat?',
+        answer: 'Durasi mengikuti ketentuan sekolah atau kampus. Informasi biaya serta sertifikat atau surat keterangan magang disampaikan langsung oleh tim PixxelPro Digital saat konsultasi pendaftaran.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Program Magang Digital Marketing',
+      title: 'Tertarik Magang Digital Marketing di PixxelPro Digital?',
+      desc: 'Belajar konten, media sosial, SEO, dan analisis performa dengan pembimbingan langsung. Terbuka untuk mahasiswa dan siswa SMK.',
+      btnLabel: 'Daftar Magang via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20tertarik%20dengan%20program%20magang%20dan%20ingin%20konsultasi%20posisi.',
+    },
+  },
+  {
+    id: 'post-27',
+    slug: 'publikasi-berita-kegiatan-sekolah',
+    title: 'Proses Publikasi Berita Kegiatan Sekolah yang Efektif',
+    metaTitle: 'Proses Publikasi Berita Kegiatan Sekolah yang Efektif',
+    excerpt: 'Pelajari proses publikasi berita kegiatan sekolah mulai dari peliputan, wawancara, penulisan hingga persetujuan. Konsultasi konten digital melalui PixxelPro Digital.',
+    category: 'Jurnalistik',
+    categorySlug: 'jurnalistik',
+    date: '29 November 2026',
+    isoDate: '2026-11-29T12:00:00+07:00',
+    readTime: '11 menit baca',
+    featured: false,
+    image: '/images/blog/siswa-smk-belajar-fotografi-jurnalistik-di-pixxelpro-digital-malang.webp',
+    imageAlt: 'siswa-smk-belajar-fotografi-jurnalistik-di-pixxelpro-digital-malang',
+    secondImage: {
+      src: '/images/blog/siswa-smk-mengedit-artikel-berita-sekolah-di-pixxelpro-digital-malang.webp',
+      alt: 'siswa-smk-mengedit-artikel-berita-sekolah-di-pixxelpro-digital-malang',
+      caption: 'Siswa SMK mengedit artikel berita sekolah di PixxelPro Digital Malang.',
+    },
+    readAlso: {
+      title: 'Jasa Jurnalistik dan Penulisan Artikel untuk Sekolah dan Instansi di Malang',
+      slug: 'jasa-jurnalistik-penulisan-artikel-sekolah-instansi-malang',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'publikasi berita kegiatan sekolah',
+      'peliputan sekolah',
+      'reporter siswa',
+      'wawancara',
+      'dokumentasi foto',
+      'website sekolah',
+      'verifikasi',
+      'PixxelPro Digital',
+    ],
+    intro: 'Publikasi berita kegiatan sekolah dilakukan melalui perencanaan liputan, pengumpulan fakta, wawancara, penulisan, pemeriksaan, dan penerbitan resmi.',
+    sections: [
+      {
+        heading: 'Ringkasan Inti',
+        body: [],
+        list: [
+          'Rencanakan tujuan liputan dan informasi yang perlu dikumpulkan.',
+          'Gunakan fakta, kutipan terkonfirmasi, dan foto berizin.',
+          'Tulis berita dengan informasi utama di paragraf awal.',
+          'Periksa naskah sebelum diterbitkan di kanal sekolah.',
+        ],
+      },
+      {
+        heading: 'Bagaimana merencanakan publikasi berita kegiatan sekolah?',
+        body: [
+          'Publikasi berita kegiatan sekolah dimulai dengan menentukan tujuan liputan, pembaca, dan informasi yang perlu diketahui masyarakat. Perencanaan membuat reporter tidak hanya mendokumentasikan acara, tetapi juga menangkap makna kegiatan.',
+          'Sebelum acara, catat nama kegiatan, penyelenggara, waktu, lokasi, sasaran, agenda, dan narasumber. Tentukan siapa yang bertugas mencatat, mengambil foto, melakukan wawancara, serta memeriksa naskah. Pembagian tugas mengurangi informasi yang terlewat.',
+          'Buat daftar pertanyaan yang berfokus pada tujuan, proses, dan hasil kegiatan. Pertanyaan terbuka memberi kesempatan narasumber menjelaskan pengalaman atau dampak kegiatan. Reporter tetap perlu mendengarkan dan menyesuaikan pertanyaan berdasarkan jawaban, bukan hanya membaca daftar.',
+        ],
+      },
+      {
+        heading: 'Informasi apa yang perlu dikumpulkan saat peliputan?',
+        body: [
+          'Peliputan sekolah yang baik mengumpulkan fakta dasar, konteks, detail kegiatan, dan keterangan dari pihak yang relevan. Informasi tersebut menjadi bahan berita yang dapat diverifikasi.',
+          'Catat tanggal dan tempat secara tepat, nama serta jabatan narasumber, jumlah peserta jika tersedia, urutan kegiatan, dan tujuan program. Jika angka peserta belum pasti, jangan menebak. Konfirmasikan data kepada panitia atau dokumen resmi.',
+          'Foto dapat memperkuat berita jika menggambarkan kegiatan secara relevan. Ambil keterangan tentang siapa, apa, dan di mana foto dibuat. Hindari foto yang memperlihatkan data pribadi, situasi sensitif, atau peserta didik tanpa izin yang sesuai.',
+        ],
+      },
+      {
+        heading: 'Bagaimana melakukan wawancara untuk berita sekolah?',
+        body: [
+          'Wawancara berita sekolah dilakukan dengan pertanyaan jelas, sopan, dan sesuai peran narasumber. Tujuannya memperoleh informasi langsung serta penjelasan yang membantu pembaca memahami kegiatan.',
+          'Narasumber dapat berupa kepala sekolah, guru pembina, panitia, siswa peserta, atau mitra kegiatan. Pertanyaan kepada setiap pihak sebaiknya berbeda. Penyelenggara menjelaskan tujuan dan proses, sedangkan peserta dapat berbagi pengalaman sesuai kesediaannya.',
+          'Catat jawaban atau rekam dengan izin. Setelah wawancara, periksa kembali nama, jabatan, dan kutipan. Kutipan tidak boleh dipotong sehingga maknanya berubah. Jika ada bagian yang kurang jelas, lakukan konfirmasi sebelum artikel diselesaikan.',
+        ],
+      },
+      {
+        heading: 'Bagaimana menulis berita kegiatan sekolah yang mudah dibaca?',
+        body: [
+          'Berita kegiatan sekolah yang mudah dibaca menyampaikan inti peristiwa sejak paragraf pertama, lalu menjelaskan detail dan konteks secara bertahap. Struktur ini membantu pembaca memahami artikel meskipun hanya membaca bagian awal.',
+          'Paragraf pembuka dapat memuat kegiatan, penyelenggara, waktu, lokasi, dan tujuan utama. Paragraf berikutnya menjelaskan rangkaian acara, pihak yang terlibat, kutipan, serta hasil atau pembelajaran. Gunakan subjudul jika artikel cukup panjang.',
+          'Pilih judul yang spesifik dan tidak berlebihan. Hindari judul yang hanya berbunyi \'Kegiatan Berlangsung Meriah\' tanpa menjelaskan kegiatan apa. Kata kunci seperti nama program atau sekolah dapat digunakan secara natural jika relevan dengan isi.',
+        ],
+      },
+      {
+        heading: 'Bagaimana proses editing dan verifikasi sebelum publikasi?',
+        body: [
+          'Editing dan verifikasi memastikan berita sekolah akurat, runtut, dan sesuai standar komunikasi lembaga. Pemeriksaan perlu dilakukan sebelum naskah diunggah atau dibagikan.',
+          'Periksa ejaan, struktur kalimat, nama, tanggal, tempat, angka, kutipan, serta keterangan foto. Pastikan setiap klaim dapat ditelusuri ke dokumen atau narasumber. Jika terdapat informasi yang belum terkonfirmasi, hapus atau tandai untuk klarifikasi.',
+          'Editor juga memeriksa apakah artikel terlalu promosi, berulang, atau tidak memberikan konteks. Persetujuan pihak sekolah sebaiknya fokus pada fakta, privasi, dan kebijakan publikasi. Perubahan tidak boleh menghapus informasi penting yang diperlukan pembaca untuk memahami peristiwa.',
+        ],
+      },
+      {
+        heading: 'Di mana berita kegiatan sekolah sebaiknya dipublikasikan?',
+        body: [
+          'Berita sekolah dapat diterbitkan di website resmi, buletin digital, media sosial, atau kanal komunikasi sekolah. Kanal utama sebaiknya menjadi sumber lengkap yang dapat dirujuk kembali.',
+          'Website sekolah cocok untuk artikel yang membutuhkan arsip dan informasi lebih lengkap. Media sosial dapat menyajikan ringkasan, foto pilihan, dan tautan menuju berita utama. Buletin dapat mengumpulkan beberapa artikel sesuai periode penerbitan.',
+          'Pastikan tautan, judul, gambar, dan tampilan artikel berfungsi pada perangkat seluler. Jika berita dibagikan melalui beberapa kanal, gunakan informasi yang konsisten dan arahkan pembaca ke halaman resmi agar tidak terjadi perbedaan versi.',
+        ],
+      },
+      {
+        heading: 'Bagaimana menjaga etika foto dan privasi siswa?',
+        body: [
+          'Publikasi sekolah harus melindungi privasi dan keselamatan peserta didik. Dokumentasi hanya digunakan sesuai izin, tujuan, dan kebijakan sekolah yang berlaku.',
+          'Hindari menampilkan data identitas, alamat, informasi kesehatan, atau situasi pribadi yang tidak relevan. Untuk siswa di bawah umur, ikuti prosedur persetujuan orang tua atau wali dan ketentuan sekolah. Beri pilihan bagi peserta yang tidak ingin difoto.',
+          'Foto tidak boleh diberi keterangan yang keliru atau digunakan untuk menyiratkan hal yang tidak terjadi. Jika ada kesalahan, segera koreksi caption atau ganti gambar. Perlindungan siswa lebih penting daripada mengejar jumlah foto atau jangkauan publikasi.',
+        ],
+      },
+      {
+        heading: 'Apa peran website dalam publikasi berita sekolah?',
+        body: [
+          'Website sekolah berfungsi sebagai arsip utama berita, informasi program, dan kegiatan pendidikan. Struktur yang rapi membantu pembaca menemukan berita terbaru maupun dokumentasi sebelumnya.',
+          'Artikel perlu memiliki judul, tanggal terbit, penulis atau unit terkait, gambar utama, isi yang terstruktur, serta kategori yang relevan. Kategori seperti kegiatan, prestasi, program, dan informasi sekolah memudahkan navigasi jika diterapkan konsisten.',
+          'Website juga perlu dirawat secara teknis. Pastikan halaman dapat dibuka, gambar tidak terlalu berat, dan tautan internal bekerja. Artikel yang informatif tidak akan optimal jika halaman sulit diakses atau tampilan membingungkan.',
+        ],
+      },
+      {
+        heading: 'Publikasi berita kegiatan sekolah di Malang',
+        body: [
+          'Sekolah di Malang dapat mengangkat kegiatan belajar, praktik kejuruan, kemitraan industri, program literasi, prestasi, dan aktivitas masyarakat sekolah. Konteks lokal memberi pembaca pemahaman tentang relevansi kegiatan.',
+          'APJII melaporkan penetrasi internet Jawa Timur sebesar 82,19 persen pada 2025. Data ini menunjukkan bahwa kanal digital memiliki peran penting dalam penyebaran informasi, tetapi sekolah tetap perlu mempertimbangkan perbedaan akses dan kebiasaan pembaca.',
+          'Untuk pengembangan website, artikel, dan komunikasi digital sekolah, PixxelPro Digital dapat menjadi tujuan konsultasi melalui kanal resminya. Sekolah atau siswa yang mencari tempat magang juga perlu memeriksa informasi dan persyaratan magang langsung dari PixxelPro Digital.',
+        ],
+      },
+    ],
+    conclusion: 'Publikasi berita kegiatan sekolah yang baik memerlukan perencanaan, peliputan faktual, wawancara, penulisan, verifikasi, dan persetujuan.',
+    conclusionClosing: 'Website resmi dapat menjadi arsip utama, sementara media sosial membantu distribusi. Untuk dukungan konten digital atau informasi magang, gunakan kanal resmi PixxelPro Digital.',
+    faqs: [
+      {
+        question: 'Berapa panjang berita kegiatan sekolah?',
+        answer: 'Panjang berita menyesuaikan kompleksitas kegiatan. Artikel sebaiknya cukup untuk menjelaskan fakta dan konteks tanpa mengulang informasi.',
+      },
+      {
+        question: 'Apakah setiap kegiatan sekolah harus dipublikasikan?',
+        answer: 'Tidak. Pilih kegiatan yang memiliki informasi bermanfaat, relevan, dan layak dibagikan sesuai kebijakan sekolah.',
+      },
+      {
+        question: 'Siapa yang menyetujui berita sebelum terbit?',
+        answer: 'Sekolah dapat menunjuk editor atau penanggung jawab komunikasi untuk memeriksa fakta, privasi, dan kesesuaian kebijakan.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Publikasi Berita Sekolah',
+      title: 'Butuh Bantuan Menulis dan Mempublikasikan Berita Sekolah?',
+      desc: 'PixxelPro Digital membantu sekolah di Malang menyusun berita kegiatan yang akurat dan terstruktur.',
+      btnLabel: 'Konsultasi Konten via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20ingin%20konsultasi%20kebutuhan%20konten%20dan%20penulisan%20artikel.',
+    },
+  },
+
+  {
+    id: 'post-26',
+    slug: 'memilih-jasa-penulisan-artikel-instansi',
+    title: 'Cara Memilih Jasa Penulisan Artikel Instansi yang Tepat',
+    metaTitle: 'Cara Memilih Jasa Penulisan Artikel Instansi yang Tepat',
+    excerpt: 'Pelajari cara memilih jasa penulisan artikel instansi berdasarkan brief, akurasi, revisi, dan kebutuhan publikasi. Konsultasikan konten digital ke PixxelPro Digital.',
+    category: 'Jurnalistik',
+    categorySlug: 'jurnalistik',
+    date: '29 November 2026',
+    isoDate: '2026-11-29T10:00:00+07:00',
+    readTime: '10 menit baca',
+    featured: false,
+    image: '/images/blog/siswa-smk-magang-meninjau-portofolio-artikel-di-pixxelpro-digital-malang.webp',
+    imageAlt: 'siswa-smk-magang-meninjau-portofolio-artikel-di-pixxelpro-digital-malang',
+    secondImage: {
+      src: '/images/blog/siswa-smk-melakukan-wawancara-dengan-mentor-di-pixxelpro-digital-malang.webp',
+      alt: 'siswa-smk-melakukan-wawancara-dengan-mentor-di-pixxelpro-digital-malang',
+      caption: 'Siswa SMK melakukan wawancara dengan mentor di PixxelPro Digital Malang.',
+    },
+    readAlso: {
+      title: 'Jasa Jurnalistik dan Penulisan Artikel untuk Sekolah dan Instansi di Malang',
+      slug: 'jasa-jurnalistik-penulisan-artikel-sekolah-instansi-malang',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'jasa penulisan artikel instansi',
+      'brief artikel',
+      'penulis jurnalistik',
+      'wawancara',
+      'editing',
+      'verifikasi fakta',
+      'publikasi digital',
+      'PixxelPro Digital',
+    ],
+    intro: 'Jasa penulisan artikel instansi yang tepat memiliki proses pengumpulan data, verifikasi, penyuntingan, dan kesepakatan revisi yang jelas sejak awal.',
+    sections: [
+      {
+        heading: 'Ringkasan Inti',
+        body: [],
+        list: [
+          'Tentukan tujuan dan format artikel sebelum mencari penulis.',
+          'Periksa portofolio, proses kerja, dan standar akurasi.',
+          'Sepakati biaya, tenggat, revisi, dan hak penggunaan naskah.',
+          'Pastikan artikel tidak memuat klaim yang belum diverifikasi.',
+        ],
+      },
+      {
+        heading: 'Apa yang perlu diperiksa sebelum memesan jasa penulisan artikel instansi?',
+        body: [
+          'Sebelum memesan jasa penulisan artikel instansi, tentukan tujuan komunikasi, pembaca, kanal publikasi, dan jenis tulisan yang dibutuhkan. Kejelasan kebutuhan membantu penyedia memberi ruang lingkup kerja yang realistis.',
+          'Tentukan apakah tulisan berupa berita kegiatan, artikel edukasi, profil program, laporan kegiatan, atau konten website. Setiap format membutuhkan bahan dan pendekatan berbeda. Artikel berita memerlukan fakta peristiwa dan konfirmasi, sedangkan artikel edukasi membutuhkan penjelasan yang tersusun serta sumber pendukung.',
+          'Buat brief singkat yang memuat topik, tujuan, target pembaca, pesan utama, narasumber, tenggat, dan format akhir. Brief tidak harus rumit, tetapi harus cukup untuk menghindari asumsi. Bila ada istilah internal, lampirkan definisi atau dokumen resmi.',
+        ],
+      },
+      {
+        heading: 'Bagaimana menilai portofolio dan kemampuan penulis?',
+        body: [
+          'Portofolio menunjukkan kemampuan penulis dalam menyusun informasi, menggunakan bahasa, dan menyesuaikan gaya dengan kebutuhan publikasi. Pilih contoh yang dekat dengan jenis artikel yang akan dipesan, bukan hanya tulisan yang terlihat menarik.',
+          'Periksa struktur judul, paragraf pembuka, alur informasi, penggunaan kutipan, dan konsistensi fakta. Artikel yang baik memberi konteks kepada pembaca yang tidak hadir dalam kegiatan. Untuk layanan sekolah, contoh artikel pendidikan atau kegiatan institusi dapat membantu menilai kecocokan.',
+          'Portofolio tidak selalu membuktikan bahwa penulis mengerjakan seluruh proses secara mandiri. Tanyakan peran penulis, editor, dan pihak lain bila relevan. Penilaian sebaiknya menggabungkan contoh hasil, komunikasi, dan penjelasan alur kerja.',
+        ],
+      },
+      {
+        heading: 'Apa saja yang harus disepakati dalam ruang lingkup layanan?',
+        body: [
+          'Ruang lingkup layanan perlu menjelaskan hasil kerja yang diterima, tahapan pengerjaan, dan tanggung jawab pemesan. Kesepakatan tertulis mengurangi salah paham mengenai apa yang termasuk dalam harga.',
+          'Ruang lingkup dapat mencakup wawancara, pengolahan bahan, penulisan, editing, optimasi struktur SEO, caption foto, atau pengunggahan ke website. Tidak semua paket mencakup seluruh aktivitas tersebut. Pastikan setiap tambahan pekerjaan dibicarakan sebelum mulai.',
+          'Tentukan format dokumen, panjang tulisan, jumlah artikel, tenggat, jumlah revisi, serta apakah naskah disertai foto atau metadata. Jika publikasi dilakukan oleh pihak pemesan, sepakati siapa yang bertanggung jawab mengunggah dan memeriksa tampilan akhir.',
+        ],
+      },
+      {
+        heading: 'Bagaimana memastikan akurasi artikel instansi?',
+        body: [
+          'Akurasi artikel instansi dapat dinilai dari penggunaan sumber yang jelas, konfirmasi informasi penting, dan kesediaan penulis memperbaiki kesalahan faktual. Naskah tidak boleh mengisi detail yang belum diketahui dengan perkiraan.',
+          'Nama, jabatan, tanggal, lokasi, angka, dan kutipan harus diperiksa. Dokumen resmi dan narasumber berwenang dapat menjadi sumber utama. Jika terdapat perbedaan informasi, penulis perlu meminta klarifikasi sebelum menetapkan versi yang akan digunakan.',
+          'Instansi sebaiknya menunjuk satu orang pemeriksa fakta. Pemeriksaan internal membantu memastikan informasi sesuai dokumen dan kebijakan lembaga, tetapi tidak boleh digunakan untuk mengubah fakta demi pencitraan atau menghilangkan konteks penting.',
+        ],
+      },
+      {
+        heading: 'Bagaimana memahami biaya dan revisi penulisan?',
+        body: [
+          'Biaya jasa penulisan artikel dapat berbeda berdasarkan panjang naskah, kebutuhan riset, wawancara, tingkat teknis, jumlah artikel, dan layanan tambahan. Harga perlu dibandingkan berdasarkan ruang lingkup yang setara.',
+          'Mintalah rincian apakah biaya mencakup wawancara, penyuntingan, revisi, optimasi SEO, dan penyerahan file. Hindari menilai harga hanya dari jumlah kata karena proses pengumpulan data dan verifikasi dapat menjadi bagian penting dari pekerjaan.',
+          'Revisi sebaiknya dibedakan antara koreksi fakta, perbaikan bahasa, dan perubahan brief. Kesepakatan revisi menjelaskan jumlah putaran, batas waktu masukan, serta biaya jika arah artikel berubah setelah penulisan dimulai.',
+        ],
+      },
+      {
+        heading: 'Apa tanda jasa penulisan artikel yang perlu diwaspadai?',
+        body: [
+          'Tanda yang perlu diwaspadai adalah janji peringkat mesin pencari yang pasti, klaim tanpa bukti, proses kerja yang tidak transparan, atau penolakan melakukan pemeriksaan fakta.',
+          'Penulis yang bertanggung jawab menjelaskan keterbatasan hasil dan tidak menjanjikan angka kunjungan atau peringkat tertentu. SEO merupakan proses yang dipengaruhi kondisi website, persaingan, kualitas konten, dan perubahan mesin pencari.',
+          'Perhatikan pula penggunaan konten salinan, kutipan tanpa sumber, serta foto yang tidak memiliki izin. Minta penjelasan tentang orisinalitas naskah dan hak penggunaan. Jika kebutuhan menyangkut informasi publik, prioritaskan akurasi dan keterbukaan.',
+        ],
+      },
+      {
+        heading: 'Mengapa artikel instansi perlu disesuaikan dengan kanal digital?',
+        body: [
+          'Artikel untuk website, media sosial, dan buletin memiliki kebutuhan penyajian yang berbeda. Penyesuaian kanal membuat informasi lebih mudah dibaca tanpa mengubah substansi fakta.',
+          'Website dapat memuat artikel lebih lengkap dengan subjudul dan tautan pendukung. Media sosial membutuhkan ringkasan yang langsung menyampaikan inti dan mengarahkan pembaca ke sumber lengkap. Buletin dapat menggunakan gaya yang lebih terkurasi sesuai pembacanya.',
+          'Jangan menyalin artikel panjang ke semua kanal tanpa penyesuaian. Gunakan judul, ringkasan, dan format yang cocok, lalu pastikan tautan menuju publikasi resmi berfungsi. Konten yang konsisten membantu pembaca mengenali sumber informasi.',
+        ],
+      },
+      {
+        heading: 'Bagaimana menyiapkan kerja sama berulang dengan penulis?',
+        body: [
+          'Kerja sama berulang akan lebih efisien jika instansi memiliki panduan gaya, alur persetujuan, dan kalender publikasi. Sistem tersebut menjaga konsistensi sekaligus mempercepat persiapan artikel berikutnya.',
+          'Panduan gaya dapat berisi penulisan nama lembaga, jabatan, singkatan, format tanggal, nada bahasa, struktur berita, serta aturan penggunaan foto. Kalender publikasi membantu tim mengumpulkan bahan sebelum tenggat.',
+          'Setelah artikel terbit, evaluasi berdasarkan ketepatan fakta, keterbacaan, kesesuaian brief, dan kemudahan proses. Evaluasi tidak harus berupa laporan kompleks; catatan singkat tentang apa yang perlu diperbaiki sudah dapat membantu kerja berikutnya.',
+        ],
+      },
+      {
+        heading: 'Jasa penulisan artikel instansi di Malang',
+        body: [
+          'Sekolah dan instansi di Malang dapat mencari layanan yang memahami kebutuhan komunikasi lokal, koordinasi narasumber, serta publikasi digital. Kedekatan wilayah dapat memudahkan pertemuan, tetapi kualitas tetap ditentukan oleh proses dan kompetensi.',
+          'APJII mencatat penetrasi internet Jawa sebesar 84,69 persen pada survei 2025. Data ini menunjukkan relevansi kanal digital di wilayah Jawa, namun bukan jaminan bahwa setiap artikel akan menjangkau audiens tertentu. Distribusi dan kualitas konten tetap perlu direncanakan.',
+          'Untuk kebutuhan artikel, website, dan komunikasi digital yang terintegrasi, PixxelPro Digital dapat menjadi titik konsultasi melalui kanal resminya. Informasi mengenai tempat magang atau peluang belajar praktik digital juga perlu diperiksa melalui pengumuman resmi PixxelPro Digital.',
+        ],
+      },
+    ],
+    conclusion: 'Pilih jasa penulisan artikel instansi berdasarkan kecocokan portofolio, transparansi proses, verifikasi fakta, dan kesepakatan hasil kerja.',
+    conclusionClosing: 'Brief yang jelas dan pemeriksaan internal membuat artikel lebih akurat serta mudah dipublikasikan. Untuk kebutuhan konten digital atau informasi magang, hubungi kanal resmi PixxelPro Digital.',
+    faqs: [
+      {
+        question: 'Apakah jasa penulisan artikel instansi termasuk wawancara?',
+        answer: 'Wawancara dapat termasuk layanan jika disepakati dalam ruang lingkup. Pastikan jumlah narasumber dan metode wawancara ditentukan sejak awal.',
+      },
+      {
+        question: 'Apakah naskah boleh direvisi setelah selesai?',
+        answer: 'Revisi biasanya dapat dilakukan sesuai kesepakatan. Koreksi fakta penting dipisahkan dari perubahan brief atau penambahan materi baru.',
+      },
+      {
+        question: 'Apakah penulis bisa menjamin artikel berada di halaman pertama Google?',
+        answer: 'Tidak ada jaminan peringkat yang dapat diberikan secara bertanggung jawab karena hasil pencarian dipengaruhi banyak faktor.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Jasa Penulisan Artikel Instansi',
+      title: 'Butuh Artikel Profesional untuk Instansi Anda?',
+      desc: 'PixxelPro Digital menyediakan jasa penulisan artikel dengan proses verifikasi fakta dan pendampingan editorial.',
+      btnLabel: 'Konsultasi Artikel via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20ingin%20konsultasi%20kebutuhan%20konten%20dan%20penulisan%20artikel.',
+    },
+  },
+  {
+    id: 'post-25',
+    slug: 'jasa-jurnalistik-penulisan-artikel-sekolah-instansi-malang',
+    title: 'Jasa Jurnalistik dan Penulisan Artikel untuk Sekolah dan Instansi di Malang',
+    metaTitle: 'Jasa Jurnalistik dan Penulisan Artikel untuk Sekolah dan Instansi di Malang',
+    excerpt: 'Jasa jurnalistik dan penulisan artikel di Malang untuk sekolah serta instansi. Susun berita kegiatan dan konten informatif bersama PixxelPro Digital.',
+    category: 'Jurnalistik',
+    categorySlug: 'jurnalistik',
+    date: '29 November 2026',
+    isoDate: '2026-11-29T08:00:00+07:00',
+    readTime: '14 menit baca',
+    featured: true,
+    image: '/images/blog/siswa-smk-diskusi-jurnalistik-bersama-mentor.webp',
+    imageAlt: 'siswa-smk-diskusi-jurnalistik-bersama-mentor',
+    secondImage: {
+      src: '/images/blog/siswa-smk-magang-menulis-artikel-berita.webp',
+      alt: 'siswa-smk-magang-menulis-artikel-berita',
+      caption: 'Siswa SMK magang menulis artikel berita kegiatan sekolah bersama pembimbing.',
+    },
+    readAlso: {
+      title: 'Cara Memilih Jasa Penulisan Artikel Instansi yang Tepat',
+      slug: 'memilih-jasa-penulisan-artikel-instansi',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'jasa jurnalistik dan penulisan artikel untuk sekolah dan instansi di Malang',
+      'berita sekolah',
+      'artikel instansi',
+      'publikasi kegiatan',
+      'konten informatif',
+      'dokumentasi',
+      'pelatihan jurnalistik',
+      'PixxelPro Digital',
+    ],
+    intro: 'Jasa jurnalistik dan penulisan artikel untuk sekolah dan instansi di Malang membantu menyampaikan kegiatan, program, dan informasi secara jelas, akurat, serta terstruktur.',
+    sections: [
+      {
+        heading: 'Ringkasan Inti',
+        body: [],
+        list: [
+          'Penulisan jurnalistik mengubah informasi kegiatan menjadi berita yang faktual dan mudah dipahami.',
+          'Sekolah dan instansi dapat menggunakan artikel untuk dokumentasi, komunikasi publik, dan penguatan informasi digital.',
+          'Proses kerja ideal mencakup brief, pengumpulan data, wawancara, penulisan, verifikasi, dan persetujuan.',
+          'Publikasi perlu memperhatikan akurasi, privasi, izin foto, serta identitas pihak yang diberitakan.',
+        ],
+      },
+      {
+        heading: 'Apa itu jasa jurnalistik dan penulisan artikel untuk sekolah dan instansi?',
+        body: [
+          'Jasa jurnalistik dan penulisan artikel adalah layanan pengolahan informasi menjadi berita, artikel kegiatan, profil program, atau tulisan informatif yang siap dipublikasikan. Layanan ini membantu organisasi menyampaikan fakta dengan struktur yang runtut, bahasa yang sesuai pembaca, dan fokus pada informasi yang benar-benar penting.',
+          'Untuk sekolah, tulisan dapat memuat kegiatan belajar, prestasi siswa, program keahlian, kunjungan industri, penerimaan peserta didik, atau agenda sekolah. Untuk instansi, artikel dapat menjelaskan program layanan, kegiatan resmi, kolaborasi, pengumuman, dan capaian organisasi. Bentuk tulisan dipilih berdasarkan tujuan komunikasi, bukan sekadar panjang artikel.',
+          'Berita jurnalistik berbeda dari promosi langsung. Berita mengutamakan fakta, konteks, narasumber, dan kepentingan pembaca. Artikel informatif dapat memberi penjelasan lebih luas, sedangkan konten promosi bertujuan mengenalkan layanan. Menentukan jenis tulisan sejak awal membuat pesan lebih tepat dan mengurangi risiko informasi terasa berlebihan.',
+        ],
+      },
+      {
+        heading: 'Mengapa publikasi berita kegiatan sekolah penting?',
+        body: [
+          'Publikasi berita kegiatan sekolah membantu warga sekolah dan masyarakat mengetahui aktivitas pendidikan melalui informasi yang dapat dibaca kembali. Artikel yang tertata juga menjadi dokumentasi digital untuk program, kegiatan siswa, kerja sama, dan pencapaian yang relevan.',
+          'Berita sekolah dapat mendukung komunikasi antara sekolah, siswa, orang tua, alumni, mitra industri, dan masyarakat. Informasi yang jelas menjelaskan tujuan kegiatan, pihak yang terlibat, waktu pelaksanaan, serta hasil atau pembelajaran yang diperoleh. Dengan demikian, publikasi bukan hanya menyebut acara berlangsung, tetapi juga menerangkan nilai kegiatan.',
+          'Konten digital perlu disusun dengan memperhatikan keterbacaan di ponsel. Judul sebaiknya spesifik, paragraf tidak terlalu panjang, dan informasi utama ditempatkan di awal. Foto pendukung harus relevan dan memiliki keterangan yang menjelaskan situasi, bukan hanya menjadi hiasan.',
+        ],
+      },
+      {
+        heading: 'Apa manfaat jasa penulisan artikel instansi?',
+        body: [
+          'Jasa penulisan artikel instansi membantu tim komunikasi mengubah bahan kegiatan dan informasi layanan menjadi tulisan yang konsisten. Layanan ini dapat digunakan saat staf memiliki data, tetapi membutuhkan bantuan menyusun struktur, melakukan wawancara, atau mengedit naskah.',
+          'Artikel instansi dapat menjelaskan kegiatan pelayanan, agenda sosialisasi, program kerja, kolaborasi, dan informasi publik. Bahasa yang jelas mengurangi kemungkinan pembaca salah memahami tujuan atau prosedur. Naskah yang rapi juga memudahkan proses pemeriksaan internal sebelum dipublikasikan.',
+          'Manfaatnya bergantung pada kualitas bahan dan proses persetujuan. Penulis tidak seharusnya mengisi kekosongan informasi dengan asumsi. Jika data belum tersedia, bagian tersebut perlu dikonfirmasi kepada penanggung jawab atau ditulis secara terbatas agar tidak menimbulkan klaim yang keliru.',
+        ],
+      },
+      {
+        heading: 'Bagaimana proses kerja jasa jurnalistik di Malang?',
+        body: [
+          'Proses jasa jurnalistik yang baik dimulai dari penjelasan tujuan publikasi dan pengumpulan bahan, kemudian dilanjutkan dengan verifikasi, penulisan, penyuntingan, dan persetujuan. Alur ini membantu menjaga akurasi sekaligus memastikan artikel sesuai kebutuhan sekolah atau instansi.',
+          'Brief awal memuat topik, sasaran pembaca, waktu kegiatan, lokasi, narasumber, pesan utama, kanal publikasi, dan tenggat. Bahan dapat berupa agenda, siaran pers, catatan kegiatan, foto, dokumen resmi, atau kontak narasumber. Untuk kegiatan yang membutuhkan detail, wawancara langsung atau daring dapat dilakukan.',
+          'Setelah bahan terkumpul, penulis menyusun sudut berita dan kerangka. Naskah kemudian diperiksa untuk memastikan nama, jabatan, tanggal, angka, kutipan, dan konteks benar. Pihak pemesan perlu memiliki kesempatan melakukan pemeriksaan fakta, tetapi perubahan sebaiknya tidak mengubah fakta atau menjadikan berita sebagai klaim yang tidak terbukti.',
+        ],
+      },
+      {
+        heading: 'Informasi apa yang perlu disiapkan sebelum memesan artikel?',
+        body: [
+          'Brief yang lengkap membantu penulis menghasilkan artikel yang relevan tanpa terlalu banyak revisi. Sekolah atau instansi sebaiknya menyiapkan informasi dasar, dokumen pendukung, serta orang yang berwenang mengonfirmasi fakta.',
+          'Informasi utama meliputi nama kegiatan, penyelenggara, waktu dan tempat, tujuan, peserta, rangkaian aktivitas, hasil, serta kutipan narasumber yang telah disetujui. Jika ada istilah khusus, nama program, atau singkatan, sertakan penjelasan agar penulis tidak salah mengartikan.',
+          'Foto dan video harus memiliki izin penggunaan yang sesuai. Untuk peserta didik, terutama anak di bawah umur, sekolah perlu mengikuti kebijakan perlindungan peserta didik dan persetujuan yang berlaku. Hindari mengirim data pribadi yang tidak diperlukan, seperti alamat rumah, nomor identitas, atau informasi sensitif.',
+        ],
+      },
+      {
+        heading: 'Apa perbedaan berita, artikel informatif, dan konten promosi?',
+        body: [
+          'Berita, artikel informatif, dan konten promosi memiliki tujuan berbeda sehingga struktur dan gaya bahasanya juga tidak sama. Memilih format yang tepat membantu pembaca memahami apakah tulisan menyampaikan kejadian, menjelaskan topik, atau menawarkan layanan.',
+          'Berita berfokus pada peristiwa aktual dan fakta yang dapat diverifikasi. Artikel informatif mengembangkan penjelasan suatu tema, misalnya manfaat program literasi atau pengenalan jurusan. Konten promosi menonjolkan penawaran dan ajakan, tetapi tetap harus jujur serta tidak membuat klaim tanpa dasar.',
+          'Ketiga format dapat digunakan dalam strategi komunikasi sekolah atau instansi. Satu kegiatan dapat menghasilkan berita untuk dokumentasi, artikel penjelas tentang program, dan materi promosi untuk agenda berikutnya. Setiap format sebaiknya memiliki tujuan dan kanal yang jelas agar tidak saling tumpang tindih.',
+        ],
+      },
+      {
+        heading: 'Bagaimana menjaga akurasi dan etika jurnalistik?',
+        body: [
+          'Akurasi dijaga melalui pemeriksaan sumber, konfirmasi narasumber, pencocokan dokumen, dan penyuntingan sebelum publikasi. Etika jurnalistik juga menuntut penghormatan terhadap privasi, konteks, dan hak pihak yang diberitakan.',
+          'Penulis perlu membedakan fakta, pendapat, dan interpretasi. Kutipan tidak boleh diubah sehingga maknanya berbeda. Jika informasi masih belum terkonfirmasi, artikel tidak boleh menyajikannya sebagai kepastian. Kesalahan yang ditemukan setelah terbit sebaiknya diperbaiki secara transparan sesuai kebijakan penerbit.',
+          'Publikasi sekolah perlu memperhatikan perlindungan anak, izin dokumentasi, dan konteks foto. Jangan menampilkan identitas atau kondisi pribadi peserta didik yang tidak relevan. Untuk instansi, periksa apakah informasi termasuk data publik atau memerlukan persetujuan sebelum dibagikan.',
+        ],
+      },
+      {
+        heading: 'Bagaimana memilih layanan jurnalistik yang sesuai?',
+        body: [
+          'Pemilihan layanan jurnalistik sebaiknya mempertimbangkan portofolio relevan, cara pengumpulan data, standar pemeriksaan fakta, kejelasan revisi, dan hak penggunaan naskah. Harga saja tidak cukup untuk menilai kesesuaian layanan.',
+          'Periksa apakah penyedia memahami kebutuhan pendidikan dan komunikasi institusi. Tanyakan apakah layanan mencakup wawancara, penyuntingan, penulisan caption foto, optimasi struktur artikel, atau publikasi. Pastikan ruang lingkup dan tanggung jawab setiap pihak dijelaskan sebelum pekerjaan dimulai.',
+          'Untuk kebutuhan berulang, sekolah atau instansi dapat menyepakati panduan gaya yang berisi penggunaan nama lembaga, istilah, format tanggal, gaya kutipan, dan struktur artikel. Panduan tersebut menjaga konsistensi saat beberapa penulis terlibat.',
+        ],
+      },
+      {
+        heading: 'Bagaimana publikasi digital mendukung jangkauan informasi?',
+        body: [
+          'Publikasi digital membuat artikel dapat dibagikan melalui situs, media sosial, buletin, dan kanal komunikasi resmi. Artikel yang memiliki judul deskriptif dan informasi lengkap lebih mudah ditemukan serta dipahami pembaca.',
+          'APJII melaporkan penetrasi internet Indonesia mencapai 80,66 persen pada 2025, setara sekitar 229,4 juta pengguna. Angka tersebut menunjukkan besarnya konteks audiens yang dapat mengakses informasi digital, meskipun akses dan kebiasaan membaca berbeda antardaerah dan kelompok.',
+          'Data tersebut tidak menjamin setiap artikel akan dibaca atau mendapat peringkat tinggi. Kualitas informasi, relevansi topik, pengalaman pengguna, konsistensi publikasi, dan distribusi tetap berpengaruh. Sekolah dan instansi perlu melihat publikasi sebagai bagian dari komunikasi yang berkelanjutan, bukan hanya mengejar jumlah kunjungan.',
+        ],
+      },
+      {
+        heading: 'Kesalahan umum dalam penulisan berita sekolah dan instansi',
+        body: [
+          'Kesalahan yang sering terjadi adalah naskah terlalu seremonial, tidak menjelaskan manfaat kegiatan, atau hanya memuat daftar pejabat tanpa konteks. Artikel yang informatif perlu menjawab apa yang terjadi dan mengapa pembaca perlu mengetahuinya.',
+          'Kesalahan lain adalah judul terlalu umum, kutipan tanpa konfirmasi, tanggal yang tidak jelas, serta penggunaan foto tanpa keterangan. Pengulangan kata kunci secara berlebihan juga membuat tulisan terasa tidak alami dan mengganggu pembaca.',
+          'Perbaikan dapat dilakukan dengan menempatkan informasi utama di paragraf awal, menyertakan detail yang relevan, memeriksa fakta, dan menghapus kalimat yang tidak menambah informasi. Sebelum publikasi, baca naskah dari sudut pandang orang yang tidak hadir dalam kegiatan.',
+        ],
+      },
+      {
+        heading: 'Pelatihan jurnalistik sekolah sebagai penguatan keterampilan',
+        body: [
+          'Pelatihan jurnalistik sekolah membantu siswa memahami cara mencari informasi, melakukan wawancara, menulis berita, menyunting naskah, dan menerapkan etika publikasi. Kegiatan ini dapat menjadi bagian dari pengembangan majalah sekolah, tim media, atau ekstrakurikuler jurnalistik.',
+          'Materi pelatihan dapat mencakup unsur berita, teknik observasi, pertanyaan wawancara, struktur piramida terbalik, penulisan caption, verifikasi fakta, dan perlindungan privasi. Praktik langsung lebih bermanfaat apabila siswa mengerjakan berita sederhana dengan bimbingan dan umpan balik.',
+          'Pelatihan tidak harus menghasilkan publikasi besar. Tujuan utamanya adalah membangun kebiasaan menyampaikan informasi secara akurat dan bertanggung jawab. Sekolah dapat mengembangkan jadwal liputan, pembagian peran editor dan reporter, serta prosedur persetujuan sebelum konten diterbitkan.',
+        ],
+      },
+      {
+        heading: 'Jasa jurnalistik untuk sekolah dan instansi di Malang',
+        body: [
+          'Jasa jurnalistik di Malang dapat membantu sekolah dan instansi menyiapkan publikasi kegiatan, artikel program, serta informasi lembaga yang sesuai kebutuhan pembaca lokal. Kedekatan wilayah dapat memudahkan koordinasi, wawancara, dan pemahaman konteks kegiatan.',
+          'Malang memiliki lingkungan pendidikan, organisasi, dan kegiatan masyarakat yang beragam. Artikel lokal sebaiknya menyebut konteks wilayah secara tepat, bukan menambahkan nama kota sekadar untuk optimasi. Lokasi, nama lembaga, dan informasi kegiatan perlu dikonfirmasi sebelum dimasukkan ke naskah.',
+          'Untuk kebutuhan konten digital yang lebih luas, publikasi jurnalistik dapat diselaraskan dengan pengelolaan website dan strategi komunikasi. PixxelPro Digital dapat menjadi tujuan konsultasi untuk kebutuhan konten dan pengembangan digital, termasuk informasi mengenai kesempatan magang yang tersedia melalui kanal resminya.',
+        ],
+      },
+    ],
+    conclusion: 'Jasa jurnalistik dan penulisan artikel membantu sekolah serta instansi di Malang menyampaikan informasi yang jelas, akurat, dan bermanfaat.',
+    conclusionClosing: 'Hasil terbaik dimulai dari brief lengkap, sumber tepercaya, verifikasi, etika publikasi, dan proses persetujuan yang tertib. Untuk kebutuhan konten digital serta informasi tempat magang, arahkan komunikasi melalui kanal resmi PixxelPro Digital.',
+    faqs: [
+      {
+        question: 'Apa saja layanan jasa jurnalistik untuk sekolah?',
+        answer: 'Layanan dapat mencakup penulisan berita kegiatan, artikel program, wawancara, penyuntingan, caption foto, dan pendampingan publikasi sesuai ruang lingkup yang disepakati.',
+      },
+      {
+        question: 'Apakah artikel sekolah harus selalu berupa berita?',
+        answer: 'Tidak. Sekolah dapat menerbitkan berita aktual, artikel informatif, profil program, atau konten edukasi. Format dipilih berdasarkan tujuan dan bahan yang tersedia.',
+      },
+      {
+        question: 'Berapa lama penulisan artikel jurnalistik?',
+        answer: 'Waktu pengerjaan bergantung pada kelengkapan bahan, kebutuhan wawancara, panjang artikel, tingkat verifikasi, dan proses persetujuan.',
+      },
+      {
+        question: 'Apakah jasa jurnalistik menjamin artikel masuk halaman pertama Google?',
+        answer: 'Tidak. Penyedia jasa tidak dapat menjamin peringkat tertentu. SEO dipengaruhi banyak faktor, termasuk relevansi, kualitas situs, persaingan, dan pengalaman pengguna.',
+      },
+      {
+        question: 'Bagaimana menghubungi PixxelPro Digital?',
+        answer: 'Gunakan kanal resmi PixxelPro Digital untuk konsultasi kebutuhan konten, publikasi digital, atau informasi kesempatan magang yang sedang dibuka.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Jasa Jurnalistik & Penulisan Artikel Malang',
+      title: 'Butuh Artikel Berkualitas untuk Sekolah atau Instansi Anda?',
+      desc: 'PixxelPro Digital menyediakan jasa jurnalistik dan penulisan artikel untuk sekolah serta instansi di Malang dengan proses verifikasi dan pendampingan.',
+      btnLabel: 'Konsultasi Konten via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20ingin%20konsultasi%20kebutuhan%20konten%20dan%20penulisan%20artikel.',
+    },
+  },
+  {
+    id: 'post-24',
+    slug: 'fitur-website-sekolah-malang',
+    title: 'Fitur Website Sekolah di Malang yang Perlu Disiapkan',
+    metaTitle: 'Fitur Website Sekolah di Malang yang Perlu Disiapkan',
+    excerpt: 'Kenali fitur website sekolah di Malang untuk profil, program, berita, PPDB, dan kontak resmi. Susun kebutuhan situs pendidikan yang mudah dikelola.',
+    category: 'Jasa Website',
+    categorySlug: 'jasa-website',
+    date: '28 November 2026',
+    isoDate: '2026-11-28T12:00:00+07:00',
+    readTime: '10 menit baca',
+    featured: false,
+    image: '/images/blog/Siswa-SMK-magang-mengembangkan-website-sekolah-bersama-mentor.webp',
+    imageAlt: 'tampilan-website-profil-sekolah-malang',
+    secondImage: {
+      src: '/images/blog/Siswa-SMK-magang-memotret-kegiatan-sekolah-untuk-website.webp',
+      alt: 'halaman-informasi-ppdb-website-sekolah',
+      caption: 'Halaman informasi PPDB dan kegiatan website sekolah.',
+    },
+    readAlso: {
+      title: 'Cara Memilih Jasa Pembuatan Website di Malang',
+      slug: 'cara-memilih-jasa-pembuatan-website-malang',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'jasa website sekolah Malang',
+      'profil sekolah',
+      'PPDB',
+      'program keahlian',
+      'berita sekolah',
+      'kalender akademik',
+      'galeri',
+      'aksesibilitas',
+      'keamanan data',
+      'PixxelPro Digital',
+    ],
+    intro: 'Jasa website sekolah Malang membantu institusi pendidikan menyajikan profil, program, berita, agenda, dan informasi penerimaan secara terstruktur.',
+    sections: [
+      {
+        heading: 'Ringkasan Inti',
+        body: [],
+        list: [
+          'Profil dan kontak resmi harus mudah ditemukan.',
+          'Informasi PPDB perlu jelas, akurat, dan diperbarui.',
+          'Website harus nyaman digunakan lewat ponsel.',
+          'Pengelolaan konten dan privasi siswa perlu ditetapkan.',
+        ],
+      },
+      {
+        heading: 'Apa fungsi utama website sekolah?',
+        body: [
+          'Website sekolah merupakan pusat informasi resmi yang membantu calon siswa, orang tua, guru, dan masyarakat mengenal institusi serta menemukan pengumuman yang dibutuhkan.',
+          'Website dapat menjelaskan identitas sekolah, program, fasilitas, kegiatan, prestasi yang terverifikasi, dan jalur komunikasi. Informasi yang tersusun baik mengurangi kebingungan serta membantu publik membedakan kanal resmi dari informasi tidak resmi.',
+          'Di Malang, website sekolah dapat mendukung komunikasi dengan masyarakat lokal maupun calon siswa dari wilayah lain. Namun, situs perlu dikelola aktif agar informasi tidak tertinggal atau menyesatkan.',
+        ],
+      },
+      {
+        heading: 'Apa saja halaman penting pada website sekolah?',
+        body: [
+          'Website sekolah umumnya membutuhkan halaman profil, visi misi, program pendidikan, fasilitas, berita, agenda, galeri, informasi penerimaan, dan kontak.',
+          'Profil menjelaskan identitas institusi, sedangkan halaman program menguraikan kompetensi atau kegiatan belajar. Halaman fasilitas sebaiknya menggunakan foto aktual dan keterangan yang relevan, bukan klaim yang tidak dapat diperiksa.',
+          'Berita dan agenda membantu warga sekolah mengikuti kegiatan. Kontak resmi dapat mencakup alamat, nomor telepon, email, serta tautan kanal yang benar-benar dikelola sekolah.',
+        ],
+      },
+      {
+        heading: 'Bagaimana membuat halaman PPDB yang informatif?',
+        body: [
+          'Halaman penerimaan peserta didik baru perlu memuat jadwal, persyaratan, tahapan, jalur pendaftaran, kontak panitia, dan pembaruan resmi.',
+          'Informasi penting sebaiknya disajikan dengan bahasa sederhana, tanggal yang jelas, dan tautan dokumen yang masih berlaku. Jika pendaftaran dilakukan melalui sistem eksternal, jelaskan alur dan kanal resmi untuk menghindari tautan palsu.',
+          'Sekolah perlu meninjau halaman PPDB setiap periode. Informasi tahun sebelumnya harus diberi arsip atau diperbarui agar calon siswa tidak memakai persyaratan yang sudah berubah.',
+        ],
+      },
+      {
+        heading: 'Aksesibilitas dan kenyamanan pengunjung',
+        body: [
+          'Website sekolah sebaiknya dapat digunakan oleh pengunjung dengan beragam perangkat dan kebutuhan. Teks yang terbaca, kontras memadai, tautan jelas, dan struktur heading yang logis mendukung aksesibilitas.',
+          'Jangan mengandalkan warna saja untuk menyampaikan status informasi. Berikan teks alternatif yang relevan pada gambar informatif dan pastikan dokumen penting dapat dibaca dengan nyaman.',
+          'Uji website dengan pengguna yang berbeda jika memungkinkan. Masukan orang tua, siswa, dan staf dapat mengungkap menu atau istilah yang membingungkan.',
+        ],
+      },
+      {
+        heading: 'Mengapa website sekolah harus responsif?',
+        body: [
+          'Website responsif membuat halaman dapat menyesuaikan ukuran layar sehingga informasi sekolah tetap mudah dibaca di ponsel, tablet, dan komputer.',
+          'APJII mencatat penetrasi internet Indonesia sebesar 80,66 persen pada 2025. Data nasional ini menunjukkan akses internet luas, tetapi perangkat, kualitas koneksi, dan kemampuan digital pengguna tetap beragam.',
+          'Google menggunakan versi mobile situs untuk pengindeksan. Karena itu, menu, pengumuman, konten utama, dan tautan pendaftaran harus tersedia serta mudah digunakan pada tampilan ponsel.',
+        ],
+      },
+      {
+        heading: 'Bagaimana sekolah mengelola berita dan konten?',
+        body: [
+          'Pengelolaan konten yang baik membutuhkan penanggung jawab, alur pemeriksaan, jadwal pembaruan, dan standar publikasi.',
+          'Sekolah dapat menetapkan editor untuk memeriksa tanggal, nama kegiatan, ejaan, izin foto, dan informasi kontak sebelum berita diterbitkan. Konten lama yang masih relevan dapat diperbarui, sedangkan pengumuman kedaluwarsa perlu diberi penanda.',
+          'Sistem manajemen konten yang mudah digunakan membantu staf memperbarui informasi tanpa harus mengubah kode. Pelatihan singkat dan panduan tertulis membuat proses publikasi lebih konsisten.',
+        ],
+      },
+      {
+        heading: 'Bagaimana menjaga privasi dan keamanan website sekolah?',
+        body: [
+          'Website sekolah perlu membatasi publikasi data pribadi siswa dan mengelola akses administrator secara hati-hati.',
+          'Foto kegiatan, daftar nama, dokumen, dan formulir dapat memuat informasi pribadi. Sekolah perlu memastikan izin dan dasar publikasi sesuai kebijakan yang berlaku serta menghindari menampilkan data yang tidak diperlukan.',
+          'Gunakan kata sandi kuat, akun administrator terbatas, pembaruan perangkat lunak, sertifikat HTTPS, dan backup berkala. Formulir pendaftaran harus menjelaskan tujuan pengumpulan data dan siapa yang mengelolanya.',
+        ],
+      },
+      {
+        heading: 'Bagaimana memilih jasa website sekolah di Malang?',
+        body: [
+          'Pilih penyedia yang memahami struktur informasi pendidikan, memberikan desain responsif, dan menjelaskan cara sekolah mengelola konten setelah situs aktif.',
+          'Tinjau portofolio, kemudahan menu, kemampuan mengelola berita, halaman PPDB, galeri, dan formulir. Pastikan sekolah mendapat akses administrator serta pelatihan yang sesuai dengan kemampuan tim.',
+          'Kesepakatan perlu mencakup biaya domain dan hosting, jumlah halaman, jadwal, revisi, backup, keamanan, dan dukungan teknis. Hindari membeli fitur yang tidak memiliki kebutuhan jelas atau sulit dikelola oleh staf sekolah.',
+        ],
+      },
+    ],
+    conclusion: 'Website sekolah yang efektif mengutamakan informasi resmi, navigasi sederhana, akses mobile, dan pengelolaan konten yang bertanggung jawab.',
+    conclusionClosing: [
+      'Mulailah dengan halaman profil, program, berita, agenda, penerimaan, dan kontak. Tetapkan pengelola, periksa akurasi informasi, serta pastikan keamanan dan privasi menjadi bagian dari proses pengembangan.',
+      'Dengan kebutuhan yang jelas, sekolah dapat berkonsultasi dengan jasa website sekolah Malang untuk menentukan struktur dan fitur sesuai kapasitas pengelolaan.',
+    ],
+    faqs: [
+      {
+        question: 'Apakah website sekolah harus memiliki halaman PPDB?',
+        answer: 'Jika sekolah menerima pendaftaran dan memerlukan informasi daring, halaman PPDB atau informasi penerimaan sangat membantu.',
+      },
+      {
+        question: 'Apakah berita sekolah harus sering diperbarui?',
+        answer: 'Konten sebaiknya diperbarui sesuai kegiatan dan informasi yang berubah, bukan sekadar mengejar jumlah artikel.',
+      },
+      {
+        question: 'Apakah sekolah dapat mengelola website sendiri?',
+        answer: 'Bisa jika mendapat akses, pelatihan, dan sistem yang mudah digunakan.',
+      },
+      {
+        question: 'Apakah foto siswa boleh dipublikasikan?',
+        answer: 'Sekolah perlu mengikuti ketentuan privasi dan memperoleh izin yang sesuai sebelum mempublikasikan foto atau data siswa.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Jasa Website Sekolah Malang',
+      title: 'Siapkan Website Sekolah yang Informatif dan Mudah Dikelola',
+      desc: 'PixxelPro Digital membantu sekolah di Malang membangun website profil, PPDB, berita, dan galeri dengan desain responsif.',
+      btnLabel: 'Konsultasi Website Sekolah via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20untuk%20UMKM%20atau%20sekolah.',
+    },
+  },
+
+  {
+    id: 'post-23',
+    slug: 'cara-memilih-jasa-pembuatan-website-malang',
+    title: 'Cara Memilih Jasa Pembuatan Website di Malang',
+    metaTitle: 'Cara Memilih Jasa Pembuatan Website di Malang',
+    excerpt: 'Pelajari cara memilih jasa pembuatan website di Malang dari portofolio, fitur, biaya, hingga dukungan. Bandingkan kebutuhan sebelum konsultasi.',
+    category: 'Jasa Website',
+    categorySlug: 'jasa-website',
+    date: '28 November 2026',
+    isoDate: '2026-11-28T10:00:00+07:00',
+    readTime: '9 menit baca',
+    featured: false,
+    image: '/images/blog/Pengusaha-pria-membandingkan-portofolio-website-di-tablet.webp',
+    imageAlt: 'evaluasi-portofolio-jasa-pembuatan-website-malang',
+    secondImage: {
+      src: '/images/blog/Pemilik-UMKM-berdiskusi-dengan-developer-website.webp',
+      alt: 'konsultasi-kebutuhan-website-bisnis-dan-sekolah',
+      caption: 'Pemilik UMKM berdiskusi dengan developer untuk kebutuhan website bisnis.',
+    },
+    readAlso: {
+      title: 'Biaya Pembuatan Website UMKM di Malang',
+      slug: 'biaya-pembuatan-website-umkm-malang',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'jasa pembuatan website di Malang',
+      'portofolio website',
+      'web developer',
+      'desain UI UX',
+      'SEO teknis',
+      'domain',
+      'hosting',
+      'maintenance',
+      'PixxelPro Digital',
+    ],
+    intro: 'Jasa pembuatan website di Malang sebaiknya dipilih berdasarkan portofolio nyata, ruang lingkup tertulis, kepemilikan akses, dan dukungan setelah peluncuran.',
+    sections: [
+      {
+        heading: 'Ringkasan Inti',
+        body: [],
+        list: [
+          'Periksa contoh website yang benar-benar aktif dan relevan.',
+          'Bandingkan fitur serta layanan, bukan hanya harga awal.',
+          'Pastikan domain, hosting, dan akses admin jelas.',
+          'Sepakati jadwal, revisi, konten, serta maintenance.',
+        ],
+      },
+      {
+        heading: 'Mengapa memilih penyedia website perlu evaluasi?',
+        body: [
+          'Memilih jasa website adalah keputusan proyek digital yang memengaruhi biaya, waktu, dan kemudahan pengelolaan. Evaluasi sejak awal membantu mengurangi salah paham dan memastikan website sesuai tujuan.',
+          'APJII mencatat penetrasi internet Indonesia sebesar 80,66 persen pada 2025. Data ini memberi konteks luasnya penggunaan internet, tetapi tidak berarti setiap bisnis membutuhkan fitur kompleks atau akan otomatis mendapat pelanggan dari website.',
+          'UMKM dan sekolah di Malang sebaiknya memilih layanan berdasarkan kebutuhan nyata. Website profil, katalog, dan sistem informasi memiliki ruang lingkup berbeda, sehingga perbandingan vendor harus memakai kebutuhan yang setara.',
+        ],
+      },
+      {
+        heading: 'Bagaimana menilai portofolio jasa website?',
+        body: [
+          'Portofolio yang baik memperlihatkan hasil yang dapat diperiksa, bukan hanya gambar desain. Buka situs contoh dan uji halaman penting melalui ponsel serta komputer.',
+          'Perhatikan kejelasan navigasi, keterbacaan, waktu muat yang wajar, formulir, tombol kontak, dan konsistensi desain. Jika mencari website sekolah, lihat apakah penyedia pernah membuat situs dengan struktur informasi pendidikan.',
+          'Tanyakan peran penyedia dalam proyek tersebut dan apakah contoh masih dikelola. Portofolio tidak harus berasal dari industri yang sama, tetapi perlu menunjukkan kemampuan menyelesaikan masalah yang sejenis.',
+        ],
+      },
+      {
+        heading: 'Apa yang perlu ditanyakan sebelum memesan?',
+        body: [
+          'Pertanyaan awal harus menjelaskan hasil yang diterima, biaya, jadwal, akses, dan dukungan. Jawaban yang spesifik memudahkan kedua pihak menyepakati proyek.',
+          'Tanyakan jumlah halaman, fitur, siapa menulis konten, siapa menyediakan foto, jumlah revisi, teknologi yang digunakan, biaya domain dan hosting, serta apakah ada pelatihan pengelola.',
+          'Pastikan pula siapa pemilik domain dan akun hosting, bagaimana backup dilakukan, berapa lama masa dukungan, serta apa yang terjadi jika ingin pindah penyedia. Minta semua ketentuan penting tercantum dalam penawaran atau perjanjian.',
+        ],
+      },
+      {
+        heading: 'Menilai komunikasi dan proses kerja penyedia',
+        body: [
+          'Komunikasi yang teratur membantu proyek berjalan sesuai harapan. Penyedia sebaiknya menyampaikan tahapan, kebutuhan materi, dan keputusan yang menunggu persetujuan klien.',
+          'Sepakati kanal komunikasi, jadwal pembaruan, dan pihak yang berwenang memberi persetujuan. Hal ini penting ketika proyek melibatkan pemilik UMKM, staf sekolah, tim desain, dan pengelola konten.',
+          'Catatan keputusan sederhana dapat mengurangi revisi berulang. Pastikan perubahan fitur setelah persetujuan awal dibahas dampaknya terhadap biaya dan jadwal.',
+        ],
+      },
+      {
+        heading: 'Bagaimana membandingkan penawaran harga?',
+        body: [
+          'Bandingkan penawaran berdasarkan rincian layanan yang sama. Harga yang lebih rendah belum tentu lebih hemat jika fitur penting, pengaturan keamanan, atau dukungan tidak termasuk.',
+          'Buat daftar kebutuhan dasar seperti halaman profil, layanan, kontak, formulir, desain responsif, dan SEO teknis awal. Tambahkan fitur lanjutan hanya jika ada alasan bisnis atau operasional yang jelas.',
+          'Periksa biaya berulang, lisensi, pembaruan, revisi tambahan, serta biaya pengelolaan konten. Minta penyedia menjelaskan bagian yang belum termasuk agar tidak ada asumsi yang berbeda.',
+        ],
+      },
+      {
+        heading: 'Bagaimana memastikan website mudah digunakan dan SEO friendly?',
+        body: [
+          'Website yang mudah digunakan memiliki navigasi sederhana, konten jelas, tampilan responsif, dan jalur tindakan yang mudah ditemukan. SEO teknis membantu mesin pencari memahami halaman, tetapi tidak menjamin posisi tertentu.',
+          'Google menjelaskan bahwa versi mobile menjadi dasar pengindeksan pada mobile-first indexing. Oleh karena itu, informasi utama tidak boleh hilang atau sulit diakses pada ponsel.',
+          'Periksa judul halaman, struktur heading, URL, tautan internal, alt gambar, dan konfigurasi indeks. Minta penjelasan tentang apa yang termasuk SEO awal dan apa yang memerlukan pekerjaan konten berkelanjutan.',
+        ],
+      },
+      {
+        heading: 'Apa tanda penawaran website yang perlu diwaspadai?',
+        body: [
+          'Waspadai penawaran yang menjanjikan ranking atau penjualan pasti, tidak menjelaskan kepemilikan akun, atau meminta keputusan tanpa ruang untuk memeriksa ruang lingkup.',
+          'Klaim seperti nomor satu di Google dalam waktu tetap tidak dapat dijadikan jaminan yang dapat dikendalikan penyedia. Hasil pencarian dipengaruhi persaingan, kualitas halaman, lokasi, dan perubahan sistem pencarian.',
+          'Tanda lain adalah portofolio tidak dapat dibuka, biaya tambahan tidak dijelaskan, atau akses administrator dibatasi tanpa alasan. Mintalah klarifikasi tertulis sebelum menyetujui proyek.',
+        ],
+      },
+    ],
+    conclusion: 'Jasa pembuatan website di Malang dapat dipilih lebih terarah dengan daftar kebutuhan, evaluasi portofolio, dan penawaran yang transparan.',
+    conclusionClosing: [
+      'Utamakan penyedia yang menjelaskan proses dengan bahasa mudah, memberikan akses kepemilikan yang jelas, serta menyertakan pengujian dan dukungan sesuai kesepakatan. Hindari mengambil keputusan berdasarkan harga atau janji hasil semata.',
+      'Jika kebutuhan dan ruang lingkup sudah jelas, konsultasi akan lebih efektif dan risiko revisi besar dapat berkurang.',
+    ],
+    faqs: [
+      {
+        question: 'Apakah harus memilih vendor yang berada di Malang?',
+        answer: 'Tidak selalu; komunikasi, portofolio, dukungan, dan pemahaman kebutuhan lebih penting daripada lokasi saja.',
+      },
+      {
+        question: 'Apakah perlu kontrak?',
+        answer: 'Kesepakatan tertulis sangat membantu mengatur ruang lingkup, pembayaran, dan tanggung jawab.',
+      },
+      {
+        question: 'Apa yang harus disiapkan saat konsultasi?',
+        answer: 'Siapkan tujuan, target pengunjung, contoh situs, daftar halaman, konten yang tersedia, dan anggaran perkiraan.',
+      },
+      {
+        question: 'Berapa vendor yang perlu dibandingkan?',
+        answer: 'Bandingkan beberapa penawaran dengan spesifikasi sama agar evaluasinya adil.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Jasa Pembuatan Website Malang',
+      title: 'Butuh Website Profesional untuk Bisnis atau Sekolah Anda?',
+      desc: 'PixxelPro Digital melayani pembuatan website UMKM dan profil sekolah di Malang dengan portofolio nyata dan pendampingan penuh.',
+      btnLabel: 'Konsultasi Website via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20untuk%20UMKM%20atau%20sekolah.',
+    },
+  },
+  {
+    id: 'post-22',
+    slug: 'biaya-pembuatan-website-umkm-malang',
+    title: 'Biaya Pembuatan Website UMKM di Malang',
+    metaTitle: 'Biaya Pembuatan Website UMKM di Malang',
+    excerpt: 'Ketahui faktor biaya pembuatan website UMKM di Malang, komponen domain, hosting, fitur, dan cara menyusun anggaran sebelum memesan layanan.',
+    category: 'Jasa Website',
+    categorySlug: 'jasa-website',
+    date: '28 November 2026',
+    isoDate: '2026-11-28T08:00:00+07:00',
+    readTime: '8 menit baca',
+    featured: false,
+    image: '/images/blog/Siswa-SMK-magang-membantu-UMKM-menata-produk-di-website.webp',
+    imageAlt: 'perencanaan-biaya-pembuatan-website-umkm',
+    secondImage: {
+      src: '/images/blog/Siswa-SMK-magang-menyusun-anggaran-pembuatan-website.webp',
+      alt: 'fitur-katalog-produk-website-umkm',
+      caption: 'Perencanaan anggaran dan fitur katalog produk untuk website UMKM.',
+    },
+    readAlso: {
+      title: 'Jasa Pembuatan Website untuk UMKM dan Sekolah di Malang',
+      slug: 'jasa-pembuatan-website-umkm-sekolah-malang',
+    },
+    author: {
+      name: 'Tim Edukasi PixxelPro Digital',
+      role: 'Pusat Pengembangan Magang & Edukasi',
+    },
+    tags: [
+      'biaya pembuatan website UMKM',
+      'website company profile',
+      'katalog produk',
+      'domain',
+      'hosting',
+      'CMS',
+      'maintenance',
+      'SEO website',
+      'PixxelPro Digital',
+    ],
+    intro: 'Biaya pembuatan website UMKM ditentukan oleh fitur, jumlah halaman, desain, konten, domain, hosting, integrasi, dan dukungan yang disepakati.',
+    sections: [
+      {
+        heading: 'Ringkasan Inti',
+        body: [],
+        list: [
+          'Pisahkan biaya pembuatan dari biaya tahunan.',
+          'Mulai dari fitur yang mendukung kebutuhan utama.',
+          'Pastikan domain dan akun website dimiliki bisnis.',
+          'Minta rincian biaya tambahan serta pemeliharaan.',
+        ],
+      },
+      {
+        heading: 'Apa saja yang menentukan biaya website UMKM?',
+        body: [
+          'Biaya website UMKM dipengaruhi kompleksitas proyek, jumlah halaman, kebutuhan desain, fitur, konten, integrasi, serta layanan setelah website aktif. Karena kebutuhan bisnis berbeda, satu harga tidak cocok untuk semua jenis website.',
+          'Website profil dengan beberapa halaman umumnya lebih sederhana daripada katalog besar dengan filter, akun pelanggan, pemesanan, atau pembayaran. Pembuatan foto dan penulisan konten juga dapat menjadi bagian anggaran tersendiri.',
+          'BPS dalam Statistik E-Commerce 2023 yang dirilis pada 30 Januari 2025 mencatat nilai transaksi e-commerce usaha melalui website sebesar 16,03 persen dalam data media transaksi yang disajikan. Angka ini bukan ukuran kebutuhan atau biaya website, tetapi menunjukkan website merupakan salah satu kanal yang digunakan usaha.',
+        ],
+      },
+      {
+        heading: 'Bagaimana membedakan biaya awal dan biaya berulang?',
+        body: [
+          'Biaya awal mencakup pekerjaan pembuatan dan konfigurasi, sedangkan biaya berulang dapat mencakup domain, hosting, lisensi, pemeliharaan, dan dukungan. Keduanya perlu dicatat terpisah.',
+          'Biaya awal dapat meliputi perencanaan, desain, pengembangan, migrasi konten, pengujian, dan peluncuran. Biaya berulang biasanya muncul berdasarkan periode layanan atau kebutuhan pembaruan.',
+          'Tanyakan tanggal perpanjangan, siapa yang menerima pengingat, metode pembayaran, dan apa dampaknya jika layanan tidak diperpanjang. Simpan data akun serta bukti pembayaran pada tempat yang aman dan dapat diakses pemilik usaha.',
+        ],
+      },
+      {
+        heading: 'Website seperti apa yang sesuai untuk anggaran terbatas?',
+        body: [
+          'Website dengan anggaran terbatas sebaiknya fokus pada tujuan utama, menggunakan struktur sederhana, dan menghindari fitur yang belum dibutuhkan.',
+          'UMKM dapat memulai dengan halaman beranda, profil, produk atau layanan, informasi lokasi, dan kontak. Katalog dapat menampilkan produk unggulan terlebih dahulu, kemudian dikembangkan ketika data dan proses bisnis sudah siap.',
+          'Pendekatan bertahap membantu mengelola biaya tanpa mengorbankan informasi dasar. Namun, desain responsif, keamanan dasar, akses pemilik, dan backup tidak sebaiknya diabaikan demi harga paling rendah.',
+        ],
+      },
+      {
+        heading: 'Perencanaan biaya konten dan foto produk',
+        body: [
+          'Konten sering menjadi bagian yang terlupakan dalam anggaran website. Foto, deskripsi produk, profil, dan materi sekolah memerlukan waktu untuk disiapkan dan diperiksa.',
+          'Jika pemilik usaha menyediakan materi sendiri, pastikan format dan kualitasnya sesuai kebutuhan. Jika menggunakan jasa penulisan atau fotografi, minta rincian jumlah materi, hak penggunaan, serta proses revisi.',
+          'Materi yang konsisten membantu desain terlihat profesional dan mengurangi waktu pengembangan. Hindari menggunakan foto atau teks milik pihak lain tanpa izin yang sesuai.',
+        ],
+      },
+      {
+        heading: 'Apakah domain dan hosting termasuk dalam biaya?',
+        body: [
+          'Domain dan hosting dapat termasuk dalam paket atau ditagihkan terpisah. Penawaran harus menjelaskan nama domain, durasi, kapasitas hosting, dan pihak pemegang akun.',
+          'Domain adalah alamat website, sedangkan hosting menyediakan tempat untuk menyimpan file dan data situs agar dapat diakses melalui internet. Keduanya memiliki masa aktif dan perlu diperpanjang sesuai ketentuan penyedia.',
+          'Pastikan domain didaftarkan atas nama pemilik usaha atau institusi, bukan hanya atas nama pihak pembuat website. Akses administratif dan informasi pemulihan akun perlu disimpan dengan baik.',
+        ],
+      },
+      {
+        heading: 'Fitur apa yang membuat biaya website meningkat?',
+        body: [
+          'Fitur khusus dapat meningkatkan biaya karena membutuhkan perencanaan, pengembangan, pengujian, dan pemeliharaan tambahan.',
+          'Contohnya pencarian produk lanjutan, filter kategori, akun anggota, sistem reservasi, integrasi pembayaran, sinkronisasi stok, multi-bahasa, atau dashboard khusus. Setiap fitur perlu memiliki definisi hasil dan alur pengguna.',
+          'Sebelum menyetujui fitur, tanyakan apakah fungsi tersebut benar-benar diperlukan saat peluncuran. Fitur yang belum mendesak dapat masuk tahap pengembangan berikutnya setelah website digunakan dan kebutuhan nyata terlihat.',
+        ],
+      },
+      {
+        heading: 'Bagaimana meminta penawaran biaya yang transparan?',
+        body: [
+          'Penawaran transparan menyebut ruang lingkup, jumlah halaman, fitur, jadwal, revisi, materi dari klien, biaya tahunan, dan layanan purna jual.',
+          'Berikan brief yang sama kepada setiap penyedia agar hasil perbandingan lebih adil. Sertakan contoh website, target pengguna, jenis produk, kebutuhan kontak, dan fitur wajib.',
+          'Minta rincian mana yang termasuk dan tidak termasuk, serta mekanisme jika ada perubahan permintaan. Jangan hanya membandingkan nominal total tanpa memeriksa kualitas, akses, dan dukungan.',
+        ],
+      },
+    ],
+    conclusion: 'Biaya pembuatan website UMKM akan lebih terkendali ketika bisnis menentukan tujuan, fitur prioritas, serta biaya rutin sebelum memulai.',
+    conclusionClosing: [
+      'Pisahkan kebutuhan wajib dan tambahan, minta penawaran tertulis, pastikan kepemilikan domain, dan siapkan anggaran pemeliharaan. Website yang sederhana tetapi jelas dan terawat dapat lebih berguna daripada situs kompleks yang sulit diperbarui.',
+      'Untuk memahami penyedia yang tepat, lanjutkan dengan membaca artikel cara memilih jasa pembuatan website di Malang.',
+    ],
+    faqs: [
+      {
+        question: 'Apakah website gratis cukup?',
+        answer: 'Pilihan gratis dapat digunakan untuk mencoba, tetapi biasanya memiliki batas fitur, kontrol, atau alamat domain.',
+      },
+      {
+        question: 'Apakah biaya website hanya sekali?',
+        answer: 'Tidak selalu; domain, hosting, lisensi, dan pemeliharaan dapat berulang.',
+      },
+      {
+        question: 'Bisakah website dikembangkan bertahap?',
+        answer: 'Bisa, selama struktur awal memungkinkan pengembangan dan kebutuhan penting sudah direncanakan.',
+      },
+      {
+        question: 'Apakah website mahal pasti lebih baik?',
+        answer: 'Tidak; kecocokan fitur, kualitas pengerjaan, keamanan, dan dukungan lebih penting daripada harga semata.',
+      },
+    ],
+    ctaBox: {
+      badge: 'Jasa Pembuatan Website Malang',
+      title: 'Rencanakan Website UMKM Anda dengan Anggaran yang Jelas',
+      desc: 'PixxelPro Digital membantu UMKM di Malang membangun website profesional dengan rincian biaya transparan dan pendampingan penuh.',
+      btnLabel: 'Konsultasi Biaya Website via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20untuk%20UMKM%20atau%20sekolah.',
+    },
+  },
   {
     id: 'post-21',
     slug: 'jasa-pembuatan-website-umkm-sekolah-malang',
@@ -2732,187 +4921,139 @@ export const blogPosts: BlogPost[] = [
     },
   },
   {
-    id: 'post-1',
-    slug: 'tempat-pkl-jurusan-tkj-malang',
-    title: 'Tempat PKL Jurusan TKJ Malang dan Cara Memilihnya',
-    excerpt: 'Cari tempat PKL jurusan TKJ Malang? Pelajari jenis tempat, cara memilih, dan kegiatannya di sini, lalu daftar magang di PixxelPro Digital sekarang juga.',
+    id: 'post-3',
+    slug: 'magang-digital-agency-malang',
+    title: 'Magang Digital Agency Malang untuk SMK & Mahasiswa',
+    excerpt: 'Cari magang digital agency di Malang? Kenali bidang kerja, manfaat, dan cara memilih tempat PKL. Pelajari peluang magang di PixxelPro Digital.',
     category: 'Panduan Magang',
     categorySlug: 'panduan-magang',
     date: '20 November 2026',
     isoDate: '2026-11-20T08:00:00+07:00',
-    readTime: '7 menit baca',
-    featured: true,
-    image: '/images/blog/tempat-pkl-jurusan-tkj-malang-siswa-magang.webp',
+    readTime: '6 menit baca',
+    featured: false,
+    image: '/images/blog/magang-digital-agency-malang-siswa-smk.webp',
     secondImage: {
-      src: '/images/blog/memilih-tempat-pkl-tkj-malang.webp',
-      alt: 'Siswa SMK membandingkan pilihan tempat PKL',
-      caption: 'Siswa SMK membandingkan pilihan tempat PKL jurusan TKJ yang sesuai dengan kompetensi dan tujuan karier.',
+      src: '/images/blog/kolaborasi-tim-magang-digital-agency-malang.webp',
+      alt: 'Kolaborasi tim peserta magang dan mahasiswa dalam proyek digital agency Malang',
+      caption: 'Kolaborasi aktif peserta magang SMK dan mahasiswa dalam penyusunan alur proyek website dan digital marketing.',
     },
     readAlso: {
-      title: 'Tempat PKL Jurusan Bisnis Digital di Malang',
-      slug: 'tempat-pkl-bisnis-digital-malang',
+      title: 'Tempat PKL Jurusan TKJ Malang dan Cara Memilihnya',
+      slug: 'tempat-pkl-jurusan-tkj-malang',
     },
     author: {
-      name: 'Tim Edukasi PixxelPro Digital',
+      name: 'Tim Konten PixxelPro Digital',
       role: 'Pusat Pengembangan Magang & Edukasi',
     },
     tags: [
-      'tempat pkl jurusan tkj malang',
-      'tempat pkl tkj malang',
-      'magang teknik komputer dan jaringan',
-      'kegiatan pkl anak tkj',
-      'pkl tkj di perusahaan digital',
-      'pkl tkj website',
+      'magang digital agency malang',
+      'tempat magang di malang',
+      'tempat pkl digital malang',
+      'internship digital marketing malang',
+      'magang siswa smk malang',
+      'magang mahasiswa malang',
+      'pixxelpro digital magang',
     ],
-    intro: 'Tempat PKL jurusan TKJ Malang mencakup perusahaan digital, instansi, dan penyedia layanan jaringan yang memberi pengalaman kerja nyata sesuai kompetensi siswa TKJ.',
+    intro: 'Magang digital agency Malang memberi siswa SMK dan mahasiswa kesempatan mengenal proyek digital, mengembangkan keterampilan, serta membangun portofolio kerja.',
     sections: [
       {
-        heading: 'Apa yang dimaksud dengan PKL jurusan TKJ?',
+        heading: 'Poin Utama Program Magang Digital',
         body: [
-          'PKL jurusan TKJ adalah praktik kerja lapangan bagi siswa Teknik Komputer dan Jaringan untuk menerapkan keterampilan komputer, jaringan, dan sistem di lingkungan kerja nyata.',
-          'Praktik kerja lapangan, atau PKL, adalah kegiatan belajar di dunia kerja yang menjadi bagian dari pendidikan SMK. Bagi siswa Teknik Komputer dan Jaringan (TKJ), PKL menjadi kesempatan memakai keterampilan yang dipelajari di kelas dalam situasi kerja yang sesungguhnya. Sebagian sekolah menyebutnya prakerin, sedangkan di perguruan tinggi kegiatan serupa lebih sering disebut magang.',
-          'Kompetensi TKJ secara umum mencakup perakitan dan perawatan komputer, instalasi jaringan kabel dan nirkabel, konfigurasi router dan switch, administrasi sistem operasi dan server, serta keamanan jaringan dasar. PKL membantu siswa melihat bagaimana kompetensi tersebut dipakai untuk menyelesaikan kebutuhan nyata, misalnya menyiapkan jaringan kantor atau menangani kendala perangkat pengguna.',
-          'Di lapangan, istilah yang dipakai bisa beragam, seperti magang teknik komputer dan jaringan, praktik industri, atau prakerin. Aturan durasi, jam kerja, dan penilaian umumnya mengikuti kebijakan sekolah serta kesepakatan dengan tempat PKL, sehingga siswa perlu memastikannya sebelum memulai.',
-        ],
-      },
-      {
-        heading: 'Mengapa PKL penting bagi siswa TKJ?',
-        body: [
-          'PKL penting bagi siswa TKJ karena memberi pengalaman kerja nyata yang membantu mempersempit jarak antara materi sekolah dan kebutuhan dunia usaha serta industri digital.',
-          'Menurut Badan Pusat Statistik (BPS), tingkat pengangguran terbuka lulusan SMK mencapai 8,63 persen pada Agustus 2025, tertinggi dibanding lulusan jenjang pendidikan lain. Pada periode yang sama, tingkat pengangguran terbuka nasional tercatat 4,85 persen atau sekitar 7,46 juta orang. Data tersebut dirilis dalam Berita Resmi Statistik BPS tanggal 5 November 2025 dan dapat ditelusuri melalui situs resmi Badan Pusat Statistik.',
-          'Angka itu tidak berarti PKL otomatis menjamin pekerjaan, karena banyak faktor memengaruhi dunia kerja. Namun data tersebut menunjukkan bahwa kesiapan kerja lulusan SMK perlu diperkuat, dan PKL adalah salah satu cara yang paling langsung untuk melakukannya. Siswa TKJ yang memanfaatkan PKL dengan baik biasanya memperoleh beberapa manfaat berikut.',
+          'Berikut gambaran umum mengenai pelaksanaan program magang di lingkungan agensi digital Malang:',
         ],
         list: [
-          'Pengalaman kerja nyata yang dapat diceritakan dalam CV dan wawancara.',
-          'Portofolio berupa dokumentasi instalasi, konfigurasi, atau proyek yang dikerjakan.',
-          'Pemahaman budaya kerja, seperti disiplin, komunikasi, dan kerja tim.',
-          'Gambaran lebih jelas tentang bidang TKJ yang paling diminati, misalnya jaringan, server, keamanan, atau dukungan teknis.',
+          'Peserta dapat berasal dari SMK maupun perguruan tinggi, termasuk dari luar Malang.',
+          'Bidang yang relevan meliputi Bisnis Digital, RPL, Multimedia, DKV, dan TKJ.',
+          'Pengalaman magang idealnya menghubungkan tugas, pembimbingan, evaluasi, dan portofolio.',
+          'Pilih tempat magang berdasarkan relevansi pekerjaan, kejelasan program, dan dukungan pembelajaran.',
         ],
       },
       {
-        heading: 'Apa saja jenis tempat PKL TKJ di Malang?',
+        heading: 'Apa yang dimaksud magang digital agency di Malang?',
         body: [
-          'Tempat PKL TKJ di Malang terbagi menjadi perusahaan digital, instansi atau lembaga, penyedia layanan internet dan jaringan, serta usaha servis dan penjualan perangkat komputer.',
-          'Malang dan wilayah sekitarnya memiliki beragam jenis organisasi yang membutuhkan dukungan teknologi informasi. Setiap jenis tempat memberi pengalaman yang berbeda, sehingga siswa perlu mencocokkannya dengan minat dan tujuan belajar masing-masing.',
-          'Perusahaan digital dan agensi: Perusahaan digital, seperti digital agency, pengembang perangkat lunak, dan penyedia layanan website, biasanya mengerjakan beragam proyek bagi klien. Siswa TKJ dapat terlibat pada pengelolaan website, hosting, perangkat kerja tim, hingga keamanan dasar. Lingkungannya cenderung dinamis dan menuntut komunikasi yang baik.',
-          'Instansi dan lembaga: Kantor instansi pemerintah, lembaga pendidikan, dan organisasi besar umumnya memiliki jaringan komputer internal serta perangkat yang perlu dirawat. Siswa dapat belajar tentang pengelolaan jaringan yang stabil dan prosedur kerja yang tertib. Proses administrasi di tempat seperti ini kadang memerlukan waktu lebih panjang, sehingga pendaftaran sebaiknya dilakukan lebih awal.',
-          'Penyedia layanan internet dan jaringan: Penyedia layanan internet dan perusahaan instalasi jaringan memberi pengalaman dekat dengan infrastruktur, misalnya penarikan kabel, pemasangan perangkat, dan pemantauan koneksi. Pekerjaannya dapat melibatkan kegiatan lapangan, sehingga aspek keselamatan kerja dan pendampingan perlu diperhatikan.',
-          'Usaha servis dan penjualan perangkat: Toko komputer dan jasa servis memberi banyak latihan perbaikan perangkat keras, instalasi sistem operasi, dan penanganan keluhan pengguna. Tempat seperti ini cocok bagi siswa yang ingin memperdalam troubleshooting, meskipun paparan terhadap jaringan skala besar mungkin lebih terbatas.',
+          'Magang digital agency adalah kegiatan belajar kerja di lingkungan perusahaan penyedia layanan digital, seperti website, pemasaran digital, desain, dan konten.',
+          'Peserta mengenal alur pekerjaan yang digunakan untuk membantu kebutuhan komunikasi dan bisnis klien.',
+          'Kegiatannya dapat mencakup riset kata kunci, penyusunan konten, desain visual, pengembangan website, pengelolaan media sosial, hingga dokumentasi proyek.',
+          'Tugas yang diberikan sebaiknya disesuaikan dengan kompetensi, tingkat pendidikan, dan kesepakatan program.',
+          'Di Malang, pilihan tempat magang dapat berasal dari perusahaan lokal, agensi digital, unit usaha teknologi, maupun organisasi yang mempunyai tim pemasaran dan teknologi.',
+          'Karena itu, calon peserta perlu memeriksa apakah pekerjaan sehari-hari benar-benar berkaitan dengan tujuan pembelajaran, bukan hanya melihat label perusahaan.',
         ],
       },
       {
-        heading: 'Apa perbedaan PKL TKJ di perusahaan digital dan tempat lain?',
+        heading: 'Siapa yang cocok mengikuti program magang ini?',
         body: [
-          'Perbedaan utama PKL TKJ di perusahaan digital dan tempat lain terletak pada ragam proyek, ritme kerja, dan kedekatan dengan layanan website, hosting, serta keamanan sistem.',
-          'Di perusahaan digital, proyek berganti mengikuti kebutuhan klien dan siswa bekerja berdampingan dengan tim lain, seperti pengembang, desainer, dan tim pemasaran. Di instansi, sistem cenderung stabil dan tugas lebih terstandar. Di penyedia internet, fokus utama ada pada infrastruktur dan kualitas koneksi. Di usaha servis, fokus utama ada pada perangkat dan pelayanan pengguna.',
-          'Tidak ada satu pilihan yang paling cocok untuk semua siswa. Siswa yang menyukai kerja tim lintas bidang dan proyek website dapat mempertimbangkan perusahaan digital, sedangkan siswa yang tertarik pada infrastruktur dapat menimbang penyedia jaringan. Uraian yang lebih rinci tersedia dalam panduan PKL TKJ di perusahaan digital.',
+          'Program magang digital relevan bagi siswa SMK dan mahasiswa yang ingin menerapkan kompetensi sekolah atau kampus dalam konteks pekerjaan.',
+          'PixxelPro Digital membuka kesempatan bagi peserta dari beberapa latar pendidikan, terutama Bisnis Digital, Rekayasa Perangkat Lunak (RPL), Multimedia, Desain Komunikasi Visual (DKV), dan Teknik Komputer dan Jaringan (TKJ).',
+          'Peserta dari Malang Raya maupun luar kota dapat mempertimbangkan program ini dengan memperhatikan kesepakatan pelaksanaan.',
+          'Siswa Bisnis Digital dapat mempelajari riset pasar, dasar pemasaran, dan penyusunan konten. Peserta RPL dapat mengembangkan pemahaman tentang website dan proses pengembangan perangkat lunak.',
+          'Multimedia dan DKV berkaitan dengan produksi visual, desain, serta komunikasi kreatif. Sementara itu, TKJ mempunyai dasar yang berguna untuk memahami jaringan, perangkat, dan dukungan teknis. Kesesuaian tugas tetap perlu dibicarakan sebelum program dimulai.',
         ],
       },
       {
-        heading: 'Bagaimana cara memilih tempat PKL jurusan TKJ yang sesuai?',
+        heading: 'Apa manfaat magang di lingkungan digital agency?',
         body: [
-          'Pilih tempat PKL jurusan TKJ dengan menilai kesesuaian tugas dengan kompetensi, adanya pembimbing, kejelasan kesepakatan, kenyamanan lokasi, dan peluang menambah portofolio.',
-          'Apakah tugasnya sesuai dengan kompetensi TKJ? Tanyakan lebih dulu tugas apa yang akan diberikan. Tugas yang berkaitan dengan komputer, jaringan, server, keamanan, atau dukungan teknis akan lebih relevan daripada pekerjaan administratif yang tidak berhubungan dengan jurusan. Jika tugas bersifat lintas bidang, pastikan ada porsi teknis yang jelas.',
-          'Apakah ada pembimbing dan evaluasi? Pembimbing di tempat PKL membantu siswa memahami pekerjaan dan menilai perkembangan. Siswa yang hanya dibiarkan tanpa arahan cenderung kesulitan belajar. Tanyakan apakah ada orang yang ditunjuk sebagai pendamping dan bagaimana laporan atau penilaian dilakukan.',
-          'Bagaimana dengan lokasi dan sistem pelaksanaan? Pertimbangkan jarak, biaya perjalanan, dan jadwal. Sebagian tempat dapat menyesuaikan sistem pelaksanaan melalui kesepakatan, sehingga siswa dari luar kota pun dapat berpartisipasi. Pastikan jam kerja, hari kerja, dan aturan kehadiran disepakati sejak awal.',
-          'Kejelasan administrasi dan kesepakatan: Tempat PKL yang baik menjelaskan prosedur pendaftaran, dokumen yang diperlukan, serta hak dan kewajiban peserta. Kejelasan ini mengurangi risiko salah paham dan membantu sekolah menilai kesesuaian tempat PKL dengan program pembelajaran.',
+          'Manfaat utama magang adalah memberi kesempatan menerapkan teori, memahami standar kerja, dan menghasilkan bukti kompetensi yang dapat dikembangkan menjadi portofolio.',
+          'Pengalaman proyek membantu peserta melihat bagaimana pekerjaan digital disusun dari kebutuhan hingga hasil.',
+          'Misalnya, pembuatan halaman website dapat melibatkan diskusi tujuan, penyusunan struktur, penulisan konten, desain antarmuka, implementasi, dan pemeriksaan. Peserta tidak harus menguasai seluruh tahap; mereka belajar memahami hubungan antarfungsi.',
+          'Magang juga melatih komunikasi, manajemen waktu, penerimaan umpan balik, pemecahan masalah, dan tanggung jawab.',
+          'Keterampilan tersebut penting karena pekerjaan industri jarang berlangsung secara individual. Hasil magang yang baik bukan sekadar banyaknya tugas, melainkan pemahaman atas proses, kontribusi yang dapat dijelaskan, dan dokumentasi pekerjaan yang diizinkan untuk ditampilkan.',
         ],
       },
       {
-        heading: 'Kegiatan apa yang biasa dikerjakan siswa TKJ saat PKL?',
+        heading: 'Bagaimana cara memilih tempat magang di Malang?',
         body: [
-          'Kegiatan PKL siswa TKJ umumnya meliputi instalasi dan perawatan perangkat, konfigurasi jaringan, pengelolaan sistem, dokumentasi teknis, serta dukungan pengguna sesuai kebutuhan tempat PKL.',
-          'Jenis tugas bergantung pada kebutuhan tempat PKL. Di kantor kecil, siswa mungkin merapikan kabel, mengonfigurasi router, dan memeriksa koneksi. Di tempat yang lebih besar, siswa dapat membantu pemantauan jaringan, pengelolaan akun pengguna, atau pencadangan data.',
-          'Dokumentasi seperti catatan konfigurasi dan jurnal harian membantu siswa menyusun laporan dan portofolio. Contoh tugas dan alur kerja harian dibahas dalam uraian kegiatan PKL anak TKJ.',
+          'Tempat magang yang tepat mempunyai tugas relevan, alur pembimbingan yang jelas, dan kesepakatan kerja yang dipahami peserta maupun sekolah atau kampus.',
+          'Sebelum mendaftar, periksa bidang layanan perusahaan, contoh aktivitas, mekanisme supervisi, jam atau pola pelaksanaan, serta bentuk evaluasi.',
+          'Tanyakan siapa yang memberi arahan, bagaimana tugas diberikan, dan apakah peserta memperoleh kesempatan belajar sesuai jurusan.',
+          'Untuk peserta luar kota, pastikan pula pengaturan kehadiran, komunikasi, dan kebutuhan administrasi.',
+          'Jangan memilih hanya karena lokasi dekat atau nama bidangnya terdengar menarik. Program yang baik perlu menjelaskan ekspektasi secara realistis.',
+          'Hindari tempat yang meminta peserta mengerjakan pekerjaan di luar kemampuan tanpa arahan, tidak menjelaskan tanggung jawab, atau menjanjikan hasil karier yang tidak dapat dipastikan.',
         ],
       },
       {
-        heading: 'Apakah perusahaan digital cocok untuk PKL siswa TKJ?',
+        heading: 'Bagaimana program magang PixxelPro Digital relevan bagi peserta?',
         body: [
-          'Perusahaan digital cocok untuk PKL siswa TKJ jika menyediakan tugas teknis nyata, seperti pengelolaan website, hosting, jaringan kantor, dan keamanan dasar, dengan bimbingan yang jelas.',
-          'Perusahaan digital sering kali membutuhkan dukungan teknis di balik layanan yang mereka jual, misalnya domain, hosting, kinerja website, dan keamanan akun. Siswa TKJ dapat belajar bagaimana infrastruktur mendukung produk digital yang dipakai klien. Keterbatasannya, ritme kerja yang cepat menuntut kemampuan belajar mandiri dan komunikasi yang baik.',
-          'Bagi siswa yang tertarik pada sisi teknis pembuatan situs, topik ini dibahas lebih dalam dalam artikel PKL TKJ website, yang menjelaskan peran TKJ pada domain, server, dan pemeliharaan situs.',
-        ],
-      },
-      {
-        heading: 'Bagaimana program magang TKJ di PixxelPro Digital?',
-        body: [
-          'PixxelPro Digital adalah digital agency yang menerima peserta magang jurusan TKJ dari Malang Raya dan luar kota, dengan sistem pelaksanaan sesuai kesepakatan.',
-          'PixxelPro Digital bergerak di bidang digital marketing, jasa pembuatan website, SEO, social media marketing, branding online, copywriting, dan jurnalistik. Selain melayani klien, PixxelPro Digital berperan sebagai education and internship development center, yaitu wadah pengembangan keterampilan dan pengalaman kerja bagi siswa SMK dan mahasiswa.',
-          'Program magang PixxelPro Digital menerima peserta dari jurusan Bisnis Digital, Rekayasa Perangkat Lunak, Multimedia, Desain Komunikasi Visual, dan Teknik Komputer dan Jaringan. Tujuannya adalah memberi pengalaman kerja nyata, mengembangkan keterampilan sesuai jurusan, memberi pengalaman mengerjakan proyek digital, membangun portofolio, dan meningkatkan kesiapan menghadapi dunia kerja.',
-          'Ruang lingkup tugas untuk peserta TKJ dibicarakan dan disepakati bersama sebelum pelaksanaan. Calon peserta dapat membuka halaman Pendaftaran Magang dan Jurusan di website resmi PixxelPro Digital, atau menghubungi tim melalui halaman Kontak untuk menanyakan jadwal dan ketentuan yang berlaku.',
-        ],
-      },
-      {
-        heading: 'Bagaimana cara mendaftar dan menyiapkan diri untuk PKL TKJ?',
-        body: [
-          'Siapkan diri untuk PKL TKJ dengan menentukan tujuan belajar, merapikan CV dan portofolio, menghubungi tempat PKL, lalu mengonfirmasi jadwal, tugas, dan surat dari sekolah.',
-        ],
-        list: [
-          'Tentukan tujuan belajar, misalnya ingin mendalami jaringan, server, keamanan, atau dukungan teknis.',
-          'Susun CV singkat dan portofolio sederhana, seperti dokumentasi praktikum jaringan atau proyek sekolah.',
-          'Daftar beberapa tempat PKL yang sesuai, lalu hubungi melalui kanal resmi masing-masing.',
-          'Tanyakan jenis tugas, pembimbing, jadwal, dan sistem pelaksanaan sebelum memutuskan.',
-          'Siapkan surat pengantar atau dokumen dari sekolah sesuai permintaan tempat PKL.',
-          'Konfirmasi tanggal mulai, aturan kehadiran, dan ketentuan keselamatan kerja secara tertulis.',
-          'Urutan di atas dapat disesuaikan dengan kebijakan sekolah dan tempat PKL. Siswa disarankan berkonsultasi dengan guru pembimbing agar langkah yang diambil sesuai ketentuan.',
-        ],
-      },
-      {
-        heading: 'Apa kesalahan umum saat mencari tempat PKL TKJ?',
-        body: [
-          'Kesalahan umum saat mencari tempat PKL TKJ meliputi memilih hanya karena dekat, tidak menanyakan tugas, terlambat mendaftar, dan tidak menyiapkan portofolio dasar.',
-        ],
-        list: [
-          'Memilih hanya berdasarkan jarak. Tempat yang dekat belum tentu memberi tugas yang sesuai dengan jurusan TKJ.',
-          'Tidak menanyakan jenis tugas. Siswa dapat berakhir mengerjakan pekerjaan yang tidak berkaitan dengan kompetensi.',
-          'Terlambat mendaftar. Tempat PKL membutuhkan waktu untuk menanggapi dan menyiapkan penempatan.',
-          'Tidak menyiapkan portofolio. Dokumentasi praktikum sederhana pun membantu tempat PKL menilai kesiapan siswa.',
-          'Mengabaikan kesepakatan tertulis. Jadwal dan tugas yang tidak jelas sering menimbulkan salah paham.',
-        ],
-      },
-      {
-        heading: 'Apa tips agar PKL TKJ memberi hasil maksimal?',
-        body: [
-          'Agar PKL TKJ bermanfaat, siswa perlu aktif bertanya, mendokumentasikan pekerjaan, disiplin waktu, menjaga komunikasi dengan pembimbing, dan menyimpan bukti hasil kerja selama magang.',
-          'Bertanyalah ketika menemui istilah atau prosedur baru, dan catat jawabannya. Dokumentasikan konfigurasi, topologi, atau hasil perbaikan yang dikerjakan, selama diizinkan tempat PKL.',
-          'Perhatikan aturan kerahasiaan data, karena siswa TKJ sering bersentuhan dengan sistem dan informasi milik tempat PKL. Evaluasi perkembangan secara berkala bersama pembimbing agar target belajar tercapai.',
+          'PixxelPro Digital menggabungkan layanan digital profesional dengan pengembangan keterampilan dan pengalaman kerja bagi siswa SMK serta mahasiswa.',
+          'Bidang yang diperkenalkan dalam identitas PixxelPro Digital meliputi digital marketing, pembuatan website, SEO, social media marketing, branding online, copywriting, dan jurnalistik.',
+          'Program magang diarahkan untuk memberi pengalaman kerja nyata, mengembangkan keterampilan sesuai jurusan, mengenalkan proyek digital, membantu pembangunan portofolio, serta meningkatkan kesiapan memasuki dunia kerja.',
+          'Sistem pelaksanaan dilakukan berdasarkan kesepakatan. Karena rincian jadwal, kuota, persyaratan dokumen, dan teknis pendampingan dapat berubah, calon peserta sebaiknya mengonfirmasi informasi tersebut melalui kanal resmi sebelum mengirim pendaftaran.',
+          'Kunjungi beranda resmi PixxelPro Digital untuk mengenal identitas, layanan, dan informasi lengkap seputar perusahaan.',
         ],
       },
     ],
-    conclusion: 'Tempat PKL jurusan TKJ Malang yang tepat adalah yang memberi tugas relevan, pembimbing jelas, dan kesepakatan transparan, baik di perusahaan digital maupun jenis tempat lainnya. Kenali jenis tempat PKL, lalu cocokkan dengan minat TKJ Anda. Tanyakan tugas, pembimbing, jadwal, dan sistem pelaksanaan sebelum memutuskan. Siapkan CV dan portofolio sederhana agar lebih percaya diri saat mendaftar. Dokumentasikan pekerjaan selama PKL untuk bahan laporan dan portofolio. Ingin mengenal program magang lebih jauh? Kunjungi website resmi PixxelPro Digital, pelajari halaman Pendaftaran Magang, atau hubungi tim melalui halaman Kontak untuk berdiskusi tentang PKL jurusan TKJ.',
+    conclusion: 'Magang digital agency di Malang dapat menjadi jembatan antara pembelajaran dan kebutuhan industri. Utamakan tempat yang menyediakan tugas relevan, arahan, evaluasi, dan kesempatan membangun portofolio. PixxelPro Digital dapat dipertimbangkan oleh siswa SMK dan mahasiswa dari Malang maupun luar kota dengan detail program yang dikonfirmasi langsung.',
     faqs: [
       {
-        question: 'Apakah siswa TKJ bisa PKL di bidang yang tidak murni jaringan?',
-        answer: 'Bisa, selama tugasnya masih berkaitan dengan kompetensi TKJ dan disetujui sekolah. Agensi digital, misalnya, dapat melibatkan siswa TKJ pada pengelolaan website, perangkat kerja, dan keamanan dasar. Konfirmasikan ke guru pembimbing agar sesuai ketentuan sekolah.',
+        question: 'Apakah PixxelPro Digital menerima siswa SMK untuk PKL?',
+        answer: 'Ya. Program PixxelPro Digital ditujukan antara lain bagi siswa SMK, dengan pelaksanaan sesuai kesepakatan.',
       },
       {
-        question: 'Kapan sebaiknya mulai mencari tempat PKL TKJ?',
-        answer: 'Mulailah jauh sebelum jadwal PKL dari sekolah, karena tempat PKL memerlukan waktu untuk menanggapi permohonan dan menyiapkan penempatan. Waktu yang tepat bergantung pada kebijakan sekolah dan tempat PKL yang dituju.',
+        question: 'Apakah mahasiswa boleh mendaftar magang?',
+        answer: 'Ya. Mahasiswa termasuk target peserta program magang PixxelPro Digital.',
       },
       {
-        question: 'Apakah PixxelPro Digital menerima siswa TKJ dari luar Malang?',
-        answer: 'Ya. PixxelPro Digital terbuka bagi peserta dari Malang Raya maupun luar kota, dengan sistem pelaksanaan sesuai kesepakatan. Calon peserta dapat menghubungi tim melalui kontak resmi di website PixxelPro Digital.',
+        question: 'Apakah peserta dari luar Malang dapat mengikuti program?',
+        answer: 'PixxelPro Digital terbuka bagi peserta dari luar kota. Pengaturan pelaksanaan perlu dikonfirmasi terlebih dahulu.',
       },
       {
-        question: 'Dokumen apa yang biasanya disiapkan untuk PKL?',
-        answer: 'Umumnya berupa surat pengantar dari sekolah, CV, dan portofolio sederhana. Kebutuhan tepatnya dapat berbeda di setiap tempat PKL, sehingga siswa sebaiknya menanyakan langsung kepada pihak yang dituju.',
+        question: 'Jurusan apa yang relevan untuk magang digital agency?',
+        answer: 'Jurusan yang disebutkan meliputi Bisnis Digital, RPL, Multimedia, DKV, dan TKJ.',
       },
       {
-        question: 'Apakah PKL menjamin siswa langsung mendapat pekerjaan?',
-        answer: 'Tidak. PKL tidak menjamin pekerjaan, tetapi menambah pengalaman, portofolio, dan jejaring profesional yang dapat memperkuat peluang siswa saat melamar kerja atau melanjutkan studi.',
+        question: 'Apa yang sebaiknya disiapkan sebelum mendaftar?',
+        answer: 'Siapkan identitas, informasi sekolah atau kampus, jurusan, periode magang yang dibutuhkan, serta portofolio jika tersedia. Konfirmasikan dokumen wajib kepada perusahaan.',
       },
       {
-        question: 'Apa bedanya PKL dan magang?',
-        answer: 'PKL adalah istilah yang lazim dipakai di SMK, sedangkan magang memiliki cakupan lebih luas dan juga dipakai oleh mahasiswa. Praktiknya serupa, yaitu belajar bekerja langsung di tempat usaha atau instansi.',
+        question: 'Apakah magang menjamin langsung mendapat pekerjaan?',
+        answer: 'Tidak. Magang merupakan proses belajar dan pengembangan pengalaman, bukan jaminan pekerjaan setelah program selesai.',
       },
     ],
     ctaBox: {
-      badge: 'Program Magang & PKL TKJ Malang',
-      title: 'Cari Tempat PKL Jurusan TKJ di Malang yang Berbobot?',
-      desc: 'PixxelPro Digital di Mojolangu, Kota Malang membuka kuota PKL SMK Teknik Komputer dan Jaringan dengan bimbingan mentor praktisi dan proyek digital nyata.',
-      btnLabel: 'Konsultasi Posisi PKL via WhatsApp',
-      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20siswa%20SMK%20TKJ%20ingin%20konsultasi%20posisi%20dan%20kuota%20PKL.',
+      badge: 'Program Magang Digital Agency Malang',
+      title: 'Tertarik Magang di Digital Agency Berbasis Proyek Nyata?',
+      desc: 'PixxelPro Digital membuka kesempatan magang PKL SMK dan internship mahasiswa untuk jurusan Bisnis Digital, RPL, Multimedia, DKV, dan TKJ.',
+      btnLabel: 'Tanya Kuota & Posisi Magang',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20tertarik%20dengan%20program%20magang%20digital%20agency%20dan%20ingin%20konsultasi%20posisi.',
     },
   },
   {
@@ -3096,139 +5237,187 @@ export const blogPosts: BlogPost[] = [
     },
   },
   {
-    id: 'post-3',
-    slug: 'magang-digital-agency-malang',
-    title: 'Magang Digital Agency Malang untuk SMK & Mahasiswa',
-    excerpt: 'Cari magang digital agency di Malang? Kenali bidang kerja, manfaat, dan cara memilih tempat PKL. Pelajari peluang magang di PixxelPro Digital.',
+    id: 'post-1',
+    slug: 'tempat-pkl-jurusan-tkj-malang',
+    title: 'Tempat PKL Jurusan TKJ Malang dan Cara Memilihnya',
+    excerpt: 'Cari tempat PKL jurusan TKJ Malang? Pelajari jenis tempat, cara memilih, dan kegiatannya di sini, lalu daftar magang di PixxelPro Digital sekarang juga.',
     category: 'Panduan Magang',
     categorySlug: 'panduan-magang',
     date: '20 November 2026',
     isoDate: '2026-11-20T08:00:00+07:00',
-    readTime: '6 menit baca',
-    featured: false,
-    image: '/images/blog/magang-digital-agency-malang-siswa-smk.webp',
+    readTime: '7 menit baca',
+    featured: true,
+    image: '/images/blog/tempat-pkl-jurusan-tkj-malang-siswa-magang.webp',
     secondImage: {
-      src: '/images/blog/kolaborasi-tim-magang-digital-agency-malang.webp',
-      alt: 'Kolaborasi tim peserta magang dan mahasiswa dalam proyek digital agency Malang',
-      caption: 'Kolaborasi aktif peserta magang SMK dan mahasiswa dalam penyusunan alur proyek website dan digital marketing.',
+      src: '/images/blog/memilih-tempat-pkl-tkj-malang.webp',
+      alt: 'Siswa SMK membandingkan pilihan tempat PKL',
+      caption: 'Siswa SMK membandingkan pilihan tempat PKL jurusan TKJ yang sesuai dengan kompetensi dan tujuan karier.',
     },
     readAlso: {
-      title: 'Tempat PKL Jurusan TKJ Malang dan Cara Memilihnya',
-      slug: 'tempat-pkl-jurusan-tkj-malang',
+      title: 'Tempat PKL Jurusan Bisnis Digital di Malang',
+      slug: 'tempat-pkl-bisnis-digital-malang',
     },
     author: {
-      name: 'Tim Konten PixxelPro Digital',
+      name: 'Tim Edukasi PixxelPro Digital',
       role: 'Pusat Pengembangan Magang & Edukasi',
     },
     tags: [
-      'magang digital agency malang',
-      'tempat magang di malang',
-      'tempat pkl digital malang',
-      'internship digital marketing malang',
-      'magang siswa smk malang',
-      'magang mahasiswa malang',
-      'pixxelpro digital magang',
+      'tempat pkl jurusan tkj malang',
+      'tempat pkl tkj malang',
+      'magang teknik komputer dan jaringan',
+      'kegiatan pkl anak tkj',
+      'pkl tkj di perusahaan digital',
+      'pkl tkj website',
     ],
-    intro: 'Magang digital agency Malang memberi siswa SMK dan mahasiswa kesempatan mengenal proyek digital, mengembangkan keterampilan, serta membangun portofolio kerja.',
+    intro: 'Tempat PKL jurusan TKJ Malang mencakup perusahaan digital, instansi, dan penyedia layanan jaringan yang memberi pengalaman kerja nyata sesuai kompetensi siswa TKJ.',
     sections: [
       {
-        heading: 'Poin Utama Program Magang Digital',
+        heading: 'Apa yang dimaksud dengan PKL jurusan TKJ?',
         body: [
-          'Berikut gambaran umum mengenai pelaksanaan program magang di lingkungan agensi digital Malang:',
+          'PKL jurusan TKJ adalah praktik kerja lapangan bagi siswa Teknik Komputer dan Jaringan untuk menerapkan keterampilan komputer, jaringan, dan sistem di lingkungan kerja nyata.',
+          'Praktik kerja lapangan, atau PKL, adalah kegiatan belajar di dunia kerja yang menjadi bagian dari pendidikan SMK. Bagi siswa Teknik Komputer dan Jaringan (TKJ), PKL menjadi kesempatan memakai keterampilan yang dipelajari di kelas dalam situasi kerja yang sesungguhnya. Sebagian sekolah menyebutnya prakerin, sedangkan di perguruan tinggi kegiatan serupa lebih sering disebut magang.',
+          'Kompetensi TKJ secara umum mencakup perakitan dan perawatan komputer, instalasi jaringan kabel dan nirkabel, konfigurasi router dan switch, administrasi sistem operasi dan server, serta keamanan jaringan dasar. PKL membantu siswa melihat bagaimana kompetensi tersebut dipakai untuk menyelesaikan kebutuhan nyata, misalnya menyiapkan jaringan kantor atau menangani kendala perangkat pengguna.',
+          'Di lapangan, istilah yang dipakai bisa beragam, seperti magang teknik komputer dan jaringan, praktik industri, atau prakerin. Aturan durasi, jam kerja, dan penilaian umumnya mengikuti kebijakan sekolah serta kesepakatan dengan tempat PKL, sehingga siswa perlu memastikannya sebelum memulai.',
+        ],
+      },
+      {
+        heading: 'Mengapa PKL penting bagi siswa TKJ?',
+        body: [
+          'PKL penting bagi siswa TKJ karena memberi pengalaman kerja nyata yang membantu mempersempit jarak antara materi sekolah dan kebutuhan dunia usaha serta industri digital.',
+          'Menurut Badan Pusat Statistik (BPS), tingkat pengangguran terbuka lulusan SMK mencapai 8,63 persen pada Agustus 2025, tertinggi dibanding lulusan jenjang pendidikan lain. Pada periode yang sama, tingkat pengangguran terbuka nasional tercatat 4,85 persen atau sekitar 7,46 juta orang. Data tersebut dirilis dalam Berita Resmi Statistik BPS tanggal 5 November 2025 dan dapat ditelusuri melalui situs resmi Badan Pusat Statistik.',
+          'Angka itu tidak berarti PKL otomatis menjamin pekerjaan, karena banyak faktor memengaruhi dunia kerja. Namun data tersebut menunjukkan bahwa kesiapan kerja lulusan SMK perlu diperkuat, dan PKL adalah salah satu cara yang paling langsung untuk melakukannya. Siswa TKJ yang memanfaatkan PKL dengan baik biasanya memperoleh beberapa manfaat berikut.',
         ],
         list: [
-          'Peserta dapat berasal dari SMK maupun perguruan tinggi, termasuk dari luar Malang.',
-          'Bidang yang relevan meliputi Bisnis Digital, RPL, Multimedia, DKV, dan TKJ.',
-          'Pengalaman magang idealnya menghubungkan tugas, pembimbingan, evaluasi, dan portofolio.',
-          'Pilih tempat magang berdasarkan relevansi pekerjaan, kejelasan program, dan dukungan pembelajaran.',
+          'Pengalaman kerja nyata yang dapat diceritakan dalam CV dan wawancara.',
+          'Portofolio berupa dokumentasi instalasi, konfigurasi, atau proyek yang dikerjakan.',
+          'Pemahaman budaya kerja, seperti disiplin, komunikasi, dan kerja tim.',
+          'Gambaran lebih jelas tentang bidang TKJ yang paling diminati, misalnya jaringan, server, keamanan, atau dukungan teknis.',
         ],
       },
       {
-        heading: 'Apa yang dimaksud magang digital agency di Malang?',
+        heading: 'Apa saja jenis tempat PKL TKJ di Malang?',
         body: [
-          'Magang digital agency adalah kegiatan belajar kerja di lingkungan perusahaan penyedia layanan digital, seperti website, pemasaran digital, desain, dan konten.',
-          'Peserta mengenal alur pekerjaan yang digunakan untuk membantu kebutuhan komunikasi dan bisnis klien.',
-          'Kegiatannya dapat mencakup riset kata kunci, penyusunan konten, desain visual, pengembangan website, pengelolaan media sosial, hingga dokumentasi proyek.',
-          'Tugas yang diberikan sebaiknya disesuaikan dengan kompetensi, tingkat pendidikan, dan kesepakatan program.',
-          'Di Malang, pilihan tempat magang dapat berasal dari perusahaan lokal, agensi digital, unit usaha teknologi, maupun organisasi yang mempunyai tim pemasaran dan teknologi.',
-          'Karena itu, calon peserta perlu memeriksa apakah pekerjaan sehari-hari benar-benar berkaitan dengan tujuan pembelajaran, bukan hanya melihat label perusahaan.',
+          'Tempat PKL TKJ di Malang terbagi menjadi perusahaan digital, instansi atau lembaga, penyedia layanan internet dan jaringan, serta usaha servis dan penjualan perangkat komputer.',
+          'Malang dan wilayah sekitarnya memiliki beragam jenis organisasi yang membutuhkan dukungan teknologi informasi. Setiap jenis tempat memberi pengalaman yang berbeda, sehingga siswa perlu mencocokkannya dengan minat dan tujuan belajar masing-masing.',
+          'Perusahaan digital dan agensi: Perusahaan digital, seperti digital agency, pengembang perangkat lunak, dan penyedia layanan website, biasanya mengerjakan beragam proyek bagi klien. Siswa TKJ dapat terlibat pada pengelolaan website, hosting, perangkat kerja tim, hingga keamanan dasar. Lingkungannya cenderung dinamis dan menuntut komunikasi yang baik.',
+          'Instansi dan lembaga: Kantor instansi pemerintah, lembaga pendidikan, dan organisasi besar umumnya memiliki jaringan komputer internal serta perangkat yang perlu dirawat. Siswa dapat belajar tentang pengelolaan jaringan yang stabil dan prosedur kerja yang tertib. Proses administrasi di tempat seperti ini kadang memerlukan waktu lebih panjang, sehingga pendaftaran sebaiknya dilakukan lebih awal.',
+          'Penyedia layanan internet dan jaringan: Penyedia layanan internet dan perusahaan instalasi jaringan memberi pengalaman dekat dengan infrastruktur, misalnya penarikan kabel, pemasangan perangkat, dan pemantauan koneksi. Pekerjaannya dapat melibatkan kegiatan lapangan, sehingga aspek keselamatan kerja dan pendampingan perlu diperhatikan.',
+          'Usaha servis dan penjualan perangkat: Toko komputer dan jasa servis memberi banyak latihan perbaikan perangkat keras, instalasi sistem operasi, dan penanganan keluhan pengguna. Tempat seperti ini cocok bagi siswa yang ingin memperdalam troubleshooting, meskipun paparan terhadap jaringan skala besar mungkin lebih terbatas.',
         ],
       },
       {
-        heading: 'Siapa yang cocok mengikuti program magang ini?',
+        heading: 'Apa perbedaan PKL TKJ di perusahaan digital dan tempat lain?',
         body: [
-          'Program magang digital relevan bagi siswa SMK dan mahasiswa yang ingin menerapkan kompetensi sekolah atau kampus dalam konteks pekerjaan.',
-          'PixxelPro Digital membuka kesempatan bagi peserta dari beberapa latar pendidikan, terutama Bisnis Digital, Rekayasa Perangkat Lunak (RPL), Multimedia, Desain Komunikasi Visual (DKV), dan Teknik Komputer dan Jaringan (TKJ).',
-          'Peserta dari Malang Raya maupun luar kota dapat mempertimbangkan program ini dengan memperhatikan kesepakatan pelaksanaan.',
-          'Siswa Bisnis Digital dapat mempelajari riset pasar, dasar pemasaran, dan penyusunan konten. Peserta RPL dapat mengembangkan pemahaman tentang website dan proses pengembangan perangkat lunak.',
-          'Multimedia dan DKV berkaitan dengan produksi visual, desain, serta komunikasi kreatif. Sementara itu, TKJ mempunyai dasar yang berguna untuk memahami jaringan, perangkat, dan dukungan teknis. Kesesuaian tugas tetap perlu dibicarakan sebelum program dimulai.',
+          'Perbedaan utama PKL TKJ di perusahaan digital dan tempat lain terletak pada ragam proyek, ritme kerja, dan kedekatan dengan layanan website, hosting, serta keamanan sistem.',
+          'Di perusahaan digital, proyek berganti mengikuti kebutuhan klien dan siswa bekerja berdampingan dengan tim lain, seperti pengembang, desainer, dan tim pemasaran. Di instansi, sistem cenderung stabil dan tugas lebih terstandar. Di penyedia internet, fokus utama ada pada infrastruktur dan kualitas koneksi. Di usaha servis, fokus utama ada pada perangkat dan pelayanan pengguna.',
+          'Tidak ada satu pilihan yang paling cocok untuk semua siswa. Siswa yang menyukai kerja tim lintas bidang dan proyek website dapat mempertimbangkan perusahaan digital, sedangkan siswa yang tertarik pada infrastruktur dapat menimbang penyedia jaringan. Uraian yang lebih rinci tersedia dalam panduan PKL TKJ di perusahaan digital.',
         ],
       },
       {
-        heading: 'Apa manfaat magang di lingkungan digital agency?',
+        heading: 'Bagaimana cara memilih tempat PKL jurusan TKJ yang sesuai?',
         body: [
-          'Manfaat utama magang adalah memberi kesempatan menerapkan teori, memahami standar kerja, dan menghasilkan bukti kompetensi yang dapat dikembangkan menjadi portofolio.',
-          'Pengalaman proyek membantu peserta melihat bagaimana pekerjaan digital disusun dari kebutuhan hingga hasil.',
-          'Misalnya, pembuatan halaman website dapat melibatkan diskusi tujuan, penyusunan struktur, penulisan konten, desain antarmuka, implementasi, dan pemeriksaan. Peserta tidak harus menguasai seluruh tahap; mereka belajar memahami hubungan antarfungsi.',
-          'Magang juga melatih komunikasi, manajemen waktu, penerimaan umpan balik, pemecahan masalah, dan tanggung jawab.',
-          'Keterampilan tersebut penting karena pekerjaan industri jarang berlangsung secara individual. Hasil magang yang baik bukan sekadar banyaknya tugas, melainkan pemahaman atas proses, kontribusi yang dapat dijelaskan, dan dokumentasi pekerjaan yang diizinkan untuk ditampilkan.',
+          'Pilih tempat PKL jurusan TKJ dengan menilai kesesuaian tugas dengan kompetensi, adanya pembimbing, kejelasan kesepakatan, kenyamanan lokasi, dan peluang menambah portofolio.',
+          'Apakah tugasnya sesuai dengan kompetensi TKJ? Tanyakan lebih dulu tugas apa yang akan diberikan. Tugas yang berkaitan dengan komputer, jaringan, server, keamanan, atau dukungan teknis akan lebih relevan daripada pekerjaan administratif yang tidak berhubungan dengan jurusan. Jika tugas bersifat lintas bidang, pastikan ada porsi teknis yang jelas.',
+          'Apakah ada pembimbing dan evaluasi? Pembimbing di tempat PKL membantu siswa memahami pekerjaan dan menilai perkembangan. Siswa yang hanya dibiarkan tanpa arahan cenderung kesulitan belajar. Tanyakan apakah ada orang yang ditunjuk sebagai pendamping dan bagaimana laporan atau penilaian dilakukan.',
+          'Bagaimana dengan lokasi dan sistem pelaksanaan? Pertimbangkan jarak, biaya perjalanan, dan jadwal. Sebagian tempat dapat menyesuaikan sistem pelaksanaan melalui kesepakatan, sehingga siswa dari luar kota pun dapat berpartisipasi. Pastikan jam kerja, hari kerja, dan aturan kehadiran disepakati sejak awal.',
+          'Kejelasan administrasi dan kesepakatan: Tempat PKL yang baik menjelaskan prosedur pendaftaran, dokumen yang diperlukan, serta hak dan kewajiban peserta. Kejelasan ini mengurangi risiko salah paham dan membantu sekolah menilai kesesuaian tempat PKL dengan program pembelajaran.',
         ],
       },
       {
-        heading: 'Bagaimana cara memilih tempat magang di Malang?',
+        heading: 'Kegiatan apa yang biasa dikerjakan siswa TKJ saat PKL?',
         body: [
-          'Tempat magang yang tepat mempunyai tugas relevan, alur pembimbingan yang jelas, dan kesepakatan kerja yang dipahami peserta maupun sekolah atau kampus.',
-          'Sebelum mendaftar, periksa bidang layanan perusahaan, contoh aktivitas, mekanisme supervisi, jam atau pola pelaksanaan, serta bentuk evaluasi.',
-          'Tanyakan siapa yang memberi arahan, bagaimana tugas diberikan, dan apakah peserta memperoleh kesempatan belajar sesuai jurusan.',
-          'Untuk peserta luar kota, pastikan pula pengaturan kehadiran, komunikasi, dan kebutuhan administrasi.',
-          'Jangan memilih hanya karena lokasi dekat atau nama bidangnya terdengar menarik. Program yang baik perlu menjelaskan ekspektasi secara realistis.',
-          'Hindari tempat yang meminta peserta mengerjakan pekerjaan di luar kemampuan tanpa arahan, tidak menjelaskan tanggung jawab, atau menjanjikan hasil karier yang tidak dapat dipastikan.',
+          'Kegiatan PKL siswa TKJ umumnya meliputi instalasi dan perawatan perangkat, konfigurasi jaringan, pengelolaan sistem, dokumentasi teknis, serta dukungan pengguna sesuai kebutuhan tempat PKL.',
+          'Jenis tugas bergantung pada kebutuhan tempat PKL. Di kantor kecil, siswa mungkin merapikan kabel, mengonfigurasi router, dan memeriksa koneksi. Di tempat yang lebih besar, siswa dapat membantu pemantauan jaringan, pengelolaan akun pengguna, atau pencadangan data.',
+          'Dokumentasi seperti catatan konfigurasi dan jurnal harian membantu siswa menyusun laporan dan portofolio. Contoh tugas dan alur kerja harian dibahas dalam uraian kegiatan PKL anak TKJ.',
         ],
       },
       {
-        heading: 'Bagaimana program magang PixxelPro Digital relevan bagi peserta?',
+        heading: 'Apakah perusahaan digital cocok untuk PKL siswa TKJ?',
         body: [
-          'PixxelPro Digital menggabungkan layanan digital profesional dengan pengembangan keterampilan dan pengalaman kerja bagi siswa SMK serta mahasiswa.',
-          'Bidang yang diperkenalkan dalam identitas PixxelPro Digital meliputi digital marketing, pembuatan website, SEO, social media marketing, branding online, copywriting, dan jurnalistik.',
-          'Program magang diarahkan untuk memberi pengalaman kerja nyata, mengembangkan keterampilan sesuai jurusan, mengenalkan proyek digital, membantu pembangunan portofolio, serta meningkatkan kesiapan memasuki dunia kerja.',
-          'Sistem pelaksanaan dilakukan berdasarkan kesepakatan. Karena rincian jadwal, kuota, persyaratan dokumen, dan teknis pendampingan dapat berubah, calon peserta sebaiknya mengonfirmasi informasi tersebut melalui kanal resmi sebelum mengirim pendaftaran.',
-          'Kunjungi beranda resmi PixxelPro Digital untuk mengenal identitas, layanan, dan informasi lengkap seputar perusahaan.',
+          'Perusahaan digital cocok untuk PKL siswa TKJ jika menyediakan tugas teknis nyata, seperti pengelolaan website, hosting, jaringan kantor, dan keamanan dasar, dengan bimbingan yang jelas.',
+          'Perusahaan digital sering kali membutuhkan dukungan teknis di balik layanan yang mereka jual, misalnya domain, hosting, kinerja website, dan keamanan akun. Siswa TKJ dapat belajar bagaimana infrastruktur mendukung produk digital yang dipakai klien. Keterbatasannya, ritme kerja yang cepat menuntut kemampuan belajar mandiri dan komunikasi yang baik.',
+          'Bagi siswa yang tertarik pada sisi teknis pembuatan situs, topik ini dibahas lebih dalam dalam artikel PKL TKJ website, yang menjelaskan peran TKJ pada domain, server, dan pemeliharaan situs.',
+        ],
+      },
+      {
+        heading: 'Bagaimana program magang TKJ di PixxelPro Digital?',
+        body: [
+          'PixxelPro Digital adalah digital agency yang menerima peserta magang jurusan TKJ dari Malang Raya dan luar kota, dengan sistem pelaksanaan sesuai kesepakatan.',
+          'PixxelPro Digital bergerak di bidang digital marketing, jasa pembuatan website, SEO, social media marketing, branding online, copywriting, dan jurnalistik. Selain melayani klien, PixxelPro Digital berperan sebagai education and internship development center, yaitu wadah pengembangan keterampilan dan pengalaman kerja bagi siswa SMK dan mahasiswa.',
+          'Program magang PixxelPro Digital menerima peserta dari jurusan Bisnis Digital, Rekayasa Perangkat Lunak, Multimedia, Desain Komunikasi Visual, dan Teknik Komputer dan Jaringan. Tujuannya adalah memberi pengalaman kerja nyata, mengembangkan keterampilan sesuai jurusan, memberi pengalaman mengerjakan proyek digital, membangun portofolio, dan meningkatkan kesiapan menghadapi dunia kerja.',
+          'Ruang lingkup tugas untuk peserta TKJ dibicarakan dan disepakati bersama sebelum pelaksanaan. Calon peserta dapat membuka halaman Pendaftaran Magang dan Jurusan di website resmi PixxelPro Digital, atau menghubungi tim melalui halaman Kontak untuk menanyakan jadwal dan ketentuan yang berlaku.',
+        ],
+      },
+      {
+        heading: 'Bagaimana cara mendaftar dan menyiapkan diri untuk PKL TKJ?',
+        body: [
+          'Siapkan diri untuk PKL TKJ dengan menentukan tujuan belajar, merapikan CV dan portofolio, menghubungi tempat PKL, lalu mengonfirmasi jadwal, tugas, dan surat dari sekolah.',
+        ],
+        list: [
+          'Tentukan tujuan belajar, misalnya ingin mendalami jaringan, server, keamanan, atau dukungan teknis.',
+          'Susun CV singkat dan portofolio sederhana, seperti dokumentasi praktikum jaringan atau proyek sekolah.',
+          'Daftar beberapa tempat PKL yang sesuai, lalu hubungi melalui kanal resmi masing-masing.',
+          'Tanyakan jenis tugas, pembimbing, jadwal, dan sistem pelaksanaan sebelum memutuskan.',
+          'Siapkan surat pengantar atau dokumen dari sekolah sesuai permintaan tempat PKL.',
+          'Konfirmasi tanggal mulai, aturan kehadiran, dan ketentuan keselamatan kerja secara tertulis.',
+          'Urutan di atas dapat disesuaikan dengan kebijakan sekolah dan tempat PKL. Siswa disarankan berkonsultasi dengan guru pembimbing agar langkah yang diambil sesuai ketentuan.',
+        ],
+      },
+      {
+        heading: 'Apa kesalahan umum saat mencari tempat PKL TKJ?',
+        body: [
+          'Kesalahan umum saat mencari tempat PKL TKJ meliputi memilih hanya karena dekat, tidak menanyakan tugas, terlambat mendaftar, dan tidak menyiapkan portofolio dasar.',
+        ],
+        list: [
+          'Memilih hanya berdasarkan jarak. Tempat yang dekat belum tentu memberi tugas yang sesuai dengan jurusan TKJ.',
+          'Tidak menanyakan jenis tugas. Siswa dapat berakhir mengerjakan pekerjaan yang tidak berkaitan dengan kompetensi.',
+          'Terlambat mendaftar. Tempat PKL membutuhkan waktu untuk menanggapi dan menyiapkan penempatan.',
+          'Tidak menyiapkan portofolio. Dokumentasi praktikum sederhana pun membantu tempat PKL menilai kesiapan siswa.',
+          'Mengabaikan kesepakatan tertulis. Jadwal dan tugas yang tidak jelas sering menimbulkan salah paham.',
+        ],
+      },
+      {
+        heading: 'Apa tips agar PKL TKJ memberi hasil maksimal?',
+        body: [
+          'Agar PKL TKJ bermanfaat, siswa perlu aktif bertanya, mendokumentasikan pekerjaan, disiplin waktu, menjaga komunikasi dengan pembimbing, dan menyimpan bukti hasil kerja selama magang.',
+          'Bertanyalah ketika menemui istilah atau prosedur baru, dan catat jawabannya. Dokumentasikan konfigurasi, topologi, atau hasil perbaikan yang dikerjakan, selama diizinkan tempat PKL.',
+          'Perhatikan aturan kerahasiaan data, karena siswa TKJ sering bersentuhan dengan sistem dan informasi milik tempat PKL. Evaluasi perkembangan secara berkala bersama pembimbing agar target belajar tercapai.',
         ],
       },
     ],
-    conclusion: 'Magang digital agency di Malang dapat menjadi jembatan antara pembelajaran dan kebutuhan industri. Utamakan tempat yang menyediakan tugas relevan, arahan, evaluasi, dan kesempatan membangun portofolio. PixxelPro Digital dapat dipertimbangkan oleh siswa SMK dan mahasiswa dari Malang maupun luar kota dengan detail program yang dikonfirmasi langsung.',
+    conclusion: 'Tempat PKL jurusan TKJ Malang yang tepat adalah yang memberi tugas relevan, pembimbing jelas, dan kesepakatan transparan, baik di perusahaan digital maupun jenis tempat lainnya. Kenali jenis tempat PKL, lalu cocokkan dengan minat TKJ Anda. Tanyakan tugas, pembimbing, jadwal, dan sistem pelaksanaan sebelum memutuskan. Siapkan CV dan portofolio sederhana agar lebih percaya diri saat mendaftar. Dokumentasikan pekerjaan selama PKL untuk bahan laporan dan portofolio. Ingin mengenal program magang lebih jauh? Kunjungi website resmi PixxelPro Digital, pelajari halaman Pendaftaran Magang, atau hubungi tim melalui halaman Kontak untuk berdiskusi tentang PKL jurusan TKJ.',
     faqs: [
       {
-        question: 'Apakah PixxelPro Digital menerima siswa SMK untuk PKL?',
-        answer: 'Ya. Program PixxelPro Digital ditujukan antara lain bagi siswa SMK, dengan pelaksanaan sesuai kesepakatan.',
+        question: 'Apakah siswa TKJ bisa PKL di bidang yang tidak murni jaringan?',
+        answer: 'Bisa, selama tugasnya masih berkaitan dengan kompetensi TKJ dan disetujui sekolah. Agensi digital, misalnya, dapat melibatkan siswa TKJ pada pengelolaan website, perangkat kerja, dan keamanan dasar. Konfirmasikan ke guru pembimbing agar sesuai ketentuan sekolah.',
       },
       {
-        question: 'Apakah mahasiswa boleh mendaftar magang?',
-        answer: 'Ya. Mahasiswa termasuk target peserta program magang PixxelPro Digital.',
+        question: 'Kapan sebaiknya mulai mencari tempat PKL TKJ?',
+        answer: 'Mulailah jauh sebelum jadwal PKL dari sekolah, karena tempat PKL memerlukan waktu untuk menanggapi permohonan dan menyiapkan penempatan. Waktu yang tepat bergantung pada kebijakan sekolah dan tempat PKL yang dituju.',
       },
       {
-        question: 'Apakah peserta dari luar Malang dapat mengikuti program?',
-        answer: 'PixxelPro Digital terbuka bagi peserta dari luar kota. Pengaturan pelaksanaan perlu dikonfirmasi terlebih dahulu.',
+        question: 'Apakah PixxelPro Digital menerima siswa TKJ dari luar Malang?',
+        answer: 'Ya. PixxelPro Digital terbuka bagi peserta dari Malang Raya maupun luar kota, dengan sistem pelaksanaan sesuai kesepakatan. Calon peserta dapat menghubungi tim melalui kontak resmi di website PixxelPro Digital.',
       },
       {
-        question: 'Jurusan apa yang relevan untuk magang digital agency?',
-        answer: 'Jurusan yang disebutkan meliputi Bisnis Digital, RPL, Multimedia, DKV, dan TKJ.',
+        question: 'Dokumen apa yang biasanya disiapkan untuk PKL?',
+        answer: 'Umumnya berupa surat pengantar dari sekolah, CV, dan portofolio sederhana. Kebutuhan tepatnya dapat berbeda di setiap tempat PKL, sehingga siswa sebaiknya menanyakan langsung kepada pihak yang dituju.',
       },
       {
-        question: 'Apa yang sebaiknya disiapkan sebelum mendaftar?',
-        answer: 'Siapkan identitas, informasi sekolah atau kampus, jurusan, periode magang yang dibutuhkan, serta portofolio jika tersedia. Konfirmasikan dokumen wajib kepada perusahaan.',
+        question: 'Apakah PKL menjamin siswa langsung mendapat pekerjaan?',
+        answer: 'Tidak. PKL tidak menjamin pekerjaan, tetapi menambah pengalaman, portofolio, dan jejaring profesional yang dapat memperkuat peluang siswa saat melamar kerja atau melanjutkan studi.',
       },
       {
-        question: 'Apakah magang menjamin langsung mendapat pekerjaan?',
-        answer: 'Tidak. Magang merupakan proses belajar dan pengembangan pengalaman, bukan jaminan pekerjaan setelah program selesai.',
+        question: 'Apa bedanya PKL dan magang?',
+        answer: 'PKL adalah istilah yang lazim dipakai di SMK, sedangkan magang memiliki cakupan lebih luas dan juga dipakai oleh mahasiswa. Praktiknya serupa, yaitu belajar bekerja langsung di tempat usaha atau instansi.',
       },
     ],
     ctaBox: {
-      badge: 'Program Magang Digital Agency Malang',
-      title: 'Tertarik Magang di Digital Agency Berbasis Proyek Nyata?',
-      desc: 'PixxelPro Digital membuka kesempatan magang PKL SMK dan internship mahasiswa untuk jurusan Bisnis Digital, RPL, Multimedia, DKV, dan TKJ.',
-      btnLabel: 'Tanya Kuota & Posisi Magang',
-      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20tertarik%20dengan%20program%20magang%20digital%20agency%20dan%20ingin%20konsultasi%20posisi.',
+      badge: 'Program Magang & PKL TKJ Malang',
+      title: 'Cari Tempat PKL Jurusan TKJ di Malang yang Berbobot?',
+      desc: 'PixxelPro Digital di Mojolangu, Kota Malang membuka kuota PKL SMK Teknik Komputer dan Jaringan dengan bimbingan mentor praktisi dan proyek digital nyata.',
+      btnLabel: 'Konsultasi Posisi PKL via WhatsApp',
+      btnHref: 'https://wa.me/62895639068080?text=Halo%20PixxelPro,%20saya%20siswa%20SMK%20TKJ%20ingin%20konsultasi%20posisi%20dan%20kuota%20PKL.',
     },
   },
 ];
