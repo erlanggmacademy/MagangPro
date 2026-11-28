@@ -150,9 +150,7 @@ const articleSchema = {
         <!-- Main Reading Body -->
         <div class="article-body">
           <!-- Lead Intro Paragraph -->
-          <p class="article-lead-text">
-            {post.intro}
-          </p>
+          <p class="article-lead-text" set:html={post.intro} />
 
           <!-- 1. Collapsible Table of Contents (Buka/Tutup) -->
           <details class="table-of-contents-box" open>
@@ -196,7 +194,7 @@ const articleSchema = {
               <h2 class="section-subheading">{sec.heading}</h2>
 
               {sec.body.map((p) => (
-                <p class="section-paragraph">{p}</p>
+                <p class="section-paragraph" set:html={p} />
               ))}
 
               {sec.quote && (
@@ -210,14 +208,14 @@ const articleSchema = {
                   {sec.list.map((item) => (
                     <li>
                       <span class="bullet-check">✓</span>
-                      <span>{item}</span>
+                      <span set:html={item} />
                     </li>
                   ))}
                 </ul>
               )}
 
               {sec.bodyAfter && sec.bodyAfter.map((p) => (
-                <p class="section-paragraph">{p}</p>
+                <p class="section-paragraph" set:html={p} />
               ))}
             </section>
           ))}
@@ -270,7 +268,7 @@ const articleSchema = {
 
               {sec.body.map((p, pIdx) => (
                 <>
-                  <p class="section-paragraph">{p}</p>
+                  <p class="section-paragraph" set:html={p} />
 
                   {idx === 1 && pIdx === Math.min(1, sec.body.length - 1) && (
                     <div class="article-incontent-cta">
@@ -310,14 +308,14 @@ const articleSchema = {
                   {sec.list.map((item) => (
                     <li>
                       <span class="bullet-check">✓</span>
-                      <span>{item}</span>
+                      <span set:html={item} />
                     </li>
                   ))}
                 </ul>
               )}
 
               {sec.bodyAfter && sec.bodyAfter.map((p) => (
-                <p class="section-paragraph">{p}</p>
+                <p class="section-paragraph" set:html={p} />
               ))}
             </section>
           ))}
@@ -325,13 +323,13 @@ const articleSchema = {
           <!-- Conclusion Section -->
           <div class="article-conclusion-box" id="section-kesimpulan">
             <h3 class="conclusion-title">Kesimpulan</h3>
-            <p>{post.conclusion}</p>
+            <p set:html={post.conclusion} />
             {post.conclusionList && post.conclusionList.length > 0 && (
               <ul class="section-check-list" style="margin-top: 1rem; margin-bottom: 1rem;">
                 {post.conclusionList.map((item) => (
                   <li>
                     <span class="bullet-check">✓</span>
-                    <span>{item}</span>
+                    <span set:html={item} />
                   </li>
                 ))}
               </ul>
@@ -339,10 +337,10 @@ const articleSchema = {
             {post.conclusionClosing && (
               Array.isArray(post.conclusionClosing) ? (
                 post.conclusionClosing.map((p) => (
-                  <p style="margin-top: 1rem;">{p}</p>
+                  <p style="margin-top: 1rem;" set:html={p} />
                 ))
               ) : (
-                <p style="margin-top: 1rem;">{post.conclusionClosing}</p>
+                <p style="margin-top: 1rem;" set:html={post.conclusionClosing} />
               )
             )}
           </div>
@@ -365,7 +363,7 @@ const articleSchema = {
                     </svg>
                   </summary>
                   <div class="faq-answer">
-                    <p>{faq.answer}</p>
+                    <p set:html={faq.answer} />
                   </div>
                 </details>
               ))}
@@ -1008,6 +1006,24 @@ const articleSchema = {
     line-height: 1.8;
     color: #475569;
     margin-bottom: 1.25rem;
+  }
+
+  .section-paragraph :global(a),
+  .section-check-list :global(a),
+  .article-conclusion-box :global(a),
+  .faq-answer :global(a) {
+    color: var(--mp-red, #dc2626);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+    transition: color 150ms ease;
+  }
+
+  .section-paragraph :global(a:hover),
+  .section-check-list :global(a:hover),
+  .article-conclusion-box :global(a:hover),
+  .faq-answer :global(a:hover) {
+    color: #b91c1c;
   }
 
   .article-quote-box {
